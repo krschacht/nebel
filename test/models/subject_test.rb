@@ -12,4 +12,8 @@ class SubjectTest < ActiveSupport::TestCase
     assert !subject.valid?
     assert subject.errors[:name].include? "can't be blank"
   end
+
+  test "has many topics" do
+    assert subjects(:a).topics.include? topics(:a3)
+  end
 end
