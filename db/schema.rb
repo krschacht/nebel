@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140201005252) do
+ActiveRecord::Schema.define(version: 20140210184012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "lessons", force: true do |t|
+  create_table "exercises", force: true do |t|
     t.integer  "topic_id",   null: false
     t.string   "name",       null: false
     t.string   "duration"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20140201005252) do
     t.datetime "updated_at"
   end
 
-  add_index "lessons", ["topic_id"], name: "index_lessons_on_topic_id", using: :btree
+  add_index "exercises", ["topic_id"], name: "index_exercises_on_topic_id", using: :btree
 
   create_table "subjects", force: true do |t|
     t.string "code",        null: false
