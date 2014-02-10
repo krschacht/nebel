@@ -1,0 +1,213 @@
+Lesson B-22
+
+The Life of Plants II:
+How a Plant Grows Its Parts
+
+
+
+Overview: 
+
+Dovetailing with growing a small garden of flowers and vegetables (Lesson B-21) this lesson presents the question: How does a plant grow a new stem, leaves, roots, flowers, and fruits? Students will be guided to design procedures for conducting observations, taking measurements, and performing tests. Following through with these observations/measurements/tests will lead them to answers at both the general and cellular levels. A central theme deriving from observations is that cells newly formed from division may differentiate along any of a large number of pathways to become a specific tissue/structure, e.g., a leaf versus a flower.  
+
+Position in the Progression of Learning: In this lesson students will progress from their familiarity of growing garden flowers and vegetables (Lesson B-21) and their general understanding that growth and development of an organism is a product of growth, division, and differentiation of its cells (Lesson B-14) to specifically observing where and how these processes take place in a growing plant to give rise to its whole. This study may extend into any of numerous fields of plant science. Along the way, it provides unparalleled opportunities for students to practice: devising and conducting experiments, measuring, graphing, and determining answers from collected data. 
+ 
+Time Required: 
+
+Carried out during the general activity of growing and maintaining garden plants, this lesson will involve intermittently taking some additional time to make more discerning observations and measurements. The time for these intermittent observations may vary from a few minutes to one to two hours as will become clear on reading over the lesson.  
+
+Practices: Students who demonstrate understanding can:
+
+1. Conduct observations, measurements, and tests that show where the elongation of a stem occurs; record procedures, data, and conclusions. Do the same for roots.
+
+2. Conduct observations revealing, then diagram or model, how the apical meristem develops both stem and leaves through processes of cell division, growth, and differentiation. 
+
+3. Conduct observations revealing the fact that the terminal bud of a tree twig contains rudiments of multiple leaves and stem. Describe the function of a vegetative bud in terms of a tree’s annual cycle of growth.
+
+From personal observations, describe where/how a flower forms from an apical meristem. Relate this to a change in direction of the differentiation of cells formed in the apical meristem.
+
+Point out the key parts of a flower and describe where/how a fruit develops.
+
+Conduct measurements that demonstrate that mature stems grow in diameter but not in length. Explain, on the level of cell division, growth, and differentiation, how stems (and roots) grow in diameter.
+
+7. Give the principle of how meristematic cells of the same plant may differentiate along different pathways. List at least ten different sorts of specialized cells that may potentially arise from meristematic cells of the same plant.  
+
+Required Background: 
+
+Lesson B-21, The Life of Plants I
+Lesson B-13 and B-14, Cells I and Cells II
+
+Materials: 
+
+This lesson entails ongoing observations of the growth of vegetable or flower plants that students are growing in their gardens (Lesson B-21). Therefore, the garden with growing, developing plants as described in Lesson B-21 is required. The focus will require plants with stems that elongate such as sunflowers, peas, beans, tomatoes, or cucumbers. Plants that grow mainly as rosettes of leaves such as lettuce, carrots, radishes, or grasses including corn follow the same principles of growth, but since their stems do not elongate, they will not lend themselves to the analysis described. In addition to the growing plants, the following will be utilized.
+
+Tape measure
+Fine tipped Sharpie™
+Dissecting microscope is ideal (You may get away with pocket magnifiers.)
+Dissecting tools (forceps, teasing needles, etc.)
+Compound microscope with slides of: stem apical meristem, root apical meristem, cross sections of woody stems 
+Photomicrographs of the above slides may be substituted and may be obtained from the Internet. Google references are included below.
+
+Teachable Moments: 
+
+Growing and maintaining garden plants will provide numerous opportunities to invite students to make the more discerning observations called for, and lead into the lesson(s) at hand.  
+
+Methods and Procedures: 
+
+Part 1. Growth of Stems
+
+In the course of growing and tending garden plants (Lesson B-21) ask students to consider just how they grow. (This may occur in the second year of such endeavors, so that Lesson B-14 will have come before.) Students will probably give you blank looks. It will require more specific questions to get them to focus on just what you are really asking. With Q and A discussion, guide them to recall previous studies (Lessons B-13 and B-14) in which they observed that all biological tissues are comprised of cells; hence, the growth and development of any/every organism is based on division, growth, and differentiation of cells. It follows that the growth of this plant—whatever plant is at hand—is the result of growth, division, and differentiation of its cells. (Provide think time for students to key into this concept.) 
+
+NOTE: For this activity, the plants under examination should be ones that grow with a straight, twining, or branching stem such as sunflowers, peas, beans, or tomatoes. Plants that grow as rosettes (lettuce, radish, spinach, and such) have a central stem that does not elongate significantly. Therefore, they do not lend themselves to the observations discussed below. They will be considered later in the lesson. Likewise, germinating seeds, regardless of species, have a different growth pattern that makes them unsuitable for this exercise.
+
+Thus, the question is: Where in the plant are these processes of cell division, growth, and differentiation occurring? ...uniformly throughout? ...at a specific location? If at a specific location, what location? On being sure that students understand the scope of the question, challenge them to come up with ways they might go about determining the answer through making observations and conducting experiments. You might assign them, individually or as groups, to write out a proposal for observations/experiments they can conduct as a means of finding answers. To make this more manageable, have students focus on one aspect at a time, e.g., elongation of stems or development of leaves. Remind students that this is an exercise in real science; that is, finding answers through observation and experimentation as did the scientists who gave us the information that is now in books or on the web.
+
+So far as practical, facilitate students proceeding with making the observations and conducting the experiments they propose. “So far as practical?” Where students come up with ideas that are beyond the means available to carry them out, let them know that is a real problem perpetually faced by scientists. Many ideas must be set aside, at least temporarily, for lack of means to carry out desired observations or experimental tests. Whatever is undertaken, recording the procedures and results will be in order. 
+
+Also, you may recognize ahead that certain proposals, while they may be carried out, will not yield desired answers. Let students give them a try in any case. Again, this is in keeping with real science. Scientists often end up going down dead ends. This is not wasted effort; it provides information as to what is not the answer, and it often generates new questions that are worth pursuing. Furthermore, reflection that comes from a well-designed effort that does not work is among the most powerful of learning experiences,  particularly when it shows along the way a path that will be more productive. 
+
+The false starts, corrections, and restarts that students might make in the course of this activity cannot be scripted. Let it unfold as it does, only helping students redirect their efforts as necessary. In the following, however, I will outline some procedures that shed light on the problem. Hopefully students will come to these through their own trials and errors.
+
+Growth of stems. Carefully marking stems from the base to the tip at one-inch intervals, and measuring the distance between the marks a day later will show whether growth has occurred in that segment. (A fine-tipped Sharpie™ works well for marking.) In some cases the tip grows so much and fast that the uppermost mark(s) are lost. Repeats making closer marks at the tip region and observing at more frequent intervals will be in order. On the other hand, students will find that no elongation has occurred in the lower portions of the plant. Logical conclusions are that stems grow mostly at the tip. More mature parts of the stem do not elongate, and the plant does not push up out of the ground. 
+
+Growth of leaves. Leaves can be similarly marked or crosshatched with a fine-tipped Sharpie™, and observed at intervals. Students will observe that there is a rapid expansion of the tiny leaves near the stem tip. Mature leaves don’t grow further.  Additionally, students will discover that the stem will have grown and new leaves will have formed beyond the uppermost leaf that they marked. Where did they come from?
+
+Origin of stem and leaves. If casual looking has not done so before, the above observations should focus attention on the stem’s tip. Examination reveals that it consists of a Chinese-doll-like set of leaves. Each time you peel away one you find a another smaller leaf curled inside. Very critical dissection using needles under a dissecting microscope may enable students to get all the way down to the true apex of the stem called the apical meristem. However, it is more likely that you will have to resort to showing photomicrographs (Google: apical meristem photomicrograph). 
+
+The very tip of the apical meristem appears as the top of a “head” with “ears” of greater or lesser length. The “ears,” which start forming at the tip, enlarge to form leaves while sections between the “ears” expand and elongate to form stem. The conclusion is that the bulk of cell division and differentiation, forming both stem and leaves, occurs there, in the apical meristem. From there on, it is mostly a matter of cell growth and maturation leading to the elongation of the stem and expansion of leaves, observed and measured previously. 
+
+Add that division and differentiation of cells in the apical meristem may produce more than stem and leaves. Have students observe that in most broad-leaf trees, following the burst of spring growth, the tip of the stem terminates in a bud. Careful dissection of the bud again reveals a Chinese-doll arrangement of leaves and apical meristem inside. In other words, cell growth, division, and differentiation derived from the apical meristem may lead to the formation of bud scales which protect the apical meristem over winter, and this is not all.
+
+Side branches. Most plants have a bushy form; not a single stem. Where do these side branches come from? Have students observe that in the leaf axil (the “crotch” between the main stem and stem of the leaf) is a bud. (In many plants it is inconspicuous, but in photomicrographs, it is clearly evident.) It is derived from the apical meristem in the same manner as leaves. These axillary buds may remain dormant or they may take off and grow as apical meristems in their own right. Where they do grow, they result in a side branch. Students can reflect on what causes an axillary bud to grow or remain dormant. A simple test is to cut off the main growing shoot. Since that is where new growth occurs, it should preclude further growth, should it not? Let students conduct the test and observe the results. 
+
+Flower buds. The most profound thing that students may observe in watching their plants is that a growing shoot, which has been producing stem and leaves, stops growing in length and develops into a large bud. This bud later bursts forth as a flower. This process is particularly evident in sunflowers and zinnias, both of which are easy to grow. Have students reflect on what is going on here. It seems strange and even impossible, but more exacting observation bear it out. The apical meristem, which up to this point had been producing stem and leaves, switches and produces a flower bud. In other words, new cells resulting from division in the apical meristem stop differentiating into stem and leaves and commence differentiating to form petals and other flower parts. Students can ponder on how this happens. Mysteries remain for future researchers. 
+
+Fruit development. Observation of the flower opening, parts of the flower, pollination and subsequent development of the fruit will follow naturally. Information regarding these aspects is easily accessible elsewhere (Google: flower parts diagram/ pollination/ fruit development time lapse video). How much and what degree of detail to present I leave to you and the interests of your students. Key points to have students observe are: 
+
+Each flower, regardless of the species, has the same basic parts; it is only the size, shape, and numbers, e.g., numbers of petals, that differ. Be aware that in sunflowers, daisies, and other composite flowers, each segment is actually a separate flower and must be looked at accordingly.
+Fertilization of egg cells, which are within the ovary, occurs as a result of pollination (pollen being transferred from anthers to the pistil).
+The fertilized egg cells with surrounding tissue commence growing into seeds while the ovary of the flower develops into the fruit with the seeds within. Each seed, students should know, contains an embryo ready to grow into a plant of the next generation.
+
+When the flower is pollinated, which occurs naturally through visitations by various insects, or in some cases wind carrying pollen, the ovary begins to expand while other parts of the flower wither and die. The observation of the ovary of a pea flower developing into a pea pod; the ovary of a squash flower developing into a squash; the ovary of a watermelon flower developing into a watermelon, or other such examples, rarely fails to impress students. Again, invite them to reflect on how information coded within the DNA of the species must be dictating cell division, growth, and differentiation to bring about the development of the ovary of a specific flower into the specific fruit. (Scientifically speaking, the ripened ovary of any flower is a fruit.) 
+
+A key concept to highlight in relation to this study is that flowering is an essential process on the way toward development of fruits. If flowers are killed by a late frost or any other factor, or if pollination fails for lack of bees or other insects, the fruit crop will be diminished accordingly. Emphasize that the vast majority of all plants on Earth including grasses and broadleaf trees are flowering plants albeit their flowers may be inconspicuous. There are no important food-crop plants that are not flowering plants.  (Non-flowering plants include mainly mosses, ferns, needle bearing trees, and algae.) 
+
+NOTE: The most significant food crops of the world are corn, wheat, and rice, which are actually species of grasses. Many children (and adults) will be under the impression that grasses don’t have flowers. They do! It is only that the flower is highly modified and without petals. In corn, for example, the tassel is male “flowers” bearing pollen; the ears with silk are the female flowers. The corn kernels are the ripened ovaries. Facilitate students conducting closer examination of grass flowers as they may choose.  
+
+Part 2. Growth of Roots
+
+The growth of roots is obviously not as conspicuous or as easy to observe. Nevertheless, in the course of pulling weeds, transplanting, or other such activities, have students note that the size of the root system is in proportion to the top of the plant. You might choose to have students conduct a more discriminating study. Plant a single seed of the same kind in a series of ten small pots. Keep all well watered and under sufficient light. From among those that germinate and grow equally well, select one each week, carefully wash the dirt from its roots, and spread the whole plant on paper. It may be pressed, dried, and preserved, or students may make a “tracing” of the plant (top and roots) on the paper. Measurement and graphing of root growth over time in conjunction with the top of the plant may follow. The key point for students to recognize and appreciate is that the roots of a plant grow continuously along with the top of the plant. Have students reflect on the logic of this finding. To obtain sufficient water and nutrients from the soil to support the growing top, roots must grow in proportion. 
+
+“But exactly how do roots grow?” Pose this question, and as above, let students ponder and design protocols for observation and experimentation by which they might determine the answer. Likewise, facilitate students pursuing their ideas. Not to subvert students’ ideas, one of the most straightforward techniques is to germinate large seeds such as beans, or peas on moist paper under a cover as was done previously (Lesson B-11, Vol. I). As roots develop, they may be marked at intervals and observed later as was done with stems. Results will lead students to the conclusion that the growth of roots occurs at the tips in a manner similar to stems. 
+
+Invite students to examine slides or photomicrographs of root-tip sections (Google: root tip mitosis). The root tip will be seen as a rounded dome with a pointed “hat” at the very tip. This “hat” is the root cap. Just under the dome is a region of actively dividing cells identified by the fact that many are seen in various stages of division (mitosis). Just up from the dividing cells at the tip, cells are seen to be successively larger; up a bit further, cells are seen to take the form appropriate to specific tissues: vascular tissues that serve to transport water and nutrients from the soil up, other vascular tissues that serve to transport the products of photosyntheses down, and other cell types. Particularly interesting and significant are that some of the surface cells bulge out and grow long tubes extending out from the root. These are known as root hairs. They are hardly ever observed on roots that you pull from the soil because they are so fragile that they are invariably left behind. They are readily seen, however, as the white “fuzz” seen on the roots of seeds germinating on moist paper under cover. 
+
+Ask students to visualize and describe how these observations fit into a motion picture of ongoing growth. Their reflections should yield something to the effect: Cells in the central region just under the dome maintain a state of active division, growing only enough after dividing to divide again. New cells just behind that region, however, do not divide again, but continue to grow; as they get longer they push the root forward deeper into the soil. Finally, they reach their mature size and proceed to differentiate into a cell of the particular tissue appropriate to their location: vascular cells in the central region, root hair cells at the surface, and so on. 
+
+There is one more aspect of growth and differentiation occurring at the root tip. Some of the new cells formed by divisions in the dome region, get pushed to and forward from the surface of the dome. These grow and differentiate to form the root cap, which is a protective cover for the fragile dividing cells at the root tip as it pushes through the soil. 
+
+Again, steer students to reflect on the mysteries of how these processes of cell division, growth, and differentiation are directed and controlled by information coded in the DNA residing in the chromosomes. Interestingly, we find the same chromosomes in the root as in the stem implying the same DNA. Challenge students to ponder: How is it possible for stems and roots, with the same DNA, to develop so differently? With Q and A, guide their reasoning toward: All cells of the given organism contain the same “book” of information (DNA), but cells in different locations “read from different pages.” How that is determined and controlled, however, remain mysteries for them to solve.  
+
+Part 3. Growth in Diameter
+
+Students have observed that plants grow at the tips of stems and roots. A short distance below the tips there is little, if any, elongation. Does this hold true throughout the life of the plant? If so, how does growth in diameter occur? Let students ponder these questions and, again, develop a protocol of observation/experimentation they might follow to determine the answers. 
+
+Not dismissing what students may suggest, one straightforward method is the following: Drive a nail into the trunk of a healthy tree at chest height. (An iron nail will not harm the tree.) Accurately measure and record the distance from the nail to the ground. Solidly embedding a stone in the ground at the base of the tree under the nail will aid the accuracy of this and subsequent measurements. Also, carefully measure the circumference of the tree at the level of the nail. For this measurement, take care that the tape measure is evenly horizontal around the tree.  
+
+By repeating these measurements at monthly intervals over the spring and summer, students will discover that the distance from the nail to the ground remains constant, but the circumference does increase. If measurements are continued over the rest of the year and through successive years, students will discover a yearly cycle of growth. Growth, as seen by increase in circumference, hence diameter, is evident through the spring and early summer, but tapers off in late summer, remains quiescent over the winter months, and resumes the next spring. Indeed, this annual cycle of growth gives rise to the rings that students are probably familiar with seeing in a cut tree trunk. Counting the rings does reveal the age of the tree at the time of its cutting.
+
+How does increase in diameter without increase in length occur? Unfortunately, dividing cells in stems are not as conspicuous as they are in root and stem tips. Nevertheless, have students observe photomicrographs or microscope slides of stem cross sections (Google: two year woody stem cross section).
+
+NOTE: Stems of different species exhibit many variations and labeled photomicrographs will invariably give technical names for the numerous different tissues. Therefore, to convey the basic concept most straightforwardly, I recommend using the example of a two-year-old woody stem and focusing students’ attention on the vascular cambium. (The vascular cambium may also be called just “cambium” or “vascular meristem.”) Burdening students with additional detail and terminology does not help in understanding the basic concept, which is described below.   
+
+Draw students’ attention to the distinct interface between the woody central portion and the outer portion, which is what we commonly call bark when we peel the bark from a twig or trunk. Explain that long and exacting observations by scientists reveal that there is a layer of cells at this interface that remains meristematic, i.e., a layer of cells that remains capable of division and differentiation. This layer is called the vascular cambium. 
+
+Following division of one of these cells, the cell toward the inside of the stem may differentiate into one of the central woody cells, while the other remains capable of dividing again. Although these cells in the woody portion appear circular in cross section, the larger ones have the form of tubes and function in the transport of water and nutrients from the soil up to the leaves, flowers, and growing fruits. Interspersed among the tube-like cells are smaller thick-walled cells that are actually fibers, which provide strength to the stem. Derived from the same dividing cells of the cambium, they have followed a different path of differentiation. 
+
+Returning to the cell that remained meristematic, on a further division, the cell toward the outside may differentiate into one or another of the kinds of cells making up the “bark” portion (phloem, fibers, cork, etc.). As well as providing a protective layer, some of these cells (phloem) function in the transport of sugar from photosynthesis in the leaves, to the roots and other parts of the plant where it is used in the construction of new materials for growth and as fuel for energy. Note that peeling the bark from a tree destroys its ability to conduct sugar to the roots, which then starves and kills the tree as a result. Again, have students reflect on how cells derived from the same layer of meristematic cells, the vascular cambium, may follow any one of many pathways of differentiation. That is, they follow instructions on different “pages” of information encoded in the DNA.
+
+Coming back to the original question of growth in diameter, have students note that the processes of cell division, growth, and differentiation just as described result in pushing toward the sides—that is growth in diameter—not up or down. Incidentally, you may ask students why the bark of most old trees is deeply ridged. Some thought should lead them to conclude: Bark is only formed at its innermost surface; outer bark does not grow more. Therefore, as the tree expands in diameter (and circumference) the outer layer of bark is pulled further and further apart leaving the deep ridges. (A few species maintain a relatively smooth outer bark by either sloughing off older bark or filling in the ridges with growth of additional bark.)
+
+Interestingly, the meristematic cells in the stems of some plants are not restricted to developing just stem tissues. Immersed in water, they may also develop into roots as seen in the rooting of cuttings. If students are not familiar with this, immerse some sprigs of mint or willow twigs in water and have them observe how they form roots. Similarly, segments of roots of some plants will readily sprout tops, as well as, more roots. Dandelion roots are notorious for this. Again, the question to leave students pondering is: How are those meristematic cells signaled and controlled to divide, grow, and differentiate as they do?   
+
+Questions/Discussion/Activities to Review, Reinforce, Expand, and Assess Learning:
+
+Students should record in their science notebooks:
+a) methods, observations, data, leading to the conclusion that stems and roots elongate at the tips.
+diagram of an apical meristem with labels pointing out regions of cell division, growth, and how cells differentiate to form leaves, as well as, stem. 
+results of dissecting a stem bud and comments regarding its role in the annual cycle of growth 
+d) observations revealing how a flower forms by way of an apical meristem following a different path of differentiation
+e) observations regarding development of a fruit from a flower’s ovary
+f) methods, observations, data, leading to the conclusion that mature stems grow in diameter but not in length and diagrams illustrating how this occurs
+g) a list of potential directions a meristematic cell might take in differentiation with speculation as to how such direction may be determined and controlled 
+
+Continue with having your class grow flowers and vegetables of their choice. Along the way, conduct the same or more exacting observations/measurements/experiments on different species. What are similarities/differences among species?
+
+Make posters or create animations or models illustrating: a) growth of stems and leaves, b) growth of roots, c) growth in diameter. Poster(s) should depict both general observations and observations at the cellular level.
+
+Have students describe/diagram plant growth as a general pattern.  
+
+Make posters or models illustrating the development of a fruit from a flower’s ovary(ies).
+
+It is commonly thought that plants grow by pushing themselves up out of the ground. Have students counter this idea with evidence they have gleaned from their observations.
+
+Extend the work described here to conducting observations/experiments that reveal phototropism, geotropism, and other tropisms. 
+
+Facilitate students’ further investigations into factors that trigger/control cells growing or not growing, or following one or another path of differentiation.
+ 
+In small groups, pose and discuss questions such as:
+
+How does a plant grow? Describe growth in terms of cell division, growth, and differentiation and where these processes occur.
+Does one ever observe a single leaf by itself emerging from a bud or growing tip? Why not? What is observed instead? (Apical meristems invariably produce both stem and leaf tissues together.)
+Why is the bark of most mature trees deeply ridged? 
+How does a stem (or root) bend in response to gravity or direction of light? (Bending, experimentation will reveal, occurs in the region of the elongating cells behind the tip of the apical meristem. Cells on one side elongating more than those on the other causes bending. Exactly how the stimulus [light or gravity] is translated into the differential elongation of these cells is not entirely understood.)
+Why does girdling (notching the bark down to the wood all the way around the tree) kill the tree?
+How does each of the different kinds of cells seen in a stem cross-section, relate to the over all needs of the plant? 
+How are meristematic cells like the “stem cells” commonly in the news? (Stem cells are “embryonic” cells, which have the capability of developing into any/every tissue of the organism.)
+
+
+
+
+To Parents and Others Providing Support:
+
+In conjunction with growing some garden plants (or even house plants) and/or on outings, facilitate children examining/dissecting growing stem tips and bursting buds wherever you may encounter them. Discuss what is observed in terms of cell divisions, growth, and differentiation occurring in the meristem.
+
+Examine various flowers with your children, identifying the parts and the role of each. Particularly, observe how fruits develop from the flower’s ovary(ies).
+
+On outings, watch for examples of tree trunks engulfing sections of sidewalk, fence rails and wires, and so on. Discuss how such sightings illustrate how tree trunks grow in diameter but not in length. Discuss how/where such growth occurs.
+
+Facilitate children conducting the activity described of driving a nail into a tree and keeping a record of its height from the ground and the circumference of the tree.
+
+Facilitate your children’s further investigations regarding any aspect of this lesson.
+
+Re: Framework’s Principles and Next Generation Science Standards (NGSS)
+
+How cell division, growth, and differentiation are controlled and regulated to give rise to and maintain the whole organism is a key question of modern biology and the center of much current research. By observing where these processes occur in a growing plant and how they give rise to the whole, students are drawn to relate these processes to their personal experience and invited to pursue their questions further. These facts qualify this lesson as a Core Idea. 
+ 
+Implementation of the lesson will involve Practices: a, b, c, d, f, and g. Crosscutting Concepts that come to the fore are: a, b, d, and g. 
+
+Books for Correlated Reading:
+
+Bang, Molly. Living Sunlight: How Plants Bring the Earth to Life. Blue Sky Press, 2009.
+
+Burnie, David. Eyewitness: Plant. Dorling Kindersley, 2011.
+_____________. The Kingfisher Nature Encyclopedia. Kingfisher, 2010. (See especially Part 2, the Living World.)
+
+Farndon, John. Flowers (World of Plants). Blackbirch, 2006.
+__________. Leaves (World of Plants). Blackbirch, 2006.
+__________. Roots (World of Plants). Blackbirch, 2006.
+__________. Seeds (World of Plants). Blackbirch, 2006.
+__________. Stems (World of Plants). Blackbirch, 2006.
+
+Johnson, Rebecca L. Powerful Plant Cells (Microquests). Millbrook Press, 2007.
+
+Kalman, Bobbie. Photosynthesis: Changing Sunlight into Food. Crabtree, 2009. 
+Levine, Shar and Leslie Johnstone. Plants: Flowering Plants, Ferns, Mosses, and Other Plants (A Class of Their Own). Crabtree, 2010. 
+Rogers, Kirsteen, et al. The Usborne Science Encyclopedia. Usborne, 2011. (See especially the Plants and Fungi section.) 
+Taylor, Charles. The Kingfisher Science Encyclopedia. Kingfisher, 2011. (See especially Chapter 2.) 
+Taylor-Butler, Christina. Experiments with Plants (True Books). Children’s Press, 2011.
+
+See also Gail Saunders-Smith’s Growing Flowers series from Capstone Press.
+
+
+
+

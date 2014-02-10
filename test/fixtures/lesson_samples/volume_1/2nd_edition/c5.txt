@@ -1,0 +1,194 @@
+Lesson C-5
+
+Inertia
+
+
+
+
+
+Overview: 
+
+Through observation and analysis of everyday experiences and demonstrations, students will derive the principle of inertia, i.e., motionless things remain motionless and moving things remain in motion unless/until acted on by a force. They will go on to analyze inertia in terms of energy inputs and outputs.  
+
+Position in the Progression of Learning: Inertia’s designation as the “First Law of Motion” speaks to its importance in understanding countless aspects of engineering, technology, and physics, as well as innumerable physical actions of everyday life, especially those of sports. In addition to introducing students to the phenomenon of inertia, this lesson has them integrate it into their understanding of energy and forces provided in previous lessons. This provides for a logical progression toward more comprehensive understanding concerning the interrelationships among energy, forces, and movement, further aspects of which are addressed in the following lessons of this thread.
+
+Time Required:
+
+Part 1. Revealing the Principle of Inertia ( demonstrations, observations, interpretive discussion; 50-60 minutes, plus games/activities as desired)
+Part 2. 	Relating Inertia to Energy (observations, reasoning, interpretive discussion; 30-40 minutes) 
+
+Objectives: Through this exercise, students will be able to:
+
+Use experiences and observations to argue that motionless things remain motionless unless/until a force is applied.
+
+Use experiences and observations to argue that things in motion remain in motion unless/until a force is applied to slow/stop them. Describe how, on Earth, friction is invariably a force that slows/stops motion. 
+
+Give the word that defines the attribute of motionless things remaining motionless and moving things remaining in motion unless/until a force is applied. 
+
+Give an argument as to why inertia should be included as a basic attribute of matter along with its: particulate nature; its having weight (mass); and its occupying space. 
+
+Use simple devices to demonstrate the phenomenon of inertia. 
+
+Enumerate various sorts of everyday actions/events that demonstrate or utilize the phenomenon of inertia.
+
+Argue how the phenomenon of inertia is a manifestation of energy inputs and outputs. Extend the argument to how inertial demonstrates that energy comes from somewhere and goes somewhere. It does not materialize out of nothing.
+
+Required Background: 
+
+Lesson C-1, Concepts of Energy I: Making Things Go 
+Lesson C-3, Concepts of Energy II: Kinetic and Potential Energy
+Lesson C-3A Energy and Force
+Lesson C-4, Concepts of Energy III: Distinguishing Between Matter and Energy
+
+Materials: 
+
+Part 1. Revealing the Principle of Inertia
+For the activities described in this lesson, you will need
+Small ball (1-2 inches in diameter)
+Tray with a rim
+Ice cube
+Cookie sheet
+Beanbag or lump of clay
+Small bowl
+You may also show students videos of various demonstrations of inertia (Google: inertia demonstration video) and/or have students conduct such demonstrations themselves, in which case your will need materials shown in the video.
+Part 2. 	Relating Inertia to Energy
+No additional materials needed
+
+Teachable Moments: 
+
+Use a demonstration of inertia and/or one or more of the games described. 
+
+Methods and Procedures: 
+
+Part 1. Revealing the Principle of Inertia 
+
+Draw students into a review of forces (Lesson C-3A) by asking: What does it take to get this _____ (point to some object on your desk) to move. Invite students to be as creative as they wish in identifying ways the object might be moved. Beyond how they might move it themselves, encourage them to consider a blast of air, a splash of water, a magnet (it the item is iron), tipping the desk, and so on. However, if they suggest magic of some sort, ask: Can you demonstrate that that really works?)
+
+When they have developed a sizable list, ask: All of these ways of moving the object basically do just one thing that gets it to move. What is that one thing? With hints as necessary, guide students to conclude that the one thing is: They exert a force, i.e., a push or pull on the object. Saying this another way: Things do not move unless a force is applied. Or, using a slightly more technical wording: Motionless things remain motionless unless/until a force is applied. 
+
+Pursue Q and A discussion having students cite further examples from their personal experience of things starting to move and identifying the force behind that movement. Any exceptions that students may raise, i.e., motionless things being set into motion without a force, should be examined in more detail to reveal that they are not exceptions after all. Either they are not recognizing the force that is there, or there was/is an error in the observation. 
+
+As students absorb the idea that a motionless object remains motionless unless a force is applied, turn to the opposite side of this concept. What happens to a ball after you give it a throw? On level, what happens after you stop pumping you bike? What do you have do to stop a moving object such as a ball coming toward you? What does a speeding roller coaster do as it reaches the bottom of a “valley?” What do they have to do to stop a spinning bike wheel?
+
+With discussion regarding such questions, bring students to recognize and conclude that moving things tend to keep moving. Stopping their movement requires exerting a force counter to their movement. For example, in catching a ball they effectively exert a push in the opposite direction. The speeding roller coaster shoots up the other side of the valley slowing as gravity pulls on it. They may burn their hand slowing a spinning wheel. They must use their brakes to slow their bikes. 
+
+Of course, things do slow down and come to stop by themselves. Explain that this is due to a force we call friction. Friction is addressed at length in Lesson C-6, but it is useful to point out here that FRICTION is the resistance to motion caused by the two surfaces rubbing. Friction may be great—consider sliding a box over bare ground—or, it may be only the matter of air “sliding” by a moving object. Nevertheless, any moving thing on Earth is subject to greater or lesser amounts of friction slowing its motion. Thus, friction is a force that counters movement.
+
+The extreme form of friction is running int something. Have students note that this is really no different that catching a ball. Whatever a moving thing runs into effectively exerts a force counter to the moving thing. Whether or not damage is done to the moving thing or what it runs into another consideration. It does not change the idea that a counter    force is required to stop a moving object. Again, let students give further examples from their experience of how a force was/is required to stop a moving thing. 
+
+Have students reflect on the idea that moving things tend to keep moving; it is only a counter force, friction if nothing else, that slows them down and stops them. Then have them consider: It follows logically that in the absence of friction or other slowing force, a moving object should remain in motion indefinitely. Is there anything that supports this notion? (Think Time.) What about the Earth rotating on its axis and orbiting the sun? If moving objects slowed down and stopped of their own accord, it follows that the Earth’s motions should have ceased. Yet the Earth’s motions continue with no perceptible change. How so? (Think Time.) Guide students in reasoning: The answer lies in the fact that there is no friction between the Earth and outer space. Again, the conclusion is that things in motion stay in motion unless they are subject to another force.
+
+In summing up, challenge students to summarize theses observations/findings in a succinct statement. Their efforts should lead them to something approximating: Motionless things remain motionless and moving things keep moving unless/until they are acted on by a force. The only thing to add is that this phenomenon is known as INERTIA. It is also known as the first law of motion. Have students note that “law” used here has nothing in common with laws made by humans. A physical law, which this is, is really an expression of what is invariably observed, i.e., observed with no exceptions. 
+
+Indeed, inertia is so basic that we can add it to the list of properties of matter. The list thus becomes: 
+
+• particulate nature
+occupies space
+has weight (mass)
+exhibits inertia, i.e., it doesn’t start or stop moving without a force being applied.
+
+Have students use the word, inertia, in describing common actions. For example: To overcome the inertia of a motionless soccer ball, I must kick it. To overcome the inertia of a wagon sitting still, I must push it, and so on. Don’t leave out the other side of the coin. The ball keeps going after I throw it because of its inertia. I can coast on my bike after I get it going because of inertia. I am pitched forward when the car is braked suddenly, because of the inertia of my body, and so on.  
+
+Insert movement in same speed and direction
+
+In the course of this discussion, students may bring up examples that appear to be exceptions. Be prepared for the following:
+
+Things spontaneously start rolling or sliding downhill. Point out that gravity is constantly exerting a downward pull. If whatever is holding them up gives way, they will proceed to go downhill. Likewise, children may cite a flowing river. Point out that the river is actually flowing downhill although the slope may be slight. 
+
+Air moves (wind) without anything apparent pushing it. Point out that there actually is something pushing it; solar heating produces differences in pressure from one location to another (Lesson A-6). Solar energy also perpetuates the water cycle.
+
+There are numerous games or activities that demonstrate and help give students experiential understanding of inertia. Use them at your discretion. A few are given here; for others Google: inertia examples/.
+
+1. Place a small ball in the center of a tray on the floor. Give the tray a sudden jerk of a few inches in any direction.  Have students note and describe what happens to the ball as you jerk the tray. As the tray moves in one direction, the ball moves in the other relative to the tray. But, in terms of room, the ball tends to remain stationary. (It will roll around some after the jerk so it is critical to focus attention on what happens immediately with the jerk.) 
+
+Then place the ball against the rim of the tray and move the tray at an even rate (not jerking), such that the rim pushes the ball along with it. Stop the tray suddenly and have students describe what happens. They will observe that the ball continues moving in the direction of the motion. 
+
+Essentially the same activity can be performed with an ice cube on a cookie tray. A challenge is marking a path on the tray and seeing if one can make the ice cube follow the path by jerking the tray in various directions—not lifting or tipping it. Children rapidly learn that the ice cube essentially stays still while they jerk the tray under it. 
+
+2. A game that children have fun with is “bombardier.” The object of the game is to drop a “bomb,” a lump of clay, dough, bean bag, or other soft object, into a bowl while moving. Hold the “bomb” at shoulder height or higher and walk rapidly toward and past a bowl on the floor. Without changing the speed of your pace or the position of your hand, release the bomb so that it falls into the bowl as you walk by. You can make it increasingly challenging by walking faster and using a target with a smaller opening. Or, you can mark a target on the floor and have a contest as to who comes closest to the bull’s-eye. 
+
+Have students carefully observe at what point they must release the bomb in order to have it land in the bowl. They discover that they must release it before it is actually over the bowl. The faster they walk, the sooner they must release it. Further, have students observe carefully the falling object in relation to the body of the “bombardier.” They will note that the object stays aligned with the bombardier’s body as it falls (assuming she/he keeps moving at the same pace). In other words, when the “bomb” is released, it continues to move forward at the same speed when it was released.” Its simultaneous falling does not influence its forward speed. (The one thing that may influence its forward seed is wind resistance, i.e., friction.)
+
+3. A common “trick” is yanking a sheet of paper from under a glass of water without spilling the water. (Practice this with things that won’t spill until you get the technique down. The trick is to give a really sharp yank in an exactly horizontal direction so that the glass is not tipped as the paper is yanked.)
+
+Go on to have students think of and relate how things they observe or actions they conduct utilize the phenomenon of inertia, although they have not recognized it as such until now. For example, we kick or knock mud from our boots as a matter of course. How/why does this work? The boot stops suddenly and the mud keeps going because of inertia. A dog shakes water from its fur. How does this work?  The dog jerks its fur back and forth; the water tends to stay still because of its inertia, and so on. 
+ 
+Part 2. Relating Inertia to Energy
+
+Review the Law of Motion, i.e. the phenomenon of inertia, that students have uncovered in the first part of this lesson. Then pose the question: Can we relate the phenomenon of inertia to energy? (Think Time.) With Q and A discussion, guide students, so far as necessary, through the following steps of reasoning, which draw on previous lessons of this thread. (Review them as necessary.)
+
+There is energy inherent in movement. (For example, a moving mass, e.g., water, can make things go, work, move or change.)
+Energy comes from somewhere; it does not come out of nothing. 
+Therefore, to start something moving means that energy is put into it. Without energy being put into it, it will not move. 
+Applying a force (a push or pull) is the way movement energy is put into an object. 
+That force typically comes from humans or machines expending energy to generate that force, and/or it may involve the natural forces of gravity or magnetism.  
+
+Tuning to other side of inertia:
+
+Once the object or mass is moving, movement energy is there in it. 
+Any slowing down of the object or mass means that movement energy is being removed.
+How is that movement energy removed? By applying a counter force and/or friction. 
+If the movement energy is not removed, it remains and the object/mass keeps moving. 
+
+In summing up, bring students to recognize that the phenomenon of inertia is really a manifestation of energy. That is, things will not move unless energy is put into the system, and they will remain in motion unless/until energy is take out of the system. The forces required to get to start or stop moving are basically the “go-between” in transferring energy from one thing or place to another as described in Lesson C-3A. 
+
+Have students reflect on how the amount of force needed to overcoming inertia, that is the amount of force needed to start or stop an object’s movement is proportional to the weight of the object and the speed of its motion. Guide students in recognizing that this is a further reflection of energy. It takes more energy to get a weightier object moving. Then, with more movement energy, the weightier object takes more force to stop it. The question students should be left with, however, is: What happens to the movement energy as it is removed by friction, running into something, or another force? We will turn to this in Lesson C-6.  
+
+NOTE: I have seen many lesson plans and demonstrations that confuse friction and inertia. Namely, a weight is dragged using a spring scale marked in Newtons. The force required for the dragging is read on the scale and called a measurement of inertia (???). Nonsense! What is being measured in such a case is friction, the resistance to sliding/dragging one surface over another. The fact that the measurement is made in Newtons does not change the situation. 
+
+To measure the force required to overcome the inertia of an object, one would need to subtract out any contribution of friction. Then one would need to measure the force required to make the object accelerate (speed up) at a given rate. This obviously involves complexities far beyond the beginning level. It is sufficient and significant at this level to have students recognize that to set an object in motion requires an input of energy via a force, e.g., a kick, push, or pull, quite apart from any friction involved.
+
+Questions/Discussion/Activities to Review, Reinforce, Expand, and Assess Learning: 
+
+Make paper-fold books or record in science notebooks:
+observations verifying that motionless things remain motionless and moving things keep moving unless/until a force is applied
+the word that defines this phenomenon
+how inertia relate to the input of output of movement energy 
+
+Set up an activity center with devices that students can experiment with to gain experiential familiarity with the phenomenon of inertia.
+ 
+Have students give oral or written arguments as to how their observations and experience support the concept of inertia, e.g., running and jumping on a skateboard. What keeps them going on the skateboard after jumping onboard?
+
+Make posters illustrating how the phenomenon of inertia is reflection of movement energy, i.e., energy input being required to start movement and energy output being required to stop movement. 
+
+Discuss inertia in terms of cause and effect; in terms of providing a pattern defining movements; in terms of energy and matter; in terms of stability and change.
+ 
+In small groups, pose and discuss questions, such as:
+
+We kick or knock mud from our boots as a matter of course.  How/why does this work?
+A dog shakes water from its fur? Why/how does this work?
+Why do you feel yourself pitched forward as the car is braked suddenly? Why should you always wear seat belts? 
+Why do you feel yourself pushed back in the seat as the car is speeded up rapidly?
+How does a hammer drive a nail, whereas you cannot just push the nail in?
+There are many imaginary stories about stuffed animals and dolls coming to life and moving around. What does your _____(any toy or item) really do when you leave it? Why?
+When you can’t find something that you have been playing with, why is it most prudent to think of where you might have left it? Why should it be where you left it?
+When you trip, why do you always fall forward?
+How does inertia relate to energy? 
+Why does a bigger car require a bigger engine and more fuel?
+
+To Parents and Others Providing Support:
+
+In the routines of everyday life there will be many instances where you and your children will see/experience inertia at work. Common instances include:
+
+Kicking mud from boots
+Knocking “goop” from a spoon by hitting it the side of the pot
+Shaking out a rag
+Being pitched forward as the car is braked suddenly
+Telling children to buckle their seat belts
+Hitting driving a nail with a hammer
+
+Each such instance may be used a teachable moment to have children relate how the principle of inertial is involved.
+
+Every sport has numerous instances, including movements of players themselves, where inertia may be seen to operate. Take whatever sport your children like to participate in or watch, pick out such instances, and have your children explain them in terms of inertia. 
+
+Many cartoons show things happening that ignore the principle of inertia. For example, why does the woman falling from a tall building not go “splat” in Superman’s kriptonic arms. Watch such cartoons with your kids and discuss how such events violate the principle of inertia. Considering inertia, what would really happen?
+
+Watch a video of a discus thrower (Google: discus thrower video). Discuss: Why does the thrower spin around in the process of throwing the disc?
+
+Discuss with you kids the relationship between energy and inertia.
+
+Books for Correlated Reading:
+
+Bradley, Kimberly Brubaker.  Forces Make Things Move (Let’s-Read-and-Find-Out Science, Stage 2).  HarperTrophy, 2005. 
+
+Whitehouse, Patty.  Moving Machines (Construction Forces).  Rourke, 2007.

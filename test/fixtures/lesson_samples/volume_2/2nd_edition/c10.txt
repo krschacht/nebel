@@ -1,0 +1,225 @@
+Lesson C-10
+
+Movement Energy and Momentum
+
+
+
+Overview: 
+
+Following a review of the phenomenon of inertia (Lesson C-5 [Vol. I]) this lesson will take students on to interpreting and analyzing inertia in terms of energy flow, i.e., energy input being required to set an object in motion, being contained in its motion, and released in its stopping motion. They will quantify this energy in terms of momentum, i.e., mass times the velocity of the object. They will be shown how determinations of momentum are fundamental to understanding what occurs or will occur on the impact of two objects. This has practical applications in innumerable fields ranging from sports to space flight. Math calculations may be included.
+
+Position in the Progress of Learning: Building on students’ introduction to the concept of inertia presented in Lesson C-5, this lesson shows students how inertia is a consequence of energy conservation and flow (energy is neither created nor destroyed but may be transferred from one thing and/or one form to another). By further showing how this energy may be quantified in terms of momentum, the lesson provides a fundamental tool for understanding and/or predicting outcomes of impacts such as those involved in sports activities, weather, or space flight. 
+
+Time Required:
+
+Part 1. Review of Inertia (review as necessary)
+Part 2. Movement Energy and Momentum (examples drawing on experience plus interpretive discussion; 40-50 minutes)
+Part 3. Momentum and Kinetic Energy (calculations, experimentation as desired) 
+ 
+Practices: Students who demonstrate understanding can:
+
+1. Define and demonstrate an understanding of inertia by describing how it is seen and experienced in the actions or happenings of day-to-day life. 
+
+2. Explain by means of demonstration how the phenomenon of inertia is an expression of movement energy and the principle of conservation of energy. That is, describe the flow of energy involved starting the movement, the movement itself, and in stopping the movement of an object.
+
+3. Give examples that illustrate how the amount of energy inherent in a moving object (movement energy) depends on both its mass and its velocity. Cite the term that is commonly used to express movement energy. 
+
+4. Demonstrate how momentum is calculated. Given mass and velocities of two objects, perform calculations to compare their momentums.
+
+5. Predict the outcome resulting from the collision of two objects based on a comparison of their respective momentums.
+
+6. Explain how momentum is not an accurate measurement of kinetic energy.
+
+Required Background: 
+
+Lesson C-1, Concepts of Energy I: Making Things Go [Vol. I]
+Lesson C-3, Concepts of Energy II: Kinetic and Potential Energy [Vol. I]
+Lesson C-5, Inertia [Vol. I]
+Lesson C-6, Friction [Vol. I]
+
+Materials: 
+
+Momentum is a measure of an object’s movement energy; it is the product of an object’s mass (weight) times its velocity. Relative momentum is easily experienced in such actions as: throwing/catching balls of different weights; using hammers or mallets of different weights to pound something; swinging bats/sticks of different weights to hit something. Therefore, materials necessary to demonstrate momentum should consist of a variety of such objects, bearing in mind SAFETY. 
+
+Games such as marbles or croquet are excellent for demonstrating the principles of momentum as well as having fun (Google: marbles play). SAFETY: Keep marbles out of the hands of kids who are inclined to put things in their mouths.   
+ 
+Teachable Moments: 
+
+Act out pushing, kicking, hitting, or otherwise getting something to move and similarly to stop motion. Ask students to name the principle being demonstrated, i.e., INERTIA (Lesson C-5 [Vol. I]). Ask students to give further examples of how they experience and use the phenomenon of inertia in the activities of everyday life.
+
+
+
+
+Methods and Procedures: 
+
+Part 1. Review of Inertia
+
+With the lead-in suggested in “Teachable Moments” continue discussion to bring out and emphasize the following points.  
+
+•  Things sitting still stay motionless until/unless they are pushed, pulled, or otherwise moved by something or some force. 
+
+Once in motion things tend to keep moving. They slow down and stop (or turn) because of friction, running into something, or a force such as gravity, e.g., a ball thrown up slows its upward motion, stops, and starts coming back down.
+
+This phenomenon of motionless things remaining still and moving things tending to keep moving is called INERTIA. Said the other way around, INERTIA is the property of matter that is experienced by stationary things remaining stationary and moving things continuing to move unless/until acted on by another force. Along with having mass and occupying space, inertia is found to be a basic attribute of matter.
+
+There is energy inherent in movement. Once moving, the moving mass can do something else, e.g., generate electrical power, etc. Along with heat, light, and electricity, movement represents a basic form of energy (Lesson C-1, Vol. I).
+
+Concluding this review, ask students: So, what is the phenomenon of inertia telling us about energy, where energy comes from, where it goes? (Think Time.) Use Q and A discussion to guide students in recalling/reasoning that inertia is an expression of how energy is not being created or destroyed; it must come from somewhere and go somewhere (Lesson C-1). Since energy is inherent in movement, that energy had to come from somewhere, the push or kick. Without that input of energy, the motionless object stays motionless. Similarly, to stop an object from moving, its movement energy must exit; without such removal it remains in motion. In conclusion, the phenomenon of inertia can be interpreted as a flow of energy: energy input is required to start motion, energy contained in motion, and energy removal in slowing and stopping motion. 
+
+NOTE: Students are likely to cite something falling as a case of an object gaining motion energy without any energy input. Remind them that height above the ground is a form of potential energy (Lesson C-3, Vo. I). In falling, that potential energy is being converted to movement energy. Note that at the bottom of the fall, the object no longer has that potential energy; it can fall no further and energy must be expended to get it back to its previous height.   
+
+Have students suggest specific examples of things being set into motion, and then have them think of how the energy for that motion came from another source. Likewise, have them give examples of things slowing down and stopping and analyze where the movement energy went. With friction slowing an object, movement energy is converted to heat (Lesson C-6, Vol. I). As an object going uphill is slowed by gravity, its movement energy is being changed to potential energy as it gains a higher elevation. As a moving body hits another, its movement energy is transferred to the movement of the second object, and so on. 
+
+The potential for making this discussion into a competitive game should not be overlooked. For example: have one student cite an example, e.g., hitting a ball with a bat. Have others, in turn, cite the steps in the transfer of energy: energy input (body energy) to swing the bat; movement energy of the bat transferred to movement energy of the ball; conversion of movement energy to heat as the ball is slowed by friction (wind resistance or hitting the ground). In each example, have students observe how there is a flow of energy from the input to the final output as heat. Further, emphasize how heat always moves toward a cooler place, ultimately outer space; energy is not recycled. 
+ 
+Part 2. Movement Energy and Momentum
+
+As students are up to speed regarding the concept of inertia, ask: Can we measure the amount of energy in a moving object? Will it be the same for every moving object, or will it differ from case to case? If it differs, how does it differ? What factors would lead us to say? “There is more movement energy in this case than in that one.” Allow ample think time. If necessary, guide their deliberations as follows: 
+
+If a soccer ball is rolling toward you at a modest speed, how would you react? Let kids respond: They would probably step into its path and kick it. On the other hand, if a soccer-ball-sized rock was coming toward you at the same speed, how should you respond? Get out of its way; if it hit you it would likely cause serious injury. So, what is the difference? Are we not observing a difference in movement energy? So, what is responsible for the difference in movement energy? The ball and the rock are the same size coming at the same speed. The difference is in the mass (weight). 
+
+Conclusion: The amount of energy in a moving object is proportional to the mass (weight) of the object. 
+
+But, is that all? Consider another case. Suppose the same rock as above is rolling toward you but very slowly. Might you then put out your foot and stop it? (Yes!) What is the difference? With this and other such examples, guide students in concluding that the amount of energy in a moving object is also proportional to the object’s velocity. 
+
+NOTE: VELOCITY is commonly thought of as a more technical term for speed and the two are often used interchangeably. However, there is a technical difference in that velocity always implies a particular direction: east, west, up, down, etc.; speed doesn’t. I don’t believe it is worth belaboring this distinction at this level. However, to be technically correct, I will use velocity. If you wish further explanation, Google: velocity speed.
+
+Some students will be likely to express confusion here. They are used to thinking in terms of single factors. Is it mass or is it velocity that accounts for movement energy? Ask them: Why not both? Cookies have more than one ingredient. Why not movement energy? In short, the amount of energy inherent in a moving object depends on both its mass and its velocity. Going a step further, instruct students that we commonly speak of the energy inherent in the motion of an object as MOMENTUM and we quantify it by simply multiplying mass times velocity. 
+
+Momentum = Mass times Velocity
+
+NOTE: I advise not presenting any math problems involving calculating momentum at this stage for two reasons. First, the resulting units, which express mass times velocity are complex and likely to cause confusion. Second, the actual amount of kinetic energy inherent in a moving object involves a more complex relationship between mass and velocity. Both of these issues will be discussed later in the lesson (Part 3). For now, it works best to just give students a conceptual “feel” for momentum and how it increases with both mass and velocity through having them reflect on various practical examples.    
+
+Ask questions such as the following and have students answer using the term momentum and describing why momentum is greater in one case than in another.
+
+In breaking down a door, it is the heavy guy that is most likely to do it. Why?
+Why does he take a running start and throw himself against the door?
+In driving a spike, why does the workman use a heavier hammer? 
+If you want to hit something harder, why do you take a faster swing? 
+If you want to hit something harder, why do you use a rock rather than a stick?
+If a truck misses a turn and crashes into a building, which will do the most damage: an empty truck or the same truck traveling at the same speed with a load of bricks? Why?
+If a truck misses a turn and crashes into a building, which will do the most damage: a truck traveling at 60 mph or the same truck traveling at 30 mph? Why? 
+Why does it require a longer distance to stop if you are going 50 mph than if you are going 25 mph? 
+Why are lower speed limits posted around schools and why is it important to obey them?
+Why have road speed limits at all? 
+Why does an ocean liner running into a dock cause tremendous damage even though it is going slowly? 
+
+In each case, students should recognize that it is a matter of the amount of energy inherent in the moving object, i.e., movement energy. With more mass and/or more velocity there will be greater energy to do the job, or cause the damage. Invite students to giver further examples from their own experience. Of particular interest may be the way in which athletes (and all the rest of us to some extent) use the movement energy of their own bodies in many actions. Consider making a jump for example: Why is it advantageous to take a running start?
+
+Move on with the question: Does the movement energy witnessed in momentum come from nowhere? (Think Time.) Some thought will lead students to reason that the answer is, No. It requires a push, an energy input of some sort, to start something moving. (Again, treat an object’s falling or rolling down hill as a case of converting potential to kinetic energy.) Going to the next step, ask: What about the amount of energy input compared to the amount of movement energy (momentum)? Students should readily recognize from experience that they must be equivalent. It requires a harder (more energetic) push to get a heavier object moving or to get any object moving faster. Continue by asking: As a moving object slows and stops, does its movement energy simply disappear into nothing? Guide students, so far as necessary, in recognizing that the answer is again, No. Again, common experience verifies this. The faster an object is going, and/or the heavier it is, the harder it is to stop.  
+
+From their experience of spinning bicycle wheels, students will readily recognize that the same principle applies to wheels and other rotating objects. Here, physicists substitute rotations per minute (rpm), or per second (rps) for velocity, but the basic concept remains the same. Students will recognize that it takes more energy input to get it spinning faster and they rapidly discover that there is more heat output if they use friction on their hand to stop it.
+
+In summary and conclusion draw students to recognize the whole as a pattern of energy flow: whatever input of energy produces the push → movement energy → energy output on slowing and stopping. It is another demonstration that energy is neither created or destroyed; it comes from somewhere and goes somewhere, only changing form along the way. Furthermore, it is not just a matter of starting or stopping movement. Any change in velocity, either speeding up or slowing down, is invariably connected to a corresponding amount of energy input or output. 
+ 
+Without getting into the math, the concept of momentum provides a base for appreciating the cause-effect relationship among countless actions/reactions encountered in nature, technology, and everyday occurrences. In large part, we have an experiential familiarity with momentum and automatically take advantage of it in the things we do. For example, we naturally choose a larger hammer to drive a spike, or we use a faster blow to knock something loose. Similarly, we intuitively use the principle of momentum with respect to body movements. For example, in kicking a ball we naturally treat our foot as a moving object; we know that to make a ball go further we must deliver a swifter kick, i.e., put more energy into our kick to give our foot more momentum. Proper coaching can teach us to increase the effective mass of our foot as well. It involves positioning and moving the entire body so that its center of gravity (Lesson C-9) goes into the kick as well. Consider how a football player, for example, makes a running rather than a standing kick (Google: football kick analysis video). We might add that energy for the kick is derived from the oxidation of food.
+
+A most practical and important application of momentum is in becoming able to analyze and predict the results of one object hitting another. Both will be diverted by the relative momentum of the other. However, the one with the greater momentum will hold its course (its direction and velocity) to a greater extent than the one with lesser momentum, which will bounce off in a different direction. Consider, for example, a cabin cruiser colliding with a rowboat. Games such as marbles, croquet, and pool are excellent for providing an experiential understanding of momentum. Facilitate students playing/experimenting and verifying the concepts of momentum as you see fit. Students will discover that factors such as the angle at which the two objects hit is an important consideration. Likewise, the material of which the objects are made will come into the picture as well. Nevertheless, students will find that results can be interpreted in terms of the momentums of the two objects. 
+
+An application of momentum that most students find intriguing is in the investigation of traffic accidents. It is second nature for people to claim they were going more slowly than they were. However, by knowing the weight of the vehicle(s) involved, looking at the extent of the damage, and knowing the impact that would be required to cause that damage, investigators can give a fairly accurate estimate of the speed. In other words, estimating momentum (from damage sustained) and knowing mass enables one to calculate velocity. 
+
+Momentum = mass x velocity.  Therefore, Momentum/mass = velocity   
+
+Part 3. Momentum and Kinetic Energy
+
+It will be inviting to challenge students to exercise their math skills by solving problems comparing the momentum of different moving objects. On the surface, all that needs to be done is to multiply the mass times the velocity for each of the objects and compare. However, there are potential pitfalls that must be noted. First, as in all comparisons, one must be sure that the units of measurement are the same in each case. If they are not the same, appropriate conversions need to be made before starting any calculations. In the metric system, units for momentum (mass times velocity) will usually be expressed as:
+
+Momentum = Kilograms x meters per second
+
+In the English system it will usually be:
+
+Momentum = Pounds x miles per hour.
+
+Then, there is a more serious problem. While momentum (the product of mass and velocity) provides a convenient conceptual understanding of movement energy, it is not an accurate measurement of the actual amount of kinetic energy inherent in a moving object. Sophisticated tests and measurements show that there is a more complex relationship between energy, mass, and velocity. As it turns out:
+
+Kinetic energy = ½ mass x velocity squared (Kinetic Energy = ½ MV2).
+
+This obviously gets into math skills and understanding that are beyond the elementary level. Therefore, at this level I recommend sticking with the conceptual understanding of momentum as described. You may add, however, that velocity is a more significant factor than mass. This has many practical applications. For example, a car traveling at 50 mph will require more than double the stopping distance as one traveling 25 mph. This is because at double the speed, it has more than double the amount of kinetic energy. Similarly a batter will hit the ball further by doubling the speed of his/her swing rather than by doubling the weight of the bat. 
+
+The experiments that kids may conceive to test the relationship between kinetic energy, mass, and velocity are limitless. For example, they may test how far a ball will go (a measure of its kinetic energy) after being hit with sticks of different masses swung at different velocities. (Watching for safety precautions in any such experimentation is assumed.)   
+
+Addendum
+
+Students may make connections between this lesson and atomic/molecular motion described in Lessons A-11, A-12, and A-13. Congratulate them on making the connection. Indeed, it is the mass of individual atoms added together that make up the mass of any larger object, and the movement of every atom or subatomic particle does have a certain momentum. Therefore, one might logically expect that atomic/molecular motion would influence the movement and momentum of larger objects as we have described in this lesson. 
+
+Not so! Because: 1) atomic/molecular motion is random, i.e., any given atom may move in any direction at any instant in time, and 2) any object, even of microscopic size, is comprised of many, many atoms. Therefore, the movement of one atom jiggling in one direction is cancelled out by another atom jogging in the opposite direction. Hence, atomic/molecular motion plays no role in the movement energy or momentum described in this lesson.  
+
+Questions/Discussion/Activities to Review, Reinforce, Expand, and Assess Learning: 
+
+Students should record in their science notebooks:
+a) a definition of momentum as a measure of movement energy depending on both mass and velocity, followed by a list of examples illustrating how this is verified by experience 
+an explanation or diagram showing how momentum is part of an overall flow of energy, i.e, from energy input to movement energy to energy output 
+c) an explanation of how the phenomenon of inertia is related to similar energy flow
+d) calculations comparing the momentum of objects of different mass traveling at different speeds
+e) statements applying the concept of momentum to various movements/actions used in sports, play, and/or in everyday activities
+
+Cite examples of everyday actions/experiences involving movement and have students state how the phenomena of inertia and momentum apply. This may be done in game or competition format.
+
+Challenge students to take a particular example of starting and stopping the motion of something and describing it in terms of: a cause-effect sequence; scale and proportion, i.e., quantities of energy input/output); a system involving the flow of energy; energy and matter; stability and change; a general pattern.
+
+Give students examples of objects of different mass traveling at different velocities and ask them to calculate which will have the greater momentum. 
+
+Give students examples of two objects of differing momentums colliding with one another. What result may be anticipated? 
+
+Facilitate students setting up and experimenting with hitting balls with mallets of differing weights swung at differing velocities. Predict how far the ball will go and test how close the test comes to the prediction. (Keep students cognizant of safety in such activities.)
+
+
+In small groups, pose and discuss questions such as:
+ 
+There are many imaginary stories about stuffed animals and dolls coming to life and moving around. What is the reality? What are the physical principles involved?
+What keeps the Earth rotating on its axis and orbiting the sun?
+Earthquakes frequently cause the collapse of structures. Explain why this occurs in terms of inertia.
+How does the phenomenon of inertia relate to principles regarding energy? How does it support the concept that energy is neither created nor destroyed but only changed in form?
+What is meant by one object having greater momentum than another? What two factors are involved? 
+Why does a larger (heavier) car consume more fuel?
+Why can an ocean liner do severe damage even if it runs into a dock slowly? 
+Momentum is really a measure of what?
+How is momentum a link in the flow of energy?
+Why is lead the preferred material for bullets?
+Why are inertia and momentum important in space flight?
+Here on Earth, moving things invariably slow down and stop unless additional energy is supplied. Why? 
+As a moving object slows down, what happens to its movement energy? 
+How does knowing the weight of a vehicle and damage caused enable one to estimate the speed of the vehicle?
+
+To Parents and Others Providing Support:
+
+Through everyday experience, we develop an intuitive feel for inertia and momentum, i.e., greater mass and/or velocity having greater impact. Draw children into a discussion of how this “intuitive feel” can be defined in terms of inertia and measured in terms of momentum. 
+ 
+For whatever sport your kids may like to participate in, coach them in recognizing how they may better utilize the momentum of their bodies in delivering a better jump, swing, twirl, throw, or whatever.
+
+Marbles is an inexpensive game that can be played in a multitude of situations and is good for all skill levels. Enjoy it with your kids and use it as a means of their gaining experiential knowledge concerning the physical forces discussed in this lesson.
+
+Inertia and momentum are among the most commonly violated principles in science fiction films and cartoons. Watch for and discuss such violations. What would actually occur instead of what is shown?
+
+Facilitate your children investigating machinery displayed in museums or elsewhere and note where momentum is utilized in its operation. Flywheels are a prime example.
+  
+
+
+
+Re: Framework’s Principles and Next Generation Science Standards (NGSS)
+
+Momentum is a key physical principle that is at the center of understanding all sorts of movements ranging from those of sports, and dance, to planetary motions. It is critical in all engineering and technological design ranging from golf clubs to space vehicles. Furthermore, it is always a link in the concept of energy flow. Thus, the introduction presented here is always close to students’ personal experiences and can be studied to any level of sophistication. One can hardly escape designating it as a Core Idea. 
+
+Carrying out the lesson will engage students in Practices: a, b, c, d, e, f, and g. Crosscutting Concepts that students will employ in their thinking regarding the lesson are: a, b, c, d, e, f, and h. 
+
+Books for Correlated Reading:
+
+Graham, John, Forces and Motion (Hands-On Science). Kingfisher, 2001.
+
+Hakim, Joy. The Story of Science: Newton at the Center. Smithsonian Books, 2005. (See especially Chapters 6 and 16.)
+
+Rand, Casey. Forces and Motion. Raintree, 2009.
+
+Riley, Peter D. Forces and Movement (Making Sense of Science). Smart Apple Media, 2005.
+
+Rogers, Kirsteen, et al. The Usborne Science Encyclopedia. Usborne, 2011. (See especially the Energy, Forces & Motion section.) 
+Taylor, Charles. The Kingfisher Science Encyclopedia. Kingfisher, 2011. (See especially Chapter 7.)
+
+Tocci, Salvatore. Experiments with Motion (True Books). Children’s Press, 2003.
+
+For older children:
+
+DiSpezio, Michael A. Awesome Experiments in Force & Motion. Sterling, 2006.
+
+Doherty, Paul. The Spinning Blackboard and Other Dynamic Experiments on Force and Motion (Exploratorium). Wiley, 2008. 
+
