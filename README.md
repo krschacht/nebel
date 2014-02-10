@@ -1,0 +1,26 @@
+# BFSU
+
+## Mapping
+
+The book breaks things out into subjects, lessons, and parts. In the app, we map
+those sections, respectively, to subjects, topics, and exercises. Later, we'll
+introduce units that group topics and lessons that group exercises. This
+renaming is done to allow us to maintain referential integrity between an
+exercise and its supplementary material, i.e., visual aids, supplies, etc.
+
+## Book Schema
+
+### Vol. 1 - 2nd Edition
+
+* Overview
+* Time required
+* Practices
+* Required Background
+* Materials
+* Teachable Moments
+* Methods and Procedures
+* Questions/Discussion/Activities to Review, Reinforce, Expand, and Assess
+  Learning
+* To Parents an Others Providing Support
+* Re: Framework's Principles and NGSS
+* Books for Correlated Reading
