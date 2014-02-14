@@ -10,11 +10,10 @@ exercise and its supplementary material, i.e., visual aids, supplies, etc.
 
 ## Book Schema
 
-### Vol. 1 - 2nd Edition
-
 * Overview
+* Position in the Progress of Learning (optional)
 * Time required
-* Practices
+* Practices (optional)
 * Required Background
 * Materials
 * Teachable Moments
@@ -22,5 +21,5 @@ exercise and its supplementary material, i.e., visual aids, supplies, etc.
 * Questions/Discussion/Activities to Review, Reinforce, Expand, and Assess
   Learning
 * To Parents an Others Providing Support
-* Re: Framework's Principles and NGSS
+* Re: Framework's Principles and NGSS (optional)
 * Books for Correlated Reading
