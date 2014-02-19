@@ -1,0 +1,167 @@
+Lesson A-18
+
+Convection Currents:
+Observation and Interpretation
+
+
+
+Overview: 
+
+In this lesson, students will use kitchen materials and facilities to create and observe convection currents. They will analyze why such currents occur in terms of their own knowledge gained from previous lessons, concerning how changes in temperature cause expansion/contraction and consequent changes in density. They will go on to apply their insight of convection currents to basic design features for heating by passive solar energy. 
+
+Position in the Progression of Learning: This lesson makes a bridge from observations made in Lessons A-13 and A-17 (namely how changes in temperature cause the expansion/contraction of materials with consequent changes in density) and how these factors result in convection cycles. In turn, the causes and effects of convection cycles lay the foundation for understanding patterns of atmospheric and oceanic circulation, which are all-important in understanding climate and weather patterns around the globe. 
+
+Time Required: 
+
+Part 1. Creating, Observing, and Interpreting Convection Currents (demonstration, 30-45 minutes; interpretive discussion, 35-45 minutes)
+Part 2. Applying Understanding of Convection Currents: From Home Heating to the Earth’s Atmosphere (activity and analysis, 1-2 hours)
+
+Practices: Students who demonstrate understanding can:
+
+Use household materials and facilities to model a convection current.
+
+Describe a convection current in terms of a cause-effect sequence.
+
+3. Describe a convection current in terms of a transfer of heat energy from one location to another.
+
+4. Predict how/where convection currents may occur in any fluid (gas, liquid, or molten solids) that is heated at one location and cooled at another.
+
+5. Make a diagram of a cross section of a home or other building showing the placement of heating and/or cooling units and indicate where convection currents will occur from such placement.  
+
+6. Explain how convection currents occur on a global scale in oceans and in the atmosphere.
+
+Required Background: 
+
+Lesson A-15. Concept of Density and Its Measurement
+Lesson A-17. Heat, Volume, and Density
+Lesson D-9. Cause and Effects of Seasonal Changes
+
+Materials: 
+
+Part 1. Creating, Observing, and Interpreting Convection Currents
+Burner or hot plate
+White casserole dish (the larger the better, no cover is needed)
+Ice cubes
+Food dye (any color)
+Part 2. Applying Understanding of Convection Currents: Home Heating to the Earth’s Atmosphere
+Diagrams of utilizing convection currents in heat/cooling (Google: passive solar heating diagrams) (Google: atmospheric convection cycles)
+“Smoke stick” (incense sticks work well but any smoldering stick that produces smoke will work)
+
+Teachable Moments: 
+
+Having students help set up and gather around to watch the demonstration will create its own teachable moment.
+
+Methods and Procedures: 
+
+Part 1. Creating, Observing, and Interpreting Convection Currents
+
+Have students gather around to observe the following demonstration. (Have kids participate as you see fit, but bear in mind safety considerations.) 
+
+Position the casserole dish so that one edge is over a burner or hot plate and the other side of the dish is supported as necessary so that it will sit securely and level. 
+Fill the dish with room-temperature water and let it stand for a minute to be sure it is still. 
+Turn on the burner (medium/low heat) and add an ice cube to the side of the dish away from the burner, being careful not to disturb the water more than necessary. 
+Wait a minute or so to let the water quiet and allow the heating to start taking effect. 
+Finally, add one or two drops of food dye on top of the ice cube allowing it to drain around the cube into the water. 
+
+Have students observe and describe what happens. (It really is quite fascinating to watch.) They will observe a stream of colored water descend from the ice cube to the bottom of the dish, and then proceed across the bottom of the dish toward the heated end. At the heated end, the colored water rises and proceeds across the top back of the dish toward the ice cube, where it descends again to repeat the cycle. 
+
+Along the sides of the main stream, the colored water moves into various swirls of interesting patterns, but set these aside for the moment, and direct students’ attention to the overall patterns of movement: down at the cold end, across the bottom, up at the end being heated, across the top toward the cold end. Ask: How long (for how many cycles) might this movement continue? Students should reason that it may go on indefinitely as long as there is continued heating at one end and cooling at the other. (However, in the dish, the dye gradually mixes through all the water and makes it difficult to observe for more than two or three cycles.) 
+
+With Q and A discussion, guide students to interpret the cause of this circulation pattern. (Some are still likely to say that it is because heat rises and cold sinks. Emphasize again that heat, by itself, radiates outward from a source in all directions equally. So what is really going on?) Their full interpretation should include: 
+
+Heat causes water to expand; expansion causes decrease in density, hence rising. The rising water draws cooler water in under it.
+•  At the other end, ice causes cooling; cooling causes a contraction of water; contraction causes increase in density. Hence the cooled water sinks.
+Rising water at one end and sinking water at the other causes the flow across the top and across the bottom.
+
+You will only need to add that this overall pattern of flow, which occurs with heating at one location and cooling at another, is called a CONVECTION current. Have students note the similarity in words convection and convey. A convection current actually conveys heat energy from one location to another. Ask students: How does the idea of conveying heat energy apply to the convection current in their casserole dish? (Think Time.) Students should note how the convection current in the dish is actually conveying heat from the burner to the opposite end of the dish where it is melting the ice cube, albeit some heat escapes to the air as warm water moves across the top. 
+
+Continue Q and A discussion to emphasize two additional points. First: How great must the heating and cooling be? Bring students to recognize that convection is always a function of different densities. Therefore, heating and cooling are relative. It is only a matter of having one end warmer, hence less dense, than the other end. 
+
+Second: Will convection occur if there is no cooler water coming in at the bottom of the heated end? Guide students to recall that warmer air/water does not rise of its own accord. It is actually a matter of the cooler, more-dense air/water coming in underneath and pushing it up. Therefore the answer to the question is, “No.” Heating would simply create a column of hot water. (Actually one would observe convection within that column, but that is another issue.)  
+
+Returning to the swirls observed in the casserole dish, flowing water effectively rubs against the still water at the sides, sets it in motion, and causes the swirls. Which direction do the swirls turn? Have students note how they turn in a direction that should be expected from being pushed around by the central flow. In turn, each swirl pushes against water to its sides and sets more swirls in motion, resulting in an unending variety of patterns that are impossible to predict. 
+
+Ask students: Do you think convection currents occur in air the same as they do in water? They should be able to reason that the answer is yes for exactly the same reasons of changes in temperature causing expansion/contraction. If an empty three-gallon or larger aquarium is available, a convection current in air can be demonstrated. Simply use a heat lamp to heat one end, ice to cool the other, and a “smoke stick” to show the air flow. The same sort of convection current will be observed. 
+
+Moving on, challenge students to consider where convection currents come into play in real life. Allow think time and if students don’t suggest it, ask, “What about home heating/cooling systems?” Another most important area is the circulation of the Earth’s oceans and atmosphere (Lesson D-13).
+
+Part 2. Applying Understanding of Convection Currents: Home Heating to the Earth’s Atmosphere
+
+The trend over the past 100 years or so, explain, has been to install heating and cooling units wherever convenient and use ducts and blowers to get the heat where you want it. It takes a lot of extra energy to run the blowers however. Is there a way of letting convection currents do the work of circulation for free? Even more, can we use sunlight to provide the heat for free? Stress that this is becoming a very real necessity as we face a future of more limited and costly energy supplies. 
+
+Challenge students to work in small groups to come up with designs/diagrams for homes that would use convection currents for transferring heat. (Such designs/diagrams should be vertical cross sections through the house showing the arrangement of rooms and the way in which convection currents would move heat.) Have the class discuss and critique each other’s designs. 
+
+NOTE: Keep in mind, at this stage, the objective is simply to have kids do some thinking in terms of relative heating and cooling and the corresponding movement of air by convection. Therefore, when critiquing focus on: Do they have the basic concept? Have they accounted for warmer air rising and being replaced by a return of cooler air? 
+
+Actual passive solar design and architecture requires consideration of insulation, heat storage, and other factors as well as overall aesthetics. Its study and pursuit may lead to productive professional careers. Tell students of this potential and point them toward further sources of information (Google: passive solar heating diagrams) for independent study.   
+
+Convection Currents in the Atmosphere 
+
+Ask students: Do you think convection currents occur in the Earth’s atmosphere as a whole? If so, why? Challenge students to reason out their conclusion. 
+
+From Lesson D-9, students will be familiar with the fact that equatorial regions get the most solar heating because the rays of the sun are close to perpendicular there. Polar regions, which only receive more tangential rays or none at all for part of the year, are much cooler. Therefore, students can reason that the greater heating in equatorial regions will cause gigantic convection currents of rising air in equatorial regions and descending air in polar regions. 
+
+In principle, this idea is correct, but as we will elucidate in Lessons D-13 and D-15, the actual situation becomes more complicated. Nevertheless this lesson provides an introduction to why different regions of the Earth experience such different climates and weather patterns, and in turn, support such a diversity of living things.
+
+Questions/Discussion/Activities to Review, Reinforce, Expand, and Assess Learning:
+
+Students should record in their science notebooks:
+a diagram with labels showing a setup that demonstrates a convection current and the resulting current
+an explanation of what drives a convection current in terms of cause-effect statements, e.g., heat causes expansion, which causes...etc. 
+a statement of how a convection current acts to transfer heat from one location to another 
+d) a paragraph speaking to how a convection current will occur in any fluid (gas, liquid, or molten solid) where there is heating at one location and cooling at another 
+e) diagrams and supporting explanations showing how convection currents play a role in the heating or cooling of homes and other buildings
+f) diagram and supporting explanation showing how convection currents play a role in global atmospheric and oceanic circulation
+
+Have students discuss convection currents in terms of: their overall pattern; a sequence of  causes and effects; a system for transporting heat; the distinction between energy and matter; flows and cycles; design of homes and buildings; global atmospheric and oceanic circulation.  
+
+Make a poster illustrating a convection current and listing the cause-effect factors involved in driving it. 
+ 
+Have students create and conduct a playact depicting a convection current.
+. 
+In small groups, pose and discuss questions such as:
+
+What factors are necessary for a convection current to occur? Why?
+If there is a location of heating and another location of cooling in a fluid, what will inevitably occur? Why?
+Why does a convection current require an open pathway for the returning cooler fluid to come in under the rising fluid? What will happen if there is no such return?
+Without any stirring, how could you speed the mixing of dye through water?
+Sitting in front of a fire, you may feel a cold breeze on the back of your neck. Why? (Wingback chairs were actually developed to provide protection against such drafts.)
+Does a convection current necessarily have a vertical orientation? Why won’t a convection current with a horizontal orientation occur?
+Would you expect to find convection currents in solids? Why not?
+Give students diagrams (vertical cross sections) of homes and have them analyze convective airflow. For such diagrams, Google: passive solar design.
+
+
+
+
+
+To Parents and Others Providing Support:
+
+With supervision, facilitate children repeating the activities described with variations as they may choose. Discuss the results in terms of temperature change causing increase/decrease in density and so on. 
+
+Facilitate children making a model hot-air balloon. (The very light plastic film of dry cleaning/laundry bags and using a hair dryer to heat the air works well.) Discuss how/why it works.
+
+As children see or experience such things as hot-air balloons, smoke rising, or feel the cold on their feet on opening a refrigerator or upright freezer, discuss the causes behind the observation. 
+
+Observe where heating radiators or vents are placed and discuss why this placement is significant. 
+
+Re: Framework’s Principles and Next Generation Science Standards (NGSS)
+
+Convection currents play a role in innumerable phenomena ranging from atmospheric and oceanic circulation to having a comfortably heated/cooled home. Indeed, they come into the picture at one point or another in every major area of science, technology, and engineering. They are especially important in gaining a more sophisticated understanding of climate and weather, which all students will relate to. Thus, this lesson meets all the criteria for presenting a Core Idea.  
+
+Implementing the lesson will engage Practices: a, b, c, d, e, f, and g. It will lend to Crosscutting Concepts: a, b, d, e, f, and g. It speaks directly to NGSS: 3-ESS2-1,             3-ESS2-2 and provides a foundation for many other standards as well.   
+
+Books for Correlated Reading:
+ 
+Hakim, Joy. The Story of Science: Newton at the Center. Smithsonian Books, 2005. (See especially Chapter 37.)
+
+Mahaney, Ian F. Heat (Energy in Action). PowerKids Press, 2007.
+
+Oxlade, Chris. Solar Power (Tales of Invention). Heinemann-Raintree, 2011.
+
+Petersen, Christine. Solar Power (True Books). Children’s Press, 2004.
+
+Rogers, Kirsteen, et al. The Usborne Science Encyclopedia. Usborne, 2011. (See especially the Energy, Forces & Motion section.) 
+Taylor, Charles. The Kingfisher Science Encyclopedia. Kingfisher, 2011. (See especially Chapter 6.) 
+Tocci, Salvatore.  Experiments with Heat (True Books).  Children’s Press, 2003.
+
+ 

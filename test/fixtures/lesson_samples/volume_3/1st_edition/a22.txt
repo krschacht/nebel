@@ -1,0 +1,267 @@
+
+Lesson A-22
+
+Concepts of Chemistry V
+Acids and Bases
+
+
+Overview: 
+
+Students will go beyond becoming familiar with the general properties of acids and bases to understand their nature on a chemical level. Namely, they will discover that the reactive component of all acids is hydrogen ions (H+); that of bases is hydroxyl ions
+(OH-). From this they will ascertain how an acid is neutralized by a base and vice versa. Learning the basic parameters of the pH scale, measuring and recording the pH of foodstuffs and natural waters, and discussion regarding the importance of pH for living systems is included as is the chemical role and importance of buffers. The lesson concludes with reflections regarding how investigations by chemists underlie modern technology, medicine, and much of our understanding of nature, and the promise and opportunities for careers in chemistry.
+
+Time Required: 
+
+Part 1. The Chemistry of Acids and Bases (lecture, discussion, reflection, learning games, 1-2 hours)
+Part 2. pH, Its Meaning, Measurement, and Significance (lecture, discussion, demonstration, 40-50 minutes; measuring/recording pH, open ended)
+Part 3. Importance of and Opportunities for Careers in Chemistry (open ended) 
+
+Outcomes: Through this exercise, students will be able to:
+
+1. Discuss how alchemists and early chemists discovered acids and bases.
+
+2. List the key characteristics common to all acids and those common to all bases.
+
+3. Tell what occurs when a base neutralizes an acid or vice versa.
+
+4. Name and describe the particular chemical component that has been identified as key to all acids.
+
+5. List some common acids; give their chemical formulas, and explain what occurs in their contributing hydrogen ions (H+) to solution.
+
+6. Name and describe the particular chemical component that has been identified as key to all bases.
+
+7. List some common bases; give their chemical formulas, and explain what occurs in their contributing hydroxyl ions (OH-) to solution.
+
+8. Describe in detail, the chemical reaction that occurs as an acid neutralizes a base or vice versa. Give one or more specific examples of an acid, a base, and the end products that result after neutralization.
+
+9. Give the chemical distinction between a strong acid and a weak acid; a strong base and a weak base.
+
+10. Interpret the pH scale identifying relative acidity, the neutral point, and the degree of base represented by pH numbers, 1–14. 
+
+11. Measure the pH of various foodstuffs, natural waters, and soil using pH indicator paper.
+
+12. Discuss the significance of pH in terms of the natural environments of water and soil and in terms of the internal environment of living organisms.
+
+13. Describe how pH is largely controlled in natural systems. In the course of this description, give the general name for compounds involved and how they work. 
+
+14. Describe how lime serves as a buffer in natural ecosystems, in maintaining agricultural soils, and in treating acid indigestion.
+
+15. Discuss the potential for future careers in chemistry.
+
+Required Background: 
+
+Lesson A-20, Concepts of Chemistry III
+Lesson A-21, Concepts of Chemistry IV
+
+Materials: 
+
+Part 1. The Chemistry of Acids and Bases
+Purplish water from boiled beets or red cabbage
+Vinegar
+Baking soda
+Other acidic or basic substances as may be available 
+
+Part 2. pH, Its Meaning, Measurement, and Significance 
+pH indicator paper with a range from 1–14. Additional papers with smaller more precise ranges may be desired, as well  (Google: pH indicator paper).
+A variety of beverages and water from different sources for practice testing
+
+Part 3. Importance of and Opportunities for Careers in Chemistry
+No materials are necessary
+
+Teachable Moments: 
+
+ Demonstrating beet or red cabbage juice changing color upon adding baking soda and vinegar or other acid-base reaction will attract attention.
+
+Methods and Procedures: 
+
+Part 1. The Chemistry of Acids and Bases
+
+Most students will have some familiarity with the terms, “acid” and “base,” and may have some knowledge concerning them although their knowledge will be limited and may be inaccurate. Therefore, begin with some Q and A discussion to ascertain what they know and the misconceptions they may hold. Through such discussion sort out and list the attributes shared by acids and those shared by bases. Emphasize that early chemists/alchemists did not start with acids and then find that they all had these characteristics. It was the other way around. They found that various chemicals shared these characteristics; therefore, they grouped them together and called them acids. The same was true for bases. Turning to the characteristics of acids and bases:
+
+Acids are chemicals that in water solution:
+• have a sour taste. The sourness of a lemon is due to acid (citric acid), that of vinegar is due to another acid (acetic acid). (SAFETY! While all acids are said to have a sour taste, caution students to never taste a non-food chemical; early chemists/alchemists didn’t know any better, and some undoubtedly suffered consequences.)
+• cause red cabbage or beet juice, which is blue in basic solution, to turn red. (We will demonstrate and discuss this later.)
+• react with baking soda or lime to produce bubbles (carbon dioxide). 
+• cause a severe stinging if they should get onto a cut or scratch or into the eyes.
+• are highly corrosive. They eat away metal; they will eat holes in cloth; irritation to skin hardly needs to be mentioned. 
+• neutralize bases. This means that when you mix an acid and a base (below) in suitable proportions you end up with just water and a solution of salt. 
+Bases are chemicals that in water solution:
+• have a bitter taste. Again, instruct students to never taste a non-food chemical.
+• cause red cabbage or beet juice, which is red in acidic solution to turn blue. (We will demonstrate and discuss this later.)
+• often feel slippery or soapy, but can cause skin to burn. As with acids, care should be taken when handling bases.
+• corrosive to metals; break down fatty materials. Therefore, bases are often used in drain cleaners.
+• neutralize acids. When you mix a base into an acid in suitable proportions, you end up with just water and a solution of a salt.
+
+Emphasize that the most unique and significant characteristic of acids and bases is the way they were found to neutralize one another. By mixing solutions of these two very caustic chemicals in suitable amounts, one ends up with a relatively harmless solution of “salt” and water. Note and emphasize that in chemistry, the term salt may refer to any combination of positive and negative ions (positive and negative charges equaling each other) dissolved in water. Thus, the salt resulting from neutralizing an acid with a base or vice versa will depend on the kind of acid and base used.  
+
+Have students reflect on and suggest questions that must have occurred to the early chemists. Guide them in reasoning: In neutralizing an acid with a base, or vice versa, a chemical reaction between the acid and base must be involved because one ends up with chemicals that are different from the starting chemicals. But, what sort of chemical reaction? Allow students to ponder and suggest how chemists might have tackled this problem. You may go on to discuss the pros and cons of ideas they suggest and if chemists had the techniques and technology to conduct such tests. 
+
+Guide this discussion to have students recognize that chemists of the time did have techniques to determine the elements (kinds of atoms) involved in chemical reactions. Their discovery was that the common denominator, so to speak, of acids was hydrogen ions (H+). That is, it is hydrogen ions that cause the sour taste and all the reactive properties of acids including neutralizing bases. 
+
+You may need to review that atoms of hydrogen consist of a single proton (+) with a single electron (-) balancing the charge. We learned in Lesson A-20, Chemistry III, that hydrogen atoms commonly form covalent bonds sharing their electron with another atom such as oxygen, as seen in the case of water molecules; or with carbon, as seen in the case of countless molecules making up living organisms. But, here is another potential of the hydrogen atom. Some compounds/molecules are such that a hydrogen atom (the proton) may break away leaving its electron behind. We speak of the hydrogen atom (proton) without its electron as a hydrogen ion and write it as H+. The other “end” of the molecule, with the extra electron left behind from the hydrogen atom, has a negative charge. As discussed in previous lessons, it is now a negative ion with a name corresponding to the acid we started with. Again, we speak of the breaking apart into ions as ionization. Examples are: 
+
+• Hydrochloric acid ionizes into hydrogen ions and chloride ions:
+HCl  H+ + Cl-
+(Hydrochloric acid is produced in the stomach and aids the digestion of food. It is also commonly used in chemistry and industry.)
+
+• Sulfuric acid ionizes into hydrogen ions and sulfate ions: 
+H2SO4  2H+ + SO4=
+(Sulfuric acid is used in car batteries and is commonly known as battery acid. Note that in some compounds, a molecule will release more than one hydrogen ion.)
+
+• Acetic acid, the acid in vinegar, ionizes into hydrogen ions and acetate ions: CH3COOH  H+ + CH3COO- 
+
+Note how we have written the formula for acetic acid with the COOH on the end rather than further contracting it to C2H4O2.  This is because the COOH portion has a special configuration that makes it behave as an acid as shown below. 
+
+                        O                          O
+                       //                          //
+                 —C                   —C      
+                        \                           \
+                         O—H                  O-              +      H+
+
+Students may observe that the hydrogen atom is covalently bonded to (shares a pair of electrons with) an oxygen atom. However, in this particular grouping the hydrogen atom (proton) may break free leaving its electron with the oxygen. That is to say, this particular grouping is subject to ionizing. A great majority of acids found in living systems share this configuration; only what is at the other end differs, and I avoid the complexity of writing this out. Additional examples are: 
+
+• Citric acid   H+ + citrate- (the acid causing the sour taste of lemons and other citrus fruits.) 
+• Lactic Acid  H+  +  lactate- (the acid of sour milk)
+
+For further details and other examples, Google: common acids. 
+
+With their understanding that hydrogen ions are the common denominator of all acids and recognizing that hydrogen ions come from the ionization of certain molecules, ask students to come up with a general definition for acids. Working with their suggestions to make a definition as succinct as possible, they may be expected to come close to the formal definition: An acid is any compound that will ionize releasing hydrogen ions (H+) into solution. You may need to remind students that hydrogen ions (or any other ions) cannot exist by themselves because of the strong repulsion of like charges. Charges must be balanced.
+
+Turning to bases, guide students in like manner to appreciate that chemists discovered hydroxyl ions (OH-) to be the common denominator responsible for the bitter taste and reactive properties of all bases. Proceed to have students derive a definition for bases as above. It will approximate: Bases are compounds/molecules that ionize to release hydroxyl ions (OH-) into solution. The other portion of the molecule becomes a positive ion.
+
+Examples include:
+
+• Sodium Hydroxide: NaOH  Na+ + OH- 
+• Potassium Hydrodroxide: KOH  K+ + OH-
+• Sodium Bicarbonate (baking soda) NaHCO3 + H2O  H2CO3 + Na+ + OH-
+
+Ask students to use their knowledge, now, to explain how a base will neutralize an acid or vice versa. If students don’t see the answer immediately, take an example in more detail. Suppose we mix a solution of hydrochloric acid with a solution of sodium hydroxide. From the above we can see that the mixture will contain: 
+
+                                     H+ + Cl-   + Na+ + OH-
+
+By positive-negative attractions, what will happen? In addition to returning to the starting products, which does happen to some extent, Cl- will be attracted to Na+ and H+ will be attracted to OH-. What is likely to occur as the H+ and OH- ions are brought together by their positive-negative attraction? Yes, a covalent bond is formed making HOH or H2O, water! The Na+ and Cl-   remain in solution, but if we evaporate the water, we will have NaCl (sodium chloride), which students may recognize as common table salt. Of course, to obtain a perfect neutralization the amounts of acid (H+) and base (OH-) must be equal. 
+
+Strong and Weak Acids, Bases
+
+Students may have heard of acids and/or bases being called strong or weak. For example, hydrochloric acid is a strong acid; acetic acid (vinegar) is a weak acid. What does this mean? Some students may propose that there is a difference between the hydrogen ions released by hydrochloric acid and those released by vinegar. Stress that from a chemical standpoint, a hydrogen ion is a hydrogen ion; there can be no difference between them. (Of course, this idea holds true for every other kind of atom, molecule, or ion as well; it is what it is.) Thus, draw students to the conclusion that the difference is in the degree to which the acid molecules ionize. When hydrochloric acid is put into solution, essentially 100% of the molecules ionize making a relatively high concentration of hydrogen ions. On the other hand, when acetic acid is put into solution, a relatively small percentage of the molecules ionize, making a much lesser concentration of hydrogen ions. In short, different acids will ionize to different degrees making a greater or lesser concentration of hydrogen ions in solution. A strong acid is one that ionizes to high degree; a weak acid is one that ionizes to a relatively small degree. The same idea pertains to bases.
+
+Part 2. pH, Its Meaning, Measurement, and Significance 
+
+The actual hydrogen ion (H+) concentration or hydroxyl ion (OH-) concentration is determined and measured according to what is called the pH scale. How does one scale lend itself to measuring both H+ and OH-? Have students visualize starting with solution that is very acidic, i.e., one that has high concentration of H+ ions. Visualize gradually adding base, which releases OH- ions. The result will be that the concentration of H+ ions becomes less and less as they are neutralized by OH- ions. Then the neutral point is reached. As further base is added, the solution will have a greater and greater concentration of OH- ions. Thus, there is a continuum from a strongly acidic solution, through neutral (water), and on to a more and more basic solution. 
+
+On the pH scale, pH 1 is very acidic. As a solution becomes less acidic, pH numbers increase; the neutral point, the pH of pure water, is pH 7. pH numbers above 7 indicate increasingly basic. Saying this another way: pH 7 is neutral; acidity increases as one goes down the scale from 7 and base increases as one goes up the scale from 7. To show students the pH values for common substances, Google: pH values of common substances. 
+
+This will invariably strike students as strange and confusing. Explain that there actually is a mathematical logic for it, but it involves higher levels of chemistry and math that they will not encounter until high school or college. For practical purposes, it is only necessary to remember that neutral is pH 7; below 7 is acidic; above 7 is basic. Further, each number on the pH scale represents a ten-fold difference. That is, pH 5 is ten times more acidic (has ten times the hydrogen ion concentration) than pH 6. pH 4 is ten times more acidic that pH 5 and so on. The same holds for OH-. pH 9 is ten times more basic than pH 8; pH 11 is ten times more basic than pH 10, etc.
+
+Math aside, draw students to reflect on the importance of pH for all living systems. Ask: What will happen if the blood of an organism (including themselves) becomes too acidic or too basic? Without going into details, guide Q and A discussion to bring out students’ recognition that the reactive nature of either H+ or OH- results in their causing, or at least influencing virtually all other chemical reactions. Thus, it is vitally important for a living body to maintain the pH of its blood and/or other body fluids at a precise point, usually near neutral (pH 7). Having pH go much above (too basic) or below (too acidic) becomes fatal. Fortunately, our bodies do this automatically without our giving it conscious thought; it is another of the body’s awesome self-regulating systems. 
+
+Note: If you look up the pH of blood you will find that it has a pH about 7.4 and other body fluids have normal pHs that also differ somewhat from neutral. However, such detail burdens students and lends nothing to their conceptual understanding; therefore, I omit it. If details are desired, Google: pH blood body fluids. 
+
+In turn, pH of the waters of oceans, lakes, rivers, etc. is critically important. Why? Allow students to reason: An organism’s capacity to control its internal pH has limits. If its environment (or foodstuffs) are too acidic or basic, it can’t maintain its internal pH and disease and death results. The same idea holds for soil in supporting plant growth as will be discussed further in Part 2. 
+
+Without humans, the pH of waters and soils would be at their natural value—mostly near neutral with some variations. In turn, plants and animals are adapted to the pH of their natural environment. The problem comes as pollution by way of direct discharges into waterways, fallout from air pollution, agriculture and/or other activities may alter the pH of soils and waters. Thus, plant and animal life is severely affected by any alterations of pH. This is in addition to potential toxic effects of any chemicals involved. Therefore, pH is a very important environmental parameter to measure and monitor. The pH of any foods or beverages, drinking water, swimming pools, etc. is obviously important as well.
+
+Measuring pH 
+
+In addition to being one of the most important environmental/chemical parameters to measure, pH is also one of the easiest for students to measure. The simplest method is to use pH indicator paper. These are paper strips that, when dipped in water or any solution, turn color according to the pH. One compares the color of the dipped strip with a color chart on the package and reads the pH accordingly. There is also a wide variety of electronic instruments for measuring pH. However, these are both expensive and their maintenance is problematic. Even in use, they need to be recalibrated at frequent intervals. Therefore, I find pH indicator paper, which may come in a roll as well as strips, to be preferable. 
+
+Beyond demonstrating the use of pH indicator paper, I suggest giving students a free hand to devise their own program of testing and recording results of the pH of various liquids, both food related and natural waters of nearby streams, ponds, etc. 
+
+Students may ask: How does pH indicator paper work? What makes it change color according to pH? To answer such questions have students visualize how a compound will ionize to a greater or lesser extent depending on pH. For example, acetic acid (the acid in vinegar) is a weak acid. As noted above, it ionizes to only a modest percent in water. In a more acidic solution it will ionize even less because hydrogen ions in a strongly acid solution effectively push against the hydrogen atoms on the acetic acid molecule and prevent them from coming off as ions. Or, if one should come off it is immediately replaced by one of the many hydrogen ions in solution. Conversely, if acetic acid is placed in a basic solution, it will ionize to a much greater degree as its hydrogen ions are effectively pulled off and removed by combining with the OH- present. This “removal process” allows more and more of the acetic acid molecules to ionize. 
+
+The only additional consideration is to visualize that the unionized form might be one color and the ionized form another color. When/if this is the case, there will be a color change depending on pH. This does not happen in the case of acetic acid; acetic acid is essentially colorless, ionized or not. But, some substances do change color on ionization. It is such substances that are used in pH indicator papers. 
+
+A common substance that does change color with pH, i.e., with the degree of its ionization, is the compound that gives beets, purple cabbage, and certain other plants their red color. Kids are invariably intrigued by the following demonstration. Boil some sliced beets or purple cabbage in water until some of the red color leaches into the water making it reddish. Pour off the water into a clear jar. Add a bit of baking soda (base) and the solution will turn blue. Add vinegar and the solution will turn back to red. This may be repeated as many times as desired. 
+
+An additional point that may be noted in this demonstration is that the color change occurs very suddenly. For example, start with the beet juice solution as blue, and carefully add vinegar to a point that is halfway between blue and red. Students will find that it is virtually impossible; the solution is blue and stays blue, but then, with just a few drops more of vinegar, it suddenly turns red. This is simply to say that such substances can be very precise indicators of pH. (Students may reflect on the investigations and experimentation that lie behind pH indicator strips.)
+
+Buffers
+
+If students tried to exactly neutralize a strong acid with a strong base, they will have found that it is difficult. A few drops too much base and the solution overshoots neutral and becomes basic. A few drops too much acid and the solution becomes acidic again. Yet in general, natural bodies of water, and even more, blood and other fluids of living organisms maintain a very stable pH. Invite students to reflect on how this might be achieved. For example, how might acidity be neutralized without danger of going too basic? Allow students to reflect and offer suggestions. With some hints, they may derive the answer by themselves, which is the following.
+
+We have observed that one of the attributes of acids is that they will react with baking soda or lime to produce bubbles of carbon dioxide. In short, hydrogen ions will attack various substances. In the process, they may be absorbed and taken out of solution without base being involved. We can see this by looking at the reaction of hydrochloric acid (HCl) on limestone, which is largely calcium carbonate (CaCO3), in more detail.
+
+CaCO3  +  2H+ + 2 Cl-                  Ca++ 2Cl-     +      H2CO3
+
+     lime      hyrochoric acid              calcium chloride   carbonic acid
+
+Carbonic acid is a very weak acid; it does not ionize appreciably. Rather it converts to carbon dioxide and water.
+
+H2CO3                     CO2    +          H2O
+
+carbonic acid          carbon dioxide      water
+
+
+This reaction may be demonstrated by applying any acid to lime and observing the fizz, which are bubbles of carbon dioxide. Essentially the same reaction occurs in the case of adding vinegar to baking soda. 
+
+Stress the overall result: The reaction has effectively neutralized the acid, and it may be any acid, by moving the hydrogen ions into water molecules without base (HO-) being involved. Go one step further. Have students visualize gradually adding acid to water in which a considerable amount of lime is present; such a solution will be near neutral. Rather than turning acidic, the solution will remain near neutral as the added acid is neutralized through the above reaction. Thus, the presence of lime will hold water near neutral despite the addition of acid. 
+
+Any compound that acts to hold pH at a given point, despite additions of acid or base, is known as a BUFFER. Buffers are exceedingly important in the natural environment, in living organisms, and in chemistry and technology. Ask students to reflect, think of, and list reasons as to why this is so.  
+
+Bring into such reflection that limestone (lime) is a widespread naturally occurring mineral, and its buffering capacity is very significant in maintaining the pH of soil and water. Students may be familiar with the fact that lime is commonly added to agricultural and garden soils as the treatment for excessive acidity. Some ponds and lakes are being treated with lime to counter the effects of acid rain; (Google: limestone agriculture environment). Have students read the ingredients of Tums®, a common tablet for acid indigestion. The main ingredient is calcium carbonate, which is the main chemical making up lime/limestone. How far to pursue any of these topics will be your option. 
+Part 3. Importance of and Opportunities for Careers in Chemistry
+
+We should not leave these lessons on chemistry without discussing the importance of chemistry in today’s world. A fun and informative discussion will come from having students consider life in earlier times—the time when their parents, grandparents, or older generations were children, the time of pioneers, etc. The key question is: What do we have now that people didn’t have then? Kids will most readily think of things such as cars, airplanes, telephones, and computers, but bring them to consider the new materials that have made the production of these things possible: metals, plastics, computer chips, etc. 
+
+In short, guide kids to appreciate that underlying virtually every advance in technology are advances in chemistry, that is better understanding of atoms and the way they bond to make molecules, macromolecules, and larger masses. In turn, this gives us increasing ability to determine the chemical makeup of any unknown substance or material. Further, it gives us increasing ability to synthesize new materials with desired qualities. 
+
+An example of an area with exceptional intrigue and potential is the production of  “designer medicines.” Chemists are becoming able to analyze the exact shape, size, and chemical makeup of a molecule necessary to treat a particular illness, and then proceed to synthesize it. This is all to say that the field of chemistry has vast potential for rewarding careers. You may pursue any of these areas at your discretion; (Google: careers in chemistry). 
+
+Questions/Discussion/Activities to Review, Reinforce, Expand, and Assess Learning:
+
+Students should record in their science notebooks:
+a) a list of key characteristics of acids and bases
+b) the common chemical characteristic of all acids with examples and the same for bases 
+c) chemical diagrams (chemical equations) indicating how a base neutralizes an acid and/or vice versa, and  supporting by descriptions
+d) a display of the pH scale indicating acid, base, and neutral
+e) data of pH measurements of various foodstuffs and natural waters
+f) definition of a buffer supported by an example
+
+Ask students to make game/contests that will challenge their knowledge concerning attributes of acids, bases, neutralization, the pH scale, etc.
+
+Have students create models demonstrating the reaction between an acid and base.
+
+Have students make posters depicting attributes of acids, bases, neutralization, the pH scale, etc.
+
+Facilitate students measuring the pH of various foodstuffs and natural bodies of water using pH indicator paper, and presenting their findings.
+
+Discuss the importance of pH in nature. … in foodstuffs.
+
+Discuss the opportunities for careers in chemistry.
+
+In small groups, pose and discuss questions such as:
+In chemical terms, what is an acid? … a base?
+In chemical terms, what occurs as an acid is neutralized by a base?
+What is the pH scale? What is the meaning of any given number on the scale?
+How does the body control pH of blood and other body fluids?
+What is a buffer?
+What is the importance of buffers in organisms? 
+What is the importance of buffers in ecosystems? 
+Why is it important to regularly check the pH of swimming pools and adjust it if necessary?
+How has chemistry contributed to our modern way of life? How may it contribute to our lives in the future?
+
+To Parents and Others Providing Support:
+
+Facilitate children measuring and recording the pH foodstuffs, water (natural and tap), and other household products.
+
+Facilitate children exploring further information regarding acids and bases using the Internet.
+
+Discuss: What is your tongue detecting when it tastes something sour? … something bitter?
+
+On occasions when you cook beets or purple cabbage, pour off some purplish water and facilitate children conducting the color-change activity described. Discuss why the color change occurs. 
+
+Discuss what is going on when a person says they are suffering from acid indigestion and takes a Tums® tablet. How do Tums work to relieve acid indigestion? 
+
+In connection with environmental studies, water treatment systems, and elsewhere there will commonly be mention of pH. Keep your ears open for such mention and discuss its meaning.
+
+Be alert to new materials, medicines, or household products that become available and discuss the discoveries and contributions of chemists behind such products. 
+
+Connections to Other Topics and Follow-up to Higher Levels: 
+
+The concepts of chemistry presented in these lessons provide a foundation for understanding many aspects of biology, environmental science, Earth science, and technology, as well as for further studies in chemistry. In all of these studies, the relationship between chemical reactions and energy is highly significant. Therefore, pursued next should be Lesson A-23, Concepts of Chemistry VI, Chemical Reactions and Energy.
+
+Books for Correlated Reading: 
+
+Oxlade, Chris.  Acids and Bases (Chemicals in Action). Heinemann, 2007.
+
+See also the list under Lesson A-19: Concepts of Chemistry II: Atoms: Unraveling Their Nature.

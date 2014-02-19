@@ -1,0 +1,162 @@
+Lesson D-5
+
+Time and the Earth’s Turning
+
+
+
+Overview: 
+
+In this lesson, students will trace shadows of themselves at different times of the day and observe how the shadows change in direction and length. They will relate the change in shadows to the apparent movement of the sun, i.e., the actual rotation of the Earth. They will find out how we use the Earth’s rotation as a measure of time, how we set our clocks according to the sun, and how shadows may be used to tell time. They will go on to construct sundials and use them in telling time. 
+
+Position in the Progression of Learning: In this lesson, students progress from an understanding that the day-night cycle is caused by the rotation of the Earth (Lesson D-2) to finding how the Earth’s rate of rotation provides our basic measure of time. Beyond providing the basis for telling time, this provides the foundation for interpreting years in terms of the Earth’s orbit (Lesson D-6) and many other observations concerning the solar system and the heavens above. 
+
+Time Required: 
+
+Part 1. 	Relating Time to the Earth’s Turning (15 minute activity at the beginning and end of an outdoor recreational period followed by interpretive discussion; 30-40 minutes)
+Part 2. 	Making and Using a Sundial to Tell Time (Making the sundial; 40-50 minutes plus 5-10 minutes each hour over the course of the day to calibrate it) 
+
+Practices: Students who demonstrate understanding can:
+
+Model how the shadow of their own body (standing straight) will change in length and direction over the course of the day.
+
+Relate the changing length and direction of shadows to the perceived movement of the sun in the sky, and the Earth’s rotation.
+
+Use a globe and wrist watch or clock to describe the relationship between the Earth’s rotation and time.
+
+
+Demonstrate how shadows can be used to determine solar noon and how clocks can be set accordingly. Cite reasons for discrepancies between solar noon and clock noon. 
+
+Explain why/how we divide the country and the world into time zones. 
+
+Make a sundial, calibrate it, and use it to tell the time of day.
+
+Use a globe and lamp representing the Earth and sun to model why the length of one day is 24 hours but one exact rotation of the Earth is 23 hours and 56 minutes. 
+
+Model how the sun’s path across the sky, hence shadows, change with the passing weeks/months. Specify what aspects of shadows change and what aspects remain constant. 
+
+Required Background: 
+
+Lesson D-2, Day and Night and the Earth’s Rotation
+Lesson D-3, Reading and Drawing Maps
+Lesson D-3A, North, East, South, and West
+Some familiarity with telling time is assumed
+
+Materials: 
+
+Part 1. Relating Time to the Earth’s Turning
+Sunny location and chalk to trace shadows
+Globe and lamp as in Lesson D-2
+Part 2. Making and Using a Sundial to Tell Time
+Piece of poster paper about 12 inches square
+Soda straw
+Glue
+Window sill or other location that receives direct sunlight for the greater part of the day
+Tacks or tape
+Pencil and straightedge
+
+Teachable Moments: 
+
+This lesson can be inserted anywhere in the course of children learning to tell time. Invite children to trace shadows at the beginning and at the end of an outdoor recess/recreation period and note the shift.
+
+
+
+
+Methods and Procedures: 
+
+Part 1. Relating Time to the Earth’s Turning
+
+At the beginning of an outdoor recreational period on a clear day, have children trace each other’s shadows with chalk on pavement. Be sure the person casting the shadow stands straight and still. Trace the exact position of his/her feet, as well as the rest of their shadow. Specifically, place a dot at the top and center of the head of the shadow. At the end of the period (at least an hour later) have the “shadow casters” stand in exactly the same place and position while others retrace their shadow, again paying special attention to the location of the shadow’s top center. Continue this at hourly intervals throughout the day if at all feasible.
+
+Pursue with Q and A discussion: What did you observe about the two shadows you have just traced? (The shadow moved.) What caused the movement of the shadows? (The sun moved.) Did the sun actually move or is the Earth turning? Review Lesson D-2 as necessary to refresh memories that the apparent movement of the sun is caused by the rotation of the Earth. Thus, bring students to reason that the movement of the shadow over the period of time is the result of the Earth’s gradual and continual turning on its axis. 
+
+How many times does the Earth turn in one day? … seven days? Such questions will reinforce the understanding that each day is equivalent to one complete turn of the Earth. When we count days until a birthday or holiday, what are we really counting? (Turns of the Earth!) But we wish to count more than just days. We want know when we should get up, go to school, have lunch, and so on. 
+ 
+Explain that, therefore, we divide each day-night cycle (commonly referred to as one day) into 24 parts or hours (two 12-hour halves) and split each hour into minutes and seconds. (How much time you spend on teaching students to tell time and count minutes and seconds will be up to you, and it will depend on your students’ background.) Here, it is most significant to have children recognize that the Earth is continually in motion turning at aconstant speed, neither speeding up nor slowing down (at least not over the time periods of human experience). Dividing a day (one turn of the Earth) into 24 hours was a totally arbitrary decision made by people sometime back in history. Importantly, have students note that the Earth does not turn according to our clocks. We construct our clocks to correspond to the turning of the Earth. (This is a point that will bear repeated emphasis.) Furthermore, official time is still set and kept according to the Earth’s turning. 
+
+How do we set our clocks according to the Earth’s turning? (Think Time.) Explain that we use the point at which the sun reaches its ZENITH, its highest point in the sky, i.e., when shadows are their shortest. It will be halfway between sunrise and sunset. This is called SOLAR NOON, and we set our watches at 12 noon to correspond—but more is involved. Review how Sally in California sees the sun rise and set three hours later than Joe in Florida, because of her location further west. Therefore, having 12 noon on our watches correspond exactly to solar noon would mean that everyone on a gradation from east and west would be on different times, perhaps only minutes or seconds earlier or later. 
+
+Before the building of the transcontinental railroad, which was completed in 1869, each town and city did keep its own time, setting their clocks so that twelve o’clock did correspond to solar noon. With the railroad enabling relatively rapid east-west travel, this meant constantly adjusting watches and created confusion with schedules, which was terrible. Therefore, it was decided to break the country, and the rest of the world as well, into TIME ZONES. Everyone within a given time zone keeps the same time. At roughly the center of each time zone, 12 noon does correspond to solar noon, but to the east and west there is a difference of up to a half hour. Still, having everyone within a time zone on the same time, and making an even one-hour change from one time zone to the next, saves much confusion. 
+
+Daylight savings time is another matter. Emphasize that the actual time of the daylight hours remains exactly the same with or without the time change since that depends on the Earth’s turning. We only shift our clocks so that the daylight hours fit more conveniently with our hours of activity. Nevertheless, official timekeeping is still set according to the sun reaching its zenith. Emphasize again that the time from the zenith of one day to the zenith of the next is broken into 24 equal segments, or hours. Hours are broken into minutes and seconds and we tell time accordingly.
+
+We have said that each day corresponds to one turn of the Earth on its axis and a day is from the zenith of one day to the zenith of the next. Actually, there is a slight discrepancy between these two figures, because of the Earth’s progression in its orbit around the sun. This may be demonstrated as follows. Use a globe with “rice-grain Joe” and a “sun” in the center of the room as in Lesson D-2. Adjust the globe so that Joe would be seeing the sun at its zenith, i.e., Joe’s point on the globe is toward the sun. Now move about one quarter of the way in the “orbit” around the “sun,” and rotate the globe one exact turn on its axis (360 degrees). Have students observe that this results in Joe facing to the side with respect to the sun. To bring Joe back to the zenith (facing the sun) we must turn the globe one-quarter turn more.
+
+In other words, because of the Earth’s progression in its orbit around the sun, the zenith of one day to the zenith of the next demands a rotation of the Earth on its axis of slightly more than 360 degrees; it must turn nearly 36l degrees. Thus, the zenith of one day to the zenith of the next provides our measurement of one day, 24 hours. But, one exact rotation of the Earth, 360 degrees, is accomplished in 23 hours and 56 minutes. Depending on the abilities of your students, you may choose to leave this aspect out of the lesson for the time being. It will become more evident as students observe the apparent movement of the stars in later years. 
+
+
+Part 2. Making and Using a Sundial to Tell Time
+
+Pose the question: Can we tell time without a clock? (Think Time.) Use Q and A discussion to lead students in reasoning how this might be done using shadows. Then, invite them to actually do it. That is, make a sundial.
+
+With glue, mount a straw vertically near the center of a piece of poster board. Tack or tape the poster board on a level surface where it will get the sun for all or most of the day. (If it is possible for you and your students to mount a pole in a sunny location in the schoolyard and visit it periodically, this will gain even more interest.) Proceed to have students calibrate their sundial by tracing the shadow of the straw/pole each hour at 9:00 a.m., 10:00 a.m., etc. for all the hours you can. Especially, have them mark the end of each shadow and label it with the time. 
+
+Ask students to describe what they observe. In addition to the change in direction of the pole’s shadow, they should note that it gets progressively shorter during morning and lengthens again in the afternoon. The point where the shadow is the shortest is when the sun is highest in the sky and corresponds to the zenith, or solar noon. It will correspond to roughly 12 noon clock time but probably not exactly because of your location in your time zone as discussed previously. Also, if you are on daylight savings time, it will occur around 1 p.m. because of having shifted our clocks. Students may recall that the shortest shadow occurring at solar noon also points true north (Lesson D-3A) assuming you are in the northern hemisphere.
+
+Invite students on successive days to tell the time from their sundials. When the shadow is between the hour lines, they can approximate the fractions of an hour. They will have fun seeing how close their estimates come to the correct clock time. Emphasize again, however, that the sundial is not behaving according to our clocks. We have designed our clocks to correspond to the apparent movement of the sun, i.e., the turning of the Earth. A clock/watch is only a mechanism of one sort or another that runs at a constant speed, that speed corresponding to the turning of the Earth.  
+
+The development of mechanisms to keep time, historically speaking, was a significant technological achievement. Materials and technology for making clocks and watches only became available in the last 500 years or so. Before that sundials were the exclusive means of telling time. Students may be interested in investigating the history of developing time keeping devices and the diverse mechanisms conceived and used (Google: history of time keeping diagrams). The key point is that the length of time from solar noon of one day to solar noon of the next remains the basis of our 24-hour day and the sun’s zenith remains the setting point for 12 noon. 
+
+Have students keep their “sundials” in place and contrast the respective lengths of shadows at two or more intervals at least a month apart. What do they find? If intervals are during the spring months, they will observe that respective shadows are progressively shorter ,showing that the sun is going higher in the sky. They will also observe that sunrise is occurring earlier and sunset is occurring later, i.e., days are lengthening/nights are shortening. The reverse will be observed in the fall months. More advance students may undertake graphing the change in these parameters with the passing days/months.
+
+Despite change in the length of respective shadows, they will observe that the time of solar noon remains constant. However, during the times before and after noon, there will be a growing discrepancy between the time given by their sundials and clock time. Explain that this discrepancy is caused by the difference in the angle of their “pole” (vertical) and the angle of the Earth’s axis. For the sundial to work perfectly, the pole must be mounted such that it is parallel to the Earth’s axis of rotation. To do this, tip the pole toward the line of solar noon, the shortest shadow, such that the angle between the ground and the pole is equal to your latitude. (Use a protractor to make this adjustment.) This effectively makes the pole parallel to the Earth’s axis of rotation. Thus, its shadow will move uniformly with the turning of the Earth and keep accurate time throughout the year. Students may note that classic sundials of Europe have this orientation (Google: sundials photograph of famous).
+
+Conspicuously, a sundial can only keep solar time; however, by making necessary additions or subtractions of minutes to compensate for your location within a time zone and daylight savings time when it is in effect, accurate clock time can be read from a properly oriented sundial.  
+
+Questions/Discussion/Activities to Review, Reinforce, Expand and Assess Learning: 
+
+Have students make paper-fold books/record in notebooks key aspects of this lesson.
+
+Facilitate students continuing to make and use sundials to tell time. Refine the sundials by mounting the pole parallel to the Earth’s axis. 
+
+Model, with a toothpick mounted on the globe and a lamp representing the sun, how the rotation of the Earth is responsible for the change in length and direction of shadows during the day. 
+
+Discuss the movement of shadows in terms of their following a pattern. ... in terms of cause and effect. ... in terms of stability and change.
+
+Invite students to investigate the history of telling time (Google: telling time history).
+
+In small groups, pose and discuss questions such as:
+
+How and why do shadows change in direction and length during the day?
+How are movements of the Earth connected to telling time? … counting days? … counting years?
+What does shifting to daylight saving time do? ... not do?
+Does the Earth behave according to our clocks, or are our clocks constructed to move at the same rate the Earth turns? Explain.
+You are responsible for calling someone at about noon, but your watch is broken. How can you determine noontime?
+If you spent all day walking toward the sun, where would you end up?
+How could you keep on a continual westward trek using the sun as your guide?
+How is movement related to time? Are there other situations where you measure time according to movements or measure movement according to time?
+How/why does the 24-hour day differ slightly from the time for one exact rotation of the Earth? 
+If our planet rotated faster or slower, how would it affect our concept of time?
+What is the evidence that the rate of the Earth’s rotation is not changing? 
+
+To Parents and Others Providing Support:
+
+Draw children’s attention to how shadows change in length and direction over the course of a day. ... over the course of a year. Discuss what aspects remain constant and what aspects change. Help kids relate the movement of shadows to the sun, the rotation of the Earth, the passage of the day, and the passage of seasons.  
+
+Facilitate children making a sundial and using it to tell time.
+
+On a day’s outing, invite children to keep track of time and directions by observing shadows. 
+
+Discuss how our whole concept of time is related to the rotation of the Earth and its orbit around the sun. Speculate how time would be different if we lived on a planet with a different rotational or orbital period. Look up rotational and orbital periods of other planets in the solar system (Google: planets orbit rotation period). 
+
+Re: Framework’s Principles and NGSS
+
+Time is such an integral aspect of all aspects of life that ascertaining and appreciating how it is determined and measured by the Earth’s rotation is definitely a Core Idea.
+
+Implementing the lesson will engage student in Practices: a, b, c, d, e, f, and g. It will draw students to think in terms of Crosscutting Concepts: a, b, d, and h. It will be foundational in preparing students for NGSS: 1-ESS1-1; 1-ESS1-2; 2-ESS1-1; and 5-ESS1-2. 
+
+
+Books for Correlated Reading:
+
+Bailey, Jacqui and Matthew Lilly.  Sun Up, Sun Down:  The Story of Day and Night (Science Works). Picture Window Books, 2004.
+
+Bulla, Clyde Robert.  What Makes a Shadow?  (Let’s-Read-and-Find-Out Science, Stage 1). HarperCollins, 1994.
+
+Dorros, Arthur.  Me and My Shadow.  Scholastic, 1990.
+
+Karas, G. Brian.  On Earth.  G. P. Putnam’s Sons, 2005.
+
+Schuett, Stacey.  Somewhere in the World Right Now (Reading Rainbow book). Dragonfly Books, 1997.
+
+Sweeney, Joan.  Me Counting Time:  From Seconds to Centuries.  Dragonfly Books, 2001.
+
+Zolotow, Charlotte.  Over and Over.  Harp

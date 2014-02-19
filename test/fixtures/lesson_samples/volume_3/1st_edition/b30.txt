@@ -1,0 +1,267 @@
+ 
+Lesson B-30
+
+Viruses: Their Attack Nature, Attack, and 
+Our Defense
+
+
+Overview: 
+
+Starting with an overview of the tremendous reduction in infant and childhood mortality, which has occurred since the 1800s through the control of childhood diseases, students will look at the history of discovery of the efficacy of vaccinations, and development of the “germ theory.” The lesson moves on to focus on the discovery of viruses, what they are, and how they cause and spread disease. The essence of the immune system, how it works to counter viral attack, and how vaccinations work through stimulating it to produce antibodies are covered. Finally, students are drawn to consider remaining challenges and career opportunities in fields relating to the cause, spread, control, and cure of diseases.
+
+Time Required: 
+
+Part 1. Childhood Disease and Deaths, Then and Now (presentation, Q and A discussion, 30-40 minutes)
+Part 2. Discovering the Efficacy Vaccination and the Germ Theory (presentation, Q and A discussion, 30-40 minutes, repetition of Pasteur’s experiment, 1-2 hours) 
+Part 3. Discovery of Viruses and Their Description (presentation, Q and A discussion, 30-40 minutes, model building, 1-2 hours)
+Part 4. Infection by Viruses and the Immune System (presentation, Q and A discussion, 40-60 minutes)
+
+Outcomes: Through this exercise, students will be able to:
+
+1. Contrast the rate of infant and childhood mortality 200 and more years ago with that of today. Give the major cause for most early deaths in past times. Name the key factor that was and remains responsible for reducing deaths among infants and children.
+
+2. Give a brief history of how the efficacy vaccination was discovered. Describe how this discovery was independent of having any knowledge concerning the actual cause of diseases.
+
+3. Name what, prior to the mid 1800s, were presumed to be the causes of disease. Describe the key experiments conducted by Louis Pasteur and how they changed this thinking.   
+
+4. Tell why the diseases that we now recognize as being caused by viruses remained a mystery. 
+
+5. Name, describe, and give the approximate date of the technological advances that enabled discovery of viruses.
+
+6. Describe the general chemical structure of viruses, and state why this structure precludes their being cultured on a medium devoid of living cells.  
+
+7. Describe the general “life-cycle” of a virus including how it enters a cell, replicates, causes disease, and spreads. 
+
+8. State why antibiotics are ineffective against viral infections.
+
+9. Describe the general features of how the body fights off and protects itself from viral infections. Give the name of the system responsible for this and the name of the molecules that actually attack virus particles.
+
+10. Give a general description of what vaccines are and how they protect us from viral diseases. Include how some viruses and other microbes elude our finding effective vaccines for them.
+
+11. Describe the meaning of specificity and how it applies to both viruses and the immune system. 
+
+12. Explain how people who go without vaccination are only protected by those who are vaccinated. Describe the risk of many people failing to be vaccinated.
+
+13. List career opportunities related to viruses and the control of the diseases they cause. 
+
+Required Background: 
+
+Lesson A-20, Concepts of Chemistry III: How Atoms Bond
+Lesson B-18, Fungi and Bacteria III: Decomposers versus Disease and Health (Vol. II)
+Lesson B-27, Anatomy and Physiology in Relation to Cells IV: Heredity, Genetics, and DNA
+Lesson B-28, Anatomy and Physiology in Relation to Cells V: Reproduction
+
+
+Materials: 
+ 
+Part 1. Childhood Disease and Deaths, Then and Now
+List of diseases prevented by vaccination (Google: diseases prevented by vaccination)
+Pictures of old cemeteries in which headstones for infants and children are conspicuous (Google: old cemeteries headstones of infants and children photo)
+
+Part 2. Discovering the Efficacy Vaccination and the Germ Theory 
+Readings describing Edward Jenner’s discovery of the efficacy of vaccinations
+Readings and pictures concerning Louis Pasteur’s experimental proof that organisms causing fermentation entered from the outside; proof that the concept of spontaneous generation was false.  
+Equipment and materials to repeat Pasteur’s famous experiment (optional)
+List of Koch’s postulates (Google: Koch’s postulates)
+
+Part 3. Discovery of Viruses and Their Description 
+Electron micrographs of viruses (Google: viruses electron micrographs)
+Diagrams illustrating the virus “life cycle” (Google: virus life cycle animation)
+
+Part 4. Infection by Viruses and the Immune System 
+Diagrams and/or videos depicting how the immune system functions (Google: Immune System function diagrams animations)
+
+Teachable Moments: 
+
+Showing pictures, reading stories, and other depictions illustrating the horrendous death tolls, especially among infants and children, occurring in the wake of epidemics of diseases that are now rare will create its own teachable moments.
+ 
+Methods and Procedures: 
+
+Part 1. Childhood Diseases and Deaths, Then and Now. 
+
+Begin by showing students a list of diseases that are prevented by vaccination (Google: diseases prevented by vaccination), but without emphasizing the vaccination aspect. Ask students: How many of you have had one or more of these diseases? How many know someone who has had one of these diseases? How many have known an infant or child who died from one of these diseases? (This last question can be touchy in that it may bring up painful memories for a student. Use discretion and be sensitive to feelings.) For the most part, however, all students will answer in the negative to such questions. 
+
+Contrast this with the fact that if they had been living two hundred or more years ago, probably all their hands would have gone up for each of the questions. Continue with: Back in those times one or two of every three children born, on average, died in infancy or early childhood (before age ten) from one of these diseases. Particularly devastating was smallpox. Periodic epidemics of smallpox swept through populations leaving many children (and adults) dead in its wake, and many of those who survived were left with horribly scarred faces and bodies from the ugly pus-filled skin sores that earmarked the disease. (Worthy of note is that smallpox may not be on the list you found because it has been eradicated from the world by systematic vaccination programs.) You may show some photos of old cemeteries with their abundance of headstones for infants and young children to emphasize the numbers of children not surviving their early years (Google: old cemeteries tombstones of infants and children photo). 
+
+Invite students to ponder this difference in numbers of infants and children who died then and now. What is the main factor responsible for this remarkable reduction in INFANT AND CHILDHOOD MORTALITY, the technical term for children dying in their early years? (Think time.) Record students’ responses, right or wrong, on the board. (It is important to have each student personally confront his/her misconception(s) and make corrections as the lesson proceeds. It is found that, otherwise, students will tend to maintain their false impressions despite new information.)
+
+Bring to the top of list for disease prevention and reduction of mortality, VACCINATIONS. A close second on the list should be public and personal health measures of assuring uncontaminated water, food supplies, etc. as discussed in Lesson B-18. Nevertheless, you will be hard pressed to find a health professional who will not agree that vaccinations should be at the top of the list. Give students the opportunity to recount whatever memories or experience they may have regarding vaccinations, although most will have had vaccinations too early in life to remember. Go on to explain that vaccinations have been particularly effective in preventing viral diseases, i.e., diseases caused by viruses. Go back to the original list of diseases; have students peruse the list and note how many (most) are caused by viruses. (This information is usually included on the Googled list.) Emphasize that vaccinations have been most effective in preventing those diseases caused by viruses. 
+
+Indeed, the discovery and development of vaccines and vaccination procedures can well be singled out as the greatest advance of medical science of all time and it remains a primary focus of ongoing medical research. But, just what are viruses? How do viruses cause disease? Exactly, what are vaccinations, and how do they work to prevent disease? 
+
+Allow time for students to ponder such questions and express their ideas as you record them on the board, right or wrong, for the same reason as stated above. Explain that the rest of the lesson will be devoted to sorting out answers and correcting misconceptions. 
+Part 2. Discovering the Efficacy Vaccination and the Germ Theory
+
+Ask students: Which do you suppose came first—the discovery of viruses and then vaccinations or the other way about? (Think time.) Logically, they will probably guess that it was viruses and then vaccination. Surprisingly, it was the other way about, and the story is worth telling or reading (Google: vaccinations history).
+
+The gist of story is that in the 1770s a country doctor by the name of Edward Jenner was particularly taken by a young milkmaid bragging that she would never get smallpox, a recurring scourge of the time, because she had had cowpox. (Milking of cows was done by young women, milkmaids, and cowpox was a relatively mild and temporary outbreak of sores on hands and arms. Jenner, his curiosity piqued, investigated further and found the premise to be true: Those who had had cowpox were apparently immune to getting smallpox. Jenner went on to test the idea further by taking an eight-year-old boy, inoculating him with pus from a cowpox sore (he had not had cowpox) and subsequently inoculating him with smallpox in the same manner. He did not come down with smallpox despite the fact that it was will known that contamination with pus from smallpox sores was a sure way to contract the disease. 
+
+Have students observe and note the steps in scientific process illustrated by this story: curiosity, question, further investigation, hypothesis, and finally a test—albeit that Jenner’s test would violate all norms of what would be considered as ethically acceptable in today’s world.       
+
+Thus, the field of disease control through vaccination was launched, but the causative agents of disease remained unknown. With the development of the microscope (Google: microscope history) in the late 1500s and early 1600s, bacteria had been observed and described by Jenner’s time, but they had not been connected with disease. Viruses were totally unknown, because they are too small to be seen under a light microscope. 
+
+Up to and through Jenner’s time (late 1700s, early 1800s), it was widely thought that disease was caused by evil spirits, God’s punishment for sins, or other supernatural causes. Bacteria that were found in association with infections or spoiling material were thought to arise spontaneously from the material. That is, it was thought that rotting, spoiling, or decaying material gave rise to bacteria just by its own nature (Google: theory of spontaneous generation). It was not until the mid 1800s that eloquent, but simple and easy to repeat experiments conducted by Louis Pasteur proved beyond doubt that spontaneous generation was a false idea. Infection, rotting, decay, etc. were caused by bacteria and/or other microorganisms entering from the outside (Google: Louis Pasteur experiments discoveries). 
+
+The measures that derived from Pasteur’s discovery, which range from techniques of food preservation and storage, through general sanitation including public water and sewage treatment, to aseptic procedures used in surgery, are numerous, and the number of lives they have saved is unfathomable. Let students dwell on this for a time and discuss how we now take the existence of “germs” (various microorganisms) in the environment as a given, and we exercise sanitary procedures as a matter of routine. (Indeed, you are likely to find that the “germ theory” is so engrained in present-day thinking that it will be difficult for some students to even imagine a time when concepts of evil spirits, spontaneous generation, and other superstitions regarding disease held sway, and that it required experimental proof to dislodge them.) 
+
+In particular, following Pasteur’s discoveries in the mid 1800s, scientists began intensive investigations to find the causative factor(s) responsible for diseases. For many diseases, they found and proved a particular bacterium or other sort of microbe to be responsible. At this point, you may go into the steps deemed necessary to prove that a given organism was responsible for a given disease, which are known as Koch’s Postulates (Google: Koch’s postulates). Such microorganisms were subsequently described, named, and classified in a manner similar to classifying higher plants and animals. 
+
+However, there were many diseases that had the earmarks of being caused by microorganisms—they were contagious, their spread could be controlled by following sanitary procedures, and they were proved preventable by vaccination—but the causative microorganism, despite intensive investigation with the best tools available, could not be found. Give students time to consider the frustration of scientists who were involved in this search and the thoughts (alternative hypotheses) that must have crossed their minds. The diseases in question were those we now recognize as being caused by viruses, but emphasize that viruses are too small to be visible under even the best microscopes available at the time. Similarly, chemical analytical techniques had not yet been developed. Therefore, the cause of these diseases remained a mystery and frustration.
+
+Part 3. Discovery of Viruses and Their Description
+
+The first clue came when a Russian botanist (Dmitri Iwanowsk) observed that the agent responsible for a disease of tobacco plants—note that plants have their diseases as well—came through a ceramic (clay) filter. That is, the “juice” from a crushed, diseased plant that was filtered through a ceramic filter was able to cause disease in a healthy plant. A ceramic filter has a very tiny pore size, so small that it will easily screen out bacteria. Therefore, this finding meant that the causative agent for this disease was much smaller that even a bacterium. To help students visualize the scale of relative sizes have them visualize enlarging an average cell to the size of a room. A bacterium would then be about the size of a small dog, and this newly infectious agent would be about the size a marble.
+
+Through the late 1800s and early 1900s scientists made similar discoveries regarding other diseases including a number infecting humans. These new infectious agents, despite the fact that they were too small to be seen even under the best light microscopes, were termed viruses, but note that all other aspects concerning them remained a mystery. 
+
+Also, in the course of this work another frustration, which turned out to be an important clue, came to light. Try as they might, scientists were unable to culture viruses on any sort of nutrient medium or broth. This was particularly frustrating because culturing the disease-causing agent was taken as one of Koch’s postulates for proving that it was truly the cause of disease. Remind students that bacteria can be cultured readily. That is, individual bacteria, when placed on a medium with suitable nutrients, readily grow and multiply into colonies that are visible to the naked eye (Google: culturing bacteria video). Conspicuously, viruses multiplied in the tissues of plants or animals that they were infecting, but they could not be grown on a medium devoid of living cells. 
+
+Have students write a brief summary of what was discovered thus far. Such a summary should include: These disease-causing agents termed viruses were clearly contagious, multiplying and spreading from host to host through air, water, or food. Proper vaccination procedures could render the person/animal immune. Viruses were tinier than any usual cell, even bacteria; so tiny that they could not be seen under a light microscope. They could not be cultured on any medium of non-living material.
+
+This remained the situation and frustration until the 1930s. Then, with the newly developed electron microscope, viruses were actually seen for the first time. (The electron microscope uses a beam of electrons rather than light. Electrons being smaller than the wavelength of light enable a higher resolution than light and hence greater magnification.) In the same period, biochemical techniques had developed to the point that analysis of the chemical makeup of tissues was possible. 
+
+In the years following their first observation, viruses were both described from visual images through the electron microscope and analyzed chemically. Ask students to ponder: What were the outcomes of these investigations? (Allow think time sufficient for students to express what they know or think they know concerning viruses.) Then proceed to show them photographs (electron micrographs) of viruses (Google: electron micrographs viruses). Have students note that viruses, while all are exceptionally tiny, come in a variety of shapes and sizes, which leads to their classification into various groups and subgroups in a manner similar to higher plants and animals. Importantly, research revealed that each viral disease was caused by a distinct kind of virus, i.e., one kind of virus, one disease; another kind of virus, another disease. 
+
+The parallel electron microscopic and biochemical investigations revealed that a virus consists of a core of DNA (genetic material) surrounded by a protective layer of protein. Students may visualize it like a knife in a sheath. The “knife” is the DNA; the protein is the sheath surrounding and protecting it. 
+
+Note: In many viruses, the genetic material is found to be RNA rather than DNA, and in most animal viruses, the “sheath” is actually derived from the membrane of the cells that the viruses infects. However, this does not alter the basic picture of a virus being a segment of genetic material within a protective sheath. Therefore, in order to avoid excessive complexity, I leave out such detail. 
+
+Ask students how this structure explains why a virus cannot be cultured. Guide them, so far as necessary, in observing and reflecting that there is no apparatus for growth and reproduction; no apparatus for synthesizing more DNA or protein. Most of all, there is no apparatus for energy metabolism. Have students observe how this explains why viruses cannot be grown on any nutrient medium devoid of other living cells. Without any of the metabolic “machinery,” it cannot grow on its own. Like the knife in the sheath, all it can do by itself is sit there. Other living cells are required for the actual growth and reproduction of viruses, but this poses additional questions. (Think time.) Let students contemplate the problems and suggest questions that scientists no doubt asked and started to pursue next. Questions should include: How does the virus enter the body and cells of the animal/human? How does it replicate? How does it make the animal sick? How does it go on to infect other individuals? Most significantly, how does vaccination induce immunity, or, how does having the disease render one immune to contracting the disease again? (Think time.) We will turn our attention to such questions in the next part of this lesson.
+
+Part 4. Infection by Viruses and the Immune System
+
+Subsequent research using combined methodologies of electron microscopy, biochemistry, and radioactive tracing gradually revealed the following general sequence of events regarding viral infection. 
+1) Entering the body with contaminated air, water, or food, viruses may be transported throughout the body in the circulatory system.
+2) They attach themselves to the membrane of particular cells and introduce their DNA (or RNA) into the cell. In the case of animal cells, this usually occurs by the process of phagocytosis (also called endocytosis) (Lesson B-29). In other cases it may occur by a more complex viral mechanism of actual injection.
+3) This viral DNA (or RNA) carries a code that somehow tricks the cell into using its own enzymes, energy metabolism, and nutrients to manufacture more copies of the viral DNA (or RNA). 
+4) The viral DNA (or RNA) additionally carries code for making the particular proteins required for its protective “sheath.” In short, the virus particle tricks the cell into using its resources (energy, nutrients, enzymes, etc.) to make copies of the virus rather than carrying on its functions in the organism. 
+5) In animal cells the completed virus particles generally exit by phagocytosis (exocytosis). In other cases they may simply fill the cell to point of causing it to burst. In either case the virus particles are free to move on to infect additional cells of the organism repeating the process.
+6) At any time during this infection cycle, virus particles may exit the body with coughs, sneezes, and excretions that easily contaminate the surroundings making the disease highly contagious.
+
+Students can readily visualize how this virus “life cycle” may readily lead to sickness and potential death of the host organism as more and more of its cells are infected and destroyed. Remind students that death from viral infection, especially among infants and children before the days of vaccination, was common. 
+
+But even more remarkable is the fact that bodies often do recover from viral infection and are rendered immune to reinfection in the process. What is going on here? (Think time.) Guide students to consider that any security system always involves two sides, the attackers and the defenses. One of the most remarkable (and complex) systems of the body is the IMMUNE SYSTEM.
+
+ Any detailed analysis of the immune system, so far as it has been deciphered, can await college-level courses or independent studies. One can, however, give a general overview of four lines of defense that the body has against viral attack. 
+
+1) Certain cells within the body are capable of recognizing foreign particles, i.e., particles that do not belong. This is usually through a process of recognizing foreign proteins. It will engulf (via phagocytosis), digest, and destroy such foreign particles that are often invading viruses. Students may recognize that it is this same system that often causes the body to reject transplanted organs or tissues. Therefore, for such transplants it is necessary that the tissue/organ donor be a close genetic match. Also, the recipient is generally required to take certain medicines that suppress this aspect of his/her immune system. 
+
+2) A second capability of the immune system is that certain body cells are able to recognize those cells that are producing virus rather than performing as they should. These defense cells are able to engulf (phagocytosis) and destroy the “misbehaving” cells, i.e., the virus factories.
+
+3) The third defense of the immune system is that the body is stimulated to produce certain chemicals that protect uninfected cells from being infected. 
+
+4) As a final result of viral infection and recovery, the body is stimulated to produce and keep producing ANTIBODIES, which are complex chemicals that serve in the recognition and subsequent destruction of viruses of the kind causing the disease. It is this production of antibodies that makes one immune to reinfection by the same kind of virus, i.e., getting the viral-caused disease again. 
+
+Note: Students should note here that antibiotics (medicines that kill bacteria) are ineffective against viruses because viruses are being reproduced inside your own cells. Medicines taken for a virus infection may alleviate the symptoms, reducing fever, clearing congestion, etc., but they do not kill off the virus. It remains for the body’s immune system to do that.     
+
+From here, invite students to reflect on and suggest how vaccinations work to provide immunity to given diseases. (Think time.) They may logically conclude what research has shown to be the case. Vaccines consist of a solution with actual virus particles that have been treated in a way that renders their DNA (or RNA) inoperative. They cannot cause cells to start replicating them. In some cases, the vaccine contains only fragments of the virus. Nevertheless, the “killed” virus or virus fragments are enough like the “real thing” that they stimulate the immune system to start and continue producing antibodies for the given virus and thus render the body immune to that particular viral disease. 
+
+Specificity 
+
+As students engage in this study, bring them to consider a remarkable feature that has been implied in discussion but not specifically identified. That is the feature of SPECIFICITY. Ask students to reflect on and identify what is meant by this term. (Think time.) With Q and A discussion, bring students the understanding that it refers to the fact that a virus is very “picky” as to what it will or won’t attack. A particular kind of virus generally attacks only one or a closely related group of species. The good fortune of this is that our pets and other domestic animals, in general, do not get the diseases of humans, and we don’t get their diseases. Even within the animal being attacked, the particular kind of virus tends to attack cells of particular tissues, not cells of the whole body. Thus, the symptoms of attack by one kind of virus differ from those of another. This is responsible for the fact that the symptoms of one disease differ from those of another. Thus, the virus that a patient is suffering from can often be identified by the symptoms of the illness. If necessary, a more sure diagnosis is gained by conducting various chemical and/or biological tests. 
+
+On the other side of the equation, the immune system exhibits equal specificity. It does not and cannot make one antibody that will counter the attack of all viruses. It recognizes, analyses, and makes antibodies for each kind of virus, i.e., each foreign protein, separately. Since each kind of virus has different proteins on its coat, antibodies, hence immunity, to one kind of virus will not protect you from another. Said another way, being immune to measles will not protect you from mumps. To be immune to both diseases, you must be vaccinated with the protein coats of both viruses; or, suffer through and recover from both diseases. 
+Some kinds of disease-causing viruses are particularly problematic; they take advantage of the immune system’s specificity. By mutating and modifying their protein coat they can come back (infect an individual) again and again as a new virus that the immune system does not recognize and for which it has no immediate defense. The antibodies the body made for last year’s virus don’t work against this year’s version. This trait of changing the protein coat eludes efforts to develop effective vaccines as well. Such viruses include those responsible for common colds, the flu, and AIDS.   
+
+Regardless of the nature of viruses, however, the importance of maintaining a healthy immune system should be conspicuous. Maintaining a healthy immune system goes hand in hand with all other aspects of maintaining a healthy body: proper diet, adequate rest, avoidance of non-medicinal drugs, etc. Even the best of such behaviors, however, will not guarantee protection against disease-causing viruses or other microorganisms. Personal and public sanitation procedures remain equally important, as do vaccinations. 
+
+Bring students back to consider the broad picture of disease on the one hand and the control of disease on the other. Ask: Is this story finished, or is their more to do? (Think time.) It will be self-evident that despite advances, we still suffer from many diseases. Most prominent are the common cold and flu. Both of these have been discovered to be caused by viruses but developing effective vaccines has so far proved elusive. Likewise are the AIDS virus and a number of others. Thus, the study of viruses and how they cause disease on the one hand and the study of the immune system and how to aid it in fighting disease on the other are the subjects of ongoing research—ongoing research that provides many opportunities for careers in science. 
+
+Controversy Regarding the Efficacy of Vaccination
+
+ To be sure, there are some who claim that vaccinations carry risks that exceed benefits. Hence, they refuse to be vaccinated or have their children vaccinated. Have students observe that such people are protected from disease only insofar as most people are vaccinated. For example, you won’t get measles unless the measles virus is being passed from person to person. Most people being vaccinated against measles prevents its spread should an outbreak occur. Too few people being vaccinated against measles, however, would enable its rapid spread should an outbreak occur. The same holds for all other diseases now under control through vaccinations. In short, too many people shunning vaccination could soon return us to the horrendous infant, childhood, and adult mortality rates of centuries ago. Not a pleasant thought.
+
+By ferreting out hidden sources of outbreaks and sufficient vaccination programs to make persons immune to a disease, it is technically possible to eliminate given diseases from the planet. Very notably, this has been accomplished in the case of smallpox, and with sufficient effort, it may be accomplished for other diseases as well.    
+Opportunities for Further Investigations and Careers
+
+Don’t allow students to leave with the impression that everything is known about the topics discussed. Indeed, each area is a field of ongoing scientific endeavor and offers innumerable career opportunities for the future. Noteworthy is the field of virology, which focuses on discovery of yet unknown viruses, the ways in which they enter cells and replicate, the development of vaccines, etc. The field of immunology focuses on unraveling the many, as yet, poorly understood mechanisms of the immune system. Pathology is the more general study of diseases, identification of causative factors, and cures.
+
+Addendum
+
+In the course of this study or elsewhere, someone may bring up the question that has been debated since the discovery of viruses—Are they living creatures? There is no clear-cut answer, but the debate can bring students the focus, again, on the essential features of life. Viruses lack the feature of being able to reproduce on a nutrient broth of any sort; they require a separate living cell to do their “reproducing.” Therefore, one can conclude that they are not living creatures. On the other hand, it is hard to imagine a non-living entity being able to invade cells, command the cell to reproduce it, mutate, etc. 
+
+Questions/Discussion/Activities to Review, Reinforce, Expand, and Assess Learning:
+
+Students should record in their science notebooks (see Appendix XX, page XX):
+a) a paragraph describing high infant/childhood mortality of the past and the technologies that vastly reduced such mortality
+b)  a paragraph describing the discovery of the efficacy of vaccination
+c) a paragraph describing Pasteur’s major discovery and how it changed thinking regarding the cause of disease
+d) technologies and their approximate dates of development, that enabled discovery and description of viruses
+e) diagram with labels illustrating the general structure of a virus
+f) diagram with labels depicting the “life cycle” of a virus including a description of how it causes disease
+g) diagrams and/or description illustrating ways the immune system counters viral attack and infection. Include the production of antibodies and how they prevent reinfection 
+h)  a description of how a vaccination provides immunity to a given virus
+i)  a definition of specificity and how it applies to both viruses and the immune system 
+j) a listing of career opportunities dealing with the cause of diseases and their prevention
+Have students conduct further research and give reports concerning the high infant and childhood mortality that occurred before the 1800s and the causes for its decline since.
+
+Have students conduct further research and give reports concerning the discovery of the efficacy of vaccination in preventing certain diseases. 
+
+Facilitate students researching and duplicating Pasteur’s famous experiment that showed that microorganisms causing fermentation must enter from the outside.  Have students playact the two sides of the argument, spontaneous generation versus preexisting microorganisms, using evidence from experimental results as the final proof. 
+
+Make posters illustrating the nature of viruses, and their “life cycle,” i.e., the way in which they cause disease.
+
+Make posters illustrating how the body recognizes an invading virus, produces antibodies, and (hopefully) repels the attack. 
+
+Facilitate students conducting further research concerning diseases that interest them, their cause(s), and measures that are or should be taken (on both personal and public health levels) to avoid contracting the disease. 
+
+Make a poster contrasting cells of higher organisms, bacteria, and viruses. Include the abilities/inabilities of each. 
+
+Have students investigate and report on how vaccination protocols have greatly reduced the prevalence of certain diseases. 
+
+Have students conduct further research concerning the nature of the immune system.
+
+Have students investigate and discuss the plethora of career opportunities that exist in the arena of discovering causes for particular diseases through treatments, cure, and potential for vaccinations. 
+
+Invite a microbiologist to speak to your class regarding challenges and opportunities in the field. 
+
+In small groups, pose and discuss questions such as:
+Why did diseases we now know to be caused by viruses, remain a mystery for so long after the discovery of microorganisms?
+Are viruses living organisms? In what ways should they be considered living? In what ways should they be considered not living?
+Why is it impossible to culture viruses on a nutrient broth?
+What are the best ways to avoid coming down with diseases caused by one or another microorganism?
+Why is it necessary to have a separate vaccine for each different disease? 
+Why/how are people who shun vaccinations a potential risk to society?
+Why is it necessary to have a different vaccine for each disease?
+What are the difficulties in developing a vaccine to malaria, AIDS, and many other diseases?
+
+To Parents and Others Providing Support:
+
+Facilitate children in making models of viruses, their mode of attack, reproduction, etc. Include models of the counterattack by the immune system.
+
+Keep an ear out for mention in the news of an outbreak of a disease, development of new vaccines, and other topics relating to this lesson.  Discuss with your children the cause of the disease and the measures being taken to combat its spread.
+
+Keep a lookout in the news for mention regarding advances in understanding the immune system, its enhancement, or factors causing its malfunction. Discuss the parameters with your children.
+
+Facilitate your children in further investigations regarding the cause, treatment, or prevention of any disease of particular interest to them. 
+
+Discuss the nature and efficacy of vaccinations.
+
+Discuss the nature and efficacy of the immune system. 
+
+Connections to Other Topics and Follow-up to Higher Levels: 
+
+Beyond providing a general understanding concerning viruses and the way they cause disease, this lesson will serve as a stepping-stone to further studies that may lead all the way to professional careers in virology, immunology, pathology, and related fields. 
+
+Books for Correlated Reading:
+ 
+Byrnie, Faith Hickman. 101 Questions About Your Immune System You Felt Defenseless to Answer...Until Now. 21st Century, 2000.
+
+Farrell, Jeanette. Invisible Allies: Microbes That Shape Our Lives. Farrar, Straus and Giroux, 2005. 
+__________. Invisible Enemies: Stories of Infectious Disease. Farrar, Straus and Giroux, 2005.
+Goldsmith, Connie. Discovery! Superbugs Strike Back: When Antibiotics Fail. Lerner, 2007.
+
+Grady, Denise. New York Times Deadly Invaders: Virus Outbreaks Around the World, From Marburn Fever to Avian Flu. Kingfisher, 2006.
+
+Marrin, Albert. Dr. Jenner and the Speckled Monster: The Search for the Smallpox Vaccine. Dutton, 2002.
+
+Phelan, Glen. Killing Germs, Saving Lives: The Quest for the First Vaccines (Science Quest series). National Geographic, 2006.
+
+Piddock, Charles. Outbreak: Science Seeks Safeguards for Global Health (National Geographic Investigates). National Geographic, 2008.
+Robbins, Louise E. Louis Pasteur and the Hidden World of Microbes (Oxford Portraits in Science). Oxford University Press, 2001.
+
+Rodriguez, Ana Maria. Edward Jenner: Conqueror of Smallpox (Great Minds of Science). Enslow, 2006.
+
+Smith, Linda Wasmer. Louis Pasteur, Disease Fighter (Great Minds of Science). Enslow, 2001.
+
+
