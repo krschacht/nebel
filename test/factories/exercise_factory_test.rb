@@ -21,16 +21,16 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "Part 2. Changes Between Solid, Liquid, and Gas—Dependence on Temperature", exercises[1].name
     assert_equal "Part 3. States of Matter and Their Common Attributes", exercises[2].name
     assert_match /\ASet out three boxes/, exercises[0].body
-    assert_match /solid parts of the body.\z/, exercises[0].body
+    assert_match /solid parts of the body\.\z/, exercises[0].body
     assert_match /\AHave kids classify an/, exercises[1].body
-    assert_match /just introduce the concept.\z/, exercises[1].body
+    assert_match /just introduce the concept\.\z/, exercises[1].body
     assert_match /\AInstruct students that all/, exercises[2].body
-    assert_match /repeatedly in future lessons.\z/, exercises[2].body
+    assert_match /repeatedly in future lessons\.\z/, exercises[2].body
     assert_equal "demonstration, game/activity, interpretation; 40-50 minutes", exercises[0].duration
     assert_equal "demonstrations with interpretive discussion; 20-30 minutes", exercises[1].duration
     assert_equal "instruction and thought exercises; 30-40 minutes", exercises[2].duration
     assert_match /\AWater and various other liquids/, exercises[0].materials
-    assert_match /can be marked and labeled.\z/, exercises[0].materials
+    assert_match /can be marked and labeled\.\z/, exercises[0].materials
     assert_match /\AWater in a container/, exercises[1].materials
     assert_match /Ice cubes in a bowl\z/, exercises[1].materials
     assert_match /\ANo additional/, exercises[2].materials
@@ -41,9 +41,9 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "Part 1. Creating, Observing, and Interpreting Convection Currents", exercises[0].name
     assert_equal "Part 2. Applying Understanding of Convection Currents: Home Heating to the Earth’s Atmosphere", exercises[1].name
     assert_match /\AHave students gather around/, exercises[0].body
-    assert_match /and atmosphere \(Lesson D-13\).\z/, exercises[0].body
+    assert_match /and atmosphere \(Lesson D-13\)\.\z/, exercises[0].body
     assert_match /\AThe trend over the past 100/, exercises[1].body
-    assert_match /diversity of living things.\z/, exercises[1].body
+    assert_match /diversity of living things\.\z/, exercises[1].body
     assert_equal "demonstration, 30-45 minutes; interpretive discussion, 35-45 minutes", exercises[0].duration
     assert_equal "activity and analysis, 1-2 hours", exercises[1].duration
     assert_match /\ABurner or hot plate/, exercises[0].materials
@@ -59,9 +59,9 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /\AMost students will have some/, exercises[0].body
     assert_match /same idea pertains to bases\.\z/, exercises[0].body
     assert_match /\AThe actual hydrogen ion \(H\+\)/, exercises[1].body
-    assert_match /topics will be your option.\z/, exercises[1].body
+    assert_match /topics will be your option\.\z/, exercises[1].body
     assert_match /\AWe should not leave these/, exercises[2].body
-    assert_match /\(Google: careers in chemistry\).\z/, exercises[2].body
+    assert_match /\(Google: careers in chemistry\)\.\z/, exercises[2].body
     assert_equal "lecture, discussion, reflection, learning games, 1-2 hours", exercises[0].duration
     assert_equal "lecture, discussion, demonstration, 40-50 minutes; measuring/recording pH, open ended", exercises[1].duration
     assert_equal "open ended", exercises[2].duration
@@ -78,9 +78,9 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "Part 2. Growth of Roots", exercises[1].name
     assert_equal "Part 3. Growth in Diameter", exercises[2].name
     assert_match /\AIn the course of growing/, exercises[0].body
-    assert_match /grass flowers as they may choose.\z/, exercises[0].body
+    assert_match /grass flowers as they may choose\.\z/, exercises[0].body
     assert_match /\AThe growth of roots is obviously/, exercises[1].body
-    assert_match /remain mysteries for them to solve.\z/, exercises[1].body
+    assert_match /remain mysteries for them to solve\.\z/, exercises[1].body
     assert_match /\AStudents have observed that plants/, exercises[2].body
     assert_match /and differentiate as they do\?\z/, exercises[2].body
     assert_nil exercises[0].duration
@@ -97,13 +97,13 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "Part 3. Discovery of Viruses and Their Description", exercises[2].name
     assert_equal "Part 4. Infection by Viruses and the Immune System", exercises[3].name
     assert_match /\ABegin by showing students/, exercises[0].body
-    assert_match /and correcting misconceptions.\z/, exercises[0].body
+    assert_match /and correcting misconceptions\.\z/, exercises[0].body
     assert_match /\AAsk students: Which do you/, exercises[1].body
-    assert_match /a mystery and frustration.\z/, exercises[1].body
+    assert_match /a mystery and frustration\.\z/, exercises[1].body
     assert_match /\AThe first clue came when a Russian/, exercises[2].body
-    assert_match /next part of this lesson.\z/, exercises[2].body
+    assert_match /next part of this lesson\.\z/, exercises[2].body
     assert_match /\ASubsequent research using combined/, exercises[3].body
-    assert_match /to reproduce it, mutate, etc.\z/, exercises[3].body
+    assert_match /to reproduce it, mutate, etc\.\z/, exercises[3].body
     assert_equal "presentation, Q and A discussion, 30-40 minutes", exercises[0].duration
     assert_equal "presentation, Q and A discussion, 30-40 minutes", exercises[0].duration
     assert_equal "presentation, Q and A discussion, 30-40 minutes, repetition of Pasteur’s experiment, 1-2 hours", exercises[1].duration
@@ -123,13 +123,13 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "Part 1. Revealing the Principle of Inertia", exercises[0].name
     assert_equal "Part 2. Relating Inertia to Energy", exercises[1].name
     assert_match /\ADraw students into a review/, exercises[0].body
-    assert_match /of its inertia, and so on.\z/, exercises[0].body
-    assert_match /\AReview the Law of Motion, i.e./, exercises[1].body
-    assert_match /from any friction involved.\z/, exercises[1].body
+    assert_match /of its inertia, and so on\.\z/, exercises[0].body
+    assert_match /\AReview the Law of Motion, i\.e\./, exercises[1].body
+    assert_match /from any friction involved\.\z/, exercises[1].body
     assert_equal "demonstrations, observations, interpretive discussion; 50-60 minutes, plus games/activities as desired", exercises[0].duration
     assert_equal "observations, reasoning, interpretive discussion; 30-40 minutes", exercises[1].duration
     assert_match /\AFor the activities described/, exercises[0].materials
-    assert_match /shown in the video.\z/, exercises[0].materials
+    assert_match /shown in the video\.\z/, exercises[0].materials
     assert_match /\ANo additional/, exercises[1].materials
     assert_match /materials needed\z/, exercises[1].materials
 
@@ -139,11 +139,11 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "Part 2. Movement Energy and Momentum", exercises[1].name
     assert_equal "Part 3. Momentum and Kinetic Energy", exercises[2].name
     assert_match /\AWith the lead-in suggested/, exercises[0].body
-    assert_match /energy is not recycled.\z/, exercises[0].body
+    assert_match /energy is not recycled\.\z/, exercises[0].body
     assert_match /\AAs students are up to speed/, exercises[1].body
     assert_match /Therefore, Momentum\/mass = velocity\z/, exercises[1].body
     assert_match /\AIt will be inviting to challenge/, exercises[2].body
-    assert_match /described in this lesson.\z/, exercises[2].body
+    assert_match /described in this lesson\.\z/, exercises[2].body
     assert_equal "review as necessary", exercises[0].duration
     assert_equal "examples drawing on experience plus interpretive discussion; 40-50 minutes", exercises[1].duration
     assert_equal "calculations, experimentation as desired", exercises[2].duration
@@ -156,9 +156,9 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "Part 1. Relating Time to the Earth’s Turning", exercises[0].name
     assert_equal "Part 2. Making and Using a Sundial to Tell Time", exercises[1].name
     assert_match /\AAt the beginning of an outdoor/, exercises[0].body
-    assert_match /the stars in later years.\z/, exercises[0].body
+    assert_match /the stars in later years\.\z/, exercises[0].body
     assert_match /\APose the question: Can we tell/, exercises[1].body
-    assert_match /from a properly oriented sundial.\z/, exercises[1].body
+    assert_match /from a properly oriented sundial\.\z/, exercises[1].body
     assert_equal "15 minute activity at the beginning and end of an outdoor recreational period followed by interpretive discussion; 30-40 minutes", exercises[0].duration
     assert_equal "Making the sundial; 40-50 minutes plus 5-10 minutes each hour over the course of the day to calibrate it", exercises[1].duration
     assert_match /\ASunny location and chalk/, exercises[0].materials
@@ -173,13 +173,13 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "Part 3. Eclipses of the Moon and Sun", exercises[2].name
     assert_equal "Part 4. Tides", exercises[3].name
     assert_match /\AKids have undoubtedly observed the moon/, exercises[0].body
-    assert_match /more critical investigation.\z/, exercises[0].body
+    assert_match /more critical investigation\.\z/, exercises[0].body
     assert_match /\AThe gist of this part of the/, exercises[1].body
-    assert_match /students gain this understanding.\z/, exercises[1].body
+    assert_match /students gain this understanding\.\z/, exercises[1].body
     assert_match /\AFrom observations and discussion/, exercises[2].body
-    assert_match /causes of what they observe.\z/, exercises[2].body
+    assert_match /causes of what they observe\.\z/, exercises[2].body
     assert_match /\AMost students will be more or less/, exercises[3].body
-    assert_match /firsthand should not be passed up.\z/, exercises[3].body
+    assert_match /firsthand should not be passed up\.\z/, exercises[3].body
     assert_equal "assigning “homework” and discussion as deemed necessary; may be omitted if students have already mastered the content", exercises[0].duration
     assert_equal "“homework” with support from parents or others, time as necessary to make arrangements; follow-up discussion and analysis of results, 1-2 hours", exercises[1].duration
     assert_equal "modeling and interpretation, 40-50 minutes", exercises[2].duration
@@ -189,7 +189,7 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /\AThe key factor in/, exercises[1].materials
     assert_match /“Sticky notes”\z/, exercises[1].materials
     assert_match /\ANo particular materials/, exercises[2].materials
-    assert_match /lunar eclipse video\).\z/, exercises[2].materials
+    assert_match /lunar eclipse video\)\.\z/, exercises[2].materials
     assert_match /\AIf students have not had/, exercises[3].materials
     assert_match /\(Google: intertidal zones\)\z/, exercises[3].materials
   end
