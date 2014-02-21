@@ -31,71 +31,71 @@ class BookTest < ActiveSupport::TestCase
     test "#overview" do
       lesson = Book::Lesson.new(@a2)
       assert_match /\AIn this lesson students/, lesson.overview
-      assert_match /temperature; others don’t.\z/, lesson.overview
+      assert_match /temperature; others don’t\.\z/, lesson.overview
 
       lesson = Book::Lesson.new(@a18)
       assert_match /\AIn this lesson, students/, lesson.overview
-      assert_match /passive solar energy.\z/, lesson.overview
+      assert_match /passive solar energy\.\z/, lesson.overview
 
       lesson = Book::Lesson.new(@a22)
       assert_match /\AStudents will go beyond/, lesson.overview
-      assert_match /for careers in chemistry.\z/, lesson.overview
+      assert_match /for careers in chemistry\.\z/, lesson.overview
 
       lesson = Book::Lesson.new(@b22)
       assert_match /\ADovetailing with growing/, lesson.overview
-      assert_match /leaf versus a flower.\z/, lesson.overview
+      assert_match /leaf versus a flower\.\z/, lesson.overview
 
       lesson = Book::Lesson.new(@b30)
       assert_match /\AStarting with an overview/, lesson.overview
-      assert_match /and cure of diseases.\z/, lesson.overview
+      assert_match /and cure of diseases\.\z/, lesson.overview
 
       lesson = Book::Lesson.new(@c5)
       assert_match /\AThrough observation and analysis/, lesson.overview
-      assert_match /energy inputs and outputs.\z/, lesson.overview
+      assert_match /energy inputs and outputs\.\z/, lesson.overview
 
       lesson = Book::Lesson.new(@c10)
       assert_match /\AFollowing a review/, lesson.overview
-      assert_match /calculations may be included.\z/, lesson.overview
+      assert_match /calculations may be included\.\z/, lesson.overview
 
       lesson = Book::Lesson.new(@d5)
       assert_match /\AIn this lesson, students/, lesson.overview
-      assert_match /them in telling time.\z/, lesson.overview
+      assert_match /them in telling time\.\z/, lesson.overview
 
       lesson = Book::Lesson.new(@d14)
       assert_match /\AWhile people can hardly/, lesson.overview
-      assert_match /importance of intertidal zones.\z/, lesson.overview
+      assert_match /importance of intertidal zones\.\z/, lesson.overview
     end
 
     test "#position" do
       lesson = Book::Lesson.new(@a2)
       assert_match /\ABeyond the progression/, lesson.position
-      assert_match /sciences as well.\z/, lesson.position
+      assert_match /sciences as well\.\z/, lesson.position
 
       lesson = Book::Lesson.new(@a18)
       assert_match /\AThis lesson makes a/, lesson.position
-      assert_match /patterns around the globe.\z/, lesson.position
+      assert_match /patterns around the globe\.\z/, lesson.position
 
       lesson = Book::Lesson.new(@a22)
       assert_nil lesson.position
 
       lesson = Book::Lesson.new(@b22)
       assert_match /\AIn this lesson students/, lesson.position
-      assert_match /answers from collected data.\z/, lesson.position
+      assert_match /answers from collected data\.\z/, lesson.position
 
       lesson = Book::Lesson.new(@b30)
       assert_nil lesson.position
 
       lesson = Book::Lesson.new(@c5)
       assert_match /\AInertia’s designation as/, lesson.position
-      assert_match /lessons of this thread.\z/, lesson.position
+      assert_match /lessons of this thread\.\z/, lesson.position
 
       lesson = Book::Lesson.new(@c10)
       assert_match /\ABuilding on students’ introduction/, lesson.position
-      assert_match /weather, or space flight.\z/, lesson.position
+      assert_match /weather, or space flight\.\z/, lesson.position
 
       lesson = Book::Lesson.new(@d5)
       assert_match /\AIn this lesson, students/, lesson.position
-      assert_match /and the heavens above.\z/, lesson.position
+      assert_match /and the heavens above\.\z/, lesson.position
 
       lesson = Book::Lesson.new(@d14)
       assert_nil lesson.position
@@ -103,78 +103,78 @@ class BookTest < ActiveSupport::TestCase
 
     test "#time_required" do
       lesson = Book::Lesson.new(@a2)
-      assert_match /\APart 1. Identification of/, lesson.time_required
+      assert_match /\APart 1\. Identification of/, lesson.time_required
       assert_match /exercises; 30-40 minutes\)\z/, lesson.time_required
 
       lesson = Book::Lesson.new(@a18)
-      assert_match /\APart 1. Creating, Observing,/, lesson.time_required
+      assert_match /\APart 1\. Creating, Observing,/, lesson.time_required
       assert_match /and analysis, 1-2 hours\)\z/, lesson.time_required
 
       lesson = Book::Lesson.new(@a22)
-      assert_match /\APart 1. The Chemistry/, lesson.time_required
+      assert_match /\APart 1\. The Chemistry/, lesson.time_required
       assert_match /in Chemistry \(open ended\)\z/, lesson.time_required
 
       lesson = Book::Lesson.new(@b22)
       assert_match /\ACarried out during the/, lesson.time_required
-      assert_match /reading over the lesson.\z/, lesson.time_required
+      assert_match /reading over the lesson\.\z/, lesson.time_required
 
       lesson = Book::Lesson.new(@b30)
-      assert_match /\APart 1. Childhood Disease/, lesson.time_required
+      assert_match /\APart 1\. Childhood Disease/, lesson.time_required
       assert_match /discussion, 40-60 minutes\)\z/, lesson.time_required
 
       lesson = Book::Lesson.new(@c5)
-      assert_match /\APart 1. Revealing the Principle/, lesson.time_required
+      assert_match /\APart 1\. Revealing the Principle/, lesson.time_required
       assert_match /discussion; 30-40 minutes\)\z/, lesson.time_required
 
       lesson = Book::Lesson.new(@c10)
-      assert_match /\APart 1. Review of Inertia/, lesson.time_required
+      assert_match /\APart 1\. Review of Inertia/, lesson.time_required
       assert_match /experimentation as desired\)\z/, lesson.time_required
 
       lesson = Book::Lesson.new(@d5)
-      assert_match /\APart 1.\s+Relating Time/, lesson.time_required
+      assert_match /\APart 1\.\s+Relating Time/, lesson.time_required
       assert_match /the day to calibrate it\)\z/, lesson.time_required
 
       lesson = Book::Lesson.new(@d14)
-      assert_match /\APart 1. Creating the Background/, lesson.time_required
+      assert_match /\APart 1\. Creating the Background/, lesson.time_required
       assert_match /interpretation 40-50 minutes\)\z/, lesson.time_required
     end
 
     test "#objectives" do
       lesson = Book::Lesson.new(@a2)
       assert_match /\AStudents who demonstrate/, lesson.objectives
-      assert_match /don’t occupy space.\z/, lesson.objectives
+      assert_match /don’t occupy space\.\z/, lesson.objectives
 
       lesson = Book::Lesson.new(@a18)
       assert_match /\AStudents who demonstrate/, lesson.objectives
-      assert_match /and in the atmosphere.\z/, lesson.objectives
+      assert_match /and in the atmosphere\.\z/, lesson.objectives
 
       lesson = Book::Lesson.new(@a22)
       assert_match /\AThrough this exercise,/, lesson.objectives
-      assert_match /careers in chemistry.\z/, lesson.objectives
+      assert_match /careers in chemistry\.\z/, lesson.objectives
 
       lesson = Book::Lesson.new(@b22)
       assert_match /\AStudents who demonstrate/, lesson.objectives
-      assert_match /cells of the same plant.\z/, lesson.objectives
+      assert_match /cells of the same plant\.\z/, lesson.objectives
 
       lesson = Book::Lesson.new(@b30)
       assert_match /\AThrough this exercise,/, lesson.objectives
-      assert_match /of the diseases they cause.\z/, lesson.objectives
+      assert_match /of the diseases they cause\.\z/, lesson.objectives
 
       lesson = Book::Lesson.new(@c5)
       assert_match /\AThrough this exercise/, lesson.objectives
-      assert_match /materialize out of nothing.\z/, lesson.objectives
+      assert_match /materialize out of nothing\.\z/, lesson.objectives
 
       lesson = Book::Lesson.new(@c10)
       assert_match /\AStudents who demonstrate/, lesson.objectives
-      assert_match /measurement of kinetic energy.\z/, lesson.objectives
+      assert_match /measurement of kinetic energy\.\z/, lesson.objectives
 
       lesson = Book::Lesson.new(@d5)
       assert_match /\AStudents who demonstrate/, lesson.objectives
-      assert_match /aspects remain constant.\z/, lesson.objectives
+      assert_match /aspects remain constant\.\z/, lesson.objectives
 
       lesson = Book::Lesson.new(@d14)
       assert_match /\AThrough this exercise,/, lesson.objectives
-      assert_match /the phase of the moon.\z/, lesson.objectives
+      assert_match /the phase of the moon\.\z/, lesson.objectives
     end
 
     test "#required_background" do
@@ -212,7 +212,7 @@ class BookTest < ActiveSupport::TestCase
 
       lesson = Book::Lesson.new(@d14)
       assert_match /\AA general familiarity/, lesson.required_background
-      assert_match /two weeks is assumed.\z/, lesson.required_background
+      assert_match /two weeks is assumed\.\z/, lesson.required_background
     end
 
     test "#materials" do
@@ -230,7 +230,7 @@ class BookTest < ActiveSupport::TestCase
 
       lesson = Book::Lesson.new(@b22)
       assert_match /\AThis lesson entails ongoing/, lesson.materials
-      assert_match /references are included below.\z/, lesson.materials
+      assert_match /references are included below\.\z/, lesson.materials
 
       lesson = Book::Lesson.new(@b30)
       assert_match /\APart 1. Childhood Disease/, lesson.materials
@@ -242,7 +242,7 @@ class BookTest < ActiveSupport::TestCase
 
       lesson = Book::Lesson.new(@c10)
       assert_match /\AMomentum is a measure/, lesson.materials
-      assert_match /things in their mouths.\z/, lesson.materials
+      assert_match /things in their mouths\.\z/, lesson.materials
 
       lesson = Book::Lesson.new(@d5)
       assert_match /\APart 1. Relating Time to/, lesson.materials
@@ -256,53 +256,53 @@ class BookTest < ActiveSupport::TestCase
     test "#teachable_moments" do
       lesson = Book::Lesson.new(@a2)
       assert_match /\AIntroduce this exercise/, lesson.teachable_moments
-      assert_match /any convenient time.\z/, lesson.teachable_moments
+      assert_match /any convenient time\.\z/, lesson.teachable_moments
 
       lesson = Book::Lesson.new(@a18)
       assert_match /\AHaving students help/, lesson.teachable_moments
-      assert_match /its own teachable moment.\z/, lesson.teachable_moments
+      assert_match /its own teachable moment\.\z/, lesson.teachable_moments
 
       lesson = Book::Lesson.new(@a22)
       assert_match /\ADemonstrating beet or red/, lesson.teachable_moments
-      assert_match /reaction will attract attention.\z/, lesson.teachable_moments
+      assert_match /reaction will attract attention\.\z/, lesson.teachable_moments
 
       lesson = Book::Lesson.new(@b22)
       assert_match /\AGrowing and maintaining/, lesson.teachable_moments
-      assert_match /lesson\(s\) at hand.\z/, lesson.teachable_moments
+      assert_match /lesson\(s\) at hand\.\z/, lesson.teachable_moments
 
       lesson = Book::Lesson.new(@b30)
       assert_match /\AShowing pictures, reading stories/, lesson.teachable_moments
-      assert_match /its own teachable moments.\z/, lesson.teachable_moments
+      assert_match /its own teachable moments\.\z/, lesson.teachable_moments
 
       lesson = Book::Lesson.new(@c5)
       assert_match /\AUse a demonstration/, lesson.teachable_moments
-      assert_match /the games described.\z/, lesson.teachable_moments
+      assert_match /the games described\.\z/, lesson.teachable_moments
 
       lesson = Book::Lesson.new(@c10)
       assert_match /\AAct out pushing, kicking/, lesson.teachable_moments
-      assert_match /activities of everyday life.\z/, lesson.teachable_moments
+      assert_match /activities of everyday life\.\z/, lesson.teachable_moments
 
       lesson = Book::Lesson.new(@d5)
       assert_match /\AThis lesson can be inserted/, lesson.teachable_moments
-      assert_match /period and note the shift.\z/, lesson.teachable_moments
+      assert_match /period and note the shift\.\z/, lesson.teachable_moments
 
       lesson = Book::Lesson.new(@d14)
       assert_match /\AAt any time there is a clear/, lesson.teachable_moments
-      assert_match /it in a more systematic way.\z/, lesson.teachable_moments
+      assert_match /it in a more systematic way\.\z/, lesson.teachable_moments
     end
 
     test "#methods_and_procedures" do
       lesson = Book::Lesson.new(@a2)
       assert_match /\APart 1. Identification/, lesson.methods_and_procedures
-      assert_match /in future lessons.\z/, lesson.methods_and_procedures
+      assert_match /in future lessons\.\z/, lesson.methods_and_procedures
 
       lesson = Book::Lesson.new(@a18)
       assert_match /\APart 1. Creating, Observing/, lesson.methods_and_procedures
-      assert_match /diversity of living things.\z/, lesson.methods_and_procedures
+      assert_match /diversity of living things\.\z/, lesson.methods_and_procedures
 
       lesson = Book::Lesson.new(@a22)
       assert_match /\APart 1. The Chemistry/, lesson.methods_and_procedures
-      assert_match /\(Google: careers in chemistry\).\z/, lesson.methods_and_procedures
+      assert_match /\(Google: careers in chemistry\)\.\z/, lesson.methods_and_procedures
 
       lesson = Book::Lesson.new(@b22)
       assert_match /\APart 1. Growth of Stems/, lesson.methods_and_procedures
@@ -310,23 +310,23 @@ class BookTest < ActiveSupport::TestCase
 
       lesson = Book::Lesson.new(@b30)
       assert_match /\APart 1. Childhood Diseases/, lesson.methods_and_procedures
-      assert_match /reproduce it, mutate, etc.\z/, lesson.methods_and_procedures
+      assert_match /reproduce it, mutate, etc\.\z/, lesson.methods_and_procedures
 
       lesson = Book::Lesson.new(@c5)
       assert_match /\APart 1. Revealing the/, lesson.methods_and_procedures
-      assert_match /any friction involved.\z/, lesson.methods_and_procedures
+      assert_match /any friction involved\.\z/, lesson.methods_and_procedures
 
       lesson = Book::Lesson.new(@c10)
       assert_match /\APart 1. Review of Inertia/, lesson.methods_and_procedures
-      assert_match /described in this lesson.\z/, lesson.methods_and_procedures
+      assert_match /described in this lesson\.\z/, lesson.methods_and_procedures
 
       lesson = Book::Lesson.new(@d5)
       assert_match /\APart 1. Relating Time to /, lesson.methods_and_procedures
-      assert_match /properly oriented sundial.\z/, lesson.methods_and_procedures
+      assert_match /properly oriented sundial\.\z/, lesson.methods_and_procedures
 
       lesson = Book::Lesson.new(@d14)
-      assert_match /\APart 1. Creating the Background/, lesson.methods_and_procedures
-      assert_match /firsthand should not be passed up.\z/, lesson.methods_and_procedures
+      assert_match /\APart 1\. Creating the Background/, lesson.methods_and_procedures
+      assert_match /firsthand should not be passed up\.\z/, lesson.methods_and_procedures
     end
 
     test "#questions" do
@@ -336,7 +336,7 @@ class BookTest < ActiveSupport::TestCase
 
       lesson = Book::Lesson.new(@a18)
       assert_match /\AStudents should record/, lesson.questions
-      assert_match /Google: passive solar design.\z/, lesson.questions
+      assert_match /Google: passive solar design\.\z/, lesson.questions
 
       lesson = Book::Lesson.new(@a22)
       assert_match /\AStudents should record/, lesson.questions
@@ -364,7 +364,7 @@ class BookTest < ActiveSupport::TestCase
 
       lesson = Book::Lesson.new(@d14)
       assert_match /\AHave students record/, lesson.questions
-      assert_match /predominant flora and fauna of each.\z/, lesson.questions
+      assert_match /predominant flora and fauna of each\.\z/, lesson.questions
     end
 
     test "#support" do
@@ -374,35 +374,35 @@ class BookTest < ActiveSupport::TestCase
 
       lesson = Book::Lesson.new(@a18)
       assert_match /\AWith supervision, facilitate/, lesson.support
-      assert_match /placement is significant.\z/, lesson.support
+      assert_match /placement is significant\.\z/, lesson.support
 
       lesson = Book::Lesson.new(@a22)
       assert_match /\AFacilitate children measuring/, lesson.support
-      assert_match /chemists behind such products.\z/, lesson.support
+      assert_match /chemists behind such products\.\z/, lesson.support
 
       lesson = Book::Lesson.new(@b22)
       assert_match /\AIn conjunction with growing/, lesson.support
-      assert_match /aspect of this lesson.\z/, lesson.support
+      assert_match /aspect of this lesson\.\z/, lesson.support
 
       lesson = Book::Lesson.new(@b30)
       assert_match /\AFacilitate children in making/, lesson.support
-      assert_match /of the immune system.\z/, lesson.support
+      assert_match /of the immune system\.\z/, lesson.support
 
       lesson = Book::Lesson.new(@c5)
       assert_match /\AIn the routines of/, lesson.support
-      assert_match /energy and inertia.\z/, lesson.support
+      assert_match /energy and inertia\.\z/, lesson.support
 
       lesson = Book::Lesson.new(@c10)
       assert_match /\AThrough everyday experience,/, lesson.support
-      assert_match /Flywheels are a prime example.\z/, lesson.support
+      assert_match /Flywheels are a prime example\.\z/, lesson.support
 
       lesson = Book::Lesson.new(@d5)
       assert_match /\ADraw children’s attention/, lesson.support
-      assert_match /orbit rotation period\).\z/, lesson.support
+      assert_match /orbit rotation period\)\.\z/, lesson.support
 
       lesson = Book::Lesson.new(@d14)
       assert_match /\AFacilitate children making observations/, lesson.support
-      assert_match /constitutes an unique ecosystem.\z/, lesson.support
+      assert_match /constitutes an unique ecosystem\.\z/, lesson.support
     end
 
     test "#connections" do
@@ -414,14 +414,14 @@ class BookTest < ActiveSupport::TestCase
 
       lesson = Book::Lesson.new(@a22)
       assert_match /\AThe concepts of chemistry/, lesson.connections
-      assert_match /Chemical Reactions and Energy.\z/, lesson.connections
+      assert_match /Chemical Reactions and Energy\.\z/, lesson.connections
 
       lesson = Book::Lesson.new(@b22)
       assert_nil lesson.connections
 
       lesson = Book::Lesson.new(@b30)
       assert_match /\ABeyond providing a general/, lesson.connections
-      assert_match /pathology, and related fields.\z/, lesson.connections
+      assert_match /pathology, and related fields\.\z/, lesson.connections
 
       lesson = Book::Lesson.new(@c5)
       assert_nil lesson.connections
@@ -440,18 +440,18 @@ class BookTest < ActiveSupport::TestCase
     test "#ngss" do
       lesson = Book::Lesson.new(@a2)
       assert_match /\ARecognizing that everything/, lesson.ngss
-      assert_match /achieving NGSS: 5-ESS2-1.\z/, lesson.ngss
+      assert_match /achieving NGSS: 5-ESS2-1\.\z/, lesson.ngss
 
       lesson = Book::Lesson.new(@a18)
       assert_match /\AConvection currents play/, lesson.ngss
-      assert_match /other standards as well.\z/, lesson.ngss
+      assert_match /other standards as well\.\z/, lesson.ngss
 
       lesson = Book::Lesson.new(@a22)
       assert_nil lesson.ngss
 
       lesson = Book::Lesson.new(@b22)
       assert_match /\AHow cell division, growth,/, lesson.ngss
-      assert_match /are: a, b, d, and g.\z/, lesson.ngss
+      assert_match /are: a, b, d, and g\.\z/, lesson.ngss
 
       lesson = Book::Lesson.new(@b30)
       assert_nil lesson.ngss
@@ -461,11 +461,11 @@ class BookTest < ActiveSupport::TestCase
 
       lesson = Book::Lesson.new(@c10)
       assert_match /\AMomentum is a key physical/, lesson.ngss
-      assert_match /lesson are: a, b, c, d, e, f, and h.\z/, lesson.ngss
+      assert_match /lesson are: a, b, c, d, e, f, and h\.\z/, lesson.ngss
 
       lesson = Book::Lesson.new(@d5)
       assert_match /\ATime is such an integral/, lesson.ngss
-      assert_match /2-ESS1-1; and 5-ESS1-2.\z/, lesson.ngss
+      assert_match /2-ESS1-1; and 5-ESS1-2\.\z/, lesson.ngss
 
       lesson = Book::Lesson.new(@d14)
       assert_nil lesson.ngss
@@ -473,40 +473,40 @@ class BookTest < ActiveSupport::TestCase
 
     test "#books" do
       lesson = Book::Lesson.new(@a2)
-      assert_match /\ACurry, Don L.  What Is Matter\?/, lesson.books
+      assert_match /\ACurry, Don L\.  What Is Matter\?/, lesson.books
       assert_match /Matter \(Early Bird\)\. Lerner,\z/, lesson.books
 
       lesson = Book::Lesson.new(@a18)
-      assert_match /\AHakim, Joy. The Story of Science/, lesson.books
-      assert_match /Children’s Press, 2003.\z/, lesson.books
+      assert_match /\AHakim, Joy\. The Story of Science/, lesson.books
+      assert_match /Children’s Press, 2003\.\z/, lesson.books
 
       lesson = Book::Lesson.new(@a22)
-      assert_match /\AOxlade, Chris.  Acids and Bases/, lesson.books
-      assert_match /Atoms: Unraveling Their Nature.\z/, lesson.books
+      assert_match /\AOxlade, Chris\.  Acids and Bases/, lesson.books
+      assert_match /Atoms: Unraveling Their Nature\.\z/, lesson.books
 
       lesson = Book::Lesson.new(@b22)
-      assert_match /\ABang, Molly. Living Sunlight/, lesson.books
-      assert_match /from Capstone Press.\z/, lesson.books
+      assert_match /\ABang, Molly\. Living Sunlight/, lesson.books
+      assert_match /from Capstone Press\.\z/, lesson.books
 
       lesson = Book::Lesson.new(@b30)
       assert_match /\AByrnie, Faith Hickman./, lesson.books
-      assert_match /Science\). Enslow, 2001.\z/, lesson.books
+      assert_match /Science\)\. Enslow, 2001\.\z/, lesson.books
 
       lesson = Book::Lesson.new(@c5)
       assert_match /\ABradley, Kimberly/, lesson.books
-      assert_match /Rourke, 2007.\z/, lesson.books
+      assert_match /Rourke, 2007\.\z/, lesson.books
 
       lesson = Book::Lesson.new(@c10)
       assert_match /\AGraham, John, Forces and Motion/, lesson.books
-      assert_match /\(Exploratorium\). Wiley, 2008.\z/, lesson.books
+      assert_match /\(Exploratorium\)\. Wiley, 2008\.\z/, lesson.books
 
       lesson = Book::Lesson.new(@d5)
       assert_match /\ABailey, Jacqui and Matthew/, lesson.books
-      assert_match /Over and Over.  Harp\z/, lesson.books
+      assert_match /Over and Over\.  Harp\z/, lesson.books
 
       lesson = Book::Lesson.new(@d14)
       assert_match /\ALegault, Thierry and Serge Brunier/, lesson.books
-      assert_match /that the effect is the same.\z/, lesson.books
+      assert_match /that the effect is the same\.\z/, lesson.books
     end
 
   end

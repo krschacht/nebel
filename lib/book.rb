@@ -13,70 +13,63 @@ class Book
     def overview
       result   = @text[/overview:(.*)^.*progress(ion)? of learning:/mi, 1]
       result ||= @text[/overview:(.*)time required:/mi, 1]
-      clean result
+      result.try :clean
     end
 
     def position
       result   = @text[/progress of learning:(.*)time required:/mi, 1]
       result ||= @text[/progression of learning:(.*)time required:/mi, 1]
-      clean result
+      result.try :clean
     end
 
     def time_required
       result   = @text[/time required:(.*)objectives:/mi, 1]
       result ||= @text[/time required:(.*)^outcomes:/mi, 1]
       result ||= @text[/time required:(.*)^practices:/mi, 1]
-      clean result
+      result.try :clean
     end
 
     def objectives
-      clean @text[/(practices|outcomes|objectives):(.*)required background:/mi, 2]
+      @text[/(practices|outcomes|objectives):(.*)required background:/mi, 2].try :clean
     end
 
     def required_background
-      clean @text[/required background:(.*)materials:/mi, 1]
+      @text[/required background:(.*)materials:/mi, 1].try :clean
     end
 
     def materials
-      clean @text[/materials:(.*)teachable moments:/mi, 1]
+      @text[/materials:(.*)teachable moments:/mi, 1].try :clean
     end
 
     def teachable_moments
-      clean @text[/teachable moments:(.*)methods and procedures:/mi, 1]
+      @text[/teachable moments:(.*)methods and procedures:/mi, 1].try :clean
     end
 
     def methods_and_procedures
-      clean @text[/methods and procedures:(.*)^questions.*:/mi, 1]
+      @text[/methods and procedures:(.*)^questions.*:/mi, 1].try :clean
     end
 
     def questions
-      clean @text[/assess learning:(.*)to parents and.*:/mi, 1]
+      @text[/assess learning:(.*)to parents and.*:/mi, 1].try :clean
     end
 
     def support
       result   = @text[/providing support:(.*)re: framework.*ngss/mi, 1]
       result ||= @text[/providing support:(.*)connections to other topics/mi, 1]
       result ||= @text[/providing support:(.*)books for correlated reading:/mi, 1]
-      clean result
+      result.try :clean
     end
 
     def ngss
-      clean @text[/^re:.*principles and.*\(?ngss\)?\s*$(.*)books for correlated reading:/mi, 1]
+      @text[/^re:.*principles and.*\(?ngss\)?\s*$(.*)books for correlated reading:/mi, 1].try :clean
     end
 
     def connections
-      clean @text[/follow-up to higher levels:(.*)books for correlated reading:/mi, 1]
+      @text[/follow-up to higher levels:(.*)books for correlated reading:/mi, 1].try :clean
     end
 
     def books
-      clean @text[/correlated reading:(.*)/mi, 1]
-    end
-
-  private
-
-    def clean(string)
-      return nil if string.blank?
-      string.gsub(/\u2028/, "").gsub(/(\A(\n|\s)*|(\n|\s)*\z)/, "")
+      @text[/correlated reading:(.*)/mi, 1].try :clean
     end
 
   end
