@@ -28,6 +28,35 @@ class BookTest < ActiveSupport::TestCase
       assert_equal File.read(@c5), lesson.text
     end
 
+    test "#name" do
+      lesson = Book::Lesson.new(@a2)
+      assert_equal "Solids, Liquids, and Gases and\nChange With Temperature", lesson.name
+
+      lesson = Book::Lesson.new(@a18)
+      assert_equal "Convection Currents:\nObservation and Interpretation", lesson.name
+
+      lesson = Book::Lesson.new(@a22)
+      assert_equal "Concepts of Chemistry V\nAcids and Bases", lesson.name
+
+      lesson = Book::Lesson.new(@b22)
+      assert_equal "The Life of Plants II:\nHow a Plant Grows Its Parts", lesson.name
+
+      lesson = Book::Lesson.new(@b30)
+      assert_equal "Viruses: Their Attack Nature, Attack, and \nOur Defense", lesson.name
+
+      lesson = Book::Lesson.new(@c5)
+      assert_equal "Inertia", lesson.name
+
+      lesson = Book::Lesson.new(@c10)
+      assert_equal "Movement Energy and Momentum", lesson.name
+
+      lesson = Book::Lesson.new(@d5)
+      assert_equal "Time and the Earth’s Turning", lesson.name
+
+      lesson = Book::Lesson.new(@d14)
+      assert_equal "The Moon and Its Phases, \nand Tides", lesson.name
+    end
+
     test "#overview" do
       lesson = Book::Lesson.new(@a2)
       assert_match /\AIn this lesson students/, lesson.overview

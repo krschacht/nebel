@@ -10,6 +10,10 @@ class Book
       @text = File.exists?(path_or_text) ? File.read(path_or_text) : path_or_text
     end
 
+    def name
+      @text[/\A\s*Lesson\s[ABCD]-\d{1,2}\n(.*)Overview:/m, 1].clean
+    end
+
     def overview
       result   = @text[/overview:(.*)^.*progress(ion)? of learning:/mi, 1]
       result ||= @text[/overview:(.*)time required:/mi, 1]
