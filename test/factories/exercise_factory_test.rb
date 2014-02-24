@@ -1,6 +1,7 @@
 require "test_helper"
 
 class ExerciseFactoryTest < ActiveSupport::TestCase
+
   setup do
     fixtures_root = Rails.root.join "test/fixtures/lesson_samples/"
     @a2  = Book::Lesson.new fixtures_root.join "volume_1/2nd_edition/a2.txt"
@@ -193,4 +194,5 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /\AIf students have not had/, exercises[3].materials
     assert_match /\(Google: intertidal zones\)\z/, exercises[3].materials
   end
+
 end

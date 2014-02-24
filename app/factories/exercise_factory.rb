@@ -1,6 +1,7 @@
 require "book"
 
 class ExerciseFactory
+
   def initialize(book_lesson)
     @book_lesson = book_lesson
   end
