@@ -9,7 +9,7 @@ class TopicFactory
   def topic
     Topic.new({
       name:              name,
-      order:             nil,
+      order:             @book_lesson.number,
       overview:          @book_lesson.overview,
       context:           @book_lesson.position,
       objectives:        @book_lesson.objectives,

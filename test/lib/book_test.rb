@@ -86,6 +86,35 @@ class BookTest < ActiveSupport::TestCase
       assert_equal "D", lesson.subject_code
     end
 
+    test "#number" do
+      lesson = Book::Lesson.new(@a2)
+      assert_equal 2, lesson.number
+
+      lesson = Book::Lesson.new(@a18)
+      assert_equal 18, lesson.number
+
+      lesson = Book::Lesson.new(@a22)
+      assert_equal 22, lesson.number
+
+      lesson = Book::Lesson.new(@b22)
+      assert_equal 22, lesson.number
+
+      lesson = Book::Lesson.new(@b30)
+      assert_equal 30, lesson.number
+
+      lesson = Book::Lesson.new(@c5)
+      assert_equal 5, lesson.number
+
+      lesson = Book::Lesson.new(@c10)
+      assert_equal 10, lesson.number
+
+      lesson = Book::Lesson.new(@d5)
+      assert_equal 5, lesson.number
+
+      lesson = Book::Lesson.new(@d14)
+      assert_equal 14, lesson.number
+    end
+
     test "#overview" do
       lesson = Book::Lesson.new(@a2)
       assert_match /\AIn this lesson students/, lesson.overview
