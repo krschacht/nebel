@@ -8,7 +8,7 @@ class TopicFactory
 
   def topic
     Topic.new({
-      name:              nil,
+      name:              name,
       order:             nil,
       overview:          @book_lesson.overview,
       context:           @book_lesson.position,
@@ -19,6 +19,12 @@ class TopicFactory
       connections:       @book_lesson.connections,
       books:             @book_lesson.books
     })
+  end
+
+private
+
+  def name
+    @book_lesson.name.gsub("\n", " ").split(" ").map(&:strip).join(" ")
   end
 
 end

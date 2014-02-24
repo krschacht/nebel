@@ -17,6 +17,7 @@ class TopicFactoryTest < ActiveSupport::TestCase
 
   test "#topics" do
     topic = TopicFactory.new(@a2).topic
+    assert_equal "Solids, Liquids, and Gases and Change With Temperature", topic.name
     assert_match /\AIn this lesson students/, topic.overview
     assert_match /temperature; others don’t\.\z/, topic.overview
     assert_match /\ABeyond the progression/, topic.context
@@ -35,6 +36,7 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /Matter \(Early Bird\)\. Lerner,\z/, topic.books
 
     topic = TopicFactory.new(@c5).topic
+    assert_equal "Inertia", topic.name
     assert_match /\AThrough observation and analysis/, topic.overview
     assert_match /energy inputs and outputs.\z/, topic.overview
     assert_match /\AInertia’s designation as the/, topic.context
@@ -52,6 +54,7 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /Forces\)\.  Rourke, 2007\.\z/, topic.books
 
     topic = TopicFactory.new(@d5).topic
+    assert_equal "Time and the Earth’s Turning", topic.name
     assert_match /\AIn this lesson, students/, topic.overview
     assert_match /use them in telling time\.\z/, topic.overview
     assert_match /\AIn this lesson, students/, topic.context
@@ -70,6 +73,7 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /Over and Over\.  Harp\z/, topic.books
 
     topic = TopicFactory.new(@a18).topic
+    assert_equal "Convection Currents: Observation and Interpretation", topic.name
     assert_match /\AIn this lesson, students will use/, topic.overview
     assert_match /heating by passive solar energy\.\z/, topic.overview
     assert_match /\AThis lesson makes a bridge/, topic.context
@@ -88,6 +92,7 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /Children’s Press, 2003\.\z/, topic.books
 
     topic = TopicFactory.new(@b22).topic
+    assert_equal "The Life of Plants II: How a Plant Grows Its Parts", topic.name
     assert_match /\ADovetailing with growing a small/, topic.overview
     assert_match /e\.g\., a leaf versus a flower\.\z/, topic.overview
     assert_match /\AIn this lesson students/, topic.context
@@ -106,6 +111,7 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /series from Capstone Press\.\z/, topic.books
 
     topic = TopicFactory.new(@c10).topic
+    assert_equal "Movement Energy and Momentum", topic.name
     assert_match /\AFollowing a review of the phenomenon/, topic.overview
     assert_match /calculations may be included\.\z/, topic.overview
     assert_match /\ABuilding on students’ introduction/, topic.context
@@ -124,6 +130,7 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /\(Exploratorium\)\. Wiley, 2008\.\z/, topic.books
 
     topic = TopicFactory.new(@a22).topic
+    assert_equal "Concepts of Chemistry V Acids and Bases", topic.name
     assert_match /\AStudents will go beyond/, topic.overview
     assert_match /opportunities for careers in chemistry\.\z/, topic.overview
     assert_nil topic.context
@@ -141,6 +148,7 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /Atoms: Unraveling Their Nature\.\z/, topic.books
 
     topic = TopicFactory.new(@b30).topic
+    assert_equal "Viruses: Their Attack Nature, Attack, and Our Defense", topic.name
     assert_match /\AStarting with an overview/, topic.overview
     assert_match /control, and cure of diseases\.\z/, topic.overview
     assert_nil topic.context
@@ -158,6 +166,7 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /Minds of Science\)\. Enslow, 2001\.\z/, topic.books
 
     topic = TopicFactory.new(@d14).topic
+    assert_equal "The Moon and Its Phases, and Tides", topic.name
     assert_match /\AWhile people can hardly/, topic.overview
     assert_match /importance of intertidal zones\.\z/, topic.overview
     assert_nil topic.context
