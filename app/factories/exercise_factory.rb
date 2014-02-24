@@ -3,9 +3,6 @@ require "book"
 class ExerciseFactory
   def initialize(book_lesson)
     @book_lesson = book_lesson
-    # name
-    # time_required => duration
-    # materials => materials (text for now)
   end
 
   def exercises
