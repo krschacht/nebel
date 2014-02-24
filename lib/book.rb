@@ -14,6 +14,10 @@ class Book
       @text[/\A\s*Lesson\s[ABCD]-\d{1,2}\n(.*)Overview:/m, 1].clean
     end
 
+    def subject_code
+      @text[/\A\s*Lesson\s([ABCD])-\d{1,2}\n.*Overview:/m, 1]
+    end
+
     def overview
       result   = @text[/overview:(.*)^.*progress(ion)? of learning:/mi, 1]
       result ||= @text[/overview:(.*)time required:/mi, 1]

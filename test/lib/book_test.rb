@@ -57,6 +57,35 @@ class BookTest < ActiveSupport::TestCase
       assert_equal "The Moon and Its Phases, \nand Tides", lesson.name
     end
 
+    test "#subject_code" do
+      lesson = Book::Lesson.new(@a2)
+      assert_equal "A", lesson.subject_code
+
+      lesson = Book::Lesson.new(@a18)
+      assert_equal "A", lesson.subject_code
+
+      lesson = Book::Lesson.new(@a22)
+      assert_equal "A", lesson.subject_code
+
+      lesson = Book::Lesson.new(@b22)
+      assert_equal "B", lesson.subject_code
+
+      lesson = Book::Lesson.new(@b30)
+      assert_equal "B", lesson.subject_code
+
+      lesson = Book::Lesson.new(@c5)
+      assert_equal "C", lesson.subject_code
+
+      lesson = Book::Lesson.new(@c10)
+      assert_equal "C", lesson.subject_code
+
+      lesson = Book::Lesson.new(@d5)
+      assert_equal "D", lesson.subject_code
+
+      lesson = Book::Lesson.new(@d14)
+      assert_equal "D", lesson.subject_code
+    end
+
     test "#overview" do
       lesson = Book::Lesson.new(@a2)
       assert_match /\AIn this lesson students/, lesson.overview
