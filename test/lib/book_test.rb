@@ -407,17 +407,20 @@ class BookTest < ActiveSupport::TestCase
 
     test "#connections" do
       lesson = Book::Lesson.new(@a2)
-      assert_nil lesson.connections
+      assert_match /\ARecognizing that everything/, lesson.connections
+      assert_match /achieving NGSS: 5-ESS2-1\.\z/, lesson.connections
 
       lesson = Book::Lesson.new(@a18)
-      assert_nil lesson.connections
+      assert_match /\AConvection currents play/, lesson.connections
+      assert_match /other standards as well\.\z/, lesson.connections
 
       lesson = Book::Lesson.new(@a22)
       assert_match /\AThe concepts of chemistry/, lesson.connections
       assert_match /Chemical Reactions and Energy\.\z/, lesson.connections
 
       lesson = Book::Lesson.new(@b22)
-      assert_nil lesson.connections
+      assert_match /\AHow cell division, growth,/, lesson.connections
+      assert_match /are: a, b, d, and g\.\z/, lesson.connections
 
       lesson = Book::Lesson.new(@b30)
       assert_match /\ABeyond providing a general/, lesson.connections
@@ -427,48 +430,16 @@ class BookTest < ActiveSupport::TestCase
       assert_nil lesson.connections
 
       lesson = Book::Lesson.new(@c10)
-      assert_nil lesson.connections
+      assert_match /\AMomentum is a key physical/, lesson.connections
+      assert_match /lesson are: a, b, c, d, e, f, and h\.\z/, lesson.connections
 
       lesson = Book::Lesson.new(@d5)
-      assert_nil lesson.connections
+      assert_match /\ATime is such an integral/, lesson.connections
+      assert_match /2-ESS1-1; and 5-ESS1-2\.\z/, lesson.connections
 
       lesson = Book::Lesson.new(@d14)
       assert_match /\ALesson D-15, The Solar System/, lesson.connections
       assert_match /observed in different locations\z/, lesson.connections
-    end
-
-    test "#ngss" do
-      lesson = Book::Lesson.new(@a2)
-      assert_match /\ARecognizing that everything/, lesson.ngss
-      assert_match /achieving NGSS: 5-ESS2-1\.\z/, lesson.ngss
-
-      lesson = Book::Lesson.new(@a18)
-      assert_match /\AConvection currents play/, lesson.ngss
-      assert_match /other standards as well\.\z/, lesson.ngss
-
-      lesson = Book::Lesson.new(@a22)
-      assert_nil lesson.ngss
-
-      lesson = Book::Lesson.new(@b22)
-      assert_match /\AHow cell division, growth,/, lesson.ngss
-      assert_match /are: a, b, d, and g\.\z/, lesson.ngss
-
-      lesson = Book::Lesson.new(@b30)
-      assert_nil lesson.ngss
-
-      lesson = Book::Lesson.new(@c5)
-      assert_nil lesson.ngss
-
-      lesson = Book::Lesson.new(@c10)
-      assert_match /\AMomentum is a key physical/, lesson.ngss
-      assert_match /lesson are: a, b, c, d, e, f, and h\.\z/, lesson.ngss
-
-      lesson = Book::Lesson.new(@d5)
-      assert_match /\ATime is such an integral/, lesson.ngss
-      assert_match /2-ESS1-1; and 5-ESS1-2\.\z/, lesson.ngss
-
-      lesson = Book::Lesson.new(@d14)
-      assert_nil lesson.ngss
     end
 
     test "#books" do

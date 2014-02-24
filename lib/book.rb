@@ -60,12 +60,10 @@ class Book
       result.try :clean
     end
 
-    def ngss
-      @text[/^re:.*principles and.*\(?ngss\)?\s*$(.*)books for correlated reading:/mi, 1].try :clean
-    end
-
     def connections
-      @text[/follow-up to higher levels:(.*)books for correlated reading:/mi, 1].try :clean
+      result   = @text[/^re:.*principles and.*\(?ngss\)?\s*$(.*)books for correlated reading:/mi, 1]
+      result ||= @text[/follow-up to higher levels:(.*)books for correlated reading:/mi, 1]
+      result.try :clean
     end
 
     def books
