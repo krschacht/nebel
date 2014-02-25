@@ -9,8 +9,19 @@ git fetch github
 git branch --track master github/master
 ```
 
-To deploy, do the usual:
+This may be optional, but if you're using RVM and want to use the .ruby-version file then:
+```
+cd ..
+cd nebelscience
+```
 
+Finally, do the usual:
+```
+gem install bundle
+bundle install
+```
+
+To deploy, do the usual:
 ```
 git push heroku master
 ```
