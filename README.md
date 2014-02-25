@@ -1,5 +1,20 @@
 # BFSU
 
+## Setting up a new dev environment
+
+```
+git clone git@heroku.com:nebelscience.git -o heroku
+git remote add github ssh://git@github.com/avand/bfsu.git
+git fetch github
+git branch --track master github/master
+```
+
+To deploy, do the usual:
+
+```
+git push heroku master
+```
+
 ## Mapping
 
 The book breaks things out into subjects, lessons, and parts. In the app, we map
