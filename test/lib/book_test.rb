@@ -55,6 +55,15 @@ class BookTest < ActiveSupport::TestCase
 
       lesson = Book::Lesson.new(@d14)
       assert_equal "The Moon and Its Phases, \nand Tides", lesson.name
+
+      lesson = Book::Lesson.new("Lesson A/B-1\n\nOrganizing Things Into Categories\n\n\n\nOverview:")
+      assert_equal "Organizing Things Into Categories", lesson.name
+
+      lesson = Book::Lesson.new("Lesson A-5A\n\nMagnets and Magnetic Fields\n\n\n\nOverview:")
+      assert_equal "Magnets and Magnetic Fields", lesson.name
+
+      lesson = Book::Lesson.new("Lesson B-4B\n\nWhat is a Species?\n\n\n\nOverview:")
+      assert_equal "What is a Species?", lesson.name
     end
 
     test "#subject_code" do

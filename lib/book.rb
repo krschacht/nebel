@@ -11,7 +11,10 @@ class Book
     end
 
     def name
-      @text[/\A\s*Lesson\s[ABCD]-\d{1,2}\n(.*)Overview:/m, 1].clean
+      result   = @text[/\A\s*Lesson\s[ABCD]-\d{1,2}\n(.*)Overview:/m, 1]
+      result ||= @text[/\A\s*Lesson\s[ABCD]\/[ABCD]-\d{1,2}\n(.*)Overview:/m, 1]
+      result ||= @text[/\A\s*Lesson\s[ABCD]-\d{1,2}[AB]{1}\n(.*)Overview:/m, 1]
+      result.clean
     end
 
     def subject_code
