@@ -84,12 +84,18 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /remain mysteries for them to solve\.\z/, exercises[1].body
     assert_match /\AStudents have observed that plants/, exercises[2].body
     assert_match /and differentiate as they do\?\z/, exercises[2].body
-    assert_nil exercises[0].duration
-    assert_nil exercises[1].duration
-    assert_nil exercises[2].duration
-    assert_nil exercises[0].materials
-    assert_nil exercises[0].materials
-    assert_nil exercises[0].materials
+    assert_match /\ACarried out during/, exercises[0].duration
+    assert_match /reading over the lesson\.\z/, exercises[0].duration
+    assert_match /\ACarried out during/, exercises[1].duration
+    assert_match /reading over the lesson\.\z/, exercises[1].duration
+    assert_match /\ACarried out during/, exercises[2].duration
+    assert_match /reading over the lesson\.\z/, exercises[2].duration
+    assert_match /\AThis lesson entails ongoing/, exercises[0].materials
+    assert_match /references are included below\.\z/, exercises[0].materials
+    assert_match /\AThis lesson entails ongoing/, exercises[1].materials
+    assert_match /references are included below\.\z/, exercises[1].materials
+    assert_match /\AThis lesson entails ongoing/, exercises[2].materials
+    assert_match /references are included below\.\z/, exercises[2].materials
 
     exercises = ExerciseFactory.new(@b30).exercises
     assert_equal 4, exercises.size
@@ -148,9 +154,12 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "review as necessary", exercises[0].duration
     assert_equal "examples drawing on experience plus interpretive discussion; 40-50 minutes", exercises[1].duration
     assert_equal "calculations, experimentation as desired", exercises[2].duration
-    assert_nil exercises[0].materials
-    assert_nil exercises[1].materials
-    assert_nil exercises[2].materials
+    assert_match /\AMomentum is a measure of/, exercises[0].materials
+    assert_match /put things in their mouths\.\z/, exercises[0].materials
+    assert_match /\AMomentum is a measure of/, exercises[1].materials
+    assert_match /put things in their mouths\.\z/, exercises[1].materials
+    assert_match /\AMomentum is a measure of/, exercises[2].materials
+    assert_match /put things in their mouths\.\z/, exercises[2].materials
 
     exercises = ExerciseFactory.new(@d5).exercises
     assert_equal 2, exercises.size

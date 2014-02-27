@@ -13,7 +13,9 @@ class ExerciseFactory
       part_index      = i + 1
       body            = text_between_parts(@book_lesson.methods_and_procedures, part_index)
       materials       = text_between_parts(@book_lesson.materials, part_index)
+      materials     ||= @book_lesson.materials
       duration        = @book_lesson.time_required[/^Part #{i + 1}.*\(\s*(.*)\s*\)/, 1]
+      duration      ||= @book_lesson.time_required
 
       Exercise.new({
         name:      clean_part_name,
