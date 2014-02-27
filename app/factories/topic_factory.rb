@@ -10,6 +10,7 @@ class TopicFactory
     Topic.new({
       name:              name,
       order:             @book_lesson.number,
+      code:              @book_lesson.full_lesson_code,
       overview:          @book_lesson.overview,
       context:           @book_lesson.position,
       objectives:        @book_lesson.objectives,

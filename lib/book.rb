@@ -17,6 +17,10 @@ class Book
       result.clean
     end
 
+    def full_lesson_code
+      @text[/\A\s*Lesson\s(.*)\n/, 1]
+    end
+
     def subject_code
       @text[/\A\s*Lesson\s([ABCD])-\d{1,2}\n.*Overview:/m, 1]
     end

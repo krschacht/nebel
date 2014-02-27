@@ -66,6 +66,41 @@ class BookTest < ActiveSupport::TestCase
       assert_equal "What is a Species?", lesson.name
     end
 
+    test "#full_lesson_code" do
+      lesson = Book::Lesson.new(@a2)
+      assert_equal "A-2", lesson.full_lesson_code
+
+      lesson = Book::Lesson.new(@a18)
+      assert_equal "A-18", lesson.full_lesson_code
+
+      lesson = Book::Lesson.new(@a22)
+      assert_equal "A-22", lesson.full_lesson_code
+
+      lesson = Book::Lesson.new(@b22)
+      assert_equal "B-22", lesson.full_lesson_code
+
+      lesson = Book::Lesson.new(@b30)
+      assert_equal "B-30", lesson.full_lesson_code
+
+      lesson = Book::Lesson.new(@c5)
+      assert_equal "C-5", lesson.full_lesson_code
+
+      lesson = Book::Lesson.new(@c10)
+      assert_equal "C-10", lesson.full_lesson_code
+
+      lesson = Book::Lesson.new(@d5)
+      assert_equal "D-5", lesson.full_lesson_code
+
+      lesson = Book::Lesson.new(@d14)
+      assert_equal "D-14", lesson.full_lesson_code
+
+      lesson = Book::Lesson.new("Lesson A/B-1\n\nOrganizing Things Into Categories\n\n\n\nOverview:")
+      assert_equal "A/B-1", lesson.full_lesson_code
+
+      lesson = Book::Lesson.new("Lesson B-4B\n\nWhat is a Species?\n\n\n\nOverview:")
+      assert_equal "B-4B", lesson.full_lesson_code
+    end
+
     test "#subject_code" do
       lesson = Book::Lesson.new(@a2)
       assert_equal "A", lesson.subject_code
