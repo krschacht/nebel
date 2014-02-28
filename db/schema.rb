@@ -28,6 +28,11 @@ ActiveRecord::Schema.define(version: 20140228211511) do
 
   add_index "exercises", ["topic_id"], name: "index_exercises_on_topic_id", using: :btree
 
+  create_table "prerequisites", force: true do |t|
+    t.integer "topic_id"
+    t.integer "prerequisite_topic_id"
+  end
+
   create_table "subjects", force: true do |t|
     t.string "code",        null: false
     t.string "name",        null: false
