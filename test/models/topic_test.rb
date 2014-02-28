@@ -13,6 +13,13 @@ class TopicTest < ActiveSupport::TestCase
     assert topic.errors[:subject_id].include? "can't be blank"
   end
 
+  test "validates uniqueness of code" do
+    topic = topics(:a3)
+    duplicate_topic = Topic.new code: topic.code
+    assert !duplicate_topic.valid?
+    assert duplicate_topic.errors[:code].include? "has already been taken"
+  end
+
   test "belongs to a subject" do
     assert_equal topics(:a3).subject, subjects(:a)
   end
