@@ -8,6 +8,7 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require topics
  *= require_self
  *= require_tree .
  */
@@ -29,6 +30,15 @@ a:hover,
 a:active {
   color: white;
   background-color: #fb0006;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 40px;
+}
+h2 {
+  font-size: 22px;
+  border-bottom: 1px solid #fb0006;
 }
 
 .container {

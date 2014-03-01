@@ -1,11 +1,14 @@
 class TopicsController < ApplicationController
-  before_action :set_topic, only: [:show, :edit, :update, :destroy]
+  before_action :set_topic, only: [:edit, :update, :destroy]
 
   def index
     @topics = Topic.order(:code)
   end
 
   def show
+    @topic = Topic.where(id: params[:id]).includes(:prerequisite_topics, :exercises).first
+    @prerequisite_topics = @topic.prerequisite_topics
+    @exercises = @topic.exercises.order(:name)
   end
 
   def new

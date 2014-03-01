@@ -1,0 +1,17 @@
+#left-column {
+  float: left;
+  margin-right: 10px;
+  width: 25%;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#right-column {
+  margin-left: 25%;
+}
+
+#left-column h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
