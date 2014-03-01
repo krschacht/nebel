@@ -1,6 +1,7 @@
 require "book_importer"
 
 namespace :book do
+  # rake book:import["path/to/lessons/*.txt"]
   task :import, [:path] => :environment do |task, args|
     Topic.delete_all
     Exercise.delete_all
