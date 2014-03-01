@@ -1,0 +1,25 @@
+<h1>Listing topics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Overview</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @topics.each do |topic| %>
+      <tr>
+        <td><%= link_to topic.code, topic %></td>
+        <td><%= topic.name %></td>
+        <td><%= topic.overview %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Topic', new_topic_path %>
