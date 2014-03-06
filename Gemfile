@@ -11,5 +11,6 @@ group :development, :test do
 end
 
 group :production do
-  gem "uglifier",   "~> 2.4.0"
+  gem "uglifier",       "~> 2.4.0"
+  gem "rails_12factor", "~> 0.0.2"
 end
