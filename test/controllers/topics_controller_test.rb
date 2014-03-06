@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TopicsControllerTest < ActionController::TestCase
   setup do
-    @topic = topics(:one)
+    @topic = topics(:a2)
   end
 
   test "should get index" do
@@ -17,8 +17,13 @@ class TopicsControllerTest < ActionController::TestCase
   end
 
   test "should create topic" do
+    @topic.destroy
+
     assert_difference('Topic.count') do
-      post :create, topic: { code: @topic.code, name: @topic.name, overview: @topic.overview }
+      post :create, topic: {
+        subject_id: @topic.subject_id, code: @topic.code, name: @topic.name,
+        order: @topic.order
+      }
     end
 
     assert_redirected_to topic_path(assigns(:topic))
