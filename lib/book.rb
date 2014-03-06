@@ -14,6 +14,7 @@ class Book
       result   = @text[/\A\s*Lesson\s[ABCD]-\d{1,2}\n(.*)Overview:/m, 1]
       result ||= @text[/\A\s*Lesson\s[ABCD]\/[ABCD]-\d{1,2}\n(.*)Overview:/m, 1]
       result ||= @text[/\A\s*Lesson\s[ABCD]-\d{1,2}[AB]{1}\n(.*)Overview:/m, 1]
+      result   = result.split("\n\n").first
       result.clean
     end
 
@@ -65,7 +66,9 @@ class Book
     end
 
     def methods_and_procedures
-      @text[/methods and procedures:(.*)^questions.*:/mi, 1].try :clean
+      result   = @text[/methods and procedures:(.*)^questions.*/mi, 1]
+      result ||= @text[/methods and procedure:(.*)^questions.*/mi, 1]
+      result.try :clean
     end
 
     def questions

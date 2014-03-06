@@ -35,7 +35,7 @@ namespace :book do
     tmp_dir = Rails.root.join("tmp/book")
     tmp_zip = tmp_dir.join("lessons.zip")
 
-    Dir.mkdir(tmp_dir) unless Dir.exists?(tmp_dir)
+    FileUtils.rm_rf(tmp_dir) and Dir.mkdir(tmp_dir)
 
     File.open(tmp_zip, "wb") do |saved_file|
       open(args[:url], "rb") do |read_file|

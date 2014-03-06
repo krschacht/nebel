@@ -64,6 +64,9 @@ class BookTest < ActiveSupport::TestCase
 
       lesson = Book::Lesson.new("Lesson B-4B\n\nWhat is a Species?\n\n\n\nOverview:")
       assert_equal "What is a Species?", lesson.name
+
+      lesson = Book::Lesson.new("Lesson B-18\n\nFungi and Bacteria III:\nDecomposers Versus Disease and Health\n\n\n\nADD\nAbsolutely! I'm a microbiologist,...\nOverview:")
+      assert_equal "Fungi and Bacteria III:\nDecomposers Versus Disease and Health", lesson.name
     end
 
     test "#full_lesson_code" do
@@ -458,6 +461,10 @@ class BookTest < ActiveSupport::TestCase
       lesson = Book::Lesson.new(@d14)
       assert_match /\APart 1\. Creating the Background/, lesson.methods_and_procedures
       assert_match /firsthand should not be passed up\.\z/, lesson.methods_and_procedures
+
+      lesson = Book::Lesson.new("should be supervised. \nMethods and Procedure:\nPart 1. The Pressure-Volume-Temperature Relationship...\nQuestions")
+      assert_match /\APart 1\. The Pressure/, lesson.methods_and_procedures
+      assert_match /Temperature Relationship\.\.\.\z/, lesson.methods_and_procedures
     end
 
     test "#questions" do
