@@ -12,7 +12,7 @@ class TopicFactory
       order:             @book_lesson.number,
       code:              @book_lesson.full_lesson_code,
       overview:          @book_lesson.overview,
-      context:           @book_lesson.position,
+      progression:       @book_lesson.position,
       objectives:        @book_lesson.objectives,
       teachable_moments: @book_lesson.teachable_moments,
       questions:         @book_lesson.questions,

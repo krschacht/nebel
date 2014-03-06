@@ -49,7 +49,7 @@ private
 
   def topic_params
     params.require(:topic).permit([:subject_id, :name, :order, :overview,
-      :context, :objectives, :teachable_moments, :questions, :parents,
+      :progression, :objectives, :teachable_moments, :questions, :parents,
       :connections, :books, :code])
   end
 

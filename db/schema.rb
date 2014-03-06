@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140228211511) do
+ActiveRecord::Schema.define(version: 20140306235743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20140228211511) do
     t.string  "name",              null: false
     t.integer "order",             null: false
     t.text    "overview"
-    t.text    "context"
+    t.text    "progression"
     t.text    "objectives"
     t.text    "teachable_moments"
     t.text    "questions"
