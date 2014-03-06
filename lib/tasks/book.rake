@@ -4,6 +4,8 @@ require "zip"
 require "fileutils"
 
 namespace :book do
+  task :download_and_import, [:url] => [:download, :import]
+
   # Given a path to lessons in plain text format, this task will create topics
   # and exercises. It deletes all topics and exercises first. The default path
   # is all text files inside "tmp/book".
