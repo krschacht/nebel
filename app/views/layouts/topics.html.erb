@@ -1,0 +1,51 @@
+<% content_for :content do %>
+  <p id="notice"><%= notice %></p>
+
+  <h1>
+    Lesson <%= @topic.code -%><br>
+    <%= @topic.name -%>
+  </h1>
+
+  <nav id="left-column">
+    <h3>Table of Contents:</h3>
+
+    <ul>
+      <li><%= link_to_unless_current "Overview", topic_path -%></li>
+      <li><%= link_to_unless_current "Objectives", topic_path(field: "objectives") -%></li>
+      <li><%= link_to_unless_current "Position in the Progress of Learning", topic_path(field: "progression") -%></li>
+      <li><%= link_to_unless_current "Teachable Moments", topic_path(field: "teachable_moments") -%></li>
+      <li><%= link_to_unless_current "Questions", topic_path(field: "questions") -%></li>
+      <li><%= link_to_unless_current "For Parents and Others Providing Support", topic_path(field: "parents") -%></li>
+      <li><%= link_to_unless_current "Connections", topic_path(field: "connections") -%></li>
+      <li><%= link_to_unless_current "Books for Correlated Reading", topic_path(field: "books") -%></li>
+    </ul>
+
+    <% if @prerequisite_topics.present? %>
+      <h3>Prerequisites:</h3>
+
+      <ul>
+        <% @prerequisite_topics.each do |prerequisite_topic| %>
+          <li><%= link_to prerequisite_topic.code, prerequisite_topic -%></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <% if @exercises.present? %>
+      <h3>Exercises:</h3>
+
+      <ul>
+        <% @exercises.each do |exercise| %>
+          <li><%= link_to exercise.name, exercise -%></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <p><%= link_to 'Edit', edit_topic_path(@topic) %></p>
+  </nav>
+
+  <section id="right-column">
+    <%= content_for?(:topics_content) ? yield(:topics_content) : yield %>
+  </section>
+<% end -%>
+
+<%= render template: "layouts/application" %>
