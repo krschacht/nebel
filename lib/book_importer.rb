@@ -14,6 +14,8 @@ class BookImporter
 private
 
   def create_topic_and_exercises
+    subjects = Subject.all.to_a
+
     book_lessons.each do |book_lesson|
       topic_factory    = TopicFactory.new(book_lesson)
       exercise_factory = ExerciseFactory.new(book_lesson)
@@ -21,7 +23,7 @@ private
       topic     = topic_factory.topic
       exercises = exercise_factory.exercises
 
-      topic.subject_id = 1
+      topic.subject = subjects.find { |s| s.code == book_lesson.subject_code }
 
       if topic.save!
         exercises.each do |exercise|

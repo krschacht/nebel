@@ -23,7 +23,7 @@ class Book
     end
 
     def subject_code
-      @text[/\A\s*Lesson\s([ABCD])-\d{1,2}\n.*Overview:/m, 1]
+      @text[/\A\s*Lesson\s([ABCD])/m, 1]
     end
 
     def number
