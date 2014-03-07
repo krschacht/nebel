@@ -8,7 +8,8 @@ class TopicsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:topics)
+    assert_not_nil assigns(:subjects)
+    assert_not_nil assigns(:topics_by_subject)
   end
 
   test "should get new" do

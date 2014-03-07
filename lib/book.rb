@@ -27,7 +27,10 @@ class Book
     end
 
     def number
-      @text[/\A\s*Lesson\s[ABCD]-(\d{1,2})\n.*Overview:/m, 1].to_i
+      result   = @text[/\A\s*Lesson\s[ABCD]-(\d{1,2})\n.*Overview:/m, 1]
+      result ||= @text[/\A\s*Lesson\s[ABCD]\/[ABCD]-(\d{1,2})\n.*Overview:/m, 1]
+      result ||= @text[/\A\s*Lesson\s[ABCD]-(\d{1,2})[AB]{1}\n.*Overview:/m, 1]
+      result.to_i
     end
 
     def overview

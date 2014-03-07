@@ -1,23 +1,21 @@
 <h1>Listing topics</h1>
 
-<table>
+<table class="block four-columns">
   <thead>
     <tr>
-      <th>Code</th>
-      <th>Name</th>
-      <th>Overview</th>
+      <% @subjects.each do |subject| %>
+        <th><%= subject.name -%></th>
+      <% end %>
     </tr>
   </thead>
-
   <tbody>
-    <% @topics.each do |topic| %>
-      <tr>
-        <td><%= link_to topic.code, topic %></td>
-        <td><%= topic.name %></td>
-        <td><%= topic.overview %></td>
-      </tr>
-    <% end %>
-  </tbody>
+    <tr>
+      <% @subjects.each do |subject| %>
+        <td>
+          <%= render @topics_by_subject[subject] %>
+        </td>
+      <% end %>
+    </tr>
 </table>
 
 <br>

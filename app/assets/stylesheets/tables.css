@@ -1,0 +1,11 @@
+td {
+  vertical-align: top;
+}
+
+table.four-columns td {
+  width: 24%;
+  padding-right: 1.3%;
+}
+table.four-columns td:last-child {
+  padding-right: 0;
+}

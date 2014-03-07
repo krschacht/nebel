@@ -1,5 +1,6 @@
 /*
  *= require_self
+ *= require tables
  *= require topics
  */
 
@@ -36,6 +37,6 @@ h2 {
   margin: 0 auto;
 }
 
-td {
-  vertical-align: top;
+.block {
+  display: block;
 }

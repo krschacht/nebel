@@ -163,6 +163,12 @@ class BookTest < ActiveSupport::TestCase
 
       lesson = Book::Lesson.new(@d14)
       assert_equal 14, lesson.number
+
+      lesson = Book::Lesson.new("Lesson A/B-1\n\nOrganizing Things Into Categories\n\n\n\nOverview:")
+      assert_equal 1, lesson.number
+
+      lesson = Book::Lesson.new("Lesson B-4B\n\nWhat is a Species?\n\n\n\nOverview:")
+      assert_equal 4, lesson.number
     end
 
     test "#overview" do

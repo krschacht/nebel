@@ -2,7 +2,10 @@ class TopicsController < ApplicationController
   before_action :set_topic, only: [:edit, :update, :destroy]
 
   def index
-    @topics = Topic.order(:code)
+    @subjects = Subject.all
+    @topics_by_subject = @subjects.each_with_object({}) do |subject, object|
+      object[subject] = subject.topics.order(:order)
+    end
   end
 
   def show
