@@ -13,6 +13,13 @@ class SubjectTest < ActiveSupport::TestCase
     assert subject.errors[:name].include? "can't be blank"
   end
 
+  test "validates uniqueness of code" do
+    subject = subjects(:a)
+    duplicate_subject = Subject.new code: subject.code
+    assert !duplicate_subject.valid?
+    assert duplicate_subject.errors[:code].include? "has already been taken"
+  end
+
   test "has many topics" do
     assert subjects(:a).topics.include? topics(:a3)
   end
