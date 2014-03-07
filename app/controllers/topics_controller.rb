@@ -1,6 +1,8 @@
 class TopicsController < ApplicationController
   before_action :set_topic, only: [:edit, :update, :destroy]
 
+  layout "application"
+
   def index
     @subjects = Subject.all
     @topics_by_subject = @subjects.each_with_object({}) do |subject, object|
@@ -12,6 +14,8 @@ class TopicsController < ApplicationController
     @topic = Topic.where(id: params[:id]).includes(:prerequisite_topics, :exercises).first
     @prerequisite_topics = @topic.prerequisite_topics
     @exercises = @topic.exercises.order(:name)
+
+    render layout: "topics"
   end
 
   def new
