@@ -1,13 +1,12 @@
 #left-column {
   float: left;
-  margin-right: 10px;
   width: 25%;
   font-size: 14px;
   line-height: 20px;
 }
 
 #right-column {
-  margin-left: 25%;
+  margin-left: 30%;
 }
 
 #left-column h3 {
