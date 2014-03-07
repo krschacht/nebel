@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Subject.destroy_all
+Subject.create! code: "A", name: "Nature of Matter"
+Subject.create! code: "B", name: "Life Science"
+Subject.create! code: "C", name: "Physical Science"
+Subject.create! code: "D", name: "Earth & Space Science"
