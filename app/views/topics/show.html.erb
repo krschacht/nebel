@@ -29,7 +29,7 @@
 
   <ul>
     <% @exercises.each do |exercise| %>
-      <li><%= exercise.name -%></li>
+      <li><%= link_to exercise.name, exercise -%></li>
     <% end %>
   </ul>
 

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  Lesson <%= @topic.code -%><br>
+  <%= @topic.name -%>
+</h1>
+
+<h2><%= @exercise.name %></h2>
+
+<h3>Duration:</h3>
+
+<%= simple_format @exercise.duration %>
+
+<h3>Materials:</h3>
+
+<%= simple_format @exercise.materials %>
+
+<h3>Body:</h3>
+
+<%= simple_format @exercise.body %>
+
+<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Back', exercises_path %>
