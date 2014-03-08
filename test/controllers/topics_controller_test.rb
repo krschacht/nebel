@@ -31,7 +31,7 @@ class TopicsControllerTest < ActionController::TestCase
   end
 
   test "should show topic" do
-    get :show, id: @topic
+    get :show, id: @topic, field: "overview"
     assert_response :success
   end
 

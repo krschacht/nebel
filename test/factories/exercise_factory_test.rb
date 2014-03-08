@@ -36,6 +36,9 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /Ice cubes in a bowl\z/, exercises[1].materials
     assert_match /\ANo additional/, exercises[2].materials
     assert_match /materials needed\z/, exercises[2].materials
+    assert_equal 1, exercises[0].order
+    assert_equal 2, exercises[1].order
+    assert_equal 3, exercises[2].order
 
     exercises = ExerciseFactory.new(@a18).exercises
     assert_equal 2, exercises.size
@@ -51,6 +54,8 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /Food dye \(any color\)\z/, exercises[0].materials
     assert_match /\ADiagrams of utilizing convection/, exercises[1].materials
     assert_match /produces smoke will work\)\z/, exercises[1].materials
+    assert_equal 1, exercises[0].order
+    assert_equal 2, exercises[1].order
 
     exercises = ExerciseFactory.new(@a22).exercises
     assert_equal 3, exercises.size
@@ -72,6 +77,9 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /sources for practice testing\z/, exercises[1].materials
     assert_match /\ANo materials/, exercises[2].materials
     assert_match /are necessary\z/, exercises[2].materials
+    assert_equal 1, exercises[0].order
+    assert_equal 2, exercises[1].order
+    assert_equal 3, exercises[2].order
 
     exercises = ExerciseFactory.new(@b22).exercises
     assert_equal 3, exercises.size
@@ -96,6 +104,9 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /references are included below\.\z/, exercises[1].materials
     assert_match /\AThis lesson entails ongoing/, exercises[2].materials
     assert_match /references are included below\.\z/, exercises[2].materials
+    assert_equal 1, exercises[0].order
+    assert_equal 2, exercises[1].order
+    assert_equal 3, exercises[2].order
 
     exercises = ExerciseFactory.new(@b30).exercises
     assert_equal 4, exercises.size
@@ -124,6 +135,10 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /\(Google: virus life cycle animation\)\z/, exercises[2].materials
     assert_match /\ADiagrams and\/or videos depicting/, exercises[3].materials
     assert_match /function diagrams animations\)\z/, exercises[3].materials
+    assert_equal 1, exercises[0].order
+    assert_equal 2, exercises[1].order
+    assert_equal 3, exercises[2].order
+    assert_equal 4, exercises[3].order
 
     exercises = ExerciseFactory.new(@c5).exercises
     assert_equal 2, exercises.size
@@ -139,6 +154,8 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /shown in the video\.\z/, exercises[0].materials
     assert_match /\ANo additional/, exercises[1].materials
     assert_match /materials needed\z/, exercises[1].materials
+    assert_equal 1, exercises[0].order
+    assert_equal 2, exercises[1].order
 
     exercises = ExerciseFactory.new(@c10).exercises
     assert_equal 3, exercises.size
@@ -160,6 +177,9 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /put things in their mouths\.\z/, exercises[1].materials
     assert_match /\AMomentum is a measure of/, exercises[2].materials
     assert_match /put things in their mouths\.\z/, exercises[2].materials
+    assert_equal 1, exercises[0].order
+    assert_equal 2, exercises[1].order
+    assert_equal 3, exercises[2].order
 
     exercises = ExerciseFactory.new(@d5).exercises
     assert_equal 2, exercises.size
@@ -175,6 +195,8 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /as in Lesson D-2\z/, exercises[0].materials
     assert_match /\APiece of poster paper/, exercises[1].materials
     assert_match /Pencil and straightedge\z/, exercises[1].materials
+    assert_equal 1, exercises[0].order
+    assert_equal 2, exercises[1].order
 
     exercises = ExerciseFactory.new(@d14).exercises
     assert_equal 4, exercises.size
@@ -202,6 +224,10 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /lunar eclipse video\)\.\z/, exercises[2].materials
     assert_match /\AIf students have not had/, exercises[3].materials
     assert_match /\(Google: intertidal zones\)\z/, exercises[3].materials
+    assert_equal 1, exercises[0].order
+    assert_equal 2, exercises[1].order
+    assert_equal 3, exercises[2].order
+    assert_equal 4, exercises[3].order
   end
 
 end

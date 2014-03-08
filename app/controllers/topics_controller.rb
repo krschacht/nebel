@@ -12,8 +12,6 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.where(id: params[:id]).includes(:prerequisite_topics, :exercises).first
-    @prerequisite_topics = @topic.prerequisite_topics
-    @exercises = @topic.exercises.order(:name)
 
     render layout: "topics"
   end

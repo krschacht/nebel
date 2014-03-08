@@ -21,7 +21,8 @@ class ExerciseFactory
         name:      clean_part_name,
         body:      body,
         duration:  duration,
-        materials: materials
+        materials: materials,
+        order:     order_from_name(clean_part_name)
       })
     end
   end
@@ -37,6 +38,10 @@ private
     match ||= text[last_part_pattern, 1]
 
     match.try :clean
+  end
+
+  def order_from_name(name)
+    name[/^Part\s(\d)\./, 1].to_i
   end
 
 end

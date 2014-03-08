@@ -10,32 +10,32 @@
     <h3>Table of Contents:</h3>
 
     <ul>
-      <li><%= link_to_unless_current "Overview", topic_path -%></li>
-      <li><%= link_to_unless_current "Objectives", topic_path(field: "objectives") -%></li>
-      <li><%= link_to_unless_current "Position in the Progress of Learning", topic_path(field: "progression") -%></li>
-      <li><%= link_to_unless_current "Teachable Moments", topic_path(field: "teachable_moments") -%></li>
-      <li><%= link_to_unless_current "Questions", topic_path(field: "questions") -%></li>
-      <li><%= link_to_unless_current "For Parents and Others Providing Support", topic_path(field: "parents") -%></li>
-      <li><%= link_to_unless_current "Connections", topic_path(field: "connections") -%></li>
-      <li><%= link_to_unless_current "Books for Correlated Reading", topic_path(field: "books") -%></li>
+      <li><%= link_to_unless_current "Overview", canonical_topic_path(id: @topic.id) -%></li>
+      <li><%= link_to_unless_current "Objectives", canonical_topic_path(id: @topic.id, field: "objectives") -%></li>
+      <li><%= link_to_unless_current "Position in the Progress of Learning", canonical_topic_path(id: @topic.id, field: "progression") -%></li>
+      <li><%= link_to_unless_current "Teachable Moments", canonical_topic_path(id: @topic.id, field: "teachable_moments") -%></li>
+      <li><%= link_to_unless_current "Questions", canonical_topic_path(id: @topic.id, field: "questions") -%></li>
+      <li><%= link_to_unless_current "For Parents and Others Providing Support", canonical_topic_path(id: @topic.id, field: "parents") -%></li>
+      <li><%= link_to_unless_current "Connections", canonical_topic_path(id: @topic.id, field: "connections") -%></li>
+      <li><%= link_to_unless_current "Books for Correlated Reading", canonical_topic_path(id: @topic.id, field: "books") -%></li>
     </ul>
 
-    <% if @prerequisite_topics.present? %>
+    <% if !@topic.prerequisite_topics.empty? %>
       <h3>Prerequisites:</h3>
 
       <ul>
-        <% @prerequisite_topics.each do |prerequisite_topic| %>
+        <% @topic.prerequisite_topics.each do |prerequisite_topic| %>
           <li><%= link_to prerequisite_topic.code, prerequisite_topic -%></li>
         <% end %>
       </ul>
     <% end %>
 
-    <% if @exercises.present? %>
+    <% if !@topic.exercises.empty? %>
       <h3>Exercises:</h3>
 
       <ul>
-        <% @exercises.each do |exercise| %>
-          <li><%= link_to exercise.name, exercise -%></li>
+        <% @topic.exercises.order(:order).each do |exercise| %>
+          <li><%= link_to_unless_current exercise.name, canonical_exercise_path(topic_id: @topic.id, order: exercise.order) -%></li>
         <% end %>
       </ul>
     <% end %>

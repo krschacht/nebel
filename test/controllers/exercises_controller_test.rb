@@ -27,8 +27,10 @@ class ExercisesControllerTest < ActionController::TestCase
   end
 
   test "should show exercise" do
-    get :show, id: @exercise
+    get :show, topic_id: @exercise.topic_id, order: @exercise.order
     assert_response :success
+    assert_not_nil assigns(:topic)
+    assert_not_nil assigns(:exercise)
   end
 
   test "should get edit" do

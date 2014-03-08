@@ -1,5 +1,5 @@
 class ExercisesController < ApplicationController
-  before_action :set_exercise, only: [:show, :edit, :update, :destroy]
+  before_action :set_exercise, only: [:edit, :update, :destroy]
 
   # GET /exercises
   def index
@@ -8,7 +8,10 @@ class ExercisesController < ApplicationController
 
   # GET /exercises/1
   def show
-    @topic = @exercise.topic
+    @topic = Topic.find(params[:topic_id])
+    @exercise = @topic.exercises.find_by_order(params[:order])
+
+    render layout: "topics"
   end
 
   # GET /exercises/new
