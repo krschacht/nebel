@@ -1,5 +1,5 @@
 <div class="topic" data-order="<%= topic.order -%>">
-  <%= link_to topic do %>
+  <%= link_to canonical_topic_path(slug: topic.slug) do %>
     <strong><%= topic.code %></strong>
     <%= topic.name %>
   <% end %>

@@ -1,14 +1,9 @@
 class ExercisesController < ApplicationController
   before_action :set_exercise, only: [:edit, :update, :destroy]
 
-  # GET /exercises
-  def index
-    @exercises = Exercise.all
-  end
-
   # GET /exercises/1
   def show
-    @topic = Topic.find(params[:topic_id])
+    @topic = Topic.find_by_slug(params[:topic_slug])
     @exercise = @topic.exercises.find_by_order(params[:order])
 
     render layout: "topics"
@@ -46,7 +41,7 @@ class ExercisesController < ApplicationController
   # DELETE /exercises/1
   def destroy
     @exercise.destroy
-    redirect_to exercises_url, notice: 'Exercise was successfully destroyed.'
+    redirect_to root_path, notice: 'Exercise was successfully destroyed.'
   end
 
   private

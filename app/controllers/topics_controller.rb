@@ -11,7 +11,7 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @topic = Topic.where(id: params[:id]).includes(:prerequisite_topics, :exercises).first
+    @topic = Topic.where(slug: params[:slug]).includes(:prerequisite_topics, :exercises).first
 
     render layout: "topics"
   end

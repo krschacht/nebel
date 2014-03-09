@@ -10,14 +10,14 @@
     <h3>Table of Contents:</h3>
 
     <ul>
-      <li><%= link_to_unless_current "Overview", canonical_topic_path(id: @topic.id) -%></li>
-      <li><%= link_to_unless_current "Objectives", canonical_topic_path(id: @topic.id, field: "objectives") -%></li>
-      <li><%= link_to_unless_current "Position in the Progress of Learning", canonical_topic_path(id: @topic.id, field: "progression") -%></li>
-      <li><%= link_to_unless_current "Teachable Moments", canonical_topic_path(id: @topic.id, field: "teachable_moments") -%></li>
-      <li><%= link_to_unless_current "Questions", canonical_topic_path(id: @topic.id, field: "questions") -%></li>
-      <li><%= link_to_unless_current "For Parents and Others Providing Support", canonical_topic_path(id: @topic.id, field: "parents") -%></li>
-      <li><%= link_to_unless_current "Connections", canonical_topic_path(id: @topic.id, field: "connections") -%></li>
-      <li><%= link_to_unless_current "Books for Correlated Reading", canonical_topic_path(id: @topic.id, field: "books") -%></li>
+      <li><%= link_to_unless_current "Overview", canonical_topic_path(slug: @topic.slug) -%></li>
+      <li><%= link_to_unless_current "Objectives", canonical_topic_path(slug: @topic.slug, field: "objectives") -%></li>
+      <li><%= link_to_unless_current "Position in the Progress of Learning", canonical_topic_path(slug: @topic.slug, field: "progression") -%></li>
+      <li><%= link_to_unless_current "Teachable Moments", canonical_topic_path(slug: @topic.slug, field: "teachable_moments") -%></li>
+      <li><%= link_to_unless_current "Questions", canonical_topic_path(slug: @topic.slug, field: "questions") -%></li>
+      <li><%= link_to_unless_current "For Parents and Others Providing Support", canonical_topic_path(slug: @topic.slug, field: "parents") -%></li>
+      <li><%= link_to_unless_current "Connections", canonical_topic_path(slug: @topic.slug, field: "connections") -%></li>
+      <li><%= link_to_unless_current "Books for Correlated Reading", canonical_topic_path(slug: @topic.slug, field: "books") -%></li>
     </ul>
 
     <% if !@topic.prerequisite_topics.empty? %>
@@ -25,7 +25,7 @@
 
       <ul>
         <% @topic.prerequisite_topics.each do |prerequisite_topic| %>
-          <li><%= link_to prerequisite_topic.code, prerequisite_topic -%></li>
+          <li><%= link_to prerequisite_topic.code, canonical_topic_path(slug: prerequisite_topic.slug) -%></li>
         <% end %>
       </ul>
     <% end %>
@@ -35,7 +35,7 @@
 
       <ul>
         <% @topic.exercises.order(:order).each do |exercise| %>
-          <li><%= link_to_unless_current exercise.name, canonical_exercise_path(topic_id: @topic.id, order: exercise.order) -%></li>
+          <li><%= link_to_unless_current exercise.name, canonical_exercise_path(topic_slug: @topic.slug, order: exercise.order) -%></li>
         <% end %>
       </ul>
     <% end %>

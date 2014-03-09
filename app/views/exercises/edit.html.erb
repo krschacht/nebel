@@ -3,4 +3,4 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @exercise %> |
-<%= link_to 'Back', exercises_path %>
+<%= link_to 'Back', canonical_exercise_path(topic_slug: @exercise.topic.slug, order: @exercise.order) %>

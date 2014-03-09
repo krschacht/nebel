@@ -27,11 +27,11 @@ class TopicsControllerTest < ActionController::TestCase
       }
     end
 
-    assert_redirected_to topic_path(assigns(:topic))
+    assert_redirected_to canonical_topic_path(assigns(:topic))
   end
 
   test "should show topic" do
-    get :show, id: @topic, field: "overview"
+    get :show, slug: @topic.slug, field: "overview"
     assert_response :success
   end
 
@@ -42,7 +42,7 @@ class TopicsControllerTest < ActionController::TestCase
 
   test "should update topic" do
     patch :update, id: @topic, topic: { code: @topic.code, name: @topic.name, overview: @topic.overview }
-    assert_redirected_to topic_path(assigns(:topic))
+    assert_redirected_to canonical_topic_path(assigns(:topic))
   end
 
   test "should destroy topic" do

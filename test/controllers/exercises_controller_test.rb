@@ -5,12 +5,6 @@ class ExercisesControllerTest < ActionController::TestCase
     @exercise = exercises(:d5_part1)
   end
 
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:exercises)
-  end
-
   test "should get new" do
     get :new
     assert_response :success
@@ -27,7 +21,7 @@ class ExercisesControllerTest < ActionController::TestCase
   end
 
   test "should show exercise" do
-    get :show, topic_id: @exercise.topic_id, order: @exercise.order
+    get :show, topic_slug: @exercise.topic.slug, order: @exercise.order
     assert_response :success
     assert_not_nil assigns(:topic)
     assert_not_nil assigns(:exercise)
@@ -48,6 +42,6 @@ class ExercisesControllerTest < ActionController::TestCase
       delete :destroy, id: @exercise
     end
 
-    assert_redirected_to exercises_path
+    assert_redirected_to root_path
   end
 end
