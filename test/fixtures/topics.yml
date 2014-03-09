@@ -3,13 +3,16 @@ a2:
   order: 2
   subject: a
   code: A2
+  slug: a2
 a3:
   name: Air is a Substance
   order: 3
   subject: a
   code: A3
+  slug: a3
 d5:
   name: Time and the Earth's Turning
   order: 5
   subject: d
   code: D5
+  slug: d5

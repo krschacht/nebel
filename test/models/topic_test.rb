@@ -13,11 +13,36 @@ class TopicTest < ActiveSupport::TestCase
     assert topic.errors[:subject_id].include? "can't be blank"
   end
 
+  test "validates presence of order" do
+    topic = Topic.new
+    assert !topic.valid?
+    assert topic.errors[:order].include? "can't be blank"
+  end
+
+  test "validates presence of code" do
+    topic = Topic.new
+    assert !topic.valid?
+    assert topic.errors[:code].include? "can't be blank"
+  end
+
+  test "validates presence of slug" do
+    topic = Topic.new
+    assert !topic.valid?
+    assert topic.errors[:slug].include? "can't be blank"
+  end
+
   test "validates uniqueness of code" do
     topic = topics(:a3)
     duplicate_topic = Topic.new code: topic.code
     assert !duplicate_topic.valid?
     assert duplicate_topic.errors[:code].include? "has already been taken"
+  end
+
+  test "validates uniqueness of slug" do
+    topic = topics(:a3)
+    duplicate_topic = Topic.new slug: topic.slug
+    assert !duplicate_topic.valid?
+    assert duplicate_topic.errors[:slug].include? "has already been taken"
   end
 
   test "belongs to a subject" do
@@ -42,5 +67,19 @@ class TopicTest < ActiveSupport::TestCase
 
     assert prerequisite_topic.reload.subsequent_topics.include? subsequent_topic
     assert subsequent_topic.reload.prerequisite_topics.include? prerequisite_topic
+  end
+
+  test "generates slug from code automatically" do
+    topic = Topic.new code: "A-3"
+    topic.valid?
+    assert_equal "a-3", topic.slug
+
+    topic = Topic.new code: "A/B-1"
+    topic.valid?
+    assert_equal "ab-1", topic.slug
+
+    topic = Topic.new code: "D-9B"
+    topic.valid?
+    assert_equal "d-9b", topic.slug
   end
 end
