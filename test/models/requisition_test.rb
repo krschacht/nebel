@@ -16,4 +16,12 @@ class RequisitionTest < ActiveSupport::TestCase
   test "quantity defaults to 1" do
     assert_equal 1, Requisition.new.quantity
   end
+
+  test "belongs to material and exercise" do
+    material, exercise = materials(:straw), exercises(:d5_part1)
+    requisition = Requisition.create!(material_id: material.id, exercise_id: exercise.id)
+    requisition.reload
+    assert_equal requisition.material, material
+    assert_equal requisition.exercise, exercise
+  end
 end

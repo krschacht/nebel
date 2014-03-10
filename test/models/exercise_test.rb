@@ -16,4 +16,16 @@ class ExerciseTest < ActiveSupport::TestCase
   test "belongs to topic" do
     assert_equal topics(:d5), exercises(:d5_part1).topic
   end
+
+  test "has many requisitions" do
+    exercise, material = exercises(:d5_part1), materials(:straw)
+    requisition = Requisition.create! exercise_id: exercise.id, material_id: material.id
+    assert exercise.reload.requisitions.include? requisition
+  end
+
+  test "has many materials through requisitions" do
+    exercise, material = exercises(:d5_part1), materials(:straw)
+    requisition = Requisition.create! exercise_id: exercise.id, material_id: material.id
+    assert exercise.reload.materials.include? material
+  end
 end
