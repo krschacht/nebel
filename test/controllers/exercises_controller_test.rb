@@ -33,7 +33,7 @@ class ExercisesControllerTest < ActionController::TestCase
   end
 
   test "should update exercise" do
-    patch :update, id: @exercise, exercise: { body: @exercise.body, duration: @exercise.duration, materials: @exercise.materials, name: @exercise.name }
+    patch :update, id: @exercise, exercise: { body: @exercise.body, duration: @exercise.duration, name: @exercise.name }
     assert_redirected_to exercise_path(assigns(:exercise))
   end
 
