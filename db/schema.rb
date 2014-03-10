@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140310204747) do
+ActiveRecord::Schema.define(version: 20140310212417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,19 +59,21 @@ ActiveRecord::Schema.define(version: 20140310204747) do
   add_index "subjects", ["code"], name: "index_subjects_on_code", unique: true, using: :btree
 
   create_table "topics", force: true do |t|
-    t.integer "subject_id",        null: false
-    t.string  "name",              null: false
-    t.integer "order",             null: false
-    t.text    "overview"
-    t.text    "progression"
-    t.text    "objectives"
-    t.text    "teachable_moments"
-    t.text    "questions"
-    t.text    "parents"
-    t.text    "connections"
-    t.text    "books"
-    t.string  "code"
-    t.string  "slug"
+    t.integer  "subject_id",        null: false
+    t.string   "name",              null: false
+    t.integer  "order",             null: false
+    t.text     "overview"
+    t.text     "progression"
+    t.text     "objectives"
+    t.text     "teachable_moments"
+    t.text     "questions"
+    t.text     "parents"
+    t.text     "connections"
+    t.text     "books"
+    t.string   "code"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "topics", ["code"], name: "index_topics_on_code", unique: true, using: :btree
