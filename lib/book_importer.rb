@@ -9,6 +9,7 @@ class BookImporter
   def import
     create_topic_and_exercises
     create_prerequisites
+    create_materials_and_requisitions
   end
 
 private
@@ -42,6 +43,23 @@ private
       prerequisite_topic_codes  = prerequisite_factory.topic_codes
       prerequisite_topics       = Topic.where(code: prerequisite_topic_codes)
       topic.prerequisite_topics = prerequisite_topics
+    end
+  end
+
+  def create_materials_and_requisitions
+    book_lessons.each do |book_lesson|
+      topic = Topic.find_by_code(book_lesson.full_lesson_code)
+      materials = MaterialFactory.new(book_lesson).materials
+
+      topic.exercises.each do |exercise|
+        exercise_materials = materials.size == 1 ? materials[0] : materials[exercise.order - 1]
+
+        exercise_materials.each do |material|
+          if material.save!
+            Requisition.create! exercise_id: exercise.id, material_id: material.id
+          end
+        end
+      end
     end
   end
 
