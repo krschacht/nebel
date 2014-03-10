@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20140310180913) do
   create_table "requisitions", force: true do |t|
     t.integer  "exercise_id"
     t.integer  "material_id"
-    t.integer  "quantity"
+    t.integer  "quantity",    default: 1
     t.datetime "created_at"
     t.datetime "updated_at"
   end
