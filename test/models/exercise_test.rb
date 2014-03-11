@@ -1,12 +1,6 @@
 require 'test_helper'
 
 class ExerciseTest < ActiveSupport::TestCase
-  test "validates presence of name" do
-    exercise = Exercise.new
-    assert !exercise.valid?
-    assert exercise.errors[:name].include? "can't be blank"
-  end
-
   test "validates presence of topic_id" do
     exercise = Exercise.new
     assert !exercise.valid?
