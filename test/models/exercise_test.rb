@@ -7,6 +7,16 @@ class ExerciseTest < ActiveSupport::TestCase
     assert exercise.errors[:topic_id].include? "can't be blank"
   end
 
+  test "validates presence of part" do
+    exercise = Exercise.new part: nil
+    assert !exercise.valid?
+    assert exercise.errors[:part].include? "can't be blank"
+  end
+
+  test "part defaults to 1" do
+    assert_equal 1, Exercise.new.part
+  end
+
   test "belongs to topic" do
     assert_equal topics(:d5), exercises(:d5_part1).topic
   end

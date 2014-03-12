@@ -1,5 +1,5 @@
 class Exercise < ActiveRecord::Base
-  validates_presence_of :topic_id
+  validates_presence_of :topic_id, :part
 
   belongs_to :topic
   has_many :requisitions
