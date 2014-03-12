@@ -7,18 +7,20 @@
 <% if !@exercise.materials.empty? %>
   <h3>Materials:</h3>
 
-  <table>
+  <table class="full-width materials">
     <thead>
       <tr>
-        <th>Name</th>
+        <th>ID</th>
         <th>Original Name</th>
+        <th>New Name</th>
       </tr>
     </thead>
     <tbody>
       <% @exercise.materials.each do |material| %>
-        <tr>
-          <td><%= material.name -%></td>
+        <tr class="<%= 'highlight' if material.id.to_s == params[:material_id] -%>">
+          <td><%= link_to material.id, material -%></td>
           <td><%= material.original_name -%></td>
+          <td><%= material.name -%></td>
         </tr>
       <% end -%>
     </tbody>

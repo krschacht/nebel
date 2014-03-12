@@ -1,0 +1,11 @@
+<h1>Editing material</h1>
+
+<p>
+  <strong>Original name:</strong>
+  <%= @material.original_name -%>
+</p>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @material %> |
+<%= link_to 'Back', materials_path %>

@@ -180,7 +180,7 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
 
     exercises = ExerciseFactory.new(@a1b1).exercises
     assert_equal 1, exercises.size
-    assert_nil exercises[0].name
+    assert_equal "Part 1", exercises[0].name
     assert_match /\AA convenient place/, exercises[0].body
     assert_match /importance of organization\.\z/, exercises[0].body
     assert_match /\AIntroductory discussion/, exercises[0].duration

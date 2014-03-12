@@ -32,4 +32,12 @@ class ExerciseTest < ActiveSupport::TestCase
     requisition = Requisition.create! exercise_id: exercise.id, material_id: material.id
     assert exercise.reload.materials.include? material
   end
+
+  test "#name returns the name" do
+    assert_equal "Foo", Exercise.new(name: "Foo").name
+  end
+
+  test "#name returns the part with the prefix 'Part '" do
+    assert_equal "Part 3", Exercise.new(part: 3).name
+  end
 end

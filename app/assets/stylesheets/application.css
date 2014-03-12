@@ -40,3 +40,7 @@ h2 {
 .block {
   display: block;
 }
+
+.highlight {
+  background: #ffcc66;
+}

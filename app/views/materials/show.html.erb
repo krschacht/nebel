@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Original name:</strong>
+  <%= @material.original_name -%>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @material.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @material.description %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @material.url %>
+</p>
+
+<% if @material.exercises.empty? %>
+  <p>No exercises</p>
+<% else %>
+  <p><strong>Exercises:</strong></h2>
+
+  <ul>
+    <% @material.exercises.each do |exercise| %>
+      <li><%= link_to exercise.name, canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @material.id) %>
+    <% end -%>
+  </ul>
+<% end -%>
+
+<%= link_to 'Edit', edit_material_path(@material) %> |
+<%= link_to 'Destroy', @material, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', materials_path %>
