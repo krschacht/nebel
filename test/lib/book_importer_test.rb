@@ -15,10 +15,10 @@ class BookImporterTest < ActiveSupport::TestCase
     materials    = Material.where("created_at > ?", beginning_of_test)
     requisitions = Requisition.where("created_at > ?", beginning_of_test)
 
-    assert_equal 9, topics.count
-    assert_equal 26, exercises.count
-    assert_equal 66, materials.count
-    assert_equal 84, requisitions.count
+    assert_equal 10, topics.count
+    assert_equal 27, exercises.count
+    assert_equal 68, materials.count
+    assert_equal 86, requisitions.count
 
     topics.destroy_all
     exercises.destroy_all

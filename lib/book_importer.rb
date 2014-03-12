@@ -49,10 +49,10 @@ private
   def create_materials_and_requisitions
     book_lessons.each do |book_lesson|
       topic = Topic.find_by_code(book_lesson.full_lesson_code)
-      materials = MaterialFactory.new(book_lesson).materials
+      materials_factory = MaterialFactory.new(book_lesson)
 
       topic.exercises.each do |exercise|
-        exercise_materials = materials.size == 1 ? materials[0] : materials[exercise.part - 1]
+        exercise_materials = materials_factory.materials(exercise.part)
 
         exercise_materials.each do |material|
           if material.save!

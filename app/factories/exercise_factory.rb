@@ -13,12 +13,15 @@ class ExerciseFactory
       duration   = @book_lesson.time_required[/^Part #{part_number}.*\(\s*(.*)\s*\)/, 1]
       duration ||= @book_lesson.time_required
 
-      Exercise.new({
+      exercise = Exercise.new({
         name:      part_name,
         body:      part_text,
         duration:  duration,
-        part:      part_number
       })
+
+      exercise.part = part_number unless part_number.nil?
+
+      exercise
     end
   end
 

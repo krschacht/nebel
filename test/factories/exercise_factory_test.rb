@@ -4,15 +4,16 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
 
   setup do
     fixtures_root = Rails.root.join "test/fixtures/lesson_samples/"
-    @a2  = Book::Lesson.new fixtures_root.join "volume_1/2nd_edition/a2.txt"
-    @a18 = Book::Lesson.new fixtures_root.join "volume_2/2nd_edition/a18.txt"
-    @a22 = Book::Lesson.new fixtures_root.join "volume_3/1st_edition/a22.txt"
-    @b22 = Book::Lesson.new fixtures_root.join "volume_2/2nd_edition/b22.txt"
-    @b30 = Book::Lesson.new fixtures_root.join "volume_3/1st_edition/b30.txt"
-    @c5  = Book::Lesson.new fixtures_root.join "volume_1/2nd_edition/c5.txt"
-    @c10 = Book::Lesson.new fixtures_root.join "volume_2/2nd_edition/c10.txt"
-    @d5  = Book::Lesson.new fixtures_root.join "volume_1/2nd_edition/d5.txt"
-    @d14 = Book::Lesson.new fixtures_root.join "volume_3/1st_edition/d14.txt"
+    @a2   = Book::Lesson.new fixtures_root.join "volume_1/2nd_edition/a2.txt"
+    @a18  = Book::Lesson.new fixtures_root.join "volume_2/2nd_edition/a18.txt"
+    @a22  = Book::Lesson.new fixtures_root.join "volume_3/1st_edition/a22.txt"
+    @b22  = Book::Lesson.new fixtures_root.join "volume_2/2nd_edition/b22.txt"
+    @b30  = Book::Lesson.new fixtures_root.join "volume_3/1st_edition/b30.txt"
+    @c5   = Book::Lesson.new fixtures_root.join "volume_1/2nd_edition/c5.txt"
+    @c10  = Book::Lesson.new fixtures_root.join "volume_2/2nd_edition/c10.txt"
+    @d5   = Book::Lesson.new fixtures_root.join "volume_1/2nd_edition/d5.txt"
+    @d14  = Book::Lesson.new fixtures_root.join "volume_3/1st_edition/d14.txt"
+    @a1b1 = Book::Lesson.new fixtures_root.join "volume_1/2nd_edition/a1b1.txt"
   end
 
   test "#exercises" do
@@ -176,6 +177,15 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal 2, exercises[1].part
     assert_equal 3, exercises[2].part
     assert_equal 4, exercises[3].part
+
+    exercises = ExerciseFactory.new(@a1b1).exercises
+    assert_equal 1, exercises.size
+    assert_nil exercises[0].name
+    assert_match /\AA convenient place/, exercises[0].body
+    assert_match /importance of organization\.\z/, exercises[0].body
+    assert_match /\AIntroductory discussion/, exercises[0].duration
+    assert_match /desired \(30 minutes up\)\z/, exercises[0].duration
+    assert_equal 1, exercises[0].part
   end
 
 end
