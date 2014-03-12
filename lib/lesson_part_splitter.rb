@@ -1,7 +1,7 @@
 class LessonPartSplitter
 
   def initialize(text)
-    @text = text
+    @text = replace_parts_with_part text
   end
 
   def split
@@ -40,6 +40,10 @@ private
 
   def text_divided_into_parts?
     @text =~ /^Part\s\d/
+  end
+
+  def replace_parts_with_part(text)
+    text.gsub(/^Parts\s(\d{1,2})\./, 'Part \1.')
   end
 
 end

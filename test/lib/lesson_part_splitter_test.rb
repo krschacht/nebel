@@ -7,6 +7,12 @@ class LessonPartSplitterTest < ActiveSupport::TestCase
     @string_without_parts = "Wash and rinse the dishes"
   end
 
+  test ".new replaces 'Parts' with 'Part'" do
+    lesson_part_splitter = LessonPartSplitter.new("Parts 1. Wash")
+
+    assert_equal "Part 1. Wash", lesson_part_splitter.instance_variable_get(:@text)
+  end
+
   test "#split yields for each part" do
     lesson_part_splitter = LessonPartSplitter.new(@string_with_parts)
     count_of_yields      = 0
