@@ -17,7 +17,7 @@ class ExerciseFactory
         name:      part_name,
         body:      part_text,
         duration:  duration,
-        order:     part_number
+        part:      part_number
       })
     end
   end

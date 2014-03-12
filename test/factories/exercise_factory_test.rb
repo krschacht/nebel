@@ -30,9 +30,9 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "demonstration, game/activity, interpretation; 40-50 minutes", exercises[0].duration
     assert_equal "demonstrations with interpretive discussion; 20-30 minutes", exercises[1].duration
     assert_equal "instruction and thought exercises; 30-40 minutes", exercises[2].duration
-    assert_equal 1, exercises[0].order
-    assert_equal 2, exercises[1].order
-    assert_equal 3, exercises[2].order
+    assert_equal 1, exercises[0].part
+    assert_equal 2, exercises[1].part
+    assert_equal 3, exercises[2].part
 
     exercises = ExerciseFactory.new(@a18).exercises
     assert_equal 2, exercises.size
@@ -44,8 +44,8 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /diversity of living things\.\z/, exercises[1].body
     assert_equal "demonstration, 30-45 minutes; interpretive discussion, 35-45 minutes", exercises[0].duration
     assert_equal "activity and analysis, 1-2 hours", exercises[1].duration
-    assert_equal 1, exercises[0].order
-    assert_equal 2, exercises[1].order
+    assert_equal 1, exercises[0].part
+    assert_equal 2, exercises[1].part
 
     exercises = ExerciseFactory.new(@a22).exercises
     assert_equal 3, exercises.size
@@ -61,9 +61,9 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "lecture, discussion, reflection, learning games, 1-2 hours", exercises[0].duration
     assert_equal "lecture, discussion, demonstration, 40-50 minutes; measuring/recording pH, open ended", exercises[1].duration
     assert_equal "open ended", exercises[2].duration
-    assert_equal 1, exercises[0].order
-    assert_equal 2, exercises[1].order
-    assert_equal 3, exercises[2].order
+    assert_equal 1, exercises[0].part
+    assert_equal 2, exercises[1].part
+    assert_equal 3, exercises[2].part
 
     exercises = ExerciseFactory.new(@b22).exercises
     assert_equal 3, exercises.size
@@ -82,9 +82,9 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /reading over the lesson\.\z/, exercises[1].duration
     assert_match /\ACarried out during/, exercises[2].duration
     assert_match /reading over the lesson\.\z/, exercises[2].duration
-    assert_equal 1, exercises[0].order
-    assert_equal 2, exercises[1].order
-    assert_equal 3, exercises[2].order
+    assert_equal 1, exercises[0].part
+    assert_equal 2, exercises[1].part
+    assert_equal 3, exercises[2].part
 
     exercises = ExerciseFactory.new(@b30).exercises
     assert_equal 4, exercises.size
@@ -105,10 +105,10 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "presentation, Q and A discussion, 30-40 minutes, repetition of Pasteur’s experiment, 1-2 hours", exercises[1].duration
     assert_equal "presentation, Q and A discussion, 30-40 minutes, model building, 1-2 hours", exercises[2].duration
     assert_equal "presentation, Q and A discussion, 40-60 minutes", exercises[3].duration
-    assert_equal 1, exercises[0].order
-    assert_equal 2, exercises[1].order
-    assert_equal 3, exercises[2].order
-    assert_equal 4, exercises[3].order
+    assert_equal 1, exercises[0].part
+    assert_equal 2, exercises[1].part
+    assert_equal 3, exercises[2].part
+    assert_equal 4, exercises[3].part
 
     exercises = ExerciseFactory.new(@c5).exercises
     assert_equal 2, exercises.size
@@ -120,8 +120,8 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /from any friction involved\.\z/, exercises[1].body
     assert_equal "demonstrations, observations, interpretive discussion; 50-60 minutes, plus games/activities as desired", exercises[0].duration
     assert_equal "observations, reasoning, interpretive discussion; 30-40 minutes", exercises[1].duration
-    assert_equal 1, exercises[0].order
-    assert_equal 2, exercises[1].order
+    assert_equal 1, exercises[0].part
+    assert_equal 2, exercises[1].part
 
     exercises = ExerciseFactory.new(@c10).exercises
     assert_equal 3, exercises.size
@@ -137,9 +137,9 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "review as necessary", exercises[0].duration
     assert_equal "examples drawing on experience plus interpretive discussion; 40-50 minutes", exercises[1].duration
     assert_equal "calculations, experimentation as desired", exercises[2].duration
-    assert_equal 1, exercises[0].order
-    assert_equal 2, exercises[1].order
-    assert_equal 3, exercises[2].order
+    assert_equal 1, exercises[0].part
+    assert_equal 2, exercises[1].part
+    assert_equal 3, exercises[2].part
 
     exercises = ExerciseFactory.new(@d5).exercises
     assert_equal 2, exercises.size
@@ -151,8 +151,8 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_match /from a properly oriented sundial\.\z/, exercises[1].body
     assert_equal "15 minute activity at the beginning and end of an outdoor recreational period followed by interpretive discussion; 30-40 minutes", exercises[0].duration
     assert_equal "Making the sundial; 40-50 minutes plus 5-10 minutes each hour over the course of the day to calibrate it", exercises[1].duration
-    assert_equal 1, exercises[0].order
-    assert_equal 2, exercises[1].order
+    assert_equal 1, exercises[0].part
+    assert_equal 2, exercises[1].part
 
     exercises = ExerciseFactory.new(@d14).exercises
     assert_equal 4, exercises.size
@@ -172,10 +172,10 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     assert_equal "“homework” with support from parents or others, time as necessary to make arrangements; follow-up discussion and analysis of results, 1-2 hours", exercises[1].duration
     assert_equal "modeling and interpretation, 40-50 minutes", exercises[2].duration
     assert_equal "correlating data, 40-50 minutes; analysis and interpretation 40-50 minutes", exercises[3].duration
-    assert_equal 1, exercises[0].order
-    assert_equal 2, exercises[1].order
-    assert_equal 3, exercises[2].order
-    assert_equal 4, exercises[3].order
+    assert_equal 1, exercises[0].part
+    assert_equal 2, exercises[1].part
+    assert_equal 3, exercises[2].part
+    assert_equal 4, exercises[3].part
   end
 
 end

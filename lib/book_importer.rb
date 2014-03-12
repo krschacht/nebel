@@ -52,7 +52,7 @@ private
       materials = MaterialFactory.new(book_lesson).materials
 
       topic.exercises.each do |exercise|
-        exercise_materials = materials.size == 1 ? materials[0] : materials[exercise.order - 1]
+        exercise_materials = materials.size == 1 ? materials[0] : materials[exercise.part - 1]
 
         exercise_materials.each do |material|
           if material.save!

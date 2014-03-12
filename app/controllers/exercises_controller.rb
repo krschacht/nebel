@@ -4,7 +4,7 @@ class ExercisesController < ApplicationController
   # GET /exercises/1
   def show
     @topic = Topic.find_by_slug(params[:topic_slug])
-    @exercise = @topic.exercises.find_by_order(params[:order])
+    @exercise = @topic.exercises.find_by_part(params[:part])
 
     render layout: "topics"
   end
