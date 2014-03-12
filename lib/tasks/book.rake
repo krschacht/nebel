@@ -19,12 +19,16 @@ namespace :book do
 
     Topic.delete_all
     Exercise.delete_all
+    Material.delete_all
+    Requisition.delete_all
 
     book_importer = BookImporter.new(Dir[args[:path]])
     book_importer.import
 
     puts "#{Topic.count} topic(s) created"
     puts "#{Exercise.count} exercise(s) created"
+    puts "#{Material.count} material(s) created"
+    puts "#{Requisition.count} requisition(s) created"
   end
 
   # Given an URL to a ZIP of plain text files, this task will download the ZIP,
