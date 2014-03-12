@@ -94,6 +94,19 @@ class LessonPartSplitterTest < ActiveSupport::TestCase
     assert "result", results[1]
   end
 
+  test "#split fixes incorrectly labled part numbers" do
+    lesson_part_splitter = LessonPartSplitter.new("Part 1. Wash\nPart 3. Rinse\nPart 5. Repeat")
+    part_names           = []
+
+    lesson_part_splitter.split do |part_number, part_name|
+      part_names << part_name
+    end
+
+    assert_equal "Part 1. Wash", part_names[0]
+    assert_equal "Part 2. Rinse", part_names[1]
+    assert_equal "Part 3. Repeat", part_names[2]
+  end
+
   test "#text_for_part extracts text between two parts" do
     lesson_part_splitter = LessonPartSplitter.new(@string_with_parts)
 

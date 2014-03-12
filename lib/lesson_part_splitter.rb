@@ -11,6 +11,7 @@ class LessonPartSplitter
       @text.scan(/^Part\s\d{1,2}.*$/).map.with_index do |part_name, i|
         part_number = i + 1
         part_name   = part_name.strip.gsub(/\.$/, "")
+        part_name   = part_name.gsub(/Part\s\d{1,2}/, "Part #{part_number}")
         part_text   = text_for_part(part_number)
 
         results << yield(part_number, part_name, part_text)
