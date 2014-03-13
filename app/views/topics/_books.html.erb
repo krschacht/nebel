@@ -5,9 +5,11 @@
 
   <% if book_pieces.length == 3 %>
 
+  <p>
     <%= book_pieces[0] %>. 
-    <%= link_to book_pieces[2], "http://www.worldcat.org/search?qt=worldcat_org_all&q=#{URI.escape(book_pieces[1])}" %>. 
+    <%= link_to book_pieces[1], "http://www.worldcat.org/search?qt=worldcat_org_all&q=#{URI.escape(book_pieces[1])}" %>. 
     <%= book_pieces[2] %>.
+  </p>
 
   <% else %>
     <%= simple_format book %>
