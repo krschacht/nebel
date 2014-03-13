@@ -1,0 +1,11 @@
+
+<div style='background-color: #ccc; width: 300px; height: 100px; margin: 30px auto; padding: 20px;'>
+  <form method='post' action='/check_login'>
+    <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+    E-mail: <input type='text' name='login'>
+    Password: <input type='password' name='password'><br>
+    <input type='submit' name='Login' value='Login'>
+  </form>
+</div>
+
+
