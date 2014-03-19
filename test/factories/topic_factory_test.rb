@@ -36,6 +36,8 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /achieving NGSS: 5-ESS2-1\.\z/, topic.connections
     assert_match /\ACurry, Don L\.  What Is Matter\?/, topic.books
     assert_match /Matter \(Early Bird\)\. Lerner,\z/, topic.books
+    assert_match /\APart 1\. Identification of Solids/, topic.materials_text
+    assert_match /No additional materials needed\z/, topic.materials_text
 
     topic = TopicFactory.new(@c5).topic
     assert_equal 5, topic.order
@@ -56,6 +58,8 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_nil topic.connections
     assert_match /\ABradley, Kimberly Brubaker\./, topic.books
     assert_match /Forces\)\.  Rourke, 2007\.\z/, topic.books
+    assert_match /\APart 1\. Revealing the/, topic.materials_text
+    assert_match /No additional materials needed\z/, topic.materials_text
 
     topic = TopicFactory.new(@d5).topic
     assert_equal 5, topic.order
@@ -77,6 +81,8 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /2-ESS1-1; and 5-ESS1-2\.\z/, topic.connections
     assert_match /\ABailey, Jacqui and Matthew/, topic.books
     assert_match /Over and Over\.  Harp\z/, topic.books
+    assert_match /\APart 1\. Relating Time to the/, topic.materials_text
+    assert_match /Pencil and straightedge\z/, topic.materials_text
 
     topic = TopicFactory.new(@a18).topic
     assert_equal 18, topic.order
@@ -98,6 +104,8 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /many other standards as well\.\z/, topic.connections
     assert_match /\AHakim, Joy\. The Story of Science/, topic.books
     assert_match /Children’s Press, 2003\.\z/, topic.books
+    assert_match /\APart 1\. Creating, Observing,/, topic.materials_text
+    assert_match /produces smoke will work\)\z/, topic.materials_text
 
     topic = TopicFactory.new(@b22).topic
     assert_equal 22, topic.order
@@ -119,6 +127,8 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /the fore are: a, b, d, and g\.\z/, topic.connections
     assert_match /\ABang, Molly\. Living Sunlight:/, topic.books
     assert_match /series from Capstone Press\.\z/, topic.books
+    assert_match /\AThis lesson entails ongoing/, topic.materials_text
+    assert_match /references are included below\.\z/, topic.materials_text
 
     topic = TopicFactory.new(@c10).topic
     assert_equal 10, topic.order
@@ -140,6 +150,8 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /are: a, b, c, d, e, f, and h\.\z/, topic.connections
     assert_match /\AGraham, John, Forces and Motion/, topic.books
     assert_match /\(Exploratorium\)\. Wiley, 2008\.\z/, topic.books
+    assert_match /\AMomentum is a measure of/, topic.materials_text
+    assert_match /put things in their mouths\.\z/, topic.materials_text
 
     topic = TopicFactory.new(@a22).topic
     assert_equal 22, topic.order
@@ -160,6 +172,8 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /Chemical Reactions and Energy\.\z/, topic.connections
     assert_match /\AOxlade, Chris\.  Acids and Bases/, topic.books
     assert_match /Atoms: Unraveling Their Nature\.\z/, topic.books
+    assert_match /\APart 1\. The Chemistry/, topic.materials_text
+    assert_match /No materials are necessary\z/, topic.materials_text
 
     topic = TopicFactory.new(@b30).topic
     assert_equal 30, topic.order
@@ -180,6 +194,8 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /pathology, and related fields\.\z/, topic.connections
     assert_match /\AByrnie, Faith Hickman\. 101/, topic.books
     assert_match /Minds of Science\)\. Enslow, 2001\.\z/, topic.books
+    assert_match /\APart 1\. Childhood Disease/, topic.materials_text
+    assert_match /function diagrams animations)\z/, topic.materials_text
 
     topic = TopicFactory.new(@d14).topic
     assert_equal 14, topic.order
@@ -200,6 +216,8 @@ class TopicFactoryTest < ActiveSupport::TestCase
     assert_match /observed in different locations\z/, topic.connections
     assert_match /\ALegault, Thierry and Serge Brunier\./, topic.books
     assert_match /that the effect is the same\.\z/, topic.books
+    assert_match /\APart 1\. Creating the Background/, topic.materials_text
+    assert_match /zones \(Google: intertidal zones\)\z/, topic.materials_text
   end
 
 end

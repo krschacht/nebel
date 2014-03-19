@@ -18,7 +18,8 @@ class TopicFactory
       questions:         @book_lesson.questions,
       parents:           @book_lesson.support,
       connections:       @book_lesson.connections,
-      books:             @book_lesson.books
+      books:             @book_lesson.books,
+      materials_text:    @book_lesson.materials
     })
   end
 
