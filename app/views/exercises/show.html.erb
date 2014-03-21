@@ -4,9 +4,36 @@
 
 <%= simple_format @exercise.duration %>
 
-<h3>Materials:</h3>
+<% if !@exercise.materials.empty? %>
+  <h3>Materials:</h3>
 
-<%= simple_format @exercise.materials %>
+  <table class="full-width materials">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Original Name</th>
+        <th>New Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @exercise.materials.each do |material| %>
+        <tr class="<%= 'highlight' if material.id.to_s == params[:material_id] -%>">
+          <td><%= link_to material.id, material -%></td>
+          <td><%= material.original_name -%></td>
+          <td><%= material.name -%></td>
+        </tr>
+      <% end -%>
+    </tbody>
+  </table>
+<% end -%>
+
+<button onclick="document.querySelector('#materials_text').classList.toggle('hidden')">
+  Toggle Raw Materials Text
+</button>
+
+<div id="materials_text" class="hidden" style="font-size: 12px; color: gray">
+  <%= simple_format @topic.materials_text %>
+</div>
 
 <h3>Body:</h3>
 

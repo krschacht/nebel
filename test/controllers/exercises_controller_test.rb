@@ -21,7 +21,7 @@ class ExercisesControllerTest < ActionController::TestCase
   end
 
   test "should show exercise" do
-    get :show, topic_slug: @exercise.topic.slug, order: @exercise.order
+    get :show, topic_slug: @exercise.topic.slug, part: @exercise.part
     assert_response :success
     assert_not_nil assigns(:topic)
     assert_not_nil assigns(:exercise)
@@ -33,7 +33,7 @@ class ExercisesControllerTest < ActionController::TestCase
   end
 
   test "should update exercise" do
-    patch :update, id: @exercise, exercise: { body: @exercise.body, duration: @exercise.duration, materials: @exercise.materials, name: @exercise.name }
+    patch :update, id: @exercise, exercise: { body: @exercise.body, duration: @exercise.duration, name: @exercise.name }
     assert_redirected_to exercise_path(assigns(:exercise))
   end
 

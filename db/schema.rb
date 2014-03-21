@@ -11,27 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140308024956) do
+ActiveRecord::Schema.define(version: 20140318230311) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "exercises", force: true do |t|
-    t.integer  "topic_id",   null: false
-    t.string   "name",       null: false
+    t.integer  "topic_id",               null: false
+    t.string   "name"
     t.text     "duration"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "materials"
-    t.integer  "order"
+    t.integer  "part",       default: 1, null: false
   end
 
   add_index "exercises", ["topic_id"], name: "index_exercises_on_topic_id", using: :btree
 
+  create_table "materials", force: true do |t|
+    t.string   "name"
+    t.text     "original_name"
+    t.text     "description"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "prerequisites", force: true do |t|
     t.integer "topic_id"
     t.integer "prerequisite_topic_id"
+  end
+
+  create_table "requisitions", force: true do |t|
+    t.integer  "exercise_id"
+    t.integer  "material_id"
+    t.integer  "quantity",    default: 1
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "subjects", force: true do |t|
@@ -43,19 +59,22 @@ ActiveRecord::Schema.define(version: 20140308024956) do
   add_index "subjects", ["code"], name: "index_subjects_on_code", unique: true, using: :btree
 
   create_table "topics", force: true do |t|
-    t.integer "subject_id",        null: false
-    t.string  "name",              null: false
-    t.integer "order",             null: false
-    t.text    "overview"
-    t.text    "progression"
-    t.text    "objectives"
-    t.text    "teachable_moments"
-    t.text    "questions"
-    t.text    "parents"
-    t.text    "connections"
-    t.text    "books"
-    t.string  "code"
-    t.string  "slug"
+    t.integer  "subject_id",        null: false
+    t.string   "name",              null: false
+    t.integer  "order",             null: false
+    t.text     "overview"
+    t.text     "progression"
+    t.text     "objectives"
+    t.text     "teachable_moments"
+    t.text     "questions"
+    t.text     "parents"
+    t.text     "connections"
+    t.text     "books"
+    t.string   "code"
+    t.string   "slug"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "materials_text"
   end
 
   add_index "topics", ["code"], name: "index_topics_on_code", unique: true, using: :btree

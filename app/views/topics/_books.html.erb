@@ -1,3 +1,18 @@
 <h2 id="books">Books for Correlated Reading</h2>
 
-<%= simple_format @topic.books %>
+<% @topic.books.split("\n\n").each do |book| %>
+  <% book_pieces = book.split('.') %>
+
+  <% if book_pieces.length == 3 %>
+
+  <p>
+    <%= book_pieces[0] %>. 
+    <%= link_to book_pieces[1], "http://www.worldcat.org/search?qt=worldcat_org_all&q=#{URI.escape(book_pieces[1])}" %>. 
+    <%= book_pieces[2] %>.
+  </p>
+
+  <% else %>
+    <%= simple_format book %>
+  <% end %>
+
+<% end %>

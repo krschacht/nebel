@@ -22,3 +22,13 @@
   padding: 5px 10px;
   margin-bottom: 20px;
 }
+
+table.materials td {
+  border: 1px solid #ccc;
+}
+table.materials td:first-child {
+  width: 10%;
+}
+table.materials td:not(:first-child) {
+  width: 45%;
+}

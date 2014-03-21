@@ -6,20 +6,20 @@ class TopicFactory
     @book_lesson = book_lesson
   end
 
-  def topic
-    Topic.new({
-      name:              name,
-      order:             @book_lesson.number,
-      code:              @book_lesson.full_lesson_code,
-      overview:          @book_lesson.overview,
-      progression:       @book_lesson.position,
-      objectives:        @book_lesson.objectives,
-      teachable_moments: @book_lesson.teachable_moments,
-      questions:         @book_lesson.questions,
-      parents:           @book_lesson.support,
-      connections:       @book_lesson.connections,
-      books:             @book_lesson.books
-    })
+  def topic(subject)
+    subject.topics.find_or_initialize_by(code: @book_lesson.full_lesson_code) do |topic|
+      topic.name              = name
+      topic.order             = @book_lesson.number
+      topic.overview          = @book_lesson.overview
+      topic.progression       = @book_lesson.position
+      topic.objectives        = @book_lesson.objectives
+      topic.teachable_moments = @book_lesson.teachable_moments
+      topic.questions         = @book_lesson.questions
+      topic.parents           = @book_lesson.support
+      topic.connections       = @book_lesson.connections
+      topic.books             = @book_lesson.books
+      topic.materials_text    = @book_lesson.materials
+    end
   end
 
 private

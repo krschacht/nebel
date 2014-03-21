@@ -1,0 +1,30 @@
+<h1><%= link_to "Curriculum Map", topics_path, style: 'font-weight: normal;' %> - Supply List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Original name</th>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @materials.each do |material| %>
+      <tr>
+        <td><%= link_to material.id, material %></td>
+        <td><%= material.original_name %></td>
+        <td><%= material.name %></td>
+        <td><%= link_to 'Edit', edit_material_path(material) %></td>
+        <td><%= link_to 'Destroy', material, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Material', new_material_path %>

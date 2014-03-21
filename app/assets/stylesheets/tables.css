@@ -2,6 +2,9 @@ td {
   vertical-align: top;
 }
 
+table.full-width {
+  width: 100%;
+}
 table.four-columns td {
   width: 24%;
   padding-right: 1.3%;
