@@ -1,0 +1,5 @@
+one:
+  name: Avand Amiri
+  email: avand@avandamiri.com
+  password_hash: $2a$10$b9Rc5iX3h2vTOpnXm0T6N.svSLgKfoJeD603KC677Lt1U.P4ztdKK
+  access_token: f0c0207b350dbe297493e5e9274a7a0235abc000
