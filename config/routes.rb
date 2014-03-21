@@ -1,8 +1,6 @@
 Bfsu::Application.routes.draw do
 
   root "welcome#index"
-  get "/login", to: "welcome#login"
-  post "/check_login", to: "welcome#check_login"
 
   delete "/requisitions", to: "requisitions#destroy", as: "requisition"
 
