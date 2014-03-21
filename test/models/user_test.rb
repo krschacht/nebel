@@ -22,8 +22,27 @@ class UserTest < ActiveSupport::TestCase
 
   test "validates presence of access_token" do
     user = User.new
+    user.stubs(:access_token).returns(nil)
     assert !user.valid?
     assert user.errors[:access_token].include? "can't be blank"
+  end
+
+  test "generates an access_token before validation" do
+    user = User.new
+    SecureRandom.stubs(:hex).returns("abcd1234")
+    user.valid?
+    assert_equal "abcd1234", user.access_token
+  end
+
+  test "setting the password sets the password_hash" do
+    User::Password.expects(:create).with("secret").returns("abcd1234")
+    user = User.new password: "secret"
+    assert_equal "abcd1234", user.password_hash
+  end
+
+  test "password can be compared against unencrypted password" do
+    user = User.new password: "secret"
+    assert user.password == "secret"
   end
 
 end
