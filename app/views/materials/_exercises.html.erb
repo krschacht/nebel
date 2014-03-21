@@ -1,0 +1,11 @@
+<% if exercises.empty? %>
+  <p>No exercises</p>
+<% else %>
+  <p><strong>Exercises:</strong></h2>
+
+  <ul>
+    <% exercises.each do |exercise| %>
+      <li><%= link_to exercise.name, canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @material.id) %>
+    <% end -%>
+  </ul>
+<% end -%>

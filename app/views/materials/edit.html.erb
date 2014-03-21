@@ -5,6 +5,8 @@
   <%= @material.original_name -%>
 </p>
 
+<%= render "exercises", exercises: @material.exercises -%>
+
 <%= render 'form' %>
 
 <%= link_to 'Show', @material %> |
