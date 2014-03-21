@@ -8,20 +8,17 @@ class ExerciseFactory
     @lesson_part_splitter = LessonPartSplitter.new(@book_lesson.methods_and_procedures)
   end
 
-  def exercises
+  def exercises(topic)
     @lesson_part_splitter.split do |part_number, part_name, part_text|
-      duration   = @book_lesson.time_required[/^Part #{part_number}.*\(\s*(.*)\s*\)/, 1]
-      duration ||= @book_lesson.time_required
+      duration      = @book_lesson.time_required[/^Part #{part_number}.*\(\s*(.*)\s*\)/, 1]
+      duration    ||= @book_lesson.time_required
+      part_number ||= 1
 
-      exercise = Exercise.new({
-        name:      part_name,
-        body:      part_text,
-        duration:  duration,
-      })
-
-      exercise.part = part_number unless part_number.nil?
-
-      exercise
+      topic.exercises.find_or_initialize_by(part: part_number) do |exercise|
+        exercise.name     = part_name
+        exercise.body     = part_text
+        exercise.duration = duration
+      end
     end
   end
 

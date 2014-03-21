@@ -15,7 +15,7 @@ class PrerequisiteFactoryTest < ActiveSupport::TestCase
     @d14 = Book::Lesson.new fixtures_root.join "volume_3/1st_edition/d14.txt"
   end
 
-  test "#topic_codes" do
+  test "#topic_codes initializes an array of topic codes" do
     topic_codes = PrerequisiteFactory.new(@a2).topic_codes
     assert_equal 1, topic_codes.size
     assert topic_codes.include? "A/B-1"

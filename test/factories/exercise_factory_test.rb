@@ -3,6 +3,8 @@ require "test_helper"
 class ExerciseFactoryTest < ActiveSupport::TestCase
 
   setup do
+    @topic = topics(:a2)
+
     fixtures_root = Rails.root.join "test/fixtures/lesson_samples/"
     @a2   = Book::Lesson.new fixtures_root.join "volume_1/2nd_edition/a2.txt"
     @a18  = Book::Lesson.new fixtures_root.join "volume_2/2nd_edition/a18.txt"
@@ -16,176 +18,379 @@ class ExerciseFactoryTest < ActiveSupport::TestCase
     @a1b1 = Book::Lesson.new fixtures_root.join "volume_1/2nd_edition/a1b1.txt"
   end
 
-  test "#exercises" do
-    exercises = ExerciseFactory.new(@a2).exercises
-    assert_equal 3, exercises.size
-    assert_equal "Part 1. Identification of Solids, Liquids, and Gases", exercises[0].name
-    assert_equal "Part 2. Changes Between Solid, Liquid, and Gas—Dependence on Temperature", exercises[1].name
-    assert_equal "Part 3. States of Matter and Their Common Attributes", exercises[2].name
-    assert_match /\ASet out three boxes/, exercises[0].body
-    assert_match /solid parts of the body\.\z/, exercises[0].body
-    assert_match /\AHave kids classify an/, exercises[1].body
-    assert_match /just introduce the concept\.\z/, exercises[1].body
-    assert_match /\AInstruct students that all/, exercises[2].body
-    assert_match /repeatedly in future lessons\.\z/, exercises[2].body
-    assert_equal "demonstration, game/activity, interpretation; 40-50 minutes", exercises[0].duration
-    assert_equal "demonstrations with interpretive discussion; 20-30 minutes", exercises[1].duration
-    assert_equal "instruction and thought exercises; 30-40 minutes", exercises[2].duration
-    assert_equal 1, exercises[0].part
-    assert_equal 2, exercises[1].part
-    assert_equal 3, exercises[2].part
+  test "#exercises initializes an array of exercises" do
+    ExerciseFactory.new(@a2).exercises(@topic).tap do |exercises|
+      assert_equal 3, exercises.size
+    end
 
-    exercises = ExerciseFactory.new(@a18).exercises
-    assert_equal 2, exercises.size
-    assert_equal "Part 1. Creating, Observing, and Interpreting Convection Currents", exercises[0].name
-    assert_equal "Part 2. Applying Understanding of Convection Currents: Home Heating to the Earth’s Atmosphere", exercises[1].name
-    assert_match /\AHave students gather around/, exercises[0].body
-    assert_match /and atmosphere \(Lesson D-13\)\.\z/, exercises[0].body
-    assert_match /\AThe trend over the past 100/, exercises[1].body
-    assert_match /diversity of living things\.\z/, exercises[1].body
-    assert_equal "demonstration, 30-45 minutes; interpretive discussion, 35-45 minutes", exercises[0].duration
-    assert_equal "activity and analysis, 1-2 hours", exercises[1].duration
-    assert_equal 1, exercises[0].part
-    assert_equal 2, exercises[1].part
+    ExerciseFactory.new(@a18).exercises(@topic).tap do |exercises|
+      assert_equal 2, exercises.size
+    end
 
-    exercises = ExerciseFactory.new(@a22).exercises
-    assert_equal 3, exercises.size
-    assert_equal "Part 1. The Chemistry of Acids and Bases", exercises[0].name
-    assert_equal "Part 2. pH, Its Meaning, Measurement, and Significance", exercises[1].name
-    assert_equal "Part 3. Importance of and Opportunities for Careers in Chemistry", exercises[2].name
-    assert_match /\AMost students will have some/, exercises[0].body
-    assert_match /same idea pertains to bases\.\z/, exercises[0].body
-    assert_match /\AThe actual hydrogen ion \(H\+\)/, exercises[1].body
-    assert_match /topics will be your option\.\z/, exercises[1].body
-    assert_match /\AWe should not leave these/, exercises[2].body
-    assert_match /\(Google: careers in chemistry\)\.\z/, exercises[2].body
-    assert_equal "lecture, discussion, reflection, learning games, 1-2 hours", exercises[0].duration
-    assert_equal "lecture, discussion, demonstration, 40-50 minutes; measuring/recording pH, open ended", exercises[1].duration
-    assert_equal "open ended", exercises[2].duration
-    assert_equal 1, exercises[0].part
-    assert_equal 2, exercises[1].part
-    assert_equal 3, exercises[2].part
+    ExerciseFactory.new(@a22).exercises(@topic).tap do |exercises|
+      assert_equal 3, exercises.size
+    end
 
-    exercises = ExerciseFactory.new(@b22).exercises
-    assert_equal 3, exercises.size
-    assert_equal "Part 1. Growth of Stems", exercises[0].name
-    assert_equal "Part 2. Growth of Roots", exercises[1].name
-    assert_equal "Part 3. Growth in Diameter", exercises[2].name
-    assert_match /\AIn the course of growing/, exercises[0].body
-    assert_match /grass flowers as they may choose\.\z/, exercises[0].body
-    assert_match /\AThe growth of roots is obviously/, exercises[1].body
-    assert_match /remain mysteries for them to solve\.\z/, exercises[1].body
-    assert_match /\AStudents have observed that plants/, exercises[2].body
-    assert_match /and differentiate as they do\?\z/, exercises[2].body
-    assert_match /\ACarried out during/, exercises[0].duration
-    assert_match /reading over the lesson\.\z/, exercises[0].duration
-    assert_match /\ACarried out during/, exercises[1].duration
-    assert_match /reading over the lesson\.\z/, exercises[1].duration
-    assert_match /\ACarried out during/, exercises[2].duration
-    assert_match /reading over the lesson\.\z/, exercises[2].duration
-    assert_equal 1, exercises[0].part
-    assert_equal 2, exercises[1].part
-    assert_equal 3, exercises[2].part
+    ExerciseFactory.new(@b22).exercises(@topic).tap do |exercises|
+      assert_equal 3, exercises.size
+    end
 
-    exercises = ExerciseFactory.new(@b30).exercises
-    assert_equal 4, exercises.size
-    assert_equal "Part 1. Childhood Diseases and Deaths, Then and Now", exercises[0].name
-    assert_equal "Part 2. Discovering the Efficacy Vaccination and the Germ Theory", exercises[1].name
-    assert_equal "Part 3. Discovery of Viruses and Their Description", exercises[2].name
-    assert_equal "Part 4. Infection by Viruses and the Immune System", exercises[3].name
-    assert_match /\ABegin by showing students/, exercises[0].body
-    assert_match /and correcting misconceptions\.\z/, exercises[0].body
-    assert_match /\AAsk students: Which do you/, exercises[1].body
-    assert_match /a mystery and frustration\.\z/, exercises[1].body
-    assert_match /\AThe first clue came when a Russian/, exercises[2].body
-    assert_match /next part of this lesson\.\z/, exercises[2].body
-    assert_match /\ASubsequent research using combined/, exercises[3].body
-    assert_match /to reproduce it, mutate, etc\.\z/, exercises[3].body
-    assert_equal "presentation, Q and A discussion, 30-40 minutes", exercises[0].duration
-    assert_equal "presentation, Q and A discussion, 30-40 minutes", exercises[0].duration
-    assert_equal "presentation, Q and A discussion, 30-40 minutes, repetition of Pasteur’s experiment, 1-2 hours", exercises[1].duration
-    assert_equal "presentation, Q and A discussion, 30-40 minutes, model building, 1-2 hours", exercises[2].duration
-    assert_equal "presentation, Q and A discussion, 40-60 minutes", exercises[3].duration
-    assert_equal 1, exercises[0].part
-    assert_equal 2, exercises[1].part
-    assert_equal 3, exercises[2].part
-    assert_equal 4, exercises[3].part
+    ExerciseFactory.new(@b30).exercises(@topic).tap do |exercises|
+      assert_equal 4, exercises.size
+    end
 
-    exercises = ExerciseFactory.new(@c5).exercises
-    assert_equal 2, exercises.size
-    assert_equal "Part 1. Revealing the Principle of Inertia", exercises[0].name
-    assert_equal "Part 2. Relating Inertia to Energy", exercises[1].name
-    assert_match /\ADraw students into a review/, exercises[0].body
-    assert_match /of its inertia, and so on\.\z/, exercises[0].body
-    assert_match /\AReview the Law of Motion, i\.e\./, exercises[1].body
-    assert_match /from any friction involved\.\z/, exercises[1].body
-    assert_equal "demonstrations, observations, interpretive discussion; 50-60 minutes, plus games/activities as desired", exercises[0].duration
-    assert_equal "observations, reasoning, interpretive discussion; 30-40 minutes", exercises[1].duration
-    assert_equal 1, exercises[0].part
-    assert_equal 2, exercises[1].part
+    ExerciseFactory.new(@c5).exercises(@topic).tap do |exercises|
+      assert_equal 2, exercises.size
+    end
 
-    exercises = ExerciseFactory.new(@c10).exercises
-    assert_equal 3, exercises.size
-    assert_equal "Part 1. Review of Inertia", exercises[0].name
-    assert_equal "Part 2. Movement Energy and Momentum", exercises[1].name
-    assert_equal "Part 3. Momentum and Kinetic Energy", exercises[2].name
-    assert_match /\AWith the lead-in suggested/, exercises[0].body
-    assert_match /energy is not recycled\.\z/, exercises[0].body
-    assert_match /\AAs students are up to speed/, exercises[1].body
-    assert_match /Therefore, Momentum\/mass = velocity\z/, exercises[1].body
-    assert_match /\AIt will be inviting to challenge/, exercises[2].body
-    assert_match /described in this lesson\.\z/, exercises[2].body
-    assert_equal "review as necessary", exercises[0].duration
-    assert_equal "examples drawing on experience plus interpretive discussion; 40-50 minutes", exercises[1].duration
-    assert_equal "calculations, experimentation as desired", exercises[2].duration
-    assert_equal 1, exercises[0].part
-    assert_equal 2, exercises[1].part
-    assert_equal 3, exercises[2].part
+    ExerciseFactory.new(@c10).exercises(@topic).tap do |exercises|
+      assert_equal 3, exercises.size
+    end
 
-    exercises = ExerciseFactory.new(@d5).exercises
-    assert_equal 2, exercises.size
-    assert_equal "Part 1. Relating Time to the Earth’s Turning", exercises[0].name
-    assert_equal "Part 2. Making and Using a Sundial to Tell Time", exercises[1].name
-    assert_match /\AAt the beginning of an outdoor/, exercises[0].body
-    assert_match /the stars in later years\.\z/, exercises[0].body
-    assert_match /\APose the question: Can we tell/, exercises[1].body
-    assert_match /from a properly oriented sundial\.\z/, exercises[1].body
-    assert_equal "15 minute activity at the beginning and end of an outdoor recreational period followed by interpretive discussion; 30-40 minutes", exercises[0].duration
-    assert_equal "Making the sundial; 40-50 minutes plus 5-10 minutes each hour over the course of the day to calibrate it", exercises[1].duration
-    assert_equal 1, exercises[0].part
-    assert_equal 2, exercises[1].part
+    ExerciseFactory.new(@d5).exercises(@topic).tap do |exercises|
+      assert_equal 2, exercises.size
+    end
 
-    exercises = ExerciseFactory.new(@d14).exercises
-    assert_equal 4, exercises.size
-    assert_equal "Part 1. Creating the Background", exercises[0].name
-    assert_equal "Part 2. Plotting the Movement of the Moon Around the Earth", exercises[1].name
-    assert_equal "Part 3. Eclipses of the Moon and Sun", exercises[2].name
-    assert_equal "Part 4. Tides", exercises[3].name
-    assert_match /\AKids have undoubtedly observed the moon/, exercises[0].body
-    assert_match /more critical investigation\.\z/, exercises[0].body
-    assert_match /\AThe gist of this part of the/, exercises[1].body
-    assert_match /students gain this understanding\.\z/, exercises[1].body
-    assert_match /\AFrom observations and discussion/, exercises[2].body
-    assert_match /causes of what they observe\.\z/, exercises[2].body
-    assert_match /\AMost students will be more or less/, exercises[3].body
-    assert_match /firsthand should not be passed up\.\z/, exercises[3].body
-    assert_equal "assigning “homework” and discussion as deemed necessary; may be omitted if students have already mastered the content", exercises[0].duration
-    assert_equal "“homework” with support from parents or others, time as necessary to make arrangements; follow-up discussion and analysis of results, 1-2 hours", exercises[1].duration
-    assert_equal "modeling and interpretation, 40-50 minutes", exercises[2].duration
-    assert_equal "correlating data, 40-50 minutes; analysis and interpretation 40-50 minutes", exercises[3].duration
-    assert_equal 1, exercises[0].part
-    assert_equal 2, exercises[1].part
-    assert_equal 3, exercises[2].part
-    assert_equal 4, exercises[3].part
+    ExerciseFactory.new(@d14).exercises(@topic).tap do |exercises|
+      assert_equal 4, exercises.size
+    end
 
-    exercises = ExerciseFactory.new(@a1b1).exercises
-    assert_equal 1, exercises.size
-    assert_equal "Part 1", exercises[0].name
-    assert_match /\AA convenient place/, exercises[0].body
-    assert_match /importance of organization\.\z/, exercises[0].body
-    assert_match /\AIntroductory discussion/, exercises[0].duration
-    assert_match /desired \(30 minutes up\)\z/, exercises[0].duration
-    assert_equal 1, exercises[0].part
+    ExerciseFactory.new(@a1b1).exercises(@topic).tap do |exercises|
+      assert_equal 1, exercises.size
+    end
+  end
+
+  test "#exercises assigns the topic to each exercise" do
+    ExerciseFactory.new(@a2).exercises(@topic).tap do |exercises|
+      assert_equal @topic, exercises[0].topic
+      assert_equal @topic, exercises[1].topic
+      assert_equal @topic, exercises[2].topic
+    end
+
+    ExerciseFactory.new(@a18).exercises(@topic).tap do |exercises|
+      assert_equal @topic, exercises[0].topic
+      assert_equal @topic, exercises[1].topic
+    end
+
+    ExerciseFactory.new(@a22).exercises(@topic).tap do |exercises|
+      assert_equal @topic, exercises[0].topic
+      assert_equal @topic, exercises[1].topic
+      assert_equal @topic, exercises[2].topic
+    end
+
+    ExerciseFactory.new(@b22).exercises(@topic).tap do |exercises|
+      assert_equal @topic, exercises[0].topic
+      assert_equal @topic, exercises[1].topic
+      assert_equal @topic, exercises[2].topic
+    end
+
+    ExerciseFactory.new(@b30).exercises(@topic).tap do |exercises|
+      assert_equal @topic, exercises[0].topic
+      assert_equal @topic, exercises[1].topic
+      assert_equal @topic, exercises[2].topic
+      assert_equal @topic, exercises[3].topic
+    end
+
+    ExerciseFactory.new(@c5).exercises(@topic).tap do |exercises|
+      assert_equal @topic, exercises[0].topic
+      assert_equal @topic, exercises[1].topic
+    end
+
+    ExerciseFactory.new(@c10).exercises(@topic).tap do |exercises|
+      assert_equal @topic, exercises[0].topic
+      assert_equal @topic, exercises[1].topic
+      assert_equal @topic, exercises[2].topic
+    end
+
+    ExerciseFactory.new(@d5).exercises(@topic).tap do |exercises|
+      assert_equal @topic, exercises[0].topic
+      assert_equal @topic, exercises[1].topic
+    end
+
+    ExerciseFactory.new(@d14).exercises(@topic).tap do |exercises|
+      assert_equal @topic, exercises[0].topic
+      assert_equal @topic, exercises[1].topic
+      assert_equal @topic, exercises[2].topic
+      assert_equal @topic, exercises[3].topic
+    end
+
+    ExerciseFactory.new(@a1b1).exercises(@topic).tap do |exercises|
+      assert_equal @topic, exercises[0].topic
+    end
+  end
+
+  test "#exercises maps the name to each exercise" do
+    ExerciseFactory.new(@a2).exercises(@topic).tap do |exercises|
+      assert_equal "Part 1. Identification of Solids, Liquids, and Gases", exercises[0].name
+      assert_equal "Part 2. Changes Between Solid, Liquid, and Gas—Dependence on Temperature", exercises[1].name
+      assert_equal "Part 3. States of Matter and Their Common Attributes", exercises[2].name
+    end
+
+    ExerciseFactory.new(@a18).exercises(@topic).tap do |exercises|
+      assert_equal "Part 1. Creating, Observing, and Interpreting Convection Currents", exercises[0].name
+      assert_equal "Part 2. Applying Understanding of Convection Currents: Home Heating to the Earth’s Atmosphere", exercises[1].name
+    end
+
+    ExerciseFactory.new(@a22).exercises(@topic).tap do |exercises|
+      assert_equal "Part 1. The Chemistry of Acids and Bases", exercises[0].name
+      assert_equal "Part 2. pH, Its Meaning, Measurement, and Significance", exercises[1].name
+      assert_equal "Part 3. Importance of and Opportunities for Careers in Chemistry", exercises[2].name
+    end
+
+    ExerciseFactory.new(@b22).exercises(@topic).tap do |exercises|
+      assert_equal "Part 1. Growth of Stems", exercises[0].name
+      assert_equal "Part 2. Growth of Roots", exercises[1].name
+      assert_equal "Part 3. Growth in Diameter", exercises[2].name
+    end
+
+    ExerciseFactory.new(@b30).exercises(@topic).tap do |exercises|
+      assert_equal "Part 1. Childhood Diseases and Deaths, Then and Now", exercises[0].name
+      assert_equal "Part 2. Discovering the Efficacy Vaccination and the Germ Theory", exercises[1].name
+      assert_equal "Part 3. Discovery of Viruses and Their Description", exercises[2].name
+      assert_equal "Part 4. Infection by Viruses and the Immune System", exercises[3].name
+    end
+
+    ExerciseFactory.new(@c5).exercises(@topic).tap do |exercises|
+      assert_equal "Part 1. Revealing the Principle of Inertia", exercises[0].name
+      assert_equal "Part 2. Relating Inertia to Energy", exercises[1].name
+    end
+
+    ExerciseFactory.new(@c10).exercises(@topic).tap do |exercises|
+      assert_equal "Part 1. Review of Inertia", exercises[0].name
+      assert_equal "Part 2. Movement Energy and Momentum", exercises[1].name
+      assert_equal "Part 3. Momentum and Kinetic Energy", exercises[2].name
+    end
+
+    ExerciseFactory.new(@d5).exercises(@topic).tap do |exercises|
+      assert_equal "Part 1. Relating Time to the Earth’s Turning", exercises[0].name
+      assert_equal "Part 2. Making and Using a Sundial to Tell Time", exercises[1].name
+    end
+
+    ExerciseFactory.new(@d14).exercises(@topic).tap do |exercises|
+      assert_equal "Part 1. Creating the Background", exercises[0].name
+      assert_equal "Part 2. Plotting the Movement of the Moon Around the Earth", exercises[1].name
+      assert_equal "Part 3. Eclipses of the Moon and Sun", exercises[2].name
+      assert_equal "Part 4. Tides", exercises[3].name
+    end
+
+    ExerciseFactory.new(@a1b1).exercises(@topic).tap do |exercises|
+      assert_equal "Part 1", exercises[0].name
+    end
+  end
+
+  test "#exercises maps the body to each exercise" do
+    ExerciseFactory.new(@a2).exercises(@topic).tap do |exercises|
+      assert_match /\ASet out three boxes/, exercises[0].body
+      assert_match /solid parts of the body\.\z/, exercises[0].body
+      assert_match /\AHave kids classify an/, exercises[1].body
+      assert_match /just introduce the concept\.\z/, exercises[1].body
+      assert_match /\AInstruct students that all/, exercises[2].body
+      assert_match /repeatedly in future lessons\.\z/, exercises[2].body
+    end
+
+    ExerciseFactory.new(@a18).exercises(@topic).tap do |exercises|
+      assert_match /\AHave students gather around/, exercises[0].body
+      assert_match /and atmosphere \(Lesson D-13\)\.\z/, exercises[0].body
+      assert_match /\AThe trend over the past 100/, exercises[1].body
+      assert_match /diversity of living things\.\z/, exercises[1].body
+    end
+
+    ExerciseFactory.new(@a22).exercises(@topic).tap do |exercises|
+      assert_match /\AMost students will have some/, exercises[0].body
+      assert_match /same idea pertains to bases\.\z/, exercises[0].body
+      assert_match /\AThe actual hydrogen ion \(H\+\)/, exercises[1].body
+      assert_match /topics will be your option\.\z/, exercises[1].body
+      assert_match /\AWe should not leave these/, exercises[2].body
+      assert_match /\(Google: careers in chemistry\)\.\z/, exercises[2].body
+    end
+
+    ExerciseFactory.new(@b22).exercises(@topic).tap do |exercises|
+      assert_match /\AIn the course of growing/, exercises[0].body
+      assert_match /grass flowers as they may choose\.\z/, exercises[0].body
+      assert_match /\AThe growth of roots is obviously/, exercises[1].body
+      assert_match /remain mysteries for them to solve\.\z/, exercises[1].body
+      assert_match /\AStudents have observed that plants/, exercises[2].body
+      assert_match /and differentiate as they do\?\z/, exercises[2].body
+    end
+
+    ExerciseFactory.new(@b30).exercises(@topic).tap do |exercises|
+      assert_match /\ABegin by showing students/, exercises[0].body
+      assert_match /and correcting misconceptions\.\z/, exercises[0].body
+      assert_match /\AAsk students: Which do you/, exercises[1].body
+      assert_match /a mystery and frustration\.\z/, exercises[1].body
+      assert_match /\AThe first clue came when a Russian/, exercises[2].body
+      assert_match /next part of this lesson\.\z/, exercises[2].body
+      assert_match /\ASubsequent research using combined/, exercises[3].body
+      assert_match /to reproduce it, mutate, etc\.\z/, exercises[3].body
+    end
+
+    ExerciseFactory.new(@c5).exercises(@topic).tap do |exercises|
+      assert_match /\ADraw students into a review/, exercises[0].body
+      assert_match /of its inertia, and so on\.\z/, exercises[0].body
+      assert_match /\AReview the Law of Motion, i\.e\./, exercises[1].body
+      assert_match /from any friction involved\.\z/, exercises[1].body
+    end
+
+    ExerciseFactory.new(@c10).exercises(@topic).tap do |exercises|
+      assert_match /\AWith the lead-in suggested/, exercises[0].body
+      assert_match /energy is not recycled\.\z/, exercises[0].body
+      assert_match /\AAs students are up to speed/, exercises[1].body
+      assert_match /Therefore, Momentum\/mass = velocity\z/, exercises[1].body
+      assert_match /\AIt will be inviting to challenge/, exercises[2].body
+      assert_match /described in this lesson\.\z/, exercises[2].body
+    end
+
+    ExerciseFactory.new(@d5).exercises(@topic).tap do |exercises|
+      assert_match /\AAt the beginning of an outdoor/, exercises[0].body
+      assert_match /the stars in later years\.\z/, exercises[0].body
+      assert_match /\APose the question: Can we tell/, exercises[1].body
+      assert_match /from a properly oriented sundial\.\z/, exercises[1].body
+    end
+
+    ExerciseFactory.new(@d14).exercises(@topic).tap do |exercises|
+      assert_match /\AKids have undoubtedly observed the moon/, exercises[0].body
+      assert_match /more critical investigation\.\z/, exercises[0].body
+      assert_match /\AThe gist of this part of the/, exercises[1].body
+      assert_match /students gain this understanding\.\z/, exercises[1].body
+      assert_match /\AFrom observations and discussion/, exercises[2].body
+      assert_match /causes of what they observe\.\z/, exercises[2].body
+      assert_match /\AMost students will be more or less/, exercises[3].body
+      assert_match /firsthand should not be passed up\.\z/, exercises[3].body
+    end
+
+    ExerciseFactory.new(@a1b1).exercises(@topic).tap do |exercises|
+      assert_match /\AA convenient place/, exercises[0].body
+      assert_match /importance of organization\.\z/, exercises[0].body
+    end
+  end
+
+  test "#exercises maps the duration to each exercise" do
+    ExerciseFactory.new(@a2).exercises(@topic).tap do |exercises|
+      assert_equal "demonstration, game/activity, interpretation; 40-50 minutes", exercises[0].duration
+      assert_equal "demonstrations with interpretive discussion; 20-30 minutes", exercises[1].duration
+      assert_equal "instruction and thought exercises; 30-40 minutes", exercises[2].duration
+    end
+
+    ExerciseFactory.new(@a18).exercises(@topic).tap do |exercises|
+      assert_equal "demonstration, 30-45 minutes; interpretive discussion, 35-45 minutes", exercises[0].duration
+      assert_equal "activity and analysis, 1-2 hours", exercises[1].duration
+    end
+
+    ExerciseFactory.new(@a22).exercises(@topic).tap do |exercises|
+      assert_equal "lecture, discussion, reflection, learning games, 1-2 hours", exercises[0].duration
+      assert_equal "lecture, discussion, demonstration, 40-50 minutes; measuring/recording pH, open ended", exercises[1].duration
+      assert_equal "open ended", exercises[2].duration
+    end
+
+    ExerciseFactory.new(@b22).exercises(@topic).tap do |exercises|
+      assert_match /\ACarried out during/, exercises[0].duration
+      assert_match /reading over the lesson\.\z/, exercises[0].duration
+      assert_match /\ACarried out during/, exercises[1].duration
+      assert_match /reading over the lesson\.\z/, exercises[1].duration
+      assert_match /\ACarried out during/, exercises[2].duration
+      assert_match /reading over the lesson\.\z/, exercises[2].duration
+    end
+
+    ExerciseFactory.new(@b30).exercises(@topic).tap do |exercises|
+      assert_equal "presentation, Q and A discussion, 30-40 minutes", exercises[0].duration
+      assert_equal "presentation, Q and A discussion, 30-40 minutes", exercises[0].duration
+      assert_equal "presentation, Q and A discussion, 30-40 minutes, repetition of Pasteur’s experiment, 1-2 hours", exercises[1].duration
+      assert_equal "presentation, Q and A discussion, 30-40 minutes, model building, 1-2 hours", exercises[2].duration
+      assert_equal "presentation, Q and A discussion, 40-60 minutes", exercises[3].duration
+    end
+
+    ExerciseFactory.new(@c5).exercises(@topic).tap do |exercises|
+      assert_equal "demonstrations, observations, interpretive discussion; 50-60 minutes, plus games/activities as desired", exercises[0].duration
+      assert_equal "observations, reasoning, interpretive discussion; 30-40 minutes", exercises[1].duration
+    end
+
+    ExerciseFactory.new(@c10).exercises(@topic).tap do |exercises|
+      assert_equal "review as necessary", exercises[0].duration
+      assert_equal "examples drawing on experience plus interpretive discussion; 40-50 minutes", exercises[1].duration
+      assert_equal "calculations, experimentation as desired", exercises[2].duration
+    end
+
+    ExerciseFactory.new(@d5).exercises(@topic).tap do |exercises|
+      assert_equal "15 minute activity at the beginning and end of an outdoor recreational period followed by interpretive discussion; 30-40 minutes", exercises[0].duration
+      assert_equal "Making the sundial; 40-50 minutes plus 5-10 minutes each hour over the course of the day to calibrate it", exercises[1].duration
+    end
+
+    ExerciseFactory.new(@d14).exercises(@topic).tap do |exercises|
+      assert_equal "assigning “homework” and discussion as deemed necessary; may be omitted if students have already mastered the content", exercises[0].duration
+      assert_equal "“homework” with support from parents or others, time as necessary to make arrangements; follow-up discussion and analysis of results, 1-2 hours", exercises[1].duration
+      assert_equal "modeling and interpretation, 40-50 minutes", exercises[2].duration
+      assert_equal "correlating data, 40-50 minutes; analysis and interpretation 40-50 minutes", exercises[3].duration
+    end
+
+    ExerciseFactory.new(@a1b1).exercises(@topic).tap do |exercises|
+      assert_match /\AIntroductory discussion/, exercises[0].duration
+      assert_match /desired \(30 minutes up\)\z/, exercises[0].duration
+    end
+  end
+
+  test "#exercises maps the part to each exercise" do
+    ExerciseFactory.new(@a2).exercises(@topic).tap do |exercises|
+      assert_equal 1, exercises[0].part
+      assert_equal 2, exercises[1].part
+      assert_equal 3, exercises[2].part
+    end
+
+    ExerciseFactory.new(@a18).exercises(@topic).tap do |exercises|
+      assert_equal 1, exercises[0].part
+      assert_equal 2, exercises[1].part
+    end
+
+    ExerciseFactory.new(@a22).exercises(@topic).tap do |exercises|
+      assert_equal 1, exercises[0].part
+      assert_equal 2, exercises[1].part
+      assert_equal 3, exercises[2].part
+    end
+
+    ExerciseFactory.new(@b22).exercises(@topic).tap do |exercises|
+      assert_equal 1, exercises[0].part
+      assert_equal 2, exercises[1].part
+      assert_equal 3, exercises[2].part
+    end
+
+    ExerciseFactory.new(@b30).exercises(@topic).tap do |exercises|
+      assert_equal 1, exercises[0].part
+      assert_equal 2, exercises[1].part
+      assert_equal 3, exercises[2].part
+      assert_equal 4, exercises[3].part
+    end
+
+    ExerciseFactory.new(@c5).exercises(@topic).tap do |exercises|
+      assert_equal 1, exercises[0].part
+      assert_equal 2, exercises[1].part
+    end
+
+    ExerciseFactory.new(@c10).exercises(@topic).tap do |exercises|
+      assert_equal 1, exercises[0].part
+      assert_equal 2, exercises[1].part
+      assert_equal 3, exercises[2].part
+    end
+
+    ExerciseFactory.new(@d5).exercises(@topic).tap do |exercises|
+      assert_equal 1, exercises[0].part
+      assert_equal 2, exercises[1].part
+    end
+
+    ExerciseFactory.new(@d14).exercises(@topic).tap do |exercises|
+      assert_equal 1, exercises[0].part
+      assert_equal 2, exercises[1].part
+      assert_equal 3, exercises[2].part
+      assert_equal 4, exercises[3].part
+    end
+
+    ExerciseFactory.new(@a1b1).exercises(@topic).tap do |exercises|
+      assert_equal 1, exercises[0].part
+    end
+  end
+
+  test "#exercises finds existing exercises by part" do
+    exercises = ExerciseFactory.new(@a2).exercises(@topic)
+    exercises.each(&:save!)
+    assert_equal exercises, ExerciseFactory.new(@a2).exercises(@topic)
   end
 
 end

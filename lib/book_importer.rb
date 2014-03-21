@@ -21,18 +21,12 @@ private
       topic_factory    = TopicFactory.new(book_lesson)
       exercise_factory = ExerciseFactory.new(book_lesson)
 
-      topic     = topic_factory.topic
-      exercises = exercise_factory.exercises
+      subject = subjects.find { |s| s.code == book_lesson.subject_code }
+      topic   = topic_factory.topic(subject)
+      topic.save!
 
-      topic.subject = subjects.find { |s| s.code == book_lesson.subject_code }
-
-      if topic.save!
-        exercises.each do |exercise|
-          exercise.topic_id = topic.id
-
-          exercise.save!
-        end
-      end
+      exercises = exercise_factory.exercises(topic)
+      exercises.each(&:save!)
     end
   end
 
@@ -49,15 +43,17 @@ private
   def create_materials_and_requisitions
     book_lessons.each do |book_lesson|
       topic = Topic.find_by_code(book_lesson.full_lesson_code)
-      materials_factory = MaterialFactory.new(book_lesson)
 
       topic.exercises.each do |exercise|
-        exercise_materials = materials_factory.materials(exercise.part)
+        materials_factory = MaterialFactory.new(book_lesson)
 
-        exercise_materials.each do |material|
-          if material.save!
-            Requisition.create! exercise_id: exercise.id, material_id: material.id
-          end
+        materials = materials_factory.materials(exercise)
+
+        materials.each do |material|
+          material.save
+          Requisition.find_or_create_by!({
+            exercise_id: exercise.id, material_id: material.id
+          })
         end
       end
     end
