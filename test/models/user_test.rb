@@ -34,6 +34,10 @@ class UserTest < ActiveSupport::TestCase
     assert_equal "abcd1234", user.access_token
   end
 
+  test "password is nil by default" do
+    assert_nil User.new.password
+  end
+
   test "setting the password sets the password_hash" do
     User::Password.expects(:create).with("secret").returns("abcd1234")
     user = User.new password: "secret"

@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   before_validation :generate_access_token
 
   def password
-    Password.new(password_hash)
+    password_hash ? Password.new(password_hash) : nil
   end
 
   def password=(new_password)
