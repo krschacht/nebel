@@ -27,6 +27,14 @@
   </table>
 <% end -%>
 
+<button onclick="document.querySelector('#materials_text').classList.toggle('hidden')">
+  Toggle Raw Materials Text
+</button>
+
+<div id="materials_text" class="hidden" style="font-size: 12px; color: gray">
+  <%= simple_format @topic.materials_text %>
+</div>
+
 <h3>Body:</h3>
 
 <%= simple_format @exercise.body %>
