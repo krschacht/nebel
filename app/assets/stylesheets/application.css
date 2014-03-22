@@ -2,6 +2,7 @@
  *= require_self
  *= require tables
  *= require topics
+ *= require notices_and_alerts
  */
 
 body {
