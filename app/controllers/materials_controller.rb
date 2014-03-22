@@ -45,6 +45,26 @@ class MaterialsController < ApplicationController
     redirect_to materials_url, notice: 'Material was successfully destroyed.'
   end
 
+  def merge
+    winner = Material.find(params[:winner_id])
+    losers = Material.where(id: params[:loser_ids].split(","))
+    links  = []
+
+    losers.each do |loser|
+      loser.exercises.each do |exercise|
+        Requisition.create! exercise_id: exercise.id, material_id: winner.id
+        links << %Q{<a href="#{exercise_path(exercise)}" target="_blank">#{exercise.id}</a>}
+      end
+
+      loser.archive
+
+    end
+
+    flash[:notice] = "Exercise(s) #{links.to_sentence} are now associated to this material."
+
+    redirect_to edit_material_path(winner)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_material
