@@ -49,6 +49,10 @@ h2 {
   background: #ffcc66;
 }
 
+.faded {
+  opacity: 0.3;
+}
+
 .hidden {
   display: none;
 }
