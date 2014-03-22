@@ -1,0 +1,11 @@
+.notice, .alert {
+  padding: 20px;
+}
+
+.notice {
+  background: #bbffc8;
+}
+
+.alert {
+  background: #ffd7d3;
+}

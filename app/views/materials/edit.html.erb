@@ -1,0 +1,12 @@
+<h1>Editing material</h1>
+
+<p>
+  <strong>Original name:</strong>
+  <%= @material.original_name -%>
+</p>
+
+<%= render "exercises", exercises: @material.exercises -%>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', materials_path %>

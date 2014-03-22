@@ -1,0 +1,33 @@
+<h1><%= link_to "Curriculum Map", topics_path, style: 'font-weight: normal;' %> - Supply List</h1>
+
+<%= form_tag merge_materials_path, id: "merger" do %>
+  Merge
+  <input type="text" placeholder="Winner" name="winner_id">
+  with
+  <input type="text" placeholder="Loser(s)" name="loser_ids">
+  <input type="submit" value="Merge">
+<% end -%>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Original name</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @materials.each do |material| %>
+      <tr class=<%= "faded" if material.archived -%>>
+        <td><%= link_to material.id, edit_material_path(material) %></td>
+        <td><%= material.original_name %></td>
+        <td><%= material.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Material', new_material_path %>

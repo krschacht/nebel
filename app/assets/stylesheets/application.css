@@ -2,6 +2,8 @@
  *= require_self
  *= require tables
  *= require topics
+ *= require notices_and_alerts
+ *= require materials
  */
 
 body {
@@ -39,4 +41,19 @@ h2 {
 
 .block {
   display: block;
+}
+.inline {
+  display: inline;
+}
+
+.highlight {
+  background: #ffcc66;
+}
+
+.faded {
+  opacity: 0.3;
+}
+
+.hidden {
+  display: none;
 }

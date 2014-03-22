@@ -1,0 +1,16 @@
+<% if exercises.empty? %>
+  <p>No exercises</p>
+<% else %>
+  <p><strong>Exercises:</strong></h2>
+
+  <ul>
+    <% exercises.each do |exercise| %>
+      <li <%= 'class="highlight"'.html_safe if params[:exercise_ids] && params[:exercise_ids].include?(exercise.id.to_s)-%>>
+        <%= link_to "#{exercise.topic.code}: #{exercise.name}", canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @material.id) %>
+        <%= form_tag requisition_path(exercise_id: exercise.id, material_id: @material.id), method: :delete, class: "inline" do %>
+          <input type="submit" value="Disassociate">
+        <% end -%>
+      </li>
+    <% end -%>
+  </ul>
+<% end -%>

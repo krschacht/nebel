@@ -36,8 +36,8 @@
       <h3>Exercises:</h3>
 
       <ul>
-        <% @topic.exercises.order(:order).each do |exercise| %>
-          <li><%= link_to_unless_current exercise.name, canonical_exercise_path(topic_slug: @topic.slug, order: exercise.order) -%></li>
+        <% @topic.exercises.order(:part).each do |exercise| %>
+          <li><%= link_to_unless_current exercise.name, canonical_exercise_path(topic_slug: @topic.slug, part: exercise.part) -%></li>
         <% end %>
       </ul>
     <% end %>

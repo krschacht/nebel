@@ -17,14 +17,15 @@ namespace :book do
   task :import, [:path] => :environment do |task, args|
     args.with_defaults path: Rails.root.join("tmp/book/**/*.txt")
 
-    Topic.delete_all
-    Exercise.delete_all
+    start_of_import = Time.now
 
     book_importer = BookImporter.new(Dir[args[:path]])
     book_importer.import
 
-    puts "#{Topic.count} topic(s) created"
-    puts "#{Exercise.count} exercise(s) created"
+    puts "#{Topic.where("created_at > ?", start_of_import).count} topic(s) created (#{Topic.count} total)"
+    puts "#{Exercise.where("created_at > ?", start_of_import).count} exercise(s) created (#{Exercise.count} total)"
+    puts "#{Material.where("created_at > ?", start_of_import).count} material(s) created (#{Material.count} total)"
+    puts "#{Requisition.where("created_at > ?", start_of_import).count} requisition(s) created (#{Requisition.count} total)"
   end
 
   # Given an URL to a ZIP of plain text files, this task will download the ZIP,
