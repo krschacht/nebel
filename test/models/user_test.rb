@@ -49,4 +49,8 @@ class UserTest < ActiveSupport::TestCase
     assert user.password == "secret"
   end
 
+  test "admin is false by default" do
+    assert !User.new.admin
+  end
+
 end
