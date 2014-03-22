@@ -4,6 +4,8 @@ Bfsu::Application.routes.draw do
   get "/login", to: "welcome#login"
   post "/check_login", to: "welcome#check_login"
 
+  delete "/requisitions", to: "requisitions#destroy", as: "requisition"
+
   resources :topics,    except: :show
   resources :exercises, except: [:index, :show]
   resources :materials do

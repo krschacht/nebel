@@ -5,7 +5,12 @@
 
   <ul>
     <% exercises.each do |exercise| %>
-      <li><%= link_to exercise.name, canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @material.id) %>
+      <li>
+        <%= link_to exercise.name, canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @material.id) %>
+        <%= form_tag requisition_path(exercise_id: exercise.id, material_id: @material.id), method: :delete, class: "inline" do %>
+          <input type="submit" value="Disassociate">
+        <% end -%>
+      </li>
     <% end -%>
   </ul>
 <% end -%>

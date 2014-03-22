@@ -40,6 +40,9 @@ h2 {
 .block {
   display: block;
 }
+.inline {
+  display: inline;
+}
 
 .highlight {
   background: #ffcc66;
