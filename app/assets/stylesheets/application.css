@@ -3,6 +3,7 @@
  *= require tables
  *= require topics
  *= require notices_and_alerts
+ *= require materials
  */
 
 body {

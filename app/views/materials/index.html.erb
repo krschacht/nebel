@@ -1,6 +1,6 @@
 <h1><%= link_to "Curriculum Map", topics_path, style: 'font-weight: normal;' %> - Supply List</h1>
 
-<%= form_tag merge_materials_path do %>
+<%= form_tag merge_materials_path, id: "merger" do %>
   Merge
   <input type="text" placeholder="Winner" name="winner_id">
   with
