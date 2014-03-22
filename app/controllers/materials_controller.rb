@@ -37,8 +37,8 @@ class MaterialsController < ApplicationController
 
   # DELETE /materials/1
   def destroy
-    @material.destroy
-    redirect_to materials_url, notice: 'Material was successfully destroyed.'
+    @material.archive
+    redirect_to materials_url, notice: 'Material was successfully archived.'
   end
 
   def merge
@@ -71,6 +71,6 @@ class MaterialsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def material_params
-      params.require(:material).permit(:name, :description, :url)
+      params.require(:material).permit(:name, :description, :url, :archived)
     end
 end

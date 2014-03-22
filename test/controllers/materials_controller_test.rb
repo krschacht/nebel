@@ -35,10 +35,9 @@ class MaterialsControllerTest < ActionController::TestCase
   end
 
   test "should destroy material" do
-    assert_difference('Material.count', -1) do
-      delete :destroy, id: @material
-    end
+    delete :destroy, id: @material
 
+    assert @material.reload.archived
     assert_redirected_to materials_path
   end
 
