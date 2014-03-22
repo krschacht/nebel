@@ -19,7 +19,7 @@
 
   <tbody>
     <% @materials.each do |material| %>
-      <tr>
+      <tr class=<%= "faded" if material.archived -%>>
         <td><%= link_to material.id, edit_material_path(material) %></td>
         <td><%= material.original_name %></td>
         <td><%= material.name %></td>

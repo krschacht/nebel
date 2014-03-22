@@ -3,7 +3,7 @@ class MaterialsController < ApplicationController
 
   # GET /materials
   def index
-    @materials = Material.all
+    @materials = Material.order("archived DESC, original_name")
   end
 
   # GET /materials/new
