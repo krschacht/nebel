@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140318230311) do
+ActiveRecord::Schema.define(version: 20140322023430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140318230311) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "archived"
   end
 
   create_table "prerequisites", force: true do |t|
@@ -80,5 +81,17 @@ ActiveRecord::Schema.define(version: 20140318230311) do
   add_index "topics", ["code"], name: "index_topics_on_code", unique: true, using: :btree
   add_index "topics", ["slug"], name: "index_topics_on_slug", unique: true, using: :btree
   add_index "topics", ["subject_id"], name: "index_topics_on_subject_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "name",                          null: false
+    t.string   "email",                         null: false
+    t.string   "password_hash",                 null: false
+    t.string   "access_token",                  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "admin",         default: false
+  end
+
+  add_index "users", ["admin"], name: "index_users_on_admin", using: :btree
 
 end

@@ -25,4 +25,8 @@ class MaterialTest < ActiveSupport::TestCase
     requisition = Requisition.create! material_id: material.id, exercise_id: exercise.id
     assert material.reload.exercises.include? exercise
   end
+
+  test "archived is false by default" do
+    assert !Material.new.archived
+  end
 end
