@@ -3,11 +3,7 @@ class MaterialsController < ApplicationController
 
   # GET /materials
   def index
-    @materials = Material.all
-  end
-
-  # GET /materials/1
-  def show
+    @materials = Material.order("archived DESC, original_name")
   end
 
   # GET /materials/new
@@ -24,7 +20,7 @@ class MaterialsController < ApplicationController
     @material = Material.new(material_params)
 
     if @material.save
-      redirect_to @material, notice: 'Material was successfully created.'
+      redirect_to edit_material_path(@material), notice: 'Material was successfully created.'
     else
       render action: 'new'
     end
@@ -33,7 +29,7 @@ class MaterialsController < ApplicationController
   # PATCH/PUT /materials/1
   def update
     if @material.update(material_params)
-      redirect_to @material, notice: 'Material was successfully updated.'
+      redirect_to edit_material_path(@material), notice: 'Material was successfully updated.'
     else
       render action: 'edit'
     end
@@ -41,8 +37,30 @@ class MaterialsController < ApplicationController
 
   # DELETE /materials/1
   def destroy
-    @material.destroy
-    redirect_to materials_url, notice: 'Material was successfully destroyed.'
+    @material.archive
+    redirect_to materials_url, notice: 'Material was successfully archived.'
+  end
+
+  def merge
+    winner       = Material.find(params[:winner_id])
+    losers       = Material.where(id: params[:loser_ids].split(","))
+    links        = []
+    exercise_ids = []
+
+
+    losers.each do |loser|
+      loser.exercises.each do |exercise|
+        Requisition.find_or_create_by! exercise_id: exercise.id, material_id: winner.id
+        links << %Q{<a href="#{exercise_path(exercise)}" target="_blank">#{exercise.id}</a>}
+        exercise_ids << exercise.id
+      end
+
+      loser.archive
+    end
+
+    flash[:notice] = "Exercise(s) #{links.to_sentence} are now associated to this material."
+
+    redirect_to edit_material_path(winner, exercise_ids: exercise_ids)
   end
 
   private
@@ -53,6 +71,6 @@ class MaterialsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def material_params
-      params.require(:material).permit(:name, :description, :url)
+      params.require(:material).permit(:name, :description, :url, :archived)
     end
 end

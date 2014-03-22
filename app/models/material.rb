@@ -4,4 +4,12 @@ class Material < ActiveRecord::Base
 
   has_many :requisitions
   has_many :exercises, through: :requisitions
+
+  def archive
+    update_attribute :archived, true
+  end
+
+  def unarchive
+    update_attribute :archived, false
+  end
 end
