@@ -6,10 +6,6 @@ class MaterialsController < ApplicationController
     @materials = Material.all
   end
 
-  # GET /materials/1
-  def show
-  end
-
   # GET /materials/new
   def new
     @material = Material.new
@@ -24,7 +20,7 @@ class MaterialsController < ApplicationController
     @material = Material.new(material_params)
 
     if @material.save
-      redirect_to @material, notice: 'Material was successfully created.'
+      redirect_to edit_material_path(@material), notice: 'Material was successfully created.'
     else
       render action: 'new'
     end
@@ -33,7 +29,7 @@ class MaterialsController < ApplicationController
   # PATCH/PUT /materials/1
   def update
     if @material.update(material_params)
-      redirect_to @material, notice: 'Material was successfully updated.'
+      redirect_to edit_material_path(@material), notice: 'Material was successfully updated.'
     else
       render action: 'edit'
     end

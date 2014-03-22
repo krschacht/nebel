@@ -18,7 +18,7 @@
     <tbody>
       <% @exercise.materials.each do |material| %>
         <tr class="<%= 'highlight' if material.id.to_s == params[:material_id] -%>">
-          <td><%= link_to material.id, material -%></td>
+          <td><%= link_to material.id, edit_material_path(material) -%></td>
           <td><%= material.original_name -%></td>
           <td><%= material.name -%></td>
         </tr>

@@ -8,7 +8,7 @@ Bfsu::Application.routes.draw do
 
   resources :topics,    except: :show
   resources :exercises, except: [:index, :show]
-  resources :materials do
+  resources :materials, except: :show do
     post :merge, on: :collection
   end
 

@@ -24,11 +24,6 @@ class MaterialsControllerTest < ActionController::TestCase
     assert_redirected_to material_path(assigns(:material))
   end
 
-  test "should show material" do
-    get :show, id: @material
-    assert_response :success
-  end
-
   test "should get edit" do
     get :edit, id: @material
     assert_response :success
