@@ -62,7 +62,7 @@ class MaterialsControllerTest < ActionController::TestCase
 
     post :merge, winner_id: winner.id, loser_ids: [loser_1.id, loser_2.id]
 
-    assert_redirected_to edit_material_path(winner)
+    assert_redirected_to edit_material_path(winner, exercise_ids: [a3_part2.id, a2_part1.id])
     assert loser_1.reload.archived
     assert loser_2.reload.archived
     assert_equal 3, winner.exercises.count
