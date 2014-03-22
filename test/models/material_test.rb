@@ -29,4 +29,18 @@ class MaterialTest < ActiveSupport::TestCase
   test "archived is false by default" do
     assert !Material.new.archived
   end
+
+  test "#archive sets archive to true" do
+    material = materials(:straw)
+    material.update_attribute :archived, false
+    material.archive
+    assert material.reload.archived
+  end
+
+  test "#unarchive sets archive to false" do
+    material = materials(:straw)
+    material.update_attribute :archived, true
+    material.unarchive
+    assert !material.reload.archived
+  end
 end
