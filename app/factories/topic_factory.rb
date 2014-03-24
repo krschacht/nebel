@@ -7,7 +7,7 @@ class TopicFactory
   end
 
   def topic(subject)
-    subject.topics.find_or_initialize_by(code: @book_lesson.full_lesson_code) do |topic|
+    subject.topics.find_or_initialize_by(code: @book_lesson.full_lesson_code).tap do |topic|
       topic.name              = name
       topic.order             = @book_lesson.number
       topic.overview          = @book_lesson.overview

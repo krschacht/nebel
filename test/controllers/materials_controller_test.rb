@@ -21,7 +21,7 @@ class MaterialsControllerTest < ActionController::TestCase
       post :create, material: { name: @material.name, url: @material.url }
     end
 
-    assert_redirected_to material_path(assigns(:material))
+    assert_redirected_to edit_material_path(assigns(:material))
   end
 
   test "should get edit" do
@@ -31,7 +31,7 @@ class MaterialsControllerTest < ActionController::TestCase
 
   test "should update material" do
     patch :update, id: @material, material: { name: @material.name, url: @material.url }
-    assert_redirected_to material_path(assigns(:material))
+    assert_redirected_to edit_material_path(assigns(:material))
   end
 
   test "should destroy material" do
