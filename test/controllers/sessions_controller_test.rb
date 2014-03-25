@@ -2,14 +2,14 @@ require 'test_helper'
 
 class SessionsControllerTest < ActionController::TestCase
 
-  test "should get new" do
+  test "GET to new renders new" do
     get :new
 
     assert_response :success
     assert_template :new
   end
 
-  test "should create a session" do
+  test "POST to create stores the user's ID in session" do
     user = users(:avand)
     user.password = "secret"
     user.save
@@ -21,7 +21,7 @@ class SessionsControllerTest < ActionController::TestCase
     assert_equal flash[:notice], "Welcome back, #{user.name}."
   end
 
-  test "should not create a session" do
+  test "POST to create does not store the user's ID in session if email or password don't match" do
     user = users(:avand)
 
     post :create, email: user.email, password: "mismatch"
@@ -32,8 +32,14 @@ class SessionsControllerTest < ActionController::TestCase
     assert_nil session[:user_id]
   end
 
-  test "should destroy a session" do
-    session[:user_id] = 1
+  test "DELETE to destroy requires a user" do
+    delete :destroy
+
+    assert_user_required
+  end
+
+  test "DELETE to destroy removes the user's ID from session" do
+    login_as_user
 
     delete :destroy
 
