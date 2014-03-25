@@ -1,5 +1,6 @@
 class MaterialsController < ApplicationController
-  before_action :set_material, only: [:show, :edit, :update, :destroy]
+  before_action :require_admin
+  before_action :set_material, only: [:edit, :update, :destroy]
 
   # GET /materials
   def index

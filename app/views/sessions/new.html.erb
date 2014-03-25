@@ -1,0 +1,11 @@
+<h1>Login</h1>
+
+<%= form_tag "/sessions", method: :post do %>
+  <div class="field">
+    <input type="email" name="email" value="<%= params[:email] -%>" placeholder="Email" autofocus required>
+  </div>
+  <div class="field">
+    <input type="password" name="password" placeholder="Password" required>
+  </div>
+  <input type="submit" value="Login">
+<% end %>
