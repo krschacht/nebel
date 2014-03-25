@@ -1,7 +1,18 @@
 require 'test_helper'
 
 class RequisitionsControllerTest < ActionController::TestCase
-  test "should destroy a requisition" do
+
+  test "DELETE to destroy requires an admin" do
+    login_as_user
+
+    delete :destroy
+
+    assert_admin_required
+  end
+
+  test "DELETE to destroy destroys requisition" do
+    login_as_admin
+
     material = materials(:straw)
     exercise = exercises(:d5_part1)
 
@@ -11,4 +22,5 @@ class RequisitionsControllerTest < ActionController::TestCase
 
     assert_empty Requisition.where(exercise_id: exercise.id, material_id: material.id)
   end
+
 end
