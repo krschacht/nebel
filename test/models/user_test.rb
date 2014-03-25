@@ -31,7 +31,7 @@ class UserTest < ActiveSupport::TestCase
     user = users(:avand)
     duplicate_user = User.new email: user.email
     assert !duplicate_user.valid?
-    assert duplicate_user.errors[:code].include? "has already been taken"
+    assert duplicate_user.errors[:email].include? "has already been taken"
   end
 
   test "generates an access_token before validation" do
