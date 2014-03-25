@@ -5,45 +5,56 @@ class UsersControllerTest < ActionController::TestCase
     @user = users(:avand)
   end
 
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:users)
-  end
-
-  test "should get new" do
+  test "GET to new renders new" do
     get :new
+
     assert_response :success
+    assert_template :new
   end
 
-  test "should create user" do
-    assert_difference('User.count') do
+  test "POST to create creates user" do
+    User.delete_all
+
+    assert_difference("User.count") do
       post :create, user: { email: @user.email, name: @user.name, password: @user.password }
     end
 
-    assert_redirected_to user_path(assigns(:user))
+    assert_redirected_to topics_path
+    assert_equal flash[:notice], "User was successfully created."
   end
 
-  test "should show user" do
-    get :show, id: @user
-    assert_response :success
-  end
-
-  test "should get edit" do
+  test "GET to edit requires a user" do
     get :edit, id: @user
+
+    assert_user_required
+  end
+
+  test "GET to edit renders edit" do
+    login_as_user
+
+    get :edit, id: @user
+
     assert_response :success
+    assert_equal assigns(:user), @user
+    assert_template :edit
   end
 
-  test "should update user" do
-    patch :update, id: @user, user: { email: @user.email, name: @user.name, password: @user.password }
-    assert_redirected_to user_path(assigns(:user))
+  test "PATCH to update requires a user" do
+    patch :update, id: @user
+
+    assert_user_required
   end
 
-  test "should destroy user" do
-    assert_difference('User.count', -1) do
-      delete :destroy, id: @user
-    end
+  test "PATCH to update updates user" do
+    login_as_user
 
-    assert_redirected_to users_path
+    patch :update, id: @user, user: {
+      email: @user.email, name: @user.name, password: @user.password
+    }
+
+    assert_redirected_to edit_user_path(assigns(:user))
+    assert_equal assigns(:user), @user
+    assert_equal flash[:notice], "User was successfully updated."
   end
+
 end

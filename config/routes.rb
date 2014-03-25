@@ -4,7 +4,7 @@ Bfsu::Application.routes.draw do
 
   delete "/requisitions", to: "requisitions#destroy", as: "requisition"
 
-  resources :users
+  resources :users, only: [:new, :edit, :update, :create]
   resources :topics,    except: :show
   resources :exercises, except: [:index, :show]
   resources :sessions, only: [:new, :create] do
