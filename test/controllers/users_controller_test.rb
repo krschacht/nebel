@@ -12,7 +12,7 @@ class UsersControllerTest < ActionController::TestCase
     assert_template :new
   end
 
-  test "POST to create creates user" do
+  test "POST to create creates user and saves their ID in session" do
     User.delete_all
 
     assert_difference("User.count") do
@@ -21,6 +21,7 @@ class UsersControllerTest < ActionController::TestCase
 
     assert_redirected_to topics_path
     assert_equal flash[:notice], "User was successfully created."
+    assert_equal session[:user_id], assigns(:user).id
   end
 
   test "GET to edit requires a user" do
