@@ -1,47 +1,133 @@
 require 'test_helper'
 
 class MaterialsControllerTest < ActionController::TestCase
+
   setup do
     @material = materials(:straw)
   end
 
-  test "should get index" do
+  test "GET to index requires an admin" do
+    login_as_user
+
     get :index
+
+    assert_admin_required
+  end
+
+  test "GET to index loads materials and renders index" do
+    login_as_admin
+
+    get :index
+
     assert_response :success
     assert_not_nil assigns(:materials)
+    assert_template :index
   end
 
-  test "should get new" do
+  test "GET to new requires an admin" do
+    login_as_user
+
     get :new
-    assert_response :success
+
+    assert_admin_required
   end
 
-  test "should create material" do
-    assert_difference('Material.count') do
+  test "GET to new renders new" do
+    login_as_admin
+
+    get :new
+
+    assert_response :success
+    assert_template :new
+  end
+
+  test "POST to create requires an admin" do
+    login_as_user
+
+    post :create
+
+    assert_admin_required
+  end
+
+  test "POST to create creates material" do
+    login_as_admin
+
+    assert_difference("Material.count") do
       post :create, material: { name: @material.name, url: @material.url }
     end
 
     assert_redirected_to edit_material_path(assigns(:material))
+    assert_equal flash[:notice], "Material was successfully created."
   end
 
-  test "should get edit" do
+  test "GET to edit requires an admin" do
+    login_as_user
+
     get :edit, id: @material
+
+    assert_admin_required
+  end
+
+  test "GET to edit loads material and renders edit" do
+    login_as_admin
+
+    get :edit, id: @material
+
+    assert_equal assigns(:material), @material
     assert_response :success
+    assert_template :edit
   end
 
-  test "should update material" do
-    patch :update, id: @material, material: { name: @material.name, url: @material.url }
+  test "PATCH to update requires an admin" do
+    login_as_user
+
+    patch :update, id: @material
+
+    assert_admin_required
+  end
+
+  test "PATCH to update updates material" do
+    login_as_admin
+
+    patch :update, id: @material, material: {
+      name: @material.name, url: @material.url
+    }
+
+    assert_equal assigns(:material), @material
     assert_redirected_to edit_material_path(assigns(:material))
+    assert_equal flash[:notice], "Material was successfully updated."
   end
 
-  test "should destroy material" do
+  test "DELETE to destroy requires an admin" do
+    login_as_user
+
     delete :destroy, id: @material
 
-    assert @material.reload.archived
-    assert_redirected_to materials_path
+    assert_admin_required
   end
 
-  test "should merge materials together" do
+  test "DELETE to destroy destroys material" do
+    login_as_admin
+
+    delete :destroy, id: @material
+
+    assert_equal assigns(:material), @material
+    assert @material.reload.archived
+    assert_redirected_to materials_path
+    assert_equal flash[:notice], "Material was successfully archived."
+  end
+
+  test "POST to merge requires an admin" do
+    login_as_user
+
+    post :merge
+
+    assert_admin_required
+  end
+
+  test "POST to merge merges materials together" do
+    login_as_admin
+
     winner  = materials(:straw)
     loser_1 = materials(:glue)
     loser_2 = materials(:dirt)
