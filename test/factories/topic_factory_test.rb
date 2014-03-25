@@ -560,6 +560,13 @@ class TopicFactoryTest < ActiveSupport::TestCase
     end
   end
 
+  test "#topic maps the required_background_text" do
+    TopicFactory.new(@a2).topic(@subject).tap do |topic|
+      assert_match /\ALesson A\/B-1,/, topic.required_background_text
+      assert_match /Into Categories\z/, topic.required_background_text
+    end
+  end
+
   test "#topic finds an existing topic by code" do
     topic = TopicFactory.new(@a2).topic(@subject)
     topic.save!
