@@ -7,6 +7,9 @@ Bfsu::Application.routes.draw do
   resources :users
   resources :topics,    except: :show
   resources :exercises, except: [:index, :show]
+  resources :sessions, only: [:new, :create] do
+    delete :destroy, on: :collection
+  end
   resources :materials, except: :show do
     post :merge, on: :collection
   end
