@@ -27,6 +27,14 @@ class UserTest < ActiveSupport::TestCase
     assert user.errors[:access_token].include? "can't be blank"
   end
 
+  test "validates uniqueness of email" do
+    user = users(:avand)
+    duplicate_user = User.new email: user.email
+    assert !duplicate_user.valid?
+    assert duplicate_user.errors[:code].include? "has already been taken"
+    end
+  end
+
   test "generates an access_token before validation" do
     user = User.new
     SecureRandom.stubs(:hex).returns("abcd1234")

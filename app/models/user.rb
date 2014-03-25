@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   include BCrypt
 
   validates_presence_of :name, :email, :password_hash, :access_token
+  validates_uniqueness_of :email
 
   before_validation :generate_access_token
 
