@@ -69,6 +69,10 @@ class TopicTest < ActiveSupport::TestCase
     assert subsequent_topic.reload.prerequisite_topics.include? prerequisite_topic
   end
 
+  test "has many messages" do
+    assert topics(:a2).messages.include? messages(:opener)
+  end
+
   test "generates slug from code automatically" do
     topic = Topic.new code: "A-3"
     topic.valid?

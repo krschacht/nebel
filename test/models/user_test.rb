@@ -34,6 +34,10 @@ class UserTest < ActiveSupport::TestCase
     assert duplicate_user.errors[:email].include? "has already been taken"
   end
 
+  test "has many messages" do
+    assert users(:avand).messages.include? messages(:opener)
+  end
+
   test "generates an access_token before validation" do
     user = User.new
     SecureRandom.stubs(:hex).returns("abcd1234")
