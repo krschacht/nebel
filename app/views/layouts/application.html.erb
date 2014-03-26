@@ -14,18 +14,21 @@
       BFSU Online
     <% end -%>
 
-    <% if current_user %>
-      <nav>
-        <%= link_to_unless_current "Topics", topics_path -%> ·
+    <nav>
+      <% if current_user %>
+        <%= link_to_unless_current "Curriculum Map", topics_path -%> ·
         <% if current_user.admin? %>
-          <%= link_to_unless_current "Materials", materials_path %> ·
+          <%= link_to_unless_current "Supply List", materials_path %> ·
         <% end -%>
         <%= link_to current_user.name, edit_user_path(current_user) -%> ·
         <%= form_tag sessions_path, method: :delete, class: "inline" do %>
           <a href="javascript:void(0)" onclick="this.parentElement.submit()">Sign Out</a>
         <% end -%>
-      </nav>
-    <% end -%>
+      <% else %>
+        <%= link_to "Register", new_user_path %> ·
+        <%= link_to "Login", new_session_path %>
+      <% end -%>
+    </nav>
   </header>
 
   <%= content_tag(:div, flash[:notice].html_safe, class: "notice") if flash[:notice] -%>
