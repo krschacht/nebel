@@ -1,0 +1,10 @@
+opener:
+  author: avand
+  object: a2 (Topic)
+  subject: What's the meaning of life?
+  body: Can you tell me?
+reply:
+  author: admin
+  object: opener (Message)
+  subject: What's the meaning of life?
+  body: Sadly, I'm not really sure myself.
