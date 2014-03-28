@@ -20,6 +20,10 @@ class User < ActiveRecord::Base
     self.password_hash = Password.create(new_password)
   end
 
+  def initials
+    name.split(" ").map(&:first).join.upcase
+  end
+
 private
 
   def generate_access_token

@@ -41,4 +41,8 @@ class Message < ActiveRecord::Base
       ).order(:created_at)
     end
   end
+
+  def replies
+    @replies ||= Message.where(object_type: "Message", object_id: id).order(:created_at)
+  end
 end

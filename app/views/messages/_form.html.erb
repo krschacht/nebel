@@ -31,22 +31,32 @@
     form.classList.remove("hidden");
 
     return form;
-  }
+  };
 
-  function showReplyButton() {
+  function showHiddenReplyButton() {
     var replyButton = document.querySelector("button.start-reply.hidden");
     if (replyButton) replyButton.classList.remove("hidden");
+  };
+
+  function showHiddenOpenerButton() {
+    var openerButton = document.querySelector("button#start-opener.hidden");
+    if (openerButton) openerButton.classList.remove("hidden");
+  };
+
+  function hideMessageForm() {
+    var form = document.querySelector("form#new_message");
+    form.classList.add("hidden");
   }
 
   function replyButtonClicked(event) {
-    var form = updateForm(this.getAttribute("data-message-id"), "Message"),
-        openerButton = document.querySelector("button#start-opener");
+    var form = updateForm(this.getAttribute("data-message-id"), "Message");
 
     this.parentElement.appendChild(form);
-    showReplyButton();
-    openerButton.classList.remove("hidden");
+    showHiddenReplyButton();
+    showHiddenOpenerButton();
     this.classList.add("hidden");
-    form["message[subject]"].focus();
+    form["message[subject]"].classList.add("hidden");
+    form["message[body]"].focus();
   };
 
   function openerButtonClicked(event) {
@@ -55,21 +65,19 @@
         form          = updateForm(objectID, objectType),
         formContainer = document.querySelector("#opener-container");
 
-    showReplyButton();
+    showHiddenReplyButton();
     formContainer.appendChild(form);
     this.classList.add("hidden");
+    form["message[subject]"].classList.remove("hidden");
     form["message[subject]"].focus();
   };
 
   function cancelMessageClicked(event) {
     event.preventDefault();
 
-    var form = this.parentElement,
-        openerButton = document.querySelector("button#start-opener");
-
-    form.classList.add("hidden");
-    openerButton.classList.remove("hidden");
-    showReplyButton();
+    hideMessageForm();
+    showHiddenOpenerButton();
+    showHiddenReplyButton();
   };
 
   document.addEventListener("page:change", function() {

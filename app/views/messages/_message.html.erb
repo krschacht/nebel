@@ -1,12 +1,29 @@
 <div class="message <%= 'reply' if message.reply? -%>" id="message-<%= message.id -%>">
-  <div class="subject">
-    <%= message.subject -%>
+  <div class="author">
+    <%= message.author.initials %>
   </div>
+
+  <div class="created-at">
+    <%= message.author.name -%> ·
+    <%= message.opener? ? "Opened" : "Replied" -%>
+     <%= time_ago_in_words message.created_at -%> ago
+  </div>
+
+  <% if message.opener? %>
+    <div class="subject">
+      <%= message.subject -%>
+    </div>
+  <% end -%>
 
   <div class="body">
     <%= message.body -%><br>
-    <%= pluralize(Message.replies.where(object_id: message.id).count, "reply") -%>
   </div>
 
-  <button class="start-reply" data-message-id="<%= message.id -%>">Reply</button>
+  <% if message.opener? %>
+    <div class="replies">
+      <%= render message.replies -%>
+    </div>
+
+    <button class="start-reply" data-message-id="<%= message.id -%>">Reply</button>
+  <% end -%>
 </div>

@@ -12,8 +12,13 @@ class MessagesController < ApplicationController
   def create
     message_params = params.require(:message).permit(:object_id, :object_type, :subject, :body)
 
-    message = Message.new message_params
-    message.author = current_user
+    if message_params[:object_type] == "Message"
+      opener = Message.find message_params[:object_id]
+      message = opener.new_reply(current_user, message_params[:body])
+    else
+      message = Message.new message_params
+      message.author = current_user
+    end
 
     if message.save
       redirect_to message_path(message), notice: "Your message has been posted."

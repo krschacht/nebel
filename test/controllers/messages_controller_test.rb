@@ -27,7 +27,7 @@ class MessagesControllerTest < ActionController::TestCase
     assert_user_required
   end
 
-  test "POST to create creates a message and redirects to it" do
+  test "POST to create creates an opener and redirects to it" do
     login_as_user
 
     topic = topics(:a2)
@@ -39,7 +39,30 @@ class MessagesControllerTest < ActionController::TestCase
 
     message = Message.last
 
+    assert_equal "Topic", message.object_type
+    assert_equal topic.id, message.object_id
     assert_equal "What is the meaning of life?", message.subject
+    assert_equal "...", message.body
+    assert_equal session[:user_id], message.author_id
+    assert_redirected_to message_path(message)
+    assert_equal "Your message has been posted.", flash[:notice]
+  end
+
+  test "POST to create creates a reply and redirects to it" do
+    login_as_user
+
+    opener = messages(:opener)
+
+    post :create, message: {
+      object_type: opener.class.name, object_id: opener.id,
+      body: "..."
+    }
+
+    message = Message.last
+
+    assert_equal "Message", message.object_type
+    assert_equal opener.id, message.object_id
+    assert_equal opener.subject, message.subject
     assert_equal "...", message.body
     assert_equal session[:user_id], message.author_id
     assert_redirected_to message_path(message)

@@ -146,4 +146,12 @@ class MessageTest < ActiveSupport::TestCase
     end
   end
 
+  test "#replies returns replies to a message" do
+    opener = messages(:opener)
+    reply = messages(:reply)
+    Message.create! object: topics(:a2), author: opener.author, subject: "..."
+    assert_equal 1, opener.replies.size
+    assert opener.replies.include? reply
+  end
+
 end
