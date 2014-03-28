@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
 
   include BCrypt
 
+  has_many :messages, foreign_key: :author_id
+
   validates_presence_of :name, :email, :password_hash, :access_token
   validates_uniqueness_of :email
 
@@ -16,6 +18,10 @@ class User < ActiveRecord::Base
 
   def password=(new_password)
     self.password_hash = Password.create(new_password)
+  end
+
+  def initials
+    name.split(" ").map(&:first).join.upcase
   end
 
 private
