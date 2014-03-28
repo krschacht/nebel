@@ -26,6 +26,12 @@ To deploy, do the usual:
 git push heroku master
 ```
 
+```
+rake db:migrate
+rake db:seed
+heroku run rake book:download_and_import["https://dl.dropboxusercontent.com/u/1062541/BFSU.zip"]
+```
+
 ## Mapping
 
 The book breaks things out into subjects, lessons, and parts. In the app, we map
