@@ -7,18 +7,19 @@ class TopicFactory
   end
 
   def topic(subject)
-    subject.topics.find_or_initialize_by(code: @book_lesson.full_lesson_code) do |topic|
-      topic.name              = name
-      topic.order             = @book_lesson.number
-      topic.overview          = @book_lesson.overview
-      topic.progression       = @book_lesson.position
-      topic.objectives        = @book_lesson.objectives
-      topic.teachable_moments = @book_lesson.teachable_moments
-      topic.questions         = @book_lesson.questions
-      topic.parents           = @book_lesson.support
-      topic.connections       = @book_lesson.connections
-      topic.books             = @book_lesson.books
-      topic.materials_text    = @book_lesson.materials
+    subject.topics.find_or_initialize_by(code: @book_lesson.full_lesson_code).tap do |topic|
+      topic.name                     = name
+      topic.order                    = @book_lesson.number
+      topic.overview                 = @book_lesson.overview
+      topic.progression              = @book_lesson.position
+      topic.objectives               = @book_lesson.objectives
+      topic.teachable_moments        = @book_lesson.teachable_moments
+      topic.questions                = @book_lesson.questions
+      topic.parents                  = @book_lesson.support
+      topic.connections              = @book_lesson.connections
+      topic.books                    = @book_lesson.books
+      topic.materials_text           = @book_lesson.materials
+      topic.required_background_text = @book_lesson.required_background
     end
   end
 

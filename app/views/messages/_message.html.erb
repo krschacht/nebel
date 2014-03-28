@@ -1,0 +1,30 @@
+<div class="message <%= 'reply' if message.reply? -%>" id="message-<%= message.id -%>">
+  <div class="author">
+    <%= message.author.initials %>
+  </div>
+
+  <div class="created-at">
+    <%= message.author.name -%> ·
+    <%= link_to message_path(message) do %>
+       <%= time_ago_in_words message.created_at -%> ago
+    <% end -%>
+  </div>
+
+  <% if message.opener? %>
+    <div class="subject">
+      <%= message.subject -%>
+    </div>
+  <% end -%>
+
+  <div class="body">
+    <%= message.body -%><br>
+  </div>
+
+  <% if message.opener? %>
+    <div class="replies">
+      <%= render message.replies -%>
+    </div>
+
+    <button class="start-reply" data-message-id="<%= message.id -%>">Reply</button>
+  <% end -%>
+</div>

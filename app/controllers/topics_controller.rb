@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  before_action :require_user, only: [:index, :show]
+  before_action :require_admin, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_topic, only: [:edit, :update, :destroy]
 
   layout "application"

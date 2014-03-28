@@ -33,6 +33,17 @@ class ExerciseTest < ActiveSupport::TestCase
     assert exercise.reload.materials.include? material
   end
 
+  test "has many messages" do
+    message = Message.create!({
+      author_id:   users(:avand).id,
+      object_id:   exercises(:d5_part1).id,
+      object_type: "Exercise",
+      subject:     "Why hello there!"
+    })
+
+    assert exercises(:d5_part1).messages.include? message
+  end
+
   test "#name returns the name" do
     assert_equal "Foo", Exercise.new(name: "Foo").name
   end

@@ -14,7 +14,7 @@ class ExerciseFactory
       duration    ||= @book_lesson.time_required
       part_number ||= 1
 
-      topic.exercises.find_or_initialize_by(part: part_number) do |exercise|
+      topic.exercises.find_or_initialize_by(part: part_number).tap do |exercise|
         exercise.name     = part_name
         exercise.body     = part_text
         exercise.duration = duration

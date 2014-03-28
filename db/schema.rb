@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140322023430) do
+ActiveRecord::Schema.define(version: 20140326020558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,10 @@ ActiveRecord::Schema.define(version: 20140322023430) do
     t.integer  "part",       default: 1, null: false
   end
 
+  add_index "exercises", ["created_at"], name: "index_exercises_on_created_at", using: :btree
+  add_index "exercises", ["part"], name: "index_exercises_on_part", using: :btree
   add_index "exercises", ["topic_id"], name: "index_exercises_on_topic_id", using: :btree
+  add_index "exercises", ["updated_at"], name: "index_exercises_on_updated_at", using: :btree
 
   create_table "materials", force: true do |t|
     t.string   "name"
@@ -38,10 +41,35 @@ ActiveRecord::Schema.define(version: 20140322023430) do
     t.boolean  "archived"
   end
 
+  add_index "materials", ["archived"], name: "index_materials_on_archived", using: :btree
+  add_index "materials", ["created_at"], name: "index_materials_on_created_at", using: :btree
+  add_index "materials", ["updated_at"], name: "index_materials_on_updated_at", using: :btree
+
+  create_table "messages", force: true do |t|
+    t.integer  "author_id",                  null: false
+    t.integer  "object_id",                  null: false
+    t.string   "object_type",                null: false
+    t.string   "subject",                    null: false
+    t.text     "body"
+    t.boolean  "open",        default: true, null: false
+    t.integer  "order",       default: 0,    null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "messages", ["author_id"], name: "index_messages_on_author_id", using: :btree
+  add_index "messages", ["created_at"], name: "index_messages_on_created_at", using: :btree
+  add_index "messages", ["object_id", "object_type"], name: "index_messages_on_object_id_and_object_type", using: :btree
+  add_index "messages", ["open"], name: "index_messages_on_open", using: :btree
+  add_index "messages", ["order"], name: "index_messages_on_order", using: :btree
+  add_index "messages", ["updated_at"], name: "index_messages_on_updated_at", using: :btree
+
   create_table "prerequisites", force: true do |t|
     t.integer "topic_id"
     t.integer "prerequisite_topic_id"
   end
+
+  add_index "prerequisites", ["topic_id"], name: "index_prerequisites_on_topic_id", using: :btree
 
   create_table "requisitions", force: true do |t|
     t.integer  "exercise_id"
@@ -50,6 +78,12 @@ ActiveRecord::Schema.define(version: 20140322023430) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "requisitions", ["created_at"], name: "index_requisitions_on_created_at", using: :btree
+  add_index "requisitions", ["exercise_id"], name: "index_requisitions_on_exercise_id", using: :btree
+  add_index "requisitions", ["material_id"], name: "index_requisitions_on_material_id", using: :btree
+  add_index "requisitions", ["quantity"], name: "index_requisitions_on_quantity", using: :btree
+  add_index "requisitions", ["updated_at"], name: "index_requisitions_on_updated_at", using: :btree
 
   create_table "subjects", force: true do |t|
     t.string "code",        null: false
@@ -60,9 +94,9 @@ ActiveRecord::Schema.define(version: 20140322023430) do
   add_index "subjects", ["code"], name: "index_subjects_on_code", unique: true, using: :btree
 
   create_table "topics", force: true do |t|
-    t.integer  "subject_id",        null: false
-    t.string   "name",              null: false
-    t.integer  "order",             null: false
+    t.integer  "subject_id",               null: false
+    t.string   "name",                     null: false
+    t.integer  "order",                    null: false
     t.text     "overview"
     t.text     "progression"
     t.text     "objectives"
@@ -76,11 +110,15 @@ ActiveRecord::Schema.define(version: 20140322023430) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "materials_text"
+    t.text     "required_background_text"
   end
 
   add_index "topics", ["code"], name: "index_topics_on_code", unique: true, using: :btree
+  add_index "topics", ["created_at"], name: "index_topics_on_created_at", using: :btree
+  add_index "topics", ["order"], name: "index_topics_on_order", using: :btree
   add_index "topics", ["slug"], name: "index_topics_on_slug", unique: true, using: :btree
   add_index "topics", ["subject_id"], name: "index_topics_on_subject_id", using: :btree
+  add_index "topics", ["updated_at"], name: "index_topics_on_updated_at", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name",                          null: false
@@ -93,5 +131,8 @@ ActiveRecord::Schema.define(version: 20140322023430) do
   end
 
   add_index "users", ["admin"], name: "index_users_on_admin", using: :btree
+  add_index "users", ["created_at"], name: "index_users_on_created_at", using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["updated_at"], name: "index_users_on_updated_at", using: :btree
 
 end

@@ -12,4 +12,23 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  def login_as_user
+    session[:user_id] = users(:avand).id
+  end
+
+  def login_as_admin
+    session[:user_id] = users(:admin).id
+  end
+
+  def assert_user_required
+    assert_redirected_to root_path
+    assert_equal flash[:alert], "You must be logged in to do that."
+  end
+
+  def assert_admin_required
+    assert_redirected_to root_path
+    assert_equal flash[:alert], "You must be an admin to do that."
+  end
+
 end
