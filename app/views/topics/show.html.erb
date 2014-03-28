@@ -1,1 +1,7 @@
 <%= render params[:field] %>
+
+<h2>Messages</h2>
+
+<%= render @topic.messages %>
+
+<%= render "messages/form", message: Message.new(object: @topic) -%>

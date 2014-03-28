@@ -5,6 +5,7 @@
  *= require notices_and_alerts
  *= require materials
  *= require header
+ *= require messages
  */
 
 body {

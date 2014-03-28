@@ -1,0 +1,87 @@
+<div id="opener-container">
+  <%= form_for message, html: { class: "hidden" } do |f| %>
+    <%= f.hidden_field :object_id %>
+    <%= f.hidden_field :object_type %>
+
+    <div class="field">
+      <%= f.text_field :subject, placeholder: "Subject" %>
+    </div>
+    <div class="field">
+      <%= f.text_area :body, placeholder: "Body" %>
+    </div>
+
+    <%= f.submit "Send" -%>
+    <button id="cancel-message">Cancel</button>
+  <% end -%>
+</div>
+
+<button id="start-opener"
+        data-object-id="<%= message.object_id -%>"
+        data-object-type="<%= message.object_type -%>">
+  New Message
+</button>
+
+<script>
+  function updateForm(objectID, objectType) {
+    var form = document.querySelector("#new_message");
+
+    form["message[object_id]"].value   = objectID;
+    form["message[object_type]"].value = objectType;
+
+    form.classList.remove("hidden");
+
+    return form;
+  }
+
+  function showReplyButton() {
+    var replyButton = document.querySelector("button.start-reply.hidden");
+    if (replyButton) replyButton.classList.remove("hidden");
+  }
+
+  function replyButtonClicked(event) {
+    var form = updateForm(this.getAttribute("data-message-id"), "Message"),
+        openerButton = document.querySelector("button#start-opener");
+
+    this.parentElement.appendChild(form);
+    showReplyButton();
+    openerButton.classList.remove("hidden");
+    this.classList.add("hidden");
+    form["message[subject]"].focus();
+  };
+
+  function openerButtonClicked(event) {
+    var objectID      = this.getAttribute("data-object-id"),
+        objectType    = this.getAttribute("data-object-type"),
+        form          = updateForm(objectID, objectType),
+        formContainer = document.querySelector("#opener-container");
+
+    showReplyButton();
+    formContainer.appendChild(form);
+    this.classList.add("hidden");
+    form["message[subject]"].focus();
+  };
+
+  function cancelMessageClicked(event) {
+    event.preventDefault();
+
+    var form = this.parentElement,
+        openerButton = document.querySelector("button#start-opener");
+
+    form.classList.add("hidden");
+    openerButton.classList.remove("hidden");
+    showReplyButton();
+  };
+
+  document.addEventListener("page:change", function() {
+    var replyButtons = document.querySelectorAll("button.start-reply"),
+        openerButton = document.querySelector("button#start-opener"),
+        cancelButton = document.querySelector("button#cancel-message");
+
+    for (var i = 0; i < replyButtons.length; i++) {
+      replyButtons[i].addEventListener("click", replyButtonClicked);
+    }
+
+    openerButton.addEventListener("click", openerButtonClicked);
+    cancelButton.addEventListener("click", cancelMessageClicked);
+  })
+</script>

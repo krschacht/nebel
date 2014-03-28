@@ -19,6 +19,7 @@
         <%= link_to_unless_current "Curriculum Map", topics_path -%> ·
         <% if current_user.admin? %>
           <%= link_to_unless_current "Supply List", materials_path %> ·
+          <%= link_to_unless_current "Messages", messages_path %> ·
         <% end -%>
         <%= link_to current_user.name, edit_user_path(current_user) -%> ·
         <%= form_tag sessions_path, method: :delete, class: "inline" do %>
