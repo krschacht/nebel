@@ -29,6 +29,14 @@
   float: right;
   line-height: 32px;
 }
+.message .created-at a {
+  text-decoration: underline;
+  color: inherit;
+}
+.message .created-at a:hover {
+  background: none;
+  text-decoration: none;
+}
 #new_message input[type="text"],
 #new_message textarea {
   box-sizing: border-box;

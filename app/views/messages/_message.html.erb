@@ -5,8 +5,9 @@
 
   <div class="created-at">
     <%= message.author.name -%> ·
-    <%= message.opener? ? "Opened" : "Replied" -%>
-     <%= time_ago_in_words message.created_at -%> ago
+    <%= link_to message_path(message) do %>
+       <%= time_ago_in_words message.created_at -%> ago
+    <% end -%>
   </div>
 
   <% if message.opener? %>
