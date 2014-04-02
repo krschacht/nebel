@@ -5,9 +5,10 @@
 
   <div class="created-at">
     <%= message.author.name -%> ·
-    <%= link_to message_path(message) do %>
-       <%= time_ago_in_words message.created_at -%> ago
+    <% if message.opener? %>
+      <%= link_to message.object_type, canonical_message_path(message) %> ·
     <% end -%>
+    <%= link_to "#{time_ago_in_words message.created_at} ago", message_path(id: message.id.to_s) -%>
   </div>
 
   <% if message.opener? %>
@@ -25,8 +26,13 @@
       <%= render message.replies -%>
     </div>
 
-    <button class="reply" data-message-id="<%= message.id -%>">Reply</button>
-
+    <button class="reply">Reply</button>
     <%= render "messages/form", message: message.new_reply(current_user, nil) %>
+
+    <% if current_user.admin? %>
+      <%= form_tag toggle_message_path(message), method: :patch, class: "inline toggle-message" do %>
+        <input type="submit" value="<%= message.open? ? "Close" : "Open" -%>">
+      <% end -%>
+    <% end -%>
   <% end -%>
 </div>

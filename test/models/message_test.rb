@@ -109,6 +109,18 @@ class MessageTest < ActiveSupport::TestCase
     assert replies.exclude? messages(:opener)
   end
 
+  test "#opened returns messages whose open is true" do
+    opened = Message.opened
+    assert opened.include? messages(:opened)
+    assert opened.exclude? messages(:closed)
+  end
+
+  test "#closed returns messages whose open is false" do
+    closed = Message.closed
+    assert closed.include? messages(:closed)
+    assert closed.exclude? messages(:opened)
+  end
+
   test ".thread returns opener and all replies" do
     opener  = messages(:opener)
     reply_1 = messages(:reply)

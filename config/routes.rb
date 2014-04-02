@@ -7,7 +7,9 @@ Bfsu::Application.routes.draw do
   resources :users, only: [:new, :edit, :update, :create]
   resources :topics,    except: :show
   resources :exercises, except: [:index, :show]
-  resources :messages, only: [:index, :create]
+  resources :messages, only: [:show, :index, :create] do
+    patch :toggle, on: :member
+  end
   resources :sessions, only: [:new, :create] do
     delete :destroy, on: :collection
   end

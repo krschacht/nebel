@@ -1,2 +1,3 @@
 //= require turbolinks
-//= require messages
+//= require message_form
+//= require toggle_message

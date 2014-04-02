@@ -7,6 +7,8 @@ class Message < ActiveRecord::Base
 
   scope :openers, -> { where(object_type: %w(Topic Exercise)) }
   scope :replies, -> { where(object_type: "Message") }
+  scope :opened,  -> { where(open: true) }
+  scope :closed,  -> { where(open: false) }
 
   def reply?
     object_type == "Message"
