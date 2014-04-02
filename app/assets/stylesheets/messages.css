@@ -37,8 +37,12 @@
   background: none;
   text-decoration: none;
 }
-#new_message input[type="text"],
-#new_message textarea {
+.message:target {
+  background: #ffe8bf;
+}
+
+.new-message input[type="text"],
+.new-message textarea {
   box-sizing: border-box;
   width: 100%;
   border: 1px solid #7f7f7f;
@@ -47,12 +51,12 @@
   font-family: Arial;
   padding: 4px 6px;
 }
-#new_message input[type="text"]:focus,
-#new_message textarea:focus {
+.new-message input[type="text"]:focus,
+.new-message textarea:focus {
   outline: none;
   border-color: rgb(0, 128, 255);
   box-shadow: 0 0 6px rgba(0, 128, 255, 0.4);
 }
-.message:target {
-  background: #ffe8bf;
+.message input[name="message[subject]"] {
+  display: none;
 }

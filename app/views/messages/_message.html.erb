@@ -1,4 +1,4 @@
-<div class="message <%= 'reply' if message.reply? -%>" id="message-<%= message.id -%>">
+<div class="message" id="message-<%= message.id -%>">
   <div class="author">
     <%= message.author.initials %>
   </div>
@@ -25,6 +25,8 @@
       <%= render message.replies -%>
     </div>
 
-    <button class="start-reply" data-message-id="<%= message.id -%>">Reply</button>
+    <button class="reply" data-message-id="<%= message.id -%>">Reply</button>
+
+    <%= render "messages/form", message: message.new_reply(current_user, nil) %>
   <% end -%>
 </div>
