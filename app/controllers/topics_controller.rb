@@ -29,7 +29,7 @@ class TopicsController < ApplicationController
     @topic = Topic.new(topic_params)
 
     if @topic.save
-      redirect_to @topic, notice: 'Topic was successfully created.'
+      redirect_to edit_topic_path(@topic), notice: 'Topic was successfully created.'
     else
       render action: 'new'
     end
@@ -37,7 +37,7 @@ class TopicsController < ApplicationController
 
   def update
     if @topic.update(topic_params)
-      redirect_to @topic, notice: 'Topic was successfully updated.'
+      redirect_to edit_topic_path(@topic), notice: 'Topic was successfully updated.'
     else
       render action: 'edit'
     end

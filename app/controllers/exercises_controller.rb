@@ -25,7 +25,7 @@ class ExercisesController < ApplicationController
     @exercise = Exercise.new(exercise_params)
 
     if @exercise.save
-      redirect_to @exercise, notice: 'Exercise was successfully created.'
+      redirect_to edit_exercise_path(@exercise), notice: 'Exercise was successfully created.'
     else
       render action: 'new'
     end
@@ -34,7 +34,7 @@ class ExercisesController < ApplicationController
   # PATCH/PUT /exercises/1
   def update
     if @exercise.update(exercise_params)
-      redirect_to @exercise, notice: 'Exercise was successfully updated.'
+      redirect_to edit_exercise_path(@exercise), notice: 'Exercise was successfully updated.'
     else
       render action: 'edit'
     end
