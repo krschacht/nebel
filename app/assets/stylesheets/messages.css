@@ -37,26 +37,21 @@
   background: none;
   text-decoration: none;
 }
+
+.message .body {
+  margin-left: 55px;
+}
+.message .body p:first-child {
+  margin-top: 0;
+}
+.message .body p:last-child {
+  margin-bottom: 0;
+}
+
 .message:target {
   background: #ffe8bf;
 }
 
-.new-message input[type="text"],
-.new-message textarea {
-  box-sizing: border-box;
-  width: 100%;
-  border: 1px solid #7f7f7f;
-  border-radius: 3px;
-  font-size: 14px;
-  font-family: Arial;
-  padding: 4px 6px;
-}
-.new-message input[type="text"]:focus,
-.new-message textarea:focus {
-  outline: none;
-  border-color: rgb(0, 128, 255);
-  box-shadow: 0 0 6px rgba(0, 128, 255, 0.4);
-}
 .message input[name="message[subject]"] {
   display: none;
 }
