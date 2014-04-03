@@ -1,9 +1,12 @@
 <div class="message" id="message-<%= message.id -%>">
-  <div class="author">
+  <div class="author <%= 'admin' if message.author.admin? -%>">
     <%= message.author.initials %>
   </div>
 
   <div class="created-at">
+    <% if message.author.admin? %>
+      <span class="badge">Admin</span>
+    <% end -%>
     <%= message.author.name -%> ·
     <% if message.opener? %>
       <%= link_to message.object_type, canonical_message_path(message) %> ·

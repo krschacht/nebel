@@ -23,6 +23,17 @@
   float: left;
   margin-right: 15px;
 }
+.message .author.admin {
+  background-color: #a8cad5;
+}
+.message .badge {
+  text-transform: lowercase;
+  background-color: #a8cad5;
+  padding: 2px 4px;
+  color: white;
+  font-weight: bold;
+  border-radius: 2px;
+}
 .message .created-at {
   font-size: 12px;
   color: #b3b3b3;
