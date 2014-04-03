@@ -44,8 +44,8 @@ class MessageTest < ActiveSupport::TestCase
     assert message.errors[:object_type].include? "is not included in the list"
   end
 
-  test "open defaults to true" do
-    assert Message.new.open
+  test "opened defaults to true" do
+    assert Message.new.opened?
   end
 
   test "order defaults to 0" do

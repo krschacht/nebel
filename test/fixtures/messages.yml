@@ -13,7 +13,7 @@ closed:
   object: a2 (Topic)
   subject: What's the meaning of life?
   body: Can you tell me?
-  open: false
+  opened: false
 archived:
   author: avand
   object: a2 (Topic)

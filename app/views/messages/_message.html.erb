@@ -34,7 +34,7 @@
 
     <% if current_user.admin? %>
       <%= form_tag toggle_message_path(message), method: :patch, class: "inline toggle-message" do %>
-        <input type="submit" value="<%= message.open? ? "Close" : "Open" -%>">
+        <input type="submit" value="<%= message.opened? ? "Close" : "Open" -%>">
       <% end -%>
 
       <%= form_tag message_path(message), method: :delete, class: "inline archive-message" do %>

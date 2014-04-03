@@ -37,7 +37,7 @@ class MessagesController < ApplicationController
 
   def toggle
     @message = Message.find(params[:id])
-    @message.update_attribute(:open, !@message.open)
+    @message.update_attribute(:opened, !@message.opened)
   end
 
   def destroy

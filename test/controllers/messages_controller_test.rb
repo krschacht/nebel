@@ -144,22 +144,22 @@ class MessagesControllerTest < ActionController::TestCase
     login_as_admin
 
     message = messages(:opener)
-    message.update_attribute :open, true
+    message.update_attribute :opened, true
 
     patch :toggle, id: message.id
 
-    assert !message.reload.open
+    assert !message.reload.opened
   end
 
   test "PATCH to toggle changes open from false to true" do
     login_as_admin
 
     message = messages(:opener)
-    message.update_attribute :open, false
+    message.update_attribute :opened, false
 
     patch :toggle, id: message.id
 
-    assert message.reload.open
+    assert message.reload.opened
   end
 
   test "DELETE to destroy requires an admin" do
