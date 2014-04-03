@@ -144,7 +144,7 @@ class MessagesControllerTest < ActionController::TestCase
     login_as_admin
 
     message = messages(:opener)
-    message.update_attribute :opened, true
+    message.update opened: true
 
     patch :toggle, id: message.id
 
@@ -155,7 +155,7 @@ class MessagesControllerTest < ActionController::TestCase
     login_as_admin
 
     message = messages(:opener)
-    message.update_attribute :opened, false
+    message.update opened: false
 
     patch :toggle, id: message.id
 
