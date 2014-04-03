@@ -5,10 +5,12 @@ class Message < ActiveRecord::Base
   validates_presence_of :author_id, :object_id, :object_type, :subject
   validates :object_type, inclusion: { in: %w(Topic Exercise Message) }
 
-  scope :openers, -> { where(object_type: %w(Topic Exercise)) }
-  scope :replies, -> { where(object_type: "Message") }
-  scope :opened,  -> { where(open: true) }
-  scope :closed,  -> { where(open: false) }
+  scope :openers,    -> { where(object_type: %w(Topic Exercise)) }
+  scope :replies,    -> { where(object_type: "Message") }
+  scope :opened,     -> { where(open: true) }
+  scope :closed,     -> { where(open: false) }
+  scope :archived,   -> { where(archived: true) }
+  scope :unarchived, -> { where(archived: false) }
 
   def reply?
     object_type == "Message"

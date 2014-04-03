@@ -3,9 +3,9 @@ class MessagesController < ApplicationController
   include MessagesHelper
 
   before_action :require_user, only: :create
-  before_action :require_admin, only: [:show, :index, :toggle]
+  before_action :require_admin, only: [:show, :index, :toggle, :destroy]
 
-  layout false, only: :toggle
+  layout false, only: [:toggle, :destroy]
 
   def show
     @message = Message.find(params[:id])
@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
 
   def index
     params[:scope] ||= "opened"
-    @messages = Message.openers.order(:created_at)
+    @messages = Message.openers.unarchived.order(:created_at)
     @messages = params[:scope] == "opened" ? @messages.opened : @messages.closed
   end
 
@@ -38,6 +38,11 @@ class MessagesController < ApplicationController
   def toggle
     @message = Message.find(params[:id])
     @message.update_attribute(:open, !@message.open)
+  end
+
+  def destroy
+    message = Message.find(params[:id])
+    message.update_attribute :archived, true
   end
 
 end

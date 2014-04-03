@@ -44,7 +44,7 @@ class MessagesControllerTest < ActionController::TestCase
 
     get :index
 
-    assert assigns(:messages).include? messages(:opened)
+    assert assigns(:messages).include? messages(:opener)
     assert assigns(:messages).exclude? messages(:closed)
   end
 
@@ -54,7 +54,15 @@ class MessagesControllerTest < ActionController::TestCase
     get :index, scope: "closed"
 
     assert assigns(:messages).include? messages(:closed)
-    assert assigns(:messages).exclude? messages(:opened)
+    assert assigns(:messages).exclude? messages(:opener)
+  end
+
+  test "GET to index filters to archived messages by default" do
+    login_as_admin
+
+    get :index
+
+    assert assigns(:messages).exclude? messages(:archived)
   end
 
   test "POST to create requires a user" do
@@ -152,6 +160,24 @@ class MessagesControllerTest < ActionController::TestCase
     patch :toggle, id: message.id
 
     assert message.reload.open
+  end
+
+  test "DELETE to destroy requires an admin" do
+    login_as_user
+
+    delete :destroy, id: messages(:opener).id
+
+    assert_admin_required
+  end
+
+  test "DELETE to destroy archives the message" do
+    login_as_admin
+
+    delete :destroy, id: messages(:opener).id
+
+    assert messages(:opener).reload.archived
+    assert_response :success
+    assert_template :destroy
   end
 
 end
