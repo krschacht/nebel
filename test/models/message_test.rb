@@ -52,6 +52,10 @@ class MessageTest < ActiveSupport::TestCase
     assert_equal Message.new.order, 0
   end
 
+  test "archived defaults to false" do
+    assert !Message.new.archived
+  end
+
   test "belongs to author" do
     assert_equal users(:avand), messages(:opener).author
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140326020558) do
+ActiveRecord::Schema.define(version: 20140403045759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,17 +46,19 @@ ActiveRecord::Schema.define(version: 20140326020558) do
   add_index "materials", ["updated_at"], name: "index_materials_on_updated_at", using: :btree
 
   create_table "messages", force: true do |t|
-    t.integer  "author_id",                  null: false
-    t.integer  "object_id",                  null: false
-    t.string   "object_type",                null: false
-    t.string   "subject",                    null: false
+    t.integer  "author_id",                   null: false
+    t.integer  "object_id",                   null: false
+    t.string   "object_type",                 null: false
+    t.string   "subject",                     null: false
     t.text     "body"
-    t.boolean  "open",        default: true, null: false
-    t.integer  "order",       default: 0,    null: false
+    t.boolean  "open",        default: true,  null: false
+    t.integer  "order",       default: 0,     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "archived",    default: false, null: false
   end
 
+  add_index "messages", ["archived"], name: "index_messages_on_archived", using: :btree
   add_index "messages", ["author_id"], name: "index_messages_on_author_id", using: :btree
   add_index "messages", ["created_at"], name: "index_messages_on_created_at", using: :btree
   add_index "messages", ["object_id", "object_type"], name: "index_messages_on_object_id_and_object_type", using: :btree
