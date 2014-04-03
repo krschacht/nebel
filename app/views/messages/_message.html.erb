@@ -36,6 +36,10 @@
       <%= form_tag toggle_message_path(message), method: :patch, class: "inline toggle-message" do %>
         <input type="submit" value="<%= message.open? ? "Close" : "Open" -%>">
       <% end -%>
+
+      <%= form_tag message_path(message), method: :delete, class: "inline archive-message" do %>
+        <input type="submit" value="Archive">
+      <% end -%>
     <% end -%>
   <% end -%>
 </div>
