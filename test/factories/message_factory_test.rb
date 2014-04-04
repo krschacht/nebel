@@ -1,4 +1,4 @@
-require "test_helper"
+require "../test_helper"
 
 class MessageFactoryTest < ActiveSupport::TestCase
 
@@ -13,6 +13,13 @@ class MessageFactoryTest < ActiveSupport::TestCase
     assert message.author.new_record?
     assert_equal "bernardnebel@verizon.net", message.author.email
     assert_equal "BERNARD%20J NEBEL", message.author.name
+  end
+
+  test "#message initializes author with name set to profile" do
+    @yahoo_message["authorName"] = nil
+    message = MessageFactory.new(@yahoo_message).message
+
+    assert_equal "bnebel66", message.author.name
   end
 
   test "#message finds author" do

@@ -5,8 +5,8 @@ class MessageFactory
   end
 
   def message
-    author = User.find_or_initialize_by(email: email).tap do |user|
-      user.name = @yahoo_message["authorName"]
+    author = User.find_or_initialize_by(email: author_email).tap do |user|
+      user.name = author_name
     end
 
     Message.new({
@@ -18,7 +18,11 @@ class MessageFactory
 
 private
 
-  def email
+  def author_name
+    @yahoo_message["authorName"] || @yahoo_message["profile"]
+  end
+
+  def author_email
     @yahoo_message["from"].gsub(/&(g|l)t;/, "").split.last
   end
 
