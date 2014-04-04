@@ -11,7 +11,7 @@
     <% if message.author.admin? && message.yahoo_message_id.present? %>
       <%= link_to "Yahoo", "https://groups.yahoo.com/neo/groups/K5science/conversations/messages/#{message.yahoo_message_id}" %> ·
     <% end -%>
-    <% if message.opener? %>
+    <% if message.opener? && message.messageable_type.present? %>
       <%= link_to message.messageable_type, canonical_message_path(message) %> ·
     <% end -%>
     <%= link_to "#{time_ago_in_words message.created_at} ago", message_path(id: message.id.to_s) -%>
