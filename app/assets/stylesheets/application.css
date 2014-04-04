@@ -6,6 +6,7 @@
  *= require materials
  *= require header
  *= require messages
+ *= require forms
  */
 
 body {

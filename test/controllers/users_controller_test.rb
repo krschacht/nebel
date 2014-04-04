@@ -30,6 +30,15 @@ class UsersControllerTest < ActionController::TestCase
     assert_user_required
   end
 
+  test "GET to edit redirects if attempting to edit someone other than current_user" do
+    login_as_user
+
+    get :edit, id: users(:admin).id
+
+    assert_redirected_to root_path
+    assert_equal flash[:alert], "You are not allowed to do that."
+  end
+
   test "GET to edit renders edit" do
     login_as_user
 
@@ -44,6 +53,15 @@ class UsersControllerTest < ActionController::TestCase
     patch :update, id: @user
 
     assert_user_required
+  end
+
+  test "PATCH to update redirects if attempting to edit someone other than current_user" do
+    login_as_user
+
+    patch :update, id: users(:admin).id
+
+    assert_redirected_to root_path
+    assert_equal flash[:alert], "You are not allowed to do that."
   end
 
   test "PATCH to update updates user" do

@@ -2,7 +2,7 @@
 
 <h3>Duration:</h3>
 
-<%= simple_format @exercise.duration %>
+<%= markdown @exercise.duration %>
 
 <% if !@exercise.materials.empty? %>
   <h3>Materials:</h3>
@@ -35,17 +35,18 @@
 </button>
 
 <div id="materials_text" class="hidden" style="font-size: 12px; color: gray">
-  <%= simple_format @topic.materials_text %>
+  <%= markdown @topic.materials_text %>
 </div>
 
 <h3>Body:</h3>
 
-<%= simple_format @exercise.body %>
+<%= markdown @exercise.body %>
 
-<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Edit', edit_exercise_path(@exercise) %>
 
 <h2>Messages</h2>
 
 <%= render @exercise.messages %>
 
-<%= render "messages/form", message: Message.new(object: @exercise) -%>
+<button id="new-message">New Message</button>
+<%= render "messages/form", message: @exercise.messages.build -%>

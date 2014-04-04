@@ -1,0 +1,25 @@
+input[type="text"],
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #7f7f7f;
+  border-radius: 3px;
+  font-size: 14px;
+  font-family: Arial;
+  padding: 4px 6px;
+}
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgb(0, 128, 255);
+  box-shadow: 0 0 6px rgba(0, 128, 255, 0.4);
+}
+textarea {
+  min-height: 100px;
+}
+
+.markdown-preview-container button {
+  font-size: 10px;
+  line-height: 14px;
+  float: right;
+}

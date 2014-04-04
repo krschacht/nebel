@@ -1,3 +1,26 @@
 <h1>Messages</h1>
 
-<%= render @messages -%>
+<form>
+  Filter:
+
+  <input type="radio" id="opened" name="scope" value="opened" <%= "checked" if params[:scope] == "opened" -%>>
+  <label for="opened">Opened</label>
+
+  <input type="radio" id="closed" name="scope" value="closed" <%= "checked" if params[:scope] == "closed" -%>>
+  <label for="closed">Closed</label>
+</form>
+
+<% if @messages.present? %>
+  <%= render @messages -%>
+<% else %>
+  <p>There are no <%= params[:scope] -%> messages.</p>
+<% end %>
+
+<script>
+  var radios = document.querySelectorAll("input[type='radio']");
+  for (var i = 0; i < radios.length; i++) {
+    radios[i].addEventListener("click", function() {
+      this.parentElement.submit();
+    })
+  }
+</script>

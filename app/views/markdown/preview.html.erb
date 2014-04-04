@@ -1,0 +1,18 @@
+<style>
+  body {
+    background: #e6e6e6;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    margin: 100px auto;
+    width: 600px;
+    background: white;
+    padding: 20px 40px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+</style>
+
+<div class="container">
+  <%= markdown(params[:string]) -%>
+</div>

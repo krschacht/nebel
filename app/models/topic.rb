@@ -8,7 +8,7 @@ class Topic < ActiveRecord::Base
   has_many :prerequisite_topics, through: :prerequisites
   has_many :subsequents, class_name: "Prerequisite", foreign_key: "prerequisite_topic_id"
   has_many :subsequent_topics, through: :subsequents, source: :topic
-  has_many :messages, as: :object
+  has_many :messages, as: :messageable
 
   before_validation :generate_slug, if: :code
 

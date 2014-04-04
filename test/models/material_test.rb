@@ -32,14 +32,14 @@ class MaterialTest < ActiveSupport::TestCase
 
   test "#archive sets archive to true" do
     material = materials(:straw)
-    material.update_attribute :archived, false
+    material.update archived: false
     material.archive
     assert material.reload.archived
   end
 
   test "#unarchive sets archive to false" do
     material = materials(:straw)
-    material.update_attribute :archived, true
+    material.update archived: true
     material.unarchive
     assert !material.reload.archived
   end

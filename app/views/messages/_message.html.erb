@@ -1,13 +1,20 @@
-<div class="message <%= 'reply' if message.reply? -%>" id="message-<%= message.id -%>">
-  <div class="author">
+<div class="message" id="message-<%= message.id -%>">
+  <div class="author <%= 'admin' if message.author.admin? -%>">
     <%= message.author.initials %>
   </div>
 
   <div class="created-at">
-    <%= message.author.name -%> ·
-    <%= link_to message_path(message) do %>
-       <%= time_ago_in_words message.created_at -%> ago
+    <% if message.author.admin? %>
+      <span class="badge">Admin</span>
     <% end -%>
+    <%= message.author.name -%> ·
+    <% if message.author.admin? && message.yahoo_message_id.present? %>
+      <%= link_to "Yahoo", "https://groups.yahoo.com/neo/groups/K5science/conversations/messages/#{message.yahoo_message_id}" %> ·
+    <% end -%>
+    <% if message.opener? && message.messageable_type.present? %>
+      <%= link_to message.messageable_type, canonical_message_path(message) %> ·
+    <% end -%>
+    <%= link_to "#{time_ago_in_words message.created_at} ago", message_path(id: message.id.to_s) -%>
   </div>
 
   <% if message.opener? %>
@@ -17,7 +24,7 @@
   <% end -%>
 
   <div class="body">
-    <%= message.body -%><br>
+    <%= markdown message.body -%>
   </div>
 
   <% if message.opener? %>
@@ -25,6 +32,17 @@
       <%= render message.replies -%>
     </div>
 
-    <button class="start-reply" data-message-id="<%= message.id -%>">Reply</button>
+    <button class="reply">Reply</button>
+    <%= render "messages/form", message: message.new_reply(current_user, nil) %>
+
+    <% if current_user.admin? %>
+      <%= form_tag toggle_message_path(message), method: :patch, class: "inline toggle-message" do %>
+        <input type="submit" value="<%= message.opened? ? "Close" : "Open" -%>">
+      <% end -%>
+
+      <%= form_tag message_path(message), method: :delete, class: "inline archive-message" do %>
+        <input type="submit" value="Archive">
+      <% end -%>
+    <% end -%>
   <% end -%>
 </div>

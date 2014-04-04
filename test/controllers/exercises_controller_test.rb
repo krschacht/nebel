@@ -41,7 +41,7 @@ class ExercisesControllerTest < ActionController::TestCase
       }
     end
 
-    assert_redirected_to exercise_path(assigns(:exercise))
+    assert_redirected_to edit_exercise_path(assigns(:exercise))
     assert_equal flash[:notice], "Exercise was successfully created."
   end
 
@@ -86,7 +86,7 @@ class ExercisesControllerTest < ActionController::TestCase
 
     patch :update, id: @exercise, exercise: { body: @exercise.body, duration: @exercise.duration, name: @exercise.name }
 
-    assert_redirected_to exercise_path(assigns(:exercise))
+    assert_redirected_to edit_exercise_path(assigns(:exercise))
     assert_equal flash[:notice], "Exercise was successfully updated."
     assert_equal assigns(:exercise), @exercise
   end

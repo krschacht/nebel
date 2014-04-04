@@ -58,7 +58,7 @@ class TopicsControllerTest < ActionController::TestCase
       }
     end
 
-    assert_redirected_to canonical_topic_path(assigns(:topic))
+    assert_redirected_to edit_topic_path(assigns(:topic))
     assert_equal flash[:notice], "Topic was successfully created."
   end
 
@@ -105,7 +105,7 @@ class TopicsControllerTest < ActionController::TestCase
       code: @topic.code, name: @topic.name, overview: @topic.overview
     }
 
-    assert_redirected_to canonical_topic_path(assigns(:topic))
+    assert_redirected_to edit_topic_path(assigns(:topic))
     assert_equal flash[:notice], "Topic was successfully updated."
     assert_equal @topic, assigns(:topic)
   end

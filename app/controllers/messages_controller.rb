@@ -3,17 +3,25 @@ class MessagesController < ApplicationController
   include MessagesHelper
 
   before_action :require_user, only: :create
-  before_action :require_admin, only: :index
+  before_action :require_admin, only: [:show, :index, :toggle, :destroy]
+
+  layout false, only: [:toggle, :destroy]
+
+  def show
+    @message = Message.find(params[:id])
+  end
 
   def index
-    @messages = Message.openers.order(:created_at)
+    params[:scope] ||= "opened"
+    @messages = Message.openers.unarchived.order(:created_at)
+    @messages = params[:scope] == "opened" ? @messages.opened : @messages.closed
   end
 
   def create
-    message_params = params.require(:message).permit(:object_id, :object_type, :subject, :body)
+    message_params = params.require(:message).permit(:messageable_id, :messageable_type, :subject, :body)
 
-    if message_params[:object_type] == "Message"
-      opener = Message.find message_params[:object_id]
+    if message_params[:messageable_type] == "Message"
+      opener = Message.find message_params[:messageable_id]
       message = opener.new_reply(current_user, message_params[:body])
     else
       message = Message.new message_params
@@ -21,10 +29,20 @@ class MessagesController < ApplicationController
     end
 
     if message.save
-      redirect_to message_path(message), notice: "Your message has been posted."
+      redirect_to canonical_message_path(message), notice: "Your message has been posted."
     else
       redirect_to root_path, alert: "There was an error posting your message."
     end
+  end
+
+  def toggle
+    @message = Message.find(params[:id])
+    @message.update opened: !@message.opened
+  end
+
+  def destroy
+    message = Message.find(params[:id])
+    message.update archived: true
   end
 
 end
