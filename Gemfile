@@ -7,6 +7,7 @@ gem "turbolinks", "~> 2.2.1"
 gem "rubyzip",    "~> 1.1.0"
 gem "bcrypt",     "~> 3.1.7"
 gem "redcarpet",  "~> 3.1.1"
+gem "httparty",   "~> 0.13.0"
 
 group :development, :test do
   gem "pry-debugger", "~> 0.2.2"
