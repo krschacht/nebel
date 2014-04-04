@@ -39,7 +39,7 @@ private
   def message_body
     body = @yahoo_message["messageBody"]
     body = ReverseMarkdown.convert body
-    body.gsub(/^>.*/, "").clean
+    body.gsub(/^>.*/, "").gsub(/^--- In.*/, "").clean
   end
 
   def message_created_at
