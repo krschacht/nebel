@@ -10,9 +10,10 @@ class MessageFactory
     end
 
     Message.new({
-      author:  author,
-      subject: @yahoo_message["subject"],
-      body:    @yahoo_message["messageBody"]
+      author:           author,
+      subject:          @yahoo_message["subject"],
+      body:             @yahoo_message["messageBody"],
+      yahoo_message_id: @yahoo_message["msgId"]
     })
   end
 

@@ -1,4 +1,4 @@
-require "../test_helper"
+require "test_helper"
 
 class MessageFactoryTest < ActiveSupport::TestCase
 
@@ -36,6 +36,7 @@ class MessageFactoryTest < ActiveSupport::TestCase
     assert message.new_record?
     assert_equal "Re: [K5science] RE: Should I purchase a microscope slide making kit?", message.subject
     assert message.body.include? "you need for making slides"
+    assert_equal 2740, message.yahoo_message_id
   end
 
 end
