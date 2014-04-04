@@ -8,6 +8,9 @@
       <span class="badge">Admin</span>
     <% end -%>
     <%= message.author.name -%> ·
+    <% if message.author.admin? && message.yahoo_message_id.present? %>
+      <%= link_to "Yahoo", "https://groups.yahoo.com/neo/groups/K5science/conversations/messages/#{message.yahoo_message_id}" %> ·
+    <% end -%>
     <% if message.opener? %>
       <%= link_to message.messageable_type, canonical_message_path(message) %> ·
     <% end -%>
