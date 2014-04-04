@@ -5,5 +5,5 @@
 <%= render @topic.messages %>
 
 <button id="new-message">New Message</button>
-<%= render "messages/form", message: Message.new(object: @topic) -%>
+<%= render "messages/form", message: @topic.messages.build -%>
 

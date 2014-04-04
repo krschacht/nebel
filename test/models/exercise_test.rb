@@ -35,10 +35,10 @@ class ExerciseTest < ActiveSupport::TestCase
 
   test "has many messages" do
     message = Message.create!({
-      author_id:   users(:avand).id,
-      object_id:   exercises(:d5_part1).id,
-      object_type: "Exercise",
-      subject:     "Why hello there!"
+      author_id:        users(:avand).id,
+      messageable_id:   exercises(:d5_part1).id,
+      messageable_type: "Exercise",
+      subject:          "Why hello there!"
     })
 
     assert exercises(:d5_part1).messages.include? message

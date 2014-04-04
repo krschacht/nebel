@@ -9,7 +9,7 @@
     <% end -%>
     <%= message.author.name -%> ·
     <% if message.opener? %>
-      <%= link_to message.object_type, canonical_message_path(message) %> ·
+      <%= link_to message.messageable_type, canonical_message_path(message) %> ·
     <% end -%>
     <%= link_to "#{time_ago_in_words message.created_at} ago", message_path(id: message.id.to_s) -%>
   </div>

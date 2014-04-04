@@ -8,40 +8,28 @@ class MessageTest < ActiveSupport::TestCase
     assert message.errors[:author_id].include? "can't be blank"
   end
 
-  test "validates presence of object_id" do
-    message = Message.new
-    assert !message.valid?
-    assert message.errors[:object_id].include? "can't be blank"
-  end
-
-  test "validates presence of object_type" do
-    message = Message.new
-    assert !message.valid?
-    assert message.errors[:object_type].include? "can't be blank"
-  end
-
   test "validates presence of subject" do
     message = Message.new
     assert !message.valid?
     assert message.errors[:subject].include? "can't be blank"
   end
 
-  test "validates object_type is either 'Topic', 'Exercise', or 'Message'" do
-    message = Message.new object_type: "Topic"
+  test "validates messageable_type is either 'Topic', 'Exercise', or 'Message'" do
+    message = Message.new messageable_type: "Topic"
     message.valid?
-    assert_empty message.errors[:object_type]
+    assert_empty message.errors[:messageable_type]
 
-    message = Message.new object_type: "Exercise"
+    message = Message.new messageable_type: "Exercise"
     message.valid?
-    assert_empty message.errors[:object_type]
+    assert_empty message.errors[:messageable_type]
 
-    message = Message.new object_type: "Message"
+    message = Message.new messageable_type: "Message"
     message.valid?
-    assert_empty message.errors[:object_type]
+    assert_empty message.errors[:messageable_type]
 
-    message = Message.new object_type: "Material"
+    message = Message.new messageable_type: "Material"
     message.valid?
-    assert message.errors[:object_type].include? "is not included in the list"
+    assert message.errors[:messageable_type].include? "is not included in the list"
   end
 
   test "opened defaults to true" do
@@ -60,23 +48,24 @@ class MessageTest < ActiveSupport::TestCase
     assert_equal users(:avand), messages(:opener).author
   end
 
-  test "belongs to object" do
-    assert_equal topics(:a2), messages(:opener).object
-    assert_equal messages(:opener), messages(:reply).object
+  test "belongs to messageable" do
+    assert_equal topics(:a2), messages(:opener).messageable
+    assert_equal messages(:opener), messages(:reply).messageable
   end
 
-  test ".reply? returns true is object_type is 'Message'" do
+  test ".reply? returns true is messageable_type is 'Message'" do
     assert messages(:reply).reply?
   end
 
-  test ".reply? returns false is object_type is not 'Message'" do
+  test ".reply? returns false is messageable_type is not 'Message'" do
     assert !messages(:opener).reply?
   end
 
-  test ".opener? returns true if object_type is 'Topic' or 'Exercise'" do
-    assert Message.new(object_type: "Topic").opener?
-    assert Message.new(object_type: "Exercise").opener?
-    assert !Message.new(object_type: "Message").opener?
+  test ".opener? returns true if messageable_type is nil, 'Topic' or 'Exercise'" do
+    assert Message.new(messageable_type: nil).opener?
+    assert Message.new(messageable_type: "Topic").opener?
+    assert Message.new(messageable_type: "Exercise").opener?
+    assert !Message.new(messageable_type: "Message").opener?
   end
 
   test ".new_reply returns a new message as a reply" do
@@ -85,8 +74,8 @@ class MessageTest < ActiveSupport::TestCase
     reply  = opener.new_reply(admin, "Looking into it...")
 
     assert reply.valid?
-    assert_equal reply.object_id, opener.id
-    assert_equal reply.object_type, opener.class.name
+    assert_equal reply.messageable_id, opener.id
+    assert_equal reply.messageable_type, opener.class.name
     assert_equal reply.author_id, admin.id
     assert_equal reply.subject, opener.subject
     assert_equal reply.body, "Looking into it..."
@@ -101,13 +90,15 @@ class MessageTest < ActiveSupport::TestCase
     end
   end
 
-  test "#openers returns messages whose object_type is 'Topic' or 'Exercise' chronologically" do
+  test "#openers returns messages whose messageable_type is 'Topic', 'Exercise', or nil chronologically" do
+    opener = Message.create! author: users(:avand), subject: "..."
     openers = Message.openers
+    assert openers.include? opener
     assert openers.include? messages(:opener)
     assert openers.exclude? messages(:reply)
   end
 
-  test "#replies returns messages whose object_type is 'Message' chronologically" do
+  test "#replies returns messages whose messageable_type is 'Message' chronologically" do
     replies = Message.replies
     assert replies.include? messages(:reply)
     assert replies.exclude? messages(:opener)
@@ -145,10 +136,10 @@ class MessageTest < ActiveSupport::TestCase
     reply_4 = opener.new_reply(opener.author, "That's what I thought, thanks!")
 
     Message.create!({
-      author_id:   users(:avand).id,
-      object_id:   opener.object_id,
-      object_type: opener.object_type,
-      subject:     "What's the velocity of an unladen swallow?"
+      author_id:        users(:avand).id,
+      messageable_id:   opener.messageable_id,
+      messageable_type: opener.messageable_type,
+      subject:          "What's the velocity of an unladen swallow?"
     })
 
     reply_2.save!
@@ -177,7 +168,7 @@ class MessageTest < ActiveSupport::TestCase
   test "#replies returns replies to a message" do
     opener = messages(:opener)
     reply = messages(:reply)
-    Message.create! object: topics(:a2), author: opener.author, subject: "..."
+    Message.create! messageable: topics(:a2), author: opener.author, subject: "..."
     assert_equal 1, opener.replies.size
     assert opener.replies.include? reply
   end

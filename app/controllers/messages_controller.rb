@@ -18,10 +18,10 @@ class MessagesController < ApplicationController
   end
 
   def create
-    message_params = params.require(:message).permit(:object_id, :object_type, :subject, :body)
+    message_params = params.require(:message).permit(:messageable_id, :messageable_type, :subject, :body)
 
-    if message_params[:object_type] == "Message"
-      opener = Message.find message_params[:object_id]
+    if message_params[:messageable_type] == "Message"
+      opener = Message.find message_params[:messageable_id]
       message = opener.new_reply(current_user, message_params[:body])
     else
       message = Message.new message_params

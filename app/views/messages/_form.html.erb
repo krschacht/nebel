@@ -1,6 +1,6 @@
 <%= form_for message, html: { id: nil, class: "new-message hidden" } do |f| %>
-  <%= f.hidden_field :object_id, id: nil %>
-  <%= f.hidden_field :object_type, id: nil %>
+  <%= f.hidden_field :messageable_id, id: nil %>
+  <%= f.hidden_field :messageable_type, id: nil %>
 
   <div class="field">
     <%= f.text_field :subject, placeholder: "Subject", id: nil %>

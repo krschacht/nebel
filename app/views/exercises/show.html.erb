@@ -49,4 +49,4 @@
 <%= render @exercise.messages %>
 
 <button id="new-message">New Message</button>
-<%= render "messages/form", message: Message.new(object: @exercise) -%>
+<%= render "messages/form", message: @exercise.messages.build -%>
