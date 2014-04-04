@@ -17,6 +17,7 @@ class MessageFactory
       message.author = author
       message.subject = @yahoo_message["subject"]
       message.body = message_body
+      message.created_at = message_created_at
     end
   end
 
@@ -34,6 +35,10 @@ private
     body = @yahoo_message["messageBody"]
     body = ReverseMarkdown.convert body
     body.gsub(/^>.*/, "").clean
+  end
+
+  def message_created_at
+    Time.at(@yahoo_message["postDate"].to_i)
   end
 
 end

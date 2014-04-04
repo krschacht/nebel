@@ -38,6 +38,7 @@ class MessageFactoryTest < ActiveSupport::TestCase
     assert_equal 2740, message.yahoo_message_id
     assert_match /\AI am not a fan of kits/, message.body
     assert_match /Bernie Nebel\z/, message.body
+    assert_equal Time.at(1383414145), message.created_at
   end
 
   test "#message finds message by Yahoo ID" do
