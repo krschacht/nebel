@@ -2,6 +2,8 @@ require "httparty"
 
 class YahooGroup
 
+  LIMIT = 3_000 # There are ~2,700 total messages
+
   include HTTParty
 
   base_uri "https://groups.yahoo.com/api/v1/groups/K5science"
@@ -13,7 +15,7 @@ class YahooGroup
   def message_ids(query = {})
     query.reverse_merge!({
       start: 2740,
-      count: 3000, # There are ~2,700 total messages
+      count: LIMIT,
       sortOrder: "asc",
       direction: -1,
       chrome: "raw",
@@ -25,10 +27,11 @@ class YahooGroup
     response["ygData"]["messages"].map { |m| m["messageId"] }
   end
 
-  def messages
-    message_ids[0...3].map do |message_id|
+  def messages(offset, limit)
+    message_ids[offset...limit].map do |message_id|
       message = message(message_id)
       yield(message) if block_given?
+      sleep rand * 2
       message
     end
   end
