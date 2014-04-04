@@ -31,7 +31,6 @@ class YahooGroup
     message_ids[from...to].map do |message_id|
       message = message(message_id)
       yield(message) if block_given?
-      sleep rand * 2
       message
     end
   end

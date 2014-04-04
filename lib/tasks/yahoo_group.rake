@@ -17,6 +17,8 @@ namespace :yahoo_group do
       message.save!
 
       puts "#{message.yahoo_message_id} - #{message.subject} (#{new_record ? "new" : message.id})"
+
+      sleep rand * 2
     end
 
     puts "#{User.where("created_at > ?", start_of_import).count} users(s) created, #{User.where("updated_at > ?", start_of_import).count} updated (#{User.count} total)"
