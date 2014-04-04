@@ -39,6 +39,7 @@ class MessageFactoryTest < ActiveSupport::TestCase
     assert_match /\AI am not a fan of kits/, message.body
     assert_match /Bernie Nebel\z/, message.body
     assert_equal Time.at(1383414145), message.created_at
+    assert_nil message.messageable
   end
 
   test "#message finds message by Yahoo ID" do
@@ -48,6 +49,13 @@ class MessageFactoryTest < ActiveSupport::TestCase
     new_message = MessageFactory.new(@yahoo_message).message
 
     assert_equal existing_message, new_message
+  end
+
+  test "#message initializes reply" do
+    opener      = Message.create! author: users(:avand), subject: "...", yahoo_message_id: 2735
+    new_message = MessageFactory.new(@yahoo_message).message
+
+    assert_equal new_message.messageable, opener
   end
 
 end

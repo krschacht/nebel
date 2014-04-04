@@ -18,6 +18,11 @@ class MessageFactory
       message.subject = @yahoo_message["subject"]
       message.body = message_body
       message.created_at = message_created_at
+
+      if reply?
+        reply = Message.find_by yahoo_message_id: @yahoo_message["topicId"]
+        message.messageable = reply
+      end
     end
   end
 
@@ -39,6 +44,10 @@ private
 
   def message_created_at
     Time.at(@yahoo_message["postDate"].to_i)
+  end
+
+  def reply?
+    @yahoo_message["topicId"] != @yahoo_message["msgId"]
   end
 
 end
