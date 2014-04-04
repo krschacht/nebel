@@ -35,8 +35,9 @@ class MessageFactoryTest < ActiveSupport::TestCase
 
     assert message.new_record?
     assert_equal "Re: [K5science] RE: Should I purchase a microscope slide making kit?", message.subject
-    assert message.body.include? "you need for making slides"
     assert_equal 2740, message.yahoo_message_id
+    assert_match /\AI am not a fan of kits/, message.body
+    assert_match /Bernie Nebel\z/, message.body
   end
 
   test "#message finds message by Yahoo ID" do

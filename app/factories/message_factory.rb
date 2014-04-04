@@ -16,7 +16,7 @@ class MessageFactory
     Message.find_or_initialize_by(yahoo_message_id: @yahoo_message["msgId"]).tap do |message|
       message.author = author
       message.subject = @yahoo_message["subject"]
-      message.body = @yahoo_message["messageBody"]
+      message.body = message_body
     end
   end
 
@@ -28,6 +28,12 @@ private
 
   def author_email
     @yahoo_message["from"].gsub(/&(g|l)t;/, "").split.last
+  end
+
+  def message_body
+    body = @yahoo_message["messageBody"]
+    body = ReverseMarkdown.convert body
+    body.gsub(/^>.*/, "").clean
   end
 
 end
