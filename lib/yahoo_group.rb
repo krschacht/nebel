@@ -27,8 +27,8 @@ class YahooGroup
     response["ygData"]["messages"].map { |m| m["messageId"] }
   end
 
-  def messages(offset, limit)
-    message_ids[offset...limit].map do |message_id|
+  def messages(from, to)
+    message_ids[from...to].map do |message_id|
       message = message(message_id)
       yield(message) if block_given?
       sleep rand * 2
