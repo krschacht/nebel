@@ -2,10 +2,10 @@ require 'test_helper'
 
 class MessageTest < ActiveSupport::TestCase
 
-  test "validates presence of author_id" do
+  test "validates presence of author" do
     message = Message.new
     assert !message.valid?
-    assert message.errors[:author_id].include? "can't be blank"
+    assert message.errors[:author].include? "can't be blank"
   end
 
   test "validates presence of subject" do

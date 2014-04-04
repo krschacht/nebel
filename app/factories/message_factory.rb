@@ -9,12 +9,15 @@ class MessageFactory
       user.name = author_name
     end
 
-    Message.new({
-      author:           author,
-      subject:          @yahoo_message["subject"],
-      body:             @yahoo_message["messageBody"],
-      yahoo_message_id: @yahoo_message["msgId"]
-    })
+    if author.new_record?
+      author.password = "something"
+    end
+
+    Message.find_or_initialize_by(yahoo_message_id: @yahoo_message["msgId"]).tap do |message|
+      message.author = author
+      message.subject = @yahoo_message["subject"]
+      message.body = @yahoo_message["messageBody"]
+    end
   end
 
 private

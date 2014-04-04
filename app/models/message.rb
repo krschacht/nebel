@@ -2,8 +2,8 @@ class Message < ActiveRecord::Base
   belongs_to :messageable, polymorphic: true
   belongs_to :author, class_name: "User"
 
-  validates_presence_of :author_id, :subject
-  validates :messageable_type, inclusion: { in: %w(Topic Exercise Message) }
+  validates_presence_of :author, :subject
+  validates :messageable_type, inclusion: { in: %w(Topic Exercise Message) }, allow_nil: true
 
   scope :openers,    -> { where(messageable_type: ["Topic", "Exercise", nil]) }
   scope :replies,    -> { where(messageable_type: "Message") }

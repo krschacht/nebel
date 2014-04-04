@@ -39,4 +39,13 @@ class MessageFactoryTest < ActiveSupport::TestCase
     assert_equal 2740, message.yahoo_message_id
   end
 
+  test "#message finds message by Yahoo ID" do
+    existing_message = MessageFactory.new(@yahoo_message).message
+    existing_message.save!
+
+    new_message = MessageFactory.new(@yahoo_message).message
+
+    assert_equal existing_message, new_message
+  end
+
 end
