@@ -3,13 +3,13 @@ module MessagesHelper
   def canonical_message_path(message, bookmark = nil)
     bookmark ||= "#message-#{message.id}"
 
-    case message.object_type
+    case message.messageable_type
     when "Topic"
-      canonical_topic_path(message.object.slug) + bookmark
+      canonical_topic_path(message.messageable.slug) + bookmark
     when "Exercise"
-      canonical_exercise_path(message.object.topic.slug, message.object.part) + bookmark
+      canonical_exercise_path(message.messageable.topic.slug, message.messageable.part) + bookmark
     when "Message"
-      canonical_message_path(message.object, bookmark)
+      canonical_message_path(message.messageable, bookmark)
     end
   end
 

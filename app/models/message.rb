@@ -1,52 +1,52 @@
 class Message < ActiveRecord::Base
-  belongs_to :object, polymorphic: true
+  belongs_to :messageable, polymorphic: true
   belongs_to :author, class_name: "User"
 
-  validates_presence_of :author_id, :object_id, :object_type, :subject
-  validates :object_type, inclusion: { in: %w(Topic Exercise Message) }
+  validates_presence_of :author, :subject
+  validates :messageable_type, inclusion: { in: %w(Topic Exercise Message) }, allow_nil: true
 
-  scope :openers,    -> { where(object_type: %w(Topic Exercise)) }
-  scope :replies,    -> { where(object_type: "Message") }
+  scope :openers,    -> { where(messageable_type: ["Topic", "Exercise", nil]) }
+  scope :replies,    -> { where(messageable_type: "Message") }
   scope :opened,     -> { where(opened: true) }
   scope :closed,     -> { where(opened: false) }
   scope :archived,   -> { where(archived: true) }
   scope :unarchived, -> { where(archived: false) }
 
   def reply?
-    object_type == "Message"
+    messageable_type == "Message"
   end
 
   def opener?
-    object_type == "Topic" || object_type == "Exercise"
+    messageable_type.nil? || messageable_type == "Topic" || messageable_type == "Exercise"
   end
 
   def new_reply(author, body)
     raise "won't reply to a reply, please reply to the opener" if self.reply?
 
     Message.new({
-      author_id:   author.id,
-      object_id:   self.id,
-      object_type: self.class.name,
-      subject:     self.subject,
-      body:        body
+      author_id:        author.id,
+      messageable_id:   self.id,
+      messageable_type: self.class.name,
+      subject:          self.subject,
+      body:             body
     })
   end
 
   def thread
     if reply?
       Message.where(
-        "id = ? OR (object_id = ? AND object_type = ?)",
-        object_id, object_id, object_type
+        "id = ? OR (messageable_id = ? AND messageable_type = ?)",
+        messageable_id, messageable_id, messageable_type
       ).order(:created_at)
     else
       Message.where(
-        "id = ? OR (object_id = ? AND object_type = ?)",
+        "id = ? OR (messageable_id = ? AND messageable_type = ?)",
         id, id, self.class.name
       ).order(:created_at)
     end
   end
 
   def replies
-    @replies ||= Message.where(object_type: "Message", object_id: id).order(:created_at)
+    @replies ||= Message.where(messageable_type: "Message", messageable_id: id).order(:created_at)
   end
 end

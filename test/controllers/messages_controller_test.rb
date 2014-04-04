@@ -77,14 +77,14 @@ class MessagesControllerTest < ActionController::TestCase
     topic = topics(:a2)
 
     post :create, message: {
-      object_type: topic.class.name, object_id: topic.id,
+      messageable_type: topic.class.name, messageable_id: topic.id,
       subject: "What is the meaning of life?", body: "..."
     }
 
     message = Message.last
 
-    assert_equal "Topic", message.object_type
-    assert_equal topic.id, message.object_id
+    assert_equal "Topic", message.messageable_type
+    assert_equal topic.id, message.messageable_id
     assert_equal "What is the meaning of life?", message.subject
     assert_equal "...", message.body
     assert_equal session[:user_id], message.author_id
@@ -98,14 +98,14 @@ class MessagesControllerTest < ActionController::TestCase
     opener = messages(:opener)
 
     post :create, message: {
-      object_type: opener.class.name, object_id: opener.id,
+      messageable_type: opener.class.name, messageable_id: opener.id,
       body: "..."
     }
 
     message = Message.last
 
-    assert_equal "Message", message.object_type
-    assert_equal opener.id, message.object_id
+    assert_equal "Message", message.messageable_type
+    assert_equal opener.id, message.messageable_id
     assert_equal opener.subject, message.subject
     assert_equal "...", message.body
     assert_equal session[:user_id], message.author_id
