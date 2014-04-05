@@ -36,7 +36,14 @@ class YahooGroup
   end
 
   def message(id)
-    self.class.get("/messages/#{id}", headers: { "Cookie" => @cookies })["ygData"]
+    tries = 3
+    begin
+      self.class.get("/messages/#{id}", headers: { "Cookie" => @cookies })["ygData"]
+    rescue => error
+      tries -= 1
+      retry if tries > 0
+      raise error
+    end
   end
 
 end
