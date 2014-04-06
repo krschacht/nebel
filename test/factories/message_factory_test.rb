@@ -42,6 +42,14 @@ class MessageFactoryTest < ActiveSupport::TestCase
     assert_nil message.messageable
   end
 
+  test "#message sets the subject to 'No Subject' if unavailable" do
+    @yahoo_message["subject"] = nil
+
+    message = MessageFactory.new(@yahoo_message).message
+
+    assert_equal "No Subject", message.subject
+  end
+
   test "#message finds message by Yahoo ID" do
     existing_message = MessageFactory.new(@yahoo_message).message
     existing_message.save!

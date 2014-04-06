@@ -27,17 +27,23 @@ class YahooGroup
     response["ygData"]["messages"].map { |m| m["messageId"] }
   end
 
-  def messages(offset, limit)
-    message_ids[offset...limit].map do |message_id|
+  def messages(from, to)
+    message_ids[from...to].map do |message_id|
       message = message(message_id)
       yield(message) if block_given?
-      sleep rand * 2
       message
     end
   end
 
   def message(id)
-    self.class.get("/messages/#{id}", headers: { "Cookie" => @cookies })["ygData"]
+    tries = 3
+    begin
+      self.class.get("/messages/#{id}", headers: { "Cookie" => @cookies })["ygData"]
+    rescue => error
+      tries -= 1
+      retry if tries > 0
+      raise error
+    end
   end
 
 end

@@ -15,7 +15,7 @@ class MessageFactory
 
     Message.find_or_initialize_by(yahoo_message_id: @yahoo_message["msgId"]).tap do |message|
       message.author = author
-      message.subject = @yahoo_message["subject"]
+      message.subject = message_subject
       message.body = message_body
       message.created_at = message_created_at
 
@@ -48,6 +48,10 @@ private
 
   def reply?
     @yahoo_message["topicId"] != @yahoo_message["msgId"]
+  end
+
+  def message_subject
+    @yahoo_message["subject"] || "No Subject"
   end
 
 end
