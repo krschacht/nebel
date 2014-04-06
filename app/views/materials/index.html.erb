@@ -1,6 +1,8 @@
 <h1>Supply List</h1>
 
 <%= form_tag merge_materials_path, id: "merger" do %>
+  <%= link_to 'New Material', new_material_path %> &nbsp;&nbsp;|&nbsp;&nbsp;
+
   Merge
   <input type="text" placeholder="Winner" name="winner_id">
   with
@@ -12,8 +14,8 @@
   <thead>
     <tr>
       <th>ID</th>
-      <th>Original name</th>
       <th>Name</th>
+      <th>Description</th>
     </tr>
   </thead>
 
@@ -21,13 +23,10 @@
     <% @materials.each do |material| %>
       <tr class=<%= "faded" if material.archived -%>>
         <td><%= link_to material.id, edit_material_path(material) %></td>
-        <td><%= material.original_name %></td>
         <td><%= material.name %></td>
+        <td><%= material.description.to_s[0..50] %>...</td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Material', new_material_path %>

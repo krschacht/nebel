@@ -3,7 +3,7 @@ class Exercise < ActiveRecord::Base
 
   belongs_to :topic
   has_many :requisitions
-  has_many :materials, through: :requisitions
+  has_many :materials, -> { order("archived") }, through: :requisitions
   has_many :messages, as: :messageable
 
   def name

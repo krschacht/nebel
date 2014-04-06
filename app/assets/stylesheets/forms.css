@@ -8,12 +8,23 @@ textarea {
   font-family: Arial;
   padding: 4px 6px;
 }
+
+#merger input[type="text"],
+#new_requisition input[type="text"] {
+  width: 70px;
+}
+
+#merger input[type="text"][name="loser_ids"] {
+  width: 170px;
+}
+
 input[type="text"]:focus,
 textarea:focus {
   outline: none;
   border-color: rgb(0, 128, 255);
   box-shadow: 0 0 6px rgba(0, 128, 255, 0.4);
 }
+
 textarea {
   min-height: 100px;
 }
