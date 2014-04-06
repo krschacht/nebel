@@ -5,6 +5,8 @@ class Material < ActiveRecord::Base
   has_many :requisitions
   has_many :exercises, through: :requisitions
 
+  default_scope { order('archived') }
+
   def archive
     update archived: true
   end
