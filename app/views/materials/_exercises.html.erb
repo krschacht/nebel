@@ -1,16 +1,35 @@
-<% if exercises.empty? %>
-  <p>No exercises</p>
+<% if requisitions.empty? %>
+  No exercises - 
 <% else %>
-  <p><strong>Exercises:</strong></h2>
+  <p><strong>Exercises:</strong></p>
 
   <ul>
-    <% exercises.each do |exercise| %>
+    <% requisitions.each do |requisition| %>
+      <% exercise = requisition.exercise %>
+
       <li <%= 'class="highlight"'.html_safe if params[:exercise_ids] && params[:exercise_ids].include?(exercise.id.to_s)-%>>
-        <%= link_to "#{exercise.topic.code}: #{exercise.name}", canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @material.id) %>
-        <%= form_tag requisition_path(exercise_id: exercise.id, material_id: @material.id), method: :delete, class: "inline" do %>
-          <input type="submit" value="Disassociate">
+        <%= link_to "#{exercise.topic.code}: #{exercise.name[0..25]}...", canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @material.id) %>
+        <%= form_for requisition, html: { class: "inline" } do |f| %>
+          <%= f.hidden_field :material_id %>
+          with a <b>quantity</b>: <%= f.text_field :quantity, style: 'width: 50px;' %>
+
+          <%= f.submit "Update Qty" %>
+        <% end -%>
+        <%= form_tag requisition_path(requisition), method: :delete, class: "inline" do %>
+          <input type="submit" value="Unlink">
         <% end -%>
       </li>
     <% end -%>
   </ul>
 <% end -%>
+
+<%= form_for Requisition.new( material_id: @material.id ), html: { class: "inline" } do |f| %>
+  <%= f.hidden_field :material_id %>
+  
+  Link to <b>exercise ID</b>: <%= f.text_field :exercise_id %>
+  with a <b>quantity</b>: <%= f.text_field :quantity, value: 1 %>
+
+  <%= f.submit "Link" %>
+<% end -%>
+<br><br>
+

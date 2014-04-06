@@ -2,8 +2,7 @@ Bfsu::Application.routes.draw do
 
   root "welcome#index"
 
-  delete "/requisitions", to: "requisitions#destroy", as: "requisition"
-
+  resources :requisitions, only: [:create, :update, :destroy]
   resources :users, only: [:new, :edit, :update, :create]
   resources :topics,    except: :show
   resources :exercises, except: [:index, :show]
