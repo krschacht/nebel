@@ -1,9 +1,9 @@
 <h2 id="books">Books for Correlated Reading</h2>
 
-<% @topic.books.split("\n\n").each do |book| %>
+<% @topic.books.gsub(/\n\s+\n/, "\n\n").split("\n\n").each do |book| %>
   <% book_pieces = book.split('.') %>
 
-  <% if book_pieces.length == 3 %>
+  <% if book_pieces.length >= 3 %>
 
   <p>
     <%= book_pieces[0] %>. 
