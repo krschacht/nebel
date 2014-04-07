@@ -11,19 +11,21 @@
     <thead>
       <tr>
         <th>ID</th>
+        <th>Qty</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
-      <% @exercise.materials.each do |material| %>
+      <% @exercise.reqs_with_materials.each do |requisition| %>
         <% classes = [] %>
-        <% classes << "highlight" if material.id.to_s == params[:material_id] %>
-        <% classes << "faded"     if material.archived %>
+        <% classes << "highlight" if requisition.material.id.to_s == params[:material_id] %>
+        <% classes << "faded"     if requisition.material.archived %>
         <tr class="<%= classes.join(" ") -%>">
-          <td><%= link_to material.id, edit_material_path(material) -%></td>
-          <td><%= material.name -%></td>
-          <td><%= material.description.to_s[0..30] %></td>
+          <td><%= link_to requisition.material.id, edit_material_path(requisition.material) -%></td>
+          <td style='width: 10px;'><%= requisition.quantity -%></td>
+          <td><%= requisition.material.name -%></td>
+          <td><%= requisition.material.description.to_s[0..30] %></td>
         </tr>
       <% end -%>
     </tbody>
@@ -35,7 +37,7 @@
 </button>
 
 <div id="materials_text" class="hidden" style="font-size: 12px; color: gray">
-  <%= markdown @topic.materials_text %>
+  <%= markdown @topic.materials_text.gsub( /\n/, '<br>' ) %>
 </div>
 
 <h3>Body:</h3>

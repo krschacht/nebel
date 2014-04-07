@@ -9,4 +9,8 @@ class Exercise < ActiveRecord::Base
   def name
     read_attribute(:name) || "Part #{part}"
   end
+
+  def reqs_with_materials
+    requisitions.joins( :material ).includes( :material ).order('materials.archived')
+  end
 end
