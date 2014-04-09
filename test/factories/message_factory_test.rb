@@ -22,6 +22,14 @@ class MessageFactoryTest < ActiveSupport::TestCase
     assert_equal "bnebel66", message.author.name
   end
 
+  test "#message initializes author with name set to email" do
+    @yahoo_message["authorName"] = nil
+    @yahoo_message["profile"] = nil
+    message = MessageFactory.new(@yahoo_message).message
+
+    assert_equal "bernardnebel@verizon.net", message.author.name
+  end
+
   test "#message finds author" do
     @yahoo_message["from"] = "&lt;#{users(:avand).email}&gt;"
 

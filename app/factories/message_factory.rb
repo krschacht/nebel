@@ -29,11 +29,13 @@ class MessageFactory
 private
 
   def author_name
-    @yahoo_message["authorName"] || @yahoo_message["profile"]
+    return @yahoo_message["authorName"] if @yahoo_message["authorName"].present?
+    return @yahoo_message["profile"]    if @yahoo_message["profile"].present?
+    author_email
   end
 
   def author_email
-    @yahoo_message["from"].gsub(/&(g|l)t;/, "").split.last
+    @author_email ||= @yahoo_message["from"].gsub(/&(g|l)t;/, "").split.last
   end
 
   def message_body
