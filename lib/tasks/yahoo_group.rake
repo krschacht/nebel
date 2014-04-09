@@ -1,10 +1,16 @@
 require "yahoo_group"
 
 namespace :yahoo_group do
-  # On Heroku:
-  # heroku run rake \"yahoo_group:import[\'...\', 0, 3000]\"
+  # To run this rake task on Heroku run:
+  #
+  #   heroku run rake \"yahoo_group:import[\'...\', 0, 3000]\"
+  #
+  # You can get the first argument, cookies, from your favorite web inspector.
+  # Just visit groups.yahoo.com, login with Keith's account, and look at the
+  # network inspector. Find an XHR request and look at the headers and copy the
+  # value of the Cookie header.
   task :import, [:cookies, :from, :to] => :environment do |task, args|
-    args.with_defaults(from: 0, to: YahooGroup::LIMIT)
+    args.with_defaults(from: 0, to: 3_000) # There are ~2,700 total messages
 
     start_of_import = Time.now
     initial_message_count = Message.count
