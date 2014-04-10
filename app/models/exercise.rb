@@ -11,6 +11,6 @@ class Exercise < ActiveRecord::Base
   end
 
   def reqs_with_materials
-    requisitions.joins( :material ).includes( :material ).order('materials.archived')
+    requisitions.joins( :material ).includes( :material ).order('materials.archived, materials.id')
   end
 end

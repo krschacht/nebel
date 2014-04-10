@@ -60,7 +60,7 @@ class RequisitionsControllerTest < ActionController::TestCase
     assert_admin_required
   end
 
-  test "PATCH to update successfully if quantity is blank" do
+  test "PATCH to update successfully if quantity and comment are blank" do
     login_as_admin
 
     material = materials(:straw)
@@ -68,15 +68,15 @@ class RequisitionsControllerTest < ActionController::TestCase
 
     requisition = Requisition.create(exercise_id: exercise.id, material_id: material.id)
 
-    patch :update, id: requisition.id, requisition: { material_id: material.id, exercise_id: exercise.id, quantity: nil }
+    patch :update, id: requisition.id, requisition: { material_id: material.id, exercise_id: exercise.id, quantity: nil, comment: nil }
     requisition = Requisition.find( requisition.id )
 
-    assert_redirected_to edit_material_path( material.id )
-    assert_equal "The quantity was updated.", flash[:notice]
+    assert_redirected_to canonical_exercise_path(topic_slug: requisition.exercise.topic.slug, part: requisition.exercise.part, material_id: requisition.material.id)
+    assert_equal "Material was sucessfully updated.", flash[:notice]
     assert_equal nil, requisition.quantity
   end
 
-  test "PATCH to update successfully updates the quantity" do
+  test "PATCH to update successfully updates the quantity and comment" do
     login_as_admin
 
     material = materials(:straw)
@@ -84,12 +84,13 @@ class RequisitionsControllerTest < ActionController::TestCase
 
     requisition = Requisition.create(exercise_id: exercise.id, material_id: material.id)
 
-    patch :update, id: requisition.id, requisition: { material_id: material.id, exercise_id: exercise.id, quantity: 2 }
+    patch :update, id: requisition.id, requisition: { material_id: material.id, exercise_id: exercise.id, quantity: 2, comment: 'carefully' }
     requisition = Requisition.find( requisition.id )
 
-    assert_redirected_to edit_material_path( material.id )
-    assert_equal "The quantity was updated.", flash[:notice]
+    assert_redirected_to canonical_exercise_path(topic_slug: requisition.exercise.topic.slug, part: requisition.exercise.part, material_id: requisition.material.id)
+    assert_equal "Material was sucessfully updated.", flash[:notice]
     assert_equal 2, requisition.quantity
+    assert_equal 'carefully', requisition.comment
   end
 
 end

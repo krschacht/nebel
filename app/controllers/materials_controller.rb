@@ -30,7 +30,12 @@ class MaterialsController < ApplicationController
   # PATCH/PUT /materials/1
   def update
     if @material.update(material_params)
-      redirect_to edit_material_path(@material), notice: 'Material was successfully updated.'
+      if params[:exercise_id]
+        exercise = Exercise.find( params[:exercise_id] )
+        redirect_to canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @material.id), notice: 'Material was sucessfully updated.'
+      else
+        redirect_to edit_material_path(@material), notice: 'Material was successfully updated.'
+      end
     else
       render action: 'edit'
     end

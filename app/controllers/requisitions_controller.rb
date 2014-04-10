@@ -1,16 +1,16 @@
 class RequisitionsController < ApplicationController
   before_action :require_admin
+  before_action :set_requisition, only: [:edit, :update, :destroy]
 
   def destroy
-    requisition = Requisition.find( params[:id] )
-    material_id = requisition.material_id
-    requisition.destroy
+    material_id = @requisition.material_id
+    @requisition.destroy
     flash[:notice] = "That material is no longer associated with that exercise."
     redirect_to edit_material_path( material_id )
   end
 
   def create
-    @requisition = Requisition.new( params[:requisition].permit(:material_id, :exercise_id, :quantity) )
+    @requisition = Requisition.new( requisition_params )
 
     if @requisition.save
       flash[:notice] = "That material is now linked to exercise #{ params[:exercise_id] }."
@@ -22,17 +22,23 @@ class RequisitionsController < ApplicationController
   end
 
   def update
-    @requisition = Requisition.find( params[:id] )
-
-    @requisition.quantity = params[:requisition][:quantity]
-
-    if @requisition.save
-      flash[:notice] = "The quantity was updated."
-      redirect_to edit_material_path(params[:requisition][:material_id])
+    if @requisition.update( requisition_params )
+      exercise = @requisition.exercise
+      redirect_to canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @requisition.material.id), notice: 'Material was sucessfully updated.'
     else
-      flash[:alert] = "There was an error updating the quantity."
-      redirect_to edit_material_path(params[:requisition][:material_id])
+      redirect_to canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @requisition.material.id), alert: 'Error updating material.'
     end
   end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_requisition
+      @requisition = Requisition.find( params[:id] )
+    end
+
+    # Only allow a trusted parameter "white list" through.
+    def requisition_params
+      params.require(:requisition).permit(:material_id, :exercise_id, :quantity, :comment)
+    end
 
 end

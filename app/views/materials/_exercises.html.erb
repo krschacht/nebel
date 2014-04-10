@@ -7,14 +7,13 @@
     <% requisitions.each do |requisition| %>
       <% exercise = requisition.exercise %>
 
-      <li <%= 'class="highlight"'.html_safe if params[:exercise_ids] && params[:exercise_ids].include?(exercise.id.to_s)-%>>
-        <%= link_to "#{exercise.topic.code}: #{exercise.name[0..25]}...", canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @material.id) %>
-        <%= form_for requisition, html: { class: "inline" } do |f| %>
-          <%= f.hidden_field :material_id %>
-          with a <b>quantity</b>: <%= f.text_field :quantity, style: 'width: 50px;' %>
-
-          <%= f.submit "Update Qty" %>
-        <% end -%>
+      <li <%= 'class="highlight"'.html_safe if params[:exercise_ids] && params[:exercise_ids].include?(exercise.id.to_s) -%>>
+        <%= link_to "#{exercise.topic.code}: #{exercise.name[0..45]}...", 
+                  canonical_exercise_path(
+                    topic_slug: exercise.topic.slug, 
+                    part: exercise.part, 
+                    material_id: @material.id 
+                  ) %>
         <%= form_tag requisition_path(requisition), method: :delete, class: "inline" do %>
           <input type="submit" value="Unlink">
         <% end -%>
@@ -27,7 +26,8 @@
   <%= f.hidden_field :material_id %>
   
   Link to <b>exercise ID</b>: <%= f.text_field :exercise_id %>
-  with a <b>quantity</b>: <%= f.text_field :quantity, value: 1 %>
+  with a <b>quantity</b>: <%= f.text_field :quantity %>
+  and a <b>parenthetical</b>: <%= f.text_field :comment %>
 
   <%= f.submit "Link" %>
 <% end -%>
