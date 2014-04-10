@@ -12,8 +12,8 @@ class MessagesController < ApplicationController
   end
 
   def index
-    params[:scope] ||= "opened"
-    @messages = Message.openers.unarchived.order(:created_at)
+    params[:scope]  ||= "opened"
+    @messages = Message.openers.unarchived.order(:created_at).paginate(:page => params[:page], :per_page => 50)
     @messages = params[:scope] == "opened" ? @messages.opened : @messages.closed
   end
 

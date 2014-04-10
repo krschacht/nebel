@@ -1,6 +1,6 @@
 <h1>Messages</h1>
 
-<form>
+<form class="inline">
   Filter:
 
   <input type="radio" id="opened" name="scope" value="opened" <%= "checked" if params[:scope] == "opened" -%>>
@@ -11,7 +11,9 @@
 </form>
 
 <% if @messages.present? %>
-  <%= render @messages -%>
+  <%= render "pagination" %>
+  <div class="messages"><%= render @messages -%></div>
+  <%= render "pagination" %>
 <% else %>
   <p>There are no <%= params[:scope] -%> messages.</p>
 <% end %>

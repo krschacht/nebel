@@ -49,6 +49,13 @@ h2 {
   display: inline;
 }
 
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+
 .highlight {
   background: #ffcc66;
 }

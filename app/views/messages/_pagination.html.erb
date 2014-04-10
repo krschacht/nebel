@@ -1,0 +1,4 @@
+<div class="inline right">
+  <%= pluralize @messages.count, "message" -%> ·
+  <%= will_paginate @messages, class: "pagination inline", previous_label: "<", next_label: ">" %>
+</div>
