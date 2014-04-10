@@ -60,7 +60,7 @@ class RequisitionsControllerTest < ActionController::TestCase
     assert_admin_required
   end
 
-  test "PATCH to update redirects with a message if quantity is blank" do
+  test "PATCH to update successfully if quantity is blank" do
     login_as_admin
 
     material = materials(:straw)
@@ -72,8 +72,8 @@ class RequisitionsControllerTest < ActionController::TestCase
     requisition = Requisition.find( requisition.id )
 
     assert_redirected_to edit_material_path( material.id )
-    assert_equal "There was an error updating the quantity.", flash[:alert]
-    assert_equal 1, requisition.quantity
+    assert_equal "The quantity was updated.", flash[:notice]
+    assert_equal nil, requisition.quantity
   end
 
   test "PATCH to update successfully updates the quantity" do
