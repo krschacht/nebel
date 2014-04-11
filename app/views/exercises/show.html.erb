@@ -52,7 +52,11 @@
     <% @exercise.reqs_with_materials.each do |requisition| %>
       <% next  if requisition.material.archived %>
       <li>
-        <%= pluralize( requisition.quantity, requisition.material.name ) %>
+        <% if requisition.quantity.to_i > 0 %>
+          <%= pluralize( requisition.quantity, requisition.material.name ) %>
+        <% else %>
+          <%= requisition.material.name %>
+        <% end %>
       </li>
     <% end %>
   </ul>
