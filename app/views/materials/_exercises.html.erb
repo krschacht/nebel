@@ -8,12 +8,16 @@
       <% exercise = requisition.exercise %>
 
       <li <%= 'class="highlight"'.html_safe if params[:exercise_ids] && params[:exercise_ids].include?(exercise.id.to_s) -%>>
-        <%= link_to "#{exercise.topic.code}: #{exercise.name[0..45]}...", 
-                  canonical_exercise_path(
-                    topic_slug: exercise.topic.slug, 
-                    part: exercise.part, 
-                    material_id: @material.id 
-                  ) %>
+        <% if exercise.nil? || exercise.topic.nil? %>
+          <span style="color: blue;"><b>ERROR:</b> Linked to an invalid exercise ID (<%= requisition.exercise_id %>). Click Unlink and try again.</span>
+        <% else %>
+          <%= link_to "#{exercise.topic.code}: #{exercise.name[0..45]}...", 
+                    canonical_exercise_path(
+                      topic_slug: exercise.topic.slug, 
+                      part: exercise.part, 
+                      material_id: @material.id 
+                    ) %>
+        <% end %>
         <%= form_tag requisition_path(requisition), method: :delete, class: "inline" do %>
           <input type="submit" value="Unlink">
         <% end -%>
