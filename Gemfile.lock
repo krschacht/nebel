@@ -73,6 +73,12 @@ GEM
       mini_portile (~> 0.5.0)
     pg (0.17.1)
     polyglot (0.3.3)
+    postmark (1.1.2)
+      json
+      rake
+    postmark-rails (0.6.0)
+      actionmailer (>= 3.0.0)
+      postmark (~> 1.1.0)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -140,6 +146,7 @@ DEPENDENCIES
   letter_opener (~> 1.2.0)
   mocha (~> 1.0.0)
   pg (~> 0.17.1)
+  postmark-rails (~> 0.6.0)
   pry-debugger (~> 0.2.2)
   rails (~> 4.0.2)
   rails_12factor (~> 0.0.2)
