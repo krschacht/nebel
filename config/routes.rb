@@ -3,7 +3,10 @@ Bfsu::Application.routes.draw do
   root "welcome#index"
 
   resources :requisitions, only: [:create, :update, :destroy]
-  resources :users, only: [:new, :edit, :update, :create]
+  resources :users, only: [:new, :edit, :update, :create] do
+    get :forgot_password, on: :collection
+    post :send_access_email, on: :collection
+  end
   resources :topics,    except: :show
   resources :exercises, except: [:index, :show]
   resources :messages, only: [:show, :index, :create, :destroy] do

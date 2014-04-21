@@ -76,4 +76,26 @@ class UsersControllerTest < ActionController::TestCase
     assert_equal flash[:notice], "User was successfully updated."
   end
 
+  test "GET to forgot_password renders forgot_password" do
+    get :forgot_password
+
+    assert_response :success
+    assert_template :forgot_password
+  end
+
+  test "POST to send_access_email renders forgot_password if user can't be found" do
+    post :send_access_email, email: "foo@bar.com"
+
+    assert_equal "There is no user with that email.", flash[:alert]
+    assert_template :forgot_password
+  end
+
+  test "POST to send_access_email sends email and redirects to login" do
+    post :send_access_email, email: users(:avand).email
+
+    assert_not ActionMailer::Base.deliveries.empty?
+    assert_equal "Your access link has been sent! Please check your email.", flash[:notice]
+    assert_redirected_to new_session_path
+  end
+
 end
