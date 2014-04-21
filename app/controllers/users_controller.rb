@@ -9,6 +9,9 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    if params[:access_token]
+      flash[:notice] = "You are now signed in. Please consider changing your password."
+    end
   end
 
   # POST /users
@@ -31,6 +34,22 @@ class UsersController < ApplicationController
       render action: 'edit'
     end
   end
+
+  def forgot_password
+  end
+
+  def send_access_email
+    user = User.by_email(params[:email]).first
+
+    if user.present?
+      UserMailer.forgot_password(user).deliver
+      redirect_to new_session_path, notice: "Your access link has been sent! Please check your email."
+    else
+      flash.now[:alert] = "There is no user with that email."
+      render :forgot_password
+    end
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

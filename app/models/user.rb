@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
 
   before_validation :generate_access_token
 
+  scope :by_email, -> (email) { where("LOWER(email) = LOWER(?)", email) }
+
   def password
     password_hash ? Password.new(password_hash) : nil
   end

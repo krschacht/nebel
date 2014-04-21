@@ -49,6 +49,14 @@ class UsersControllerTest < ActionController::TestCase
     assert_template :edit
   end
 
+  test "GET to edit with access token creates session" do
+    get :edit, id: @user, access_token: @user.access_token
+
+    assert_equal @user.id, session[:user_id]
+    assert_response :success
+    assert_equal "You are now signed in. Please consider changing your password.", flash[:notice]
+  end
+
   test "PATCH to update requires a user" do
     patch :update, id: @user
 
@@ -74,6 +82,28 @@ class UsersControllerTest < ActionController::TestCase
     assert_redirected_to edit_user_path(assigns(:user))
     assert_equal assigns(:user), @user
     assert_equal flash[:notice], "User was successfully updated."
+  end
+
+  test "GET to forgot_password renders forgot_password" do
+    get :forgot_password
+
+    assert_response :success
+    assert_template :forgot_password
+  end
+
+  test "POST to send_access_email renders forgot_password if user can't be found" do
+    post :send_access_email, email: "foo@bar.com"
+
+    assert_equal "There is no user with that email.", flash[:alert]
+    assert_template :forgot_password
+  end
+
+  test "POST to send_access_email sends email and redirects to login" do
+    post :send_access_email, email: @user.email
+
+    assert_not ActionMailer::Base.deliveries.empty?
+    assert_equal "Your access link has been sent! Please check your email.", flash[:notice]
+    assert_redirected_to new_session_path
   end
 
 end

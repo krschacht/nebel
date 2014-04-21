@@ -64,4 +64,10 @@ class UserTest < ActiveSupport::TestCase
     assert !User.new.admin
   end
 
+  test "::by_email scope finds by email case insensitvely" do
+    users = User.by_email("AvAnD@aVaNdAmIrI.CoM")
+    assert users.include? users(:avand)
+    assert users.exclude? users(:admin)
+  end
+
 end

@@ -12,11 +12,13 @@ gem "reverse_markdown", "~> 0.5.1"
 gem "will_paginate",    "~> 3.0"
 
 group :development, :test do
-  gem "pry-debugger", "~> 0.2.2"
+  gem "pry-debugger",  "~> 0.2.2"
+  gem "letter_opener", "~> 1.2.0"
+  gem "mocha",         "~> 1.0.0"
 end
 
 group :production do
   gem "uglifier",       "~> 2.4.0"
   gem "rails_12factor", "~> 0.0.2"
-  gem "mocha",          "~> 1.0.0"
+  gem "postmark-rails", "~> 0.6.0"
 end
