@@ -9,6 +9,9 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    if params[:access_token]
+      flash[:notice] = "You are now signed in. Please consider changing your password."
+    end
   end
 
   # POST /users
