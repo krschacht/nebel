@@ -12,7 +12,8 @@ gem "reverse_markdown", "~> 0.5.1"
 gem "will_paginate",    "~> 3.0"
 
 group :development, :test do
-  gem "pry-debugger", "~> 0.2.2"
+  gem "pry-debugger",  "~> 0.2.2"
+  gem "letter_opener", "~> 1.2.0"
 end
 
 group :production do
