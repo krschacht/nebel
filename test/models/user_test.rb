@@ -70,4 +70,10 @@ class UserTest < ActiveSupport::TestCase
     assert users.exclude? users(:admin)
   end
 
+  test "::admins scope includes admins" do
+    users = User.admins
+    assert users.include? users(:admin)
+    assert users.exclude? users(:avand)
+  end
+
 end
