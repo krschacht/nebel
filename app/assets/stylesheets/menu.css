@@ -1,0 +1,27 @@
+.menu {
+  float: right;
+  position: relative;
+}
+.menu .activator,
+.menu .content {
+  background: #fae7e4;
+  padding: 0 10px;
+}
+.menu .content {
+  position: absolute;
+  right: 0;
+}
+.menu .content ul {
+  margin: 0;
+  padding: 10px .6em;
+  list-style-type: none;
+  width: 200px;
+}
+.menu .content li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: .3em;
+  padding-bottom: .3em;
+}
+.menu .content a {
+  display: block;
+}
