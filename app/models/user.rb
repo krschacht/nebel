@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
   before_validation :generate_access_token
 
+  scope :admins,   ->         { where(admin: true) }
   scope :by_email, -> (email) { where("LOWER(email) = LOWER(?)", email) }
 
   def password
