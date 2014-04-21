@@ -29,6 +29,7 @@ class MessagesController < ApplicationController
     end
 
     if message.save
+      UserMailer.new_message_posted(message).deliver
       redirect_to canonical_message_path(message), notice: "Your message has been posted."
     else
       redirect_to root_path, alert: "There was an error posting your message."

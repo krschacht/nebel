@@ -122,6 +122,14 @@ class MessagesControllerTest < ActionController::TestCase
     assert_equal "There was an error posting your message.", flash[:alert]
   end
 
+  test "POST to create sends an email" do
+    login_as_user
+
+    post :create, message: { subject: "foo" }
+
+    assert_not ActionMailer::Base.deliveries.empty?
+  end
+
   test "PATCH to toggle requires an admin" do
     login_as_user
 
