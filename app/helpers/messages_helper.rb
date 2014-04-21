@@ -10,6 +10,8 @@ module MessagesHelper
       canonical_exercise_path(message.messageable.topic.slug, message.messageable.part) + bookmark
     when "Message"
       canonical_message_path(message.messageable, bookmark)
+    else
+      message_path(message)
     end
   end
 
