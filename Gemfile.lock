@@ -135,7 +135,7 @@ GEM
       coffee-rails
     tzinfo (1.1.0)
       thread_safe (~> 0.1)
-    uglifier (2.4.0)
+    uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     will_paginate (3.0.5)
@@ -157,5 +157,5 @@ DEPENDENCIES
   reverse_markdown (~> 0.5.1)
   rubyzip (~> 1.1.0)
   turbolinks (~> 2.2.1)
-  uglifier (~> 2.4.0)
+  uglifier (~> 2.5.0)
   will_paginate (~> 3.0)
