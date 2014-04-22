@@ -23,11 +23,6 @@ a:link {
 a:visited {
   color: #c40009;
 }
-a:hover,
-a:active {
-  color: white;
-  background-color: #fb0006;
-}
 
 h1 {
   font-size: 22px;
