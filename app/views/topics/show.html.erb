@@ -1,9 +1,37 @@
-<%= render params[:field] %>
+<div id="topic">
+  <% if current_user.admin? %>
+    <%= link_to "Edit", edit_topic_path(@topic), class: "right" %>
+  <% end %>
 
-<h2>Messages</h2>
+  <h1><%= @topic.name -%></h1>
 
-<%= render @topic.messages %>
+  <p class="prerequisites">
+    Prerequisites:
+    <%= @topic.prerequisite_topics.map do |topic| %>
+      <% link_to topic.code, canonical_topic_path(topic.slug) %>
+    <% end.join(", ").html_safe -%>
+  </p>
 
-<button id="new-message">New Message</button>
-<%= render "messages/form", message: @topic.messages.build -%>
+  <table class="grid two-column">
+    <tr>
+      <th>Overview</th>
+      <th>Practices</th>
+    </tr>
+    <tr>
+      <td>
+        <%= markdown @topic.overview %>
+        <%= markdown "Position in the Progression of Learning: " + @topic.progression %>
+      </td>
+      <td>
+        <%= markdown @topic.objectives %>
+      </td>
+    </tr>
+  </table>
 
+  <%= render @topic.exercises.order(:part) -%>
+
+  <%= render @topic.messages %>
+
+  <button id="new-message">New Message</button>
+  <%= render "messages/form", message: @topic.messages.build -%>
+</div>

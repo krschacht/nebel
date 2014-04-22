@@ -7,6 +7,10 @@ class Material < ActiveRecord::Base
 
   default_scope { order('archived') }
 
+  def display_name
+    name || original_name
+  end
+
   def archive
     update archived: true
   end

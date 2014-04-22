@@ -3,8 +3,6 @@ class TopicsController < ApplicationController
   before_action :require_admin, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_topic, only: [:edit, :update, :destroy]
 
-  layout "application"
-
   def index
     @subjects = Subject.all
     @topics_by_subject = @subjects.each_with_object({}) do |subject, object|
@@ -14,8 +12,6 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.where(slug: params[:slug]).includes(:prerequisite_topics, :exercises).first
-
-    render layout: "topics"
   end
 
   def new

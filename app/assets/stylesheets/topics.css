@@ -1,34 +1,73 @@
-#left-column {
-  float: left;
-  width: 25%;
-  font-size: 14px;
+#topic {
+  font-size: 15px;
   line-height: 20px;
 }
 
-#right-column {
-  margin-left: 30%;
+#topic h1,
+#topic .prerequisites {
+  text-align: center;
+}
+#topic .prerequisites {
+  margin-bottom: 4em;
 }
 
-#left-column h3 {
-  margin-top: 0;
-  margin-bottom: 0;
+table.grid {
+  padding: 0;
+  margin: 0;
+  border-spacing: 0;
+  width: 100%;
+}
+table.two-column td:first-child {
+  width: 49%;
+  padding-right: 1%;
+}
+table.two-column td:last-child {
+  padding-left: 1%;
+  width: 49%;
 }
 
-.topic a {
+#topic .exercise {
+  border: 1px solid #c2c2c2;
+  padding: .6em 1em;
+  background-color: #f9f9f9;
+}
+#topic .exercise:not(:last-child) {
+  margin-bottom: 1em;
+}
+#topic .exercise:not(:target) .details {
+  display: none;
+}
+#topic .exercise:target header .materials {
+  display: none;
+}
+#topic .exercise:target .details {
   display: block;
-  color: #000000;
-  border: 1px solid #e10005;
-  background-color: #ebb8b4;
-  padding: 5px 10px;
-  margin-bottom: 20px;
+  overflow: hidden;
+}
+#topic .exercise:target header {
+  border-bottom: 1px solid #c2c2c2;
+  padding-bottom: .6em;
+}
+#topic .exercise header {
+  font-size: 16px;
+}
+#topic .exercise .part,
+#topic .exercise .name {
+  display: inline-block;
+}
+#topic .exercise .part {
+  min-width: 60px;
+  font-weight: bold;
+}
+#topic .exercise header .materials {
+  font-size: 12px;
+  line-height: 16px;
+  margin-left: 65px;
 }
 
-table.materials td {
-  border: 1px solid #ccc;
+#topic .details .materials {
+  width: 30%;
 }
-table.materials td:first-child {
-  width: 10%;
-}
-table.materials td:not(:first-child) {
-  width: 45%;
+#topic .details .body {
+  width: 68%;
 }
