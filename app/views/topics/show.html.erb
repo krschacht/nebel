@@ -18,20 +18,51 @@
       <th>Practices</th>
     </tr>
     <tr>
-      <td>
-        <%= markdown @topic.overview %>
-        <%= markdown "Position in the Progression of Learning: " + @topic.progression %>
-      </td>
-      <td>
-        <%= markdown @topic.objectives %>
-      </td>
+      <td><%= render "overview" %></td>
+      <td><%= render "objectives" %></td>
+    </tr>
+    <tr>
+      <th>Position in the Progression of Learning</th>
+      <th>Teachable Moments</th>
+    </tr>
+    <tr>
+      <td><%= render "progression" %></td>
+      <td><%= render "teachable_moments" %></td>
     </tr>
   </table>
 
   <%= render @topic.exercises.order(:part) -%>
 
+
   <%= render @topic.messages %>
 
   <button id="new-message">New Message</button>
   <%= render "messages/form", message: @topic.messages.build -%>
+
+  <table class="grid two-column">
+    <tr>
+      <th>Discussion Questions to Reinforce and Asses</th>
+      <th>To Parents and Others Providing Support</th>
+    </tr>
+    <tr>
+      <td>
+        <%= render "questions" -%>
+      </td>
+      <td>
+        <%= render "parents" -%>
+      </td>
+    </tr>
+    <tr>
+      <th>Connections</th>
+      <th>Books for Correlated Reading</th>
+    </tr>
+    <tr>
+      <td>
+        <%= render "connections" -%>
+      </td>
+      <td>
+        <%= render "books" -%>
+      </td>
+    </tr>
+  </table>
 </div>
