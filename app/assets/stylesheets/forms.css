@@ -33,8 +33,19 @@ textarea {
   min-height: 100px;
 }
 
+.markdown-preview-container {
+  position: relative;
+}
 .markdown-preview-container button {
+  color: rgb(0, 128, 255);
+  border: 1px solid rgb(0, 128, 255);
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
   font-size: 10px;
   line-height: 14px;
-  float: right;
+  position: absolute;
+  bottom: 6px;
+  right: 4px;
+  cursor: pointer;
 }
