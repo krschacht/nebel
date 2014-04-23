@@ -1,8 +1,14 @@
-<div id="topic">
-  <% if current_user.admin? %>
-    <%= link_to "Edit", edit_topic_path(@topic), class: "right" %>
-  <% end %>
+<nav>
+  <ul class="tabs">
+    <li class="previous"><%= render "tab", topic: @previous_topics[0] if @previous_topics[0] -%></li>
+    <li class="previous"><%= render "tab", topic: @previous_topics[1] if @previous_topics[1] -%></li>
+    <li class="current"><%= @topic.code -%></li>
+    <li class="next"><%= render "tab", topic: @next_topics[0] if @next_topics[0] -%></li>
+    <li class="next"><%= render "tab", topic: @next_topics[1] if @next_topics[1] -%></li>
+  </ul>
+</nav>
 
+<div id="topic">
   <h1><%= @topic.name -%></h1>
 
   <p class="prerequisites">
@@ -12,57 +18,24 @@
     <% end.join(", ").html_safe -%>
   </p>
 
-  <table class="grid two-column">
-    <tr>
-      <th>Overview</th>
-      <th>Practices</th>
-    </tr>
-    <tr>
-      <td><%= render "overview" %></td>
-      <td><%= render "objectives" %></td>
-    </tr>
-    <tr>
-      <th>Position in the Progression of Learning</th>
-      <th>Teachable Moments</th>
-    </tr>
-    <tr>
-      <td><%= render "progression" %></td>
-      <td><%= render "teachable_moments" %></td>
-    </tr>
-  </table>
+  <%= render "overview" %>
+  <%= render "objectives" %>
+  <%= render "progression" %>
+  <%= render "teachable_moments" %>
 
-  <%= render @topic.exercises.order(:part) -%>
+  <%= render @exercises -%>
 
+  <div id="messages">
+    <h2>Questions & Answers About Lesson</h2>
 
-  <%= render @topic.messages %>
+    <%= render @topic.messages %>
 
-  <button id="new-message">New Message</button>
-  <%= render "messages/form", message: @topic.messages.build -%>
+    <button id="new-message">Ask a Question</button>
+    <%= render "messages/form", message: @topic.messages.build -%>
+  </div>
 
-  <table class="grid two-column">
-    <tr>
-      <th>Discussion Questions to Reinforce and Asses</th>
-      <th>To Parents and Others Providing Support</th>
-    </tr>
-    <tr>
-      <td>
-        <%= render "questions" -%>
-      </td>
-      <td>
-        <%= render "parents" -%>
-      </td>
-    </tr>
-    <tr>
-      <th>Connections</th>
-      <th>Books for Correlated Reading</th>
-    </tr>
-    <tr>
-      <td>
-        <%= render "connections" -%>
-      </td>
-      <td>
-        <%= render "books" -%>
-      </td>
-    </tr>
-  </table>
+  <%= render "questions" %>
+  <%= render "parents" %>
+  <%= render "connections" %>
+  <%= render "books" %>
 </div>

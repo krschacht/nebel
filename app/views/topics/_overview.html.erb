@@ -1,3 +1,7 @@
-<div id="overview">
-  <%= markdown @topic.overview %>
-</div>
+<% if @topic.overview.present? %>
+  <div id="overview">
+    <h2>Overview</h2>
+
+    <%= markdown @topic.overview %>
+  </div>
+<% end %>

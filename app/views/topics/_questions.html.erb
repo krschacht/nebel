@@ -1,3 +1,7 @@
-<div id="questions">
-  <%= markdown @topic.questions %>
-</div>
+<% if @topic.questions.present? %>
+  <div id="questions">
+    <h2>Discussion Questions to Reinforce and Assess</h2>
+
+    <%= markdown @topic.questions %>
+  </div>
+<% end %>

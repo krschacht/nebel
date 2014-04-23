@@ -1,8 +1,61 @@
+.tabs {
+  border-bottom: 2px solid gray;
+  margin: 40px 0 0;
+  padding: 0;
+  position: relative;
+  height: 60px;
+}
+.tabs li {
+  display: inline-block;
+  border-width: 2px 2px 0 2px;
+  border-style: solid;
+  border-color: gray;
+  width: 185px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 24px;
+  min-height: 60px;
+  vertical-align: top;
+  background: #dddddd;
+  position: absolute;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 5px 5px 0 0;
+}
+.tabs li:nth-child(1) { left: 10px; }
+.tabs li:nth-child(2) { left: 215px; }
+.tabs li:nth-child(3) { left: 420px; }
+.tabs li:nth-child(4) { left: 560px; }
+.tabs li:nth-child(5) { left: 765px; }
+.tabs li.current {
+  color: #535353;
+  font-weight: bold;
+  font-size: 26px;
+  background: white;
+  min-height: 70px;
+  top: -8px;
+  padding: 20px 20px;
+  border-bottom: 2px solid white;
+  width: 120px;
+}
+.tabs li a {
+  display: block;
+}
+
 #topic {
   font-size: 15px;
   line-height: 20px;
+  border-style: solid;
+  border-color: gray;
+  border-width: 0 2px 2px;
+  padding: 2em 1em;
 }
 
+#topic h1 {
+  margin-top: 0;
+  font-size: 28px;
+  line-height: 32px;
+}
 #topic h1,
 #topic .prerequisites {
   text-align: center;
@@ -70,4 +123,8 @@ table.two-column td:last-child {
 }
 #topic .details .body {
   width: 68%;
+}
+
+#topic #messages {
+  margin: 2em 0;
 }

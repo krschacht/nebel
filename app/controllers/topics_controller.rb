@@ -12,6 +12,9 @@ class TopicsController < ApplicationController
 
   def show
     @topic = Topic.where(slug: params[:slug]).includes(:prerequisite_topics, :exercises).first
+    @exercises = @topic.exercises.order(:part)
+    @previous_topics = @topic.previous(2)
+    @next_topics = @topic.next(2)
   end
 
   def new

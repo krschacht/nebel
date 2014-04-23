@@ -1,3 +1,7 @@
-<div id="parents">
-  <%= markdown @topic.parents %>
-</div>
+<% if @topic.parents.present? %>
+  <div id="parents">
+    <h2>To Parents and Others Providing Support</h2>
+
+    <%= markdown @topic.parents %>
+  </div>
+<% end %>

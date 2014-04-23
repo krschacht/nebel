@@ -12,6 +12,14 @@ class Topic < ActiveRecord::Base
 
   before_validation :generate_slug, if: :code
 
+  def next(limit = 1)
+    subject.topics.order(:order).where("topics.order > ?", order).limit(limit)
+  end
+
+  def previous(limit = 1)
+    subject.topics.order("topics.order DESC").where("topics.order < ?", order).limit(limit)
+  end
+
 private
 
   def generate_slug

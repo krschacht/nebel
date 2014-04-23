@@ -1,17 +1,21 @@
-<div id="books">
-  <% @topic.books.gsub(/\n\s+\n/, "\n\n").split("\n\n").each do |book| %>
-    <% book_pieces = book.split('.') %>
+<% if @topic.books.present? %>
+  <div id="books">
+    <h2>Books for Correlated Reading</h2>
 
-    <% if book_pieces.length >= 3 %>
+    <% @topic.books.gsub(/\n\s+\n/, "\n\n").split("\n\n").each do |book| %>
+      <% book_pieces = book.split('.') %>
 
-    <p>
-      <%= book_pieces[0] %>.
-      <%= link_to book_pieces[1], "http://www.worldcat.org/search?qt=worldcat_org_all&q=#{URI.escape(book_pieces[1])}" %>.
-      <%= book_pieces[2] %>.
-    </p>
+      <% if book_pieces.length >= 3 %>
 
-    <% else %>
-      <%= simple_format book %>
+      <p>
+        <%= book_pieces[0] %>.
+        <%= link_to book_pieces[1], "http://www.worldcat.org/search?qt=worldcat_org_all&q=#{URI.escape(book_pieces[1])}" %>.
+        <%= book_pieces[2] %>.
+      </p>
+
+      <% else %>
+        <%= simple_format book %>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
+<% end %>

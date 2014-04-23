@@ -1,3 +1,7 @@
-<div id="connections">
-  <%= markdown @topic.connections %>
-</div>
+<% if @topic.connections.present? %>
+  <div id="connections">
+    <h2>Connections</h2>
+
+    <%= markdown @topic.connections %>
+  </div>
+<% end -%>

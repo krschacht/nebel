@@ -1,3 +1,7 @@
-<div id="progression">
-  <%= markdown @topic.progression %>
-</div>
+<% if @topic.progression.present? %>
+  <div id="progression">
+    <h2>Position in the Progression of Learning</h2>
+
+    <%= markdown @topic.progression %>
+  </div>
+<% end %>

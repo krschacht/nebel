@@ -1,3 +1,7 @@
-<div id="teachable-moments">
-  <%= markdown @topic.teachable_moments %>
-</div>
+<% if @topic.teachable_moments.present? %>
+  <div id="teachable-moments">
+    <h2>Teachable Moments</h2>
+
+    <%= markdown @topic.teachable_moments %>
+  </div>
+<% end %>
