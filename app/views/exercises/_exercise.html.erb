@@ -1,9 +1,5 @@
 <div class="exercise" id="part-<%= exercise.part -%>">
   <header>
-    <% if current_user.admin? %>
-      <%= link_to "Edit", edit_exercise_path(exercise), class: "admin right" %>
-    <% end %>
-
     <%= link_to "#part-#{exercise.part}" do %>
       <div class="part">
         Part <%= exercise.part -%>
@@ -79,6 +75,10 @@
           </li>
         <% end %>
       </ul>
+    <% end %>
+
+    <% if current_user.admin? %>
+      <%= link_to "Edit this Exercise", edit_exercise_path(exercise) %>
     <% end %>
   </div>
 </div>

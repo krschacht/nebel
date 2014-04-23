@@ -38,4 +38,8 @@
   <%= render "parents" %>
   <%= render "connections" %>
   <%= render "books" %>
+
+  <% if current_user.admin? %>
+    <%= link_to "Edit this Topic", edit_topic_path(@topic) -%>
+  <% end %>
 </div>
