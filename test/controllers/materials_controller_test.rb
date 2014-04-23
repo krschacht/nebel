@@ -149,7 +149,13 @@ class MaterialsControllerTest < ActionController::TestCase
     assert winner.exercises.include?(d5_part1)
     assert winner.exercises.include?(a3_part2)
     assert winner.exercises.include?(a2_part1)
-    assert_equal %Q{Exercise(s) <a href="#{exercise_path a3_part2}" target="_blank">#{a3_part2.id}</a> and <a href="#{exercise_path a2_part1}" target="_blank">#{a2_part1.id}</a> are now associated to this material.}, flash[:notice]
+
+    links = [
+      canonical_topic_path(a3_part2.topic.slug, anchor: "part-#{a3_part2.part}"),
+      canonical_topic_path(a2_part1.topic.slug, anchor: "part-#{a2_part1.part}")
+    ]
+
+    assert_equal %Q{Exercise(s) <a href="#{links[0]}" target="_blank">#{a3_part2.id}</a> and <a href="#{links[1]}" target="_blank">#{a2_part1.id}</a> are now associated to this material.}, flash[:notice]
   end
 
 end

@@ -3,14 +3,6 @@ class ExercisesController < ApplicationController
   before_action :require_admin, only: [:new, :edit, :create, :update, :destroy]
   before_action :set_exercise, only: [:edit, :update, :destroy]
 
-  # GET /exercises/1
-  def show
-    @topic = Topic.find_by_slug(params[:topic_slug])
-    @exercise = @topic.exercises.find_by_part(params[:part])
-
-    render layout: "topics"
-  end
-
   # GET /exercises/new
   def new
     @exercise = Exercise.new

@@ -24,9 +24,9 @@ class RequisitionsController < ApplicationController
   def update
     if @requisition.update( requisition_params )
       exercise = @requisition.exercise
-      redirect_to canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @requisition.material.id), notice: 'Material was sucessfully updated.'
+      redirect_to canonical_topic_path(exercise.topic.slug, anchor: "part-#{exercise.part}", material_id: @requisition.material.id), notice: 'Material was sucessfully updated.'
     else
-      redirect_to canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @requisition.material.id), alert: 'Error updating material.'
+      redirect_to canonical_topic_path(exercise.topic.slug, anchor: "part-#{exercise.part}", material_id: @requisition.material.id), alert: 'Error updating material.'
     end
   end
 
