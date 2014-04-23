@@ -25,6 +25,7 @@ var MarkdownPreview = {
   createButton: function() {
     var button = document.createElement("button");
     button.textContent = "Preview";
+    button.setAttribute("title", "Preview this message in a new tab")
     button.addEventListener("click", this.loadPreview);
     return button;
   },

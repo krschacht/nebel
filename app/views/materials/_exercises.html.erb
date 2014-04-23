@@ -1,5 +1,5 @@
 <% if requisitions.empty? %>
-  No exercises - 
+  No exercises -
 <% else %>
   <p><strong>Exercises:</strong></p>
 
@@ -11,12 +11,9 @@
         <% if exercise.nil? || exercise.topic.nil? %>
           <span style="color: blue;"><b>ERROR:</b> Linked to an invalid exercise ID (<%= requisition.exercise_id %>). Click Unlink and try again.</span>
         <% else %>
-          <%= link_to "#{exercise.topic.code}: #{exercise.name[0..45]}...", 
-                    canonical_exercise_path(
-                      topic_slug: exercise.topic.slug, 
-                      part: exercise.part, 
-                      material_id: @material.id 
-                    ) %>
+          <%= link_to canonical_topic_path(exercise.topic.slug, anchor: "part-#{exercise.part}", material_id: @material.id) do %>
+            <%= exercise.topic.code -%>: <%= truncate(exercise.name, length: 45) %>
+          <% end -%>
         <% end %>
         <%= form_tag requisition_path(requisition), method: :delete, class: "inline" do %>
           <input type="submit" value="Unlink">
@@ -28,7 +25,7 @@
 
 <%= form_for Requisition.new( material_id: @material.id ), html: { class: "inline" } do |f| %>
   <%= f.hidden_field :material_id %>
-  
+
   Link to <b>exercise ID</b>: <%= f.text_field :exercise_id %>
   with a <b>quantity</b>: <%= f.text_field :quantity %>
   and a <b>parenthetical</b>: <%= f.text_field :comment %>
@@ -36,4 +33,3 @@
   <%= f.submit "Link" %>
 <% end -%>
 <br><br>
-

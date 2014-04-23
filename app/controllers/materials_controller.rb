@@ -32,7 +32,7 @@ class MaterialsController < ApplicationController
     if @material.update(material_params)
       if params[:exercise_id]
         exercise = Exercise.find( params[:exercise_id] )
-        redirect_to canonical_exercise_path(topic_slug: exercise.topic.slug, part: exercise.part, material_id: @material.id), notice: 'Material was sucessfully updated.'
+        redirect_to canonical_topic_path(exercise.topic.slug, anchor: "part-#{exercise.part}", material_id: @material.id), notice: 'Material was sucessfully updated.'
       else
         redirect_to edit_material_path(@material), notice: 'Material was successfully updated.'
       end
@@ -57,7 +57,8 @@ class MaterialsController < ApplicationController
     losers.each do |loser|
       loser.exercises.each do |exercise|
         Requisition.find_or_create_by! exercise_id: exercise.id, material_id: winner.id
-        links << %Q{<a href="#{exercise_path(exercise)}" target="_blank">#{exercise.id}</a>}
+        href = canonical_topic_path exercise.topic.slug, anchor: "part-#{exercise.part}"
+        links << %Q{<a href="#{href}" target="_blank">#{exercise.id}</a>}
         exercise_ids << exercise.id
       end
 

@@ -1,7 +1,8 @@
-header {
+.container > header {
   border-top: 3px solid #e02a22;
   border-bottom: 1px solid #e02a22;
   padding: 5px;
+  background-color: white;
 }
 a.logo {
   font-family: Georgia;
@@ -14,7 +15,4 @@ a.logo {
 }
 a.logo:hover {
   background: none;
-}
-header nav {
-  float: right;
 }

@@ -45,16 +45,6 @@ class ExercisesControllerTest < ActionController::TestCase
     assert_equal flash[:notice], "Exercise was successfully created."
   end
 
-  test "GET to show loads exercise and topic and renders show" do
-    login_as_user
-
-    get :show, topic_slug: @exercise.topic.slug, part: @exercise.part
-
-    assert_response :success
-    assert_not_nil assigns(:topic)
-    assert_not_nil assigns(:exercise)
-  end
-
   test "GET to edit requires an admin" do
     login_as_user
 

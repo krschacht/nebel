@@ -1,0 +1,87 @@
+<div class="exercise" id="part-<%= exercise.part -%>">
+  <header>
+    <%= link_to "#part-#{exercise.part}" do %>
+      <div class="part">
+        Part <%= exercise.part -%>
+      </div>
+
+      <div class="name">
+        <%= exercise.name.split(/\d\./).last.strip -%>
+        <% if current_user.admin? %>
+          (<%= exercise.id %>)
+        <% end %>
+      </div>
+
+      <div class="materials">
+        <strong>Materials:</strong>
+        <%= exercise.materials.map { |m| m.name || m.original_name }.join(", ") -%>
+      </div>
+    <% end %>
+  </header>
+
+  <div class="details">
+    <div class="materials right">
+      <h3>Materials</h3>
+
+      <ul>
+        <% exercise.reqs_with_materials.each do |requisition| %>
+          <% next  if requisition.material.archived %>
+          <li>
+            <% if requisition.quantity.to_i > 0 %>
+              <%= pluralize(requisition.quantity, requisition.material.display_name) %>
+            <% else %>
+              <%= requisition.material.name %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+
+      <% if current_user.admin? %>
+        <button onclick="document.querySelector('#part-<%= exercise.part -%> .materials-text').classList.toggle('hidden');">
+          Toggle Raw Materials Text
+        </button>
+
+        <div class="materials-text hidden" style="font-size: 12px; color: gray">
+          <%= markdown( @topic.materials_text.gsub( /\n/, '<br>' ) ) unless @topic.materials_text.nil? %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="body">
+      <%= markdown exercise.body %>
+    </div>
+
+    <% if current_user.admin? %>
+      <ul>
+        <% exercise.reqs_with_materials.each do |requisition| %>
+          <% classes = [] %>
+          <% classes << "highlight" if requisition.material.id.to_s == params[:material_id] %>
+          <% classes << "faded"     if requisition.material.archived %>
+          <li class="<%= classes.join(" ") -%>">
+            <%= form_for requisition, html: { class: "inline" } do |f| %>
+              <%= f.hidden_field :material_id %>
+              <%= f.submit "S" %>
+              <%= f.text_field :quantity, style: 'width: 30px;' %>
+            <% end -%>
+            <%= form_for requisition.material, html: { class: "inline" } do |f| %>
+              <%= hidden_field_tag :exercise_id, exercise.id %>
+              <%= f.text_field :name, style: 'width: 220px;' %>
+              <%= pluralize_ending_for( requisition.material.name ) if requisition.quantity.to_i > 1 %>
+              <%= f.submit "S" %>
+            <% end %>
+            <%= form_for requisition, html: { class: "inline" } do |f| %>
+              <%= f.hidden_field :material_id %>
+              ( <%= f.text_field :comment, style: 'width: 200px;' %> )
+              <%= f.submit "S" %>
+            <% end -%>
+            <%= link_to requisition.material.id, edit_material_path(requisition.material), style: 'font-size: 12px;' -%>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <% if current_user.admin? %>
+      <%= link_to "Edit this Exercise", edit_exercise_path(exercise) %>
+    <% end %>
+  </div>
+</div>

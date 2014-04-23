@@ -19,8 +19,7 @@ Bfsu::Application.routes.draw do
     post :merge, on: :collection
   end
 
-  get "/topics/:topic_slug/part-:part", to: "exercises#show", as: "canonical_exercise"
-  get "/topics/:slug(/:field)", to: "topics#show", as: "canonical_topic", defaults: { field: "overview" }
+  get "/topics/:slug", to: "topics#show", as: "canonical_topic"
 
   post "/markdown/preview", to: "markdown#preview"
 

@@ -6,16 +6,16 @@ class MessagesHelperTest < ActionView::TestCase
     opener = messages(:opener)
 
     assert_equal \
-      canonical_topic_path(opener.messageable.slug) + "#message-#{opener.id}",
+      canonical_topic_path(opener.messageable.slug, anchor: "message-#{opener.id}"),
       canonical_message_path(opener)
   end
 
-  test "#canonical_message_path returns canonical exercise path if message's messageable is an Exercise" do
+  test "#canonical_message_path returns canonical topic path if message's messageable is an Exercise" do
     opener = messages(:opener)
     opener.messageable = exercises(:d5_part1)
 
     assert_equal \
-      canonical_exercise_path(opener.messageable.topic.slug, opener.messageable.part) + "#message-#{opener.id}",
+      canonical_topic_path(opener.messageable.topic.slug, anchor: "message-#{opener.id}"),
       canonical_message_path(opener)
   end
 
@@ -23,7 +23,7 @@ class MessagesHelperTest < ActionView::TestCase
     reply = messages(:reply)
 
     assert_equal \
-      canonical_topic_path(reply.messageable.messageable.slug) + "#message-#{reply.id}",
+      canonical_topic_path(reply.messageable.messageable.slug, anchor: "message-#{reply.id}"),
       canonical_message_path(reply)
   end
 
