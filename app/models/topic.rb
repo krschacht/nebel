@@ -17,7 +17,7 @@ class Topic < ActiveRecord::Base
   end
 
   def previous(limit = 1)
-    subject.topics.order("topics.order DESC").where("topics.order < ?", order).limit(limit)
+    subject.topics.order("topics.order DESC").where("topics.order < ?", order).limit(limit).reverse
   end
 
 private
