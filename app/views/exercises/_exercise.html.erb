@@ -7,6 +7,9 @@
 
       <div class="name">
         <%= exercise.name.split(/\d\./).last.strip -%>
+        <% if current_user.admin? %>
+          (<%= exercise.id %>)
+        <% end %>
       </div>
 
       <div class="materials">
