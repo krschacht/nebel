@@ -22,12 +22,12 @@
   box-sizing: border-box;
   border-radius: 5px 5px 0 0;
 }
-.tabs li:nth-child(1) { left: 10px; }
-.tabs li:nth-child(2) { left: 210px; }
-.tabs li:nth-child(3) { left: 410px; }
-.tabs li:nth-child(4) { left: 545px; }
-.tabs li:nth-child(5) { left: 745px; }
-.tabs li.current {
+.tabs li[data-position="1"] { left: 10px; }
+.tabs li[data-position="2"] { left: 210px; }
+.tabs li[data-position="3"] { left: 410px; }
+.tabs li[data-position="4"] { left: 545px; }
+.tabs li[data-position="5"] { left: 745px; }
+.tabs li[data-position="3"] {
   color: #535353;
   font-weight: bold;
   font-size: 26px;

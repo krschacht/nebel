@@ -1,10 +1,22 @@
 <nav>
   <ul class="tabs">
-    <li class="previous"><%= render "tab", topic: @previous_topics[0] if @previous_topics[0] -%></li>
-    <li class="previous"><%= render "tab", topic: @previous_topics[1] if @previous_topics[1] -%></li>
-    <li class="current"><%= @topic.code -%></li>
-    <li class="next"><%= render "tab", topic: @next_topics[0] if @next_topics[0] -%></li>
-    <li class="next"><%= render "tab", topic: @next_topics[1] if @next_topics[1] -%></li>
+    <% case @previous_topics.size %>
+    <% when 1 %>
+      <li data-position="2"><%= render "tab", topic: @previous_topics[0] if @previous_topics[0] -%></li>
+    <% when 2 %>
+      <li data-position="1"><%= render "tab", topic: @previous_topics[0] if @previous_topics[0] -%></li>
+      <li data-position="2"><%= render "tab", topic: @previous_topics[1] if @previous_topics[1] -%></li>
+    <% end %>
+
+    <li data-position="3"><%= @topic.code -%></li>
+
+    <% case @next_topics.size %>
+    <% when 1 %>
+      <li data-position="4"><%= render "tab", topic: @next_topics[0] if @next_topics[0] -%></li>
+    <% when 2 %>
+      <li data-position="4"><%= render "tab", topic: @next_topics[0] if @next_topics[0] -%></li>
+      <li data-position="5"><%= render "tab", topic: @next_topics[1] if @next_topics[1] -%></li>
+    <% end %>
   </ul>
 </nav>
 
