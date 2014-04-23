@@ -1,6 +1,7 @@
 .menu {
   float: right;
   position: relative;
+  z-index: 5;
 }
 .menu .activator,
 .menu .content {

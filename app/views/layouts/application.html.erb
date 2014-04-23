@@ -46,7 +46,10 @@
 
   <%= content_tag(:div, flash[:notice].html_safe, class: "notice") if flash[:notice] -%>
   <%= content_tag(:div, flash[:alert].html_safe,  class: "alert")  if flash[:alert] -%>
-  <%= content_for?(:content) ? yield(:content) : yield %>
+
+  <section>
+    <%= content_for?(:content) ? yield(:content) : yield %>
+  </section>
 </div>
 
 </body>
