@@ -129,3 +129,12 @@ table.two-column td:last-child {
 #topic #messages {
   margin: 2em 0;
 }
+
+.topic a {
+  display: block;
+  color: #000000;
+  border: 1px solid #e10005;
+  background-color: #ebb8b4;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
