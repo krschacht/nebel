@@ -7,10 +7,11 @@ class User < ActiveRecord::Base
 
   has_many :messages, foreign_key: :author_id
 
-  validates_presence_of :name, :email, :password_hash, :access_token
+  validates_presence_of :name, :email, :password_hash, :access_token, :trial_ends_at
   validates_uniqueness_of :email
 
   before_validation :generate_access_token
+  before_validation :set_trial_ends_at
 
   scope :admins,   ->         { where(admin: true) }
   scope :by_email, -> (email) { where("LOWER(email) = LOWER(?)", email) }
@@ -31,6 +32,10 @@ private
 
   def generate_access_token
     self.access_token ||= SecureRandom.hex(20)
+  end
+
+  def set_trial_ends_at
+    self.trial_ends_at = 30.days.from_now
   end
 
 end

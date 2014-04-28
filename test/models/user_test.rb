@@ -27,6 +27,13 @@ class UserTest < ActiveSupport::TestCase
     assert user.errors[:access_token].include? "can't be blank"
   end
 
+  test "validates uniqueness of trial_ends_at" do
+    user = User.new
+    user.stubs(:trial_ends_at).returns(nil)
+    assert !user.valid?
+    assert user.errors[:trial_ends_at].include? "can't be blank"
+  end
+
   test "validates uniqueness of email" do
     user = users(:avand)
     duplicate_user = User.new email: user.email
@@ -74,6 +81,12 @@ class UserTest < ActiveSupport::TestCase
     users = User.admins
     assert users.include? users(:admin)
     assert users.exclude? users(:avand)
+  end
+
+  test "sets trial_ends_at to 30 days from now" do
+    user = User.new
+    user.valid?
+    assert_equal 30.days.from_now.to_i, user.trial_ends_at.to_i
   end
 
 end
