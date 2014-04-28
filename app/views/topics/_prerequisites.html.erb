@@ -1,0 +1,6 @@
+<p class="prerequisites">
+  Prerequisites:
+  <%= @topic.prerequisite_topics.map do |topic| %>
+    <% link_to topic.code, canonical_topic_path(topic.slug) %>
+  <% end.join(", ").html_safe -%>
+</p>

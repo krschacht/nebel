@@ -23,29 +23,13 @@
 <div id="topic">
   <h1><%= @topic.name -%></h1>
 
-  <p class="prerequisites">
-    Prerequisites:
-    <%= @topic.prerequisite_topics.map do |topic| %>
-      <% link_to topic.code, canonical_topic_path(topic.slug) %>
-    <% end.join(", ").html_safe -%>
-  </p>
-
+  <%= render "prerequisites" -%>
   <%= render "overview" %>
   <%= render "objectives" %>
   <%= render "progression" %>
   <%= render "teachable_moments" %>
-
-  <%= render @exercises -%>
-
-  <div id="messages">
-    <h2>Questions & Answers About Lesson</h2>
-
-    <%= render @topic.messages %>
-
-    <button id="new-message">Ask a Question</button>
-    <%= render "messages/form", message: @topic.messages.build -%>
-  </div>
-
+  <%= render @exercises %>
+  <%= render "messages" %>
   <%= render "questions" %>
   <%= render "parents" %>
   <%= render "connections" %>

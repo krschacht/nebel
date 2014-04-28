@@ -1,0 +1,8 @@
+<div id="messages">
+  <h2>Questions & Answers About Lesson</h2>
+
+  <%= render @topic.messages %>
+
+  <button id="new-message">Ask a Question</button>
+  <%= render "messages/form", message: @topic.messages.build -%>
+</div>
