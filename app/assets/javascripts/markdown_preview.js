@@ -9,17 +9,11 @@ var MarkdownPreview = {
     form.setAttribute("method", "POST");
     form.setAttribute("target", "_blank");
     textarea.setAttribute("name", "string");
-    textarea.textContent = this.nextElementSibling.value;
+    textarea.textContent = this.previousElementSibling.querySelector("textarea").value;
 
     form.appendChild(textarea);
 
     form.submit();
-  },
-
-  createContainer: function() {
-    var div = document.createElement("div");
-    div.classList.add("markdown-preview-container");
-    return div;
   },
 
   createButton: function() {
@@ -35,13 +29,9 @@ var MarkdownPreview = {
 
     for (var i = 0; i < textareas.length; i++) {
       var textarea = textareas[i],
-          button   = this.createButton(),
-          div      = this.createContainer();
+          button   = this.createButton();
 
-      textarea.parentNode.insertBefore(div, textarea);
-
-      div.appendChild(button);
-      div.appendChild(textarea);
+      textarea.parentElement.insertAdjacentElement("afterend", button)
     }
   }
 }
