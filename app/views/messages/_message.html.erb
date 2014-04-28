@@ -32,7 +32,6 @@
       <%= render message.replies -%>
     </div>
 
-    <button class="reply">Reply</button>
     <%= render "messages/form", message: message.new_reply(current_user, nil) %>
 
     <% if current_user.admin? %>

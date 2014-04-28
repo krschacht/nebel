@@ -1,15 +1,20 @@
-<%= form_for message, html: { id: nil, class: "new-message hidden" } do |f| %>
+<%= form_for message, html: { id: nil, class: "new-message" } do |f| %>
   <%= f.hidden_field :messageable_id, id: nil %>
   <%= f.hidden_field :messageable_type, id: nil %>
 
-  <div class="field">
-    <%= f.text_field :subject, placeholder: "Subject", id: nil %>
-  </div>
+  <% placeholder = message.reply? ? "Write a reply..." : "Ask a question..." %>
+  <input type="text" placeholder="<%= placeholder -%>" class="trigger">
 
-  <div class="field">
-    <%= f.text_area :body, placeholder: "Body", id: nil %>
-  </div>
+  <div class="expanded hidden">
+    <div class="field">
+      <%= f.text_field :subject, placeholder: placeholder, id: nil, required: true %>
+    </div>
 
-  <%= f.submit "Send" -%>
-  <button class="cancel">Cancel</button>
+    <div class="field">
+      <%= f.text_area :body, placeholder: "Body", id: nil %>
+    </div>
+
+    <%= f.submit "Send" -%>
+    <button class="cancel">Cancel</button>
+  </div>
 <% end -%>
