@@ -3,6 +3,5 @@
 
   <%= render @topic.messages %>
 
-  <button id="new-message">Ask a Question</button>
   <%= render "messages/form", message: @topic.messages.build -%>
 </div>

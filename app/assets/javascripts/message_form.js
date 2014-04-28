@@ -1,40 +1,38 @@
 var MessageForm = {
-  show: function(event) {
-    var form = this.nextElementSibling,
-        subject = form["message[subject]"];
+  expand: function(event) {
+    var expanded = this.nextElementSibling;
 
+    expanded.classList.remove("hidden");
     this.classList.add("hidden");
-    form.classList.remove("hidden");
 
-    if (getComputedStyle(subject).display == "none") {
-      form["message[body]"].focus();
+    if (this.getAttribute("placeholder").match(/reply/)) {
+      expanded.querySelector("textarea").focus();
     } else {
-      subject.focus();
+      expanded.querySelector("input").focus();
     }
   },
 
   cancel: function(event) {
     event.preventDefault();
 
-    var form = this.parentElement;
-    form.classList.add("hidden");
-    form.previousElementSibling.classList.remove("hidden");
+    var expanded = this.parentElement,
+        trigger  = expanded.previousElementSibling;
+
+    expanded.classList.add("hidden");
+    trigger.classList.remove("hidden");
   },
 
   init: function() {
-    var replyButtons  = document.querySelectorAll(".message button.reply"),
-        cancelButtons = document.querySelectorAll(".new-message button.cancel"),
-        newButton     = document.querySelector("button#new-message");
-
-    for (var i = 0; i < replyButtons.length; i++) {
-      replyButtons[i].addEventListener("click", this.show);
-    }
+    var cancelButtons = document.querySelectorAll(".new-message button.cancel"),
+        triggerInputs = document.querySelectorAll("input.trigger");
 
     for (var i = 0; i < cancelButtons.length; i++) {
       cancelButtons[i].addEventListener("click", this.cancel);
     }
 
-    if (newButton) newButton.addEventListener("click", this.show);
+    for (var i = 0; i < triggerInputs.length; i++) {
+      triggerInputs[i].addEventListener("focus", this.expand)
+    }
   }
 }
 
