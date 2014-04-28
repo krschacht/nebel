@@ -5,3 +5,4 @@
 //= require markdown_preview
 //= require archive_message
 //= require menu
+//= require exercise
