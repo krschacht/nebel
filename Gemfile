@@ -10,6 +10,7 @@ gem "redcarpet",        "~> 3.1.1"
 gem "httparty",         "~> 0.13.0"
 gem "reverse_markdown", "~> 0.5.1"
 gem "will_paginate",    "~> 3.0"
+gem "stripe",           "~> 1.11.0"
 
 group :development, :test do
   gem "pry-debugger",  "~> 0.2.2"
