@@ -11,7 +11,7 @@ module MessagesHelper
     when "Message"
       canonical_message_path(message.messageable, anchor)
     else
-      message_path(message)
+      message_path(message, anchor: anchor)
     end
   end
 

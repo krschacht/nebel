@@ -30,7 +30,7 @@ class MessagesHelperTest < ActionView::TestCase
   test "#canonical_message_path returns message_path of message if message's messageable is nil" do
     message = users(:avand).messages.create! subject: "foo"
 
-    assert_equal message_path(message), canonical_message_path(message)
+    assert_equal message_path(message, anchor: "message-#{message.id}"), canonical_message_path(message)
   end
 
 end
