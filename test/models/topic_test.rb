@@ -86,4 +86,17 @@ class TopicTest < ActiveSupport::TestCase
     topic.valid?
     assert_equal "d-9b", topic.slug
   end
+
+  test "#next" do
+    topic = topics(:a2)
+    next_topics = topic.next
+    assert_equal [topics(:a3)], next_topics
+  end
+
+  test "#previous" do
+    topic = topics(:a3)
+    previous_topics = topic.previous
+    assert_equal [topics(:a2)], previous_topics
+  end
+
 end
