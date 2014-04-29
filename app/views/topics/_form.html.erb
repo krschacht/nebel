@@ -12,8 +12,16 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :subject_id %><br>
+    <%= f.select :subject_id, Subject.all.map { |s| ["#{s.code}. #{s.name}", s.id] } %>
+  </div>
+  <div class="field">
     <%= f.label :code %><br>
     <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :order %><br>
+    <%= f.text_field :order %>
   </div>
   <div class="field">
     <%= f.label :name %><br>
@@ -22,6 +30,34 @@
   <div class="field">
     <%= f.label :overview %><br>
     <%= f.text_area :overview %>
+  </div>
+  <div class="field">
+    <%= f.label :progression %><br>
+    <%= f.text_area :progression %>
+  </div>
+  <div class="field">
+    <%= f.label :objectives %><br>
+    <%= f.text_area :objectives %>
+  </div>
+  <div class="field">
+    <%= f.label :teachable_moments %><br>
+    <%= f.text_area :teachable_moments %>
+  </div>
+  <div class="field">
+    <%= f.label :questions %><br>
+    <%= f.text_area :questions %>
+  </div>
+  <div class="field">
+    <%= f.label :parents %><br>
+    <%= f.text_area :parents %>
+  </div>
+  <div class="field">
+    <%= f.label :connections %><br>
+    <%= f.text_area :connections %>
+  </div>
+  <div class="field">
+    <%= f.label :books %><br>
+    <%= f.text_area :books %>
   </div>
   <div class="actions">
     <%= f.submit %>
