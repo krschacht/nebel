@@ -21,4 +21,10 @@ class UserMailer < ActionMailer::Base
     mail bcc: emails, subject: subject
   end
 
+  def charge_failed(user)
+    @user = user
+
+    mail to: @user.email, subject: "[Nebel Science] Credit card charge failed."
+  end
+
 end

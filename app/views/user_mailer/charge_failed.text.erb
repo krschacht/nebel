@@ -1,0 +1,10 @@
+<%= @user.name -%>,
+
+You're subscribed to the basic monthly plan for Nebel Science. We charge you $3
+every month. We recently tried to charge you but the charge failed. Could you
+please login to your account and update your credit card information?
+
+<%= edit_user_url(@user, access_token: @user.access_token) %>
+
+Thanks for updating your credit card,
+Nebel Science

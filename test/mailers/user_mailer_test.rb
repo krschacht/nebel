@@ -57,4 +57,16 @@ class UserMailerTest < ActionMailer::TestCase
     assert email.bcc.exclude? "avand@avandamiri.com"
   end
 
+  test "charge_failed" do
+    user = users(:avand)
+
+    email = UserMailer.charge_failed(user).deliver
+
+    assert_not ActionMailer::Base.deliveries.empty?
+    assert_equal ["do-not-reply@nebelscience.com"], email.from
+    assert_equal [user.email], email.to
+    assert_equal "[Nebel Science] Credit card charge failed.", email.subject
+    assert email.body.include? edit_user_url(user, access_token: user.access_token)
+  end
+
 end

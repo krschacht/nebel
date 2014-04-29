@@ -16,6 +16,18 @@
 
     <nav class="menu">
       <% if current_user %>
+        <% if !current_user.subscribed? %>
+          <div class="trial-message">
+            <%= link_to new_subscription_path do %>
+              <% if current_user.trial_ends_at.past? %>
+                Your trial has expired.
+              <% else %>
+                You have <%= days_until User.last.trial_ends_at -%> left in your trial.
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
+
         <div class="activator">
           <%= link_to edit_user_path(current_user) do %>
             <%= current_user.name %> ▾

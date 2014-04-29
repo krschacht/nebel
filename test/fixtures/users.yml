@@ -3,14 +3,17 @@ avand:
   email: avand@avandamiri.com
   password_hash: $2a$10$b9Rc5iX3h2vTOpnXm0T6N.svSLgKfoJeD603KC677Lt1U.P4ztdKK
   access_token: f0c0207b350dbe297493e5e9274a7a0235abc000
+  trial_ends_at: <%= 30.days.from_now %>
 john:
   name: John Smith
   email: john@example.com
   password_hash: $2a$10$b9Rc5iX3h2vTOpnXm0T6N.svSLgKfoJeD603KC677Lt1U.P4ztdKK
   access_token: f0c0207b350dbe297493e5e9274a7a0235abc000
+  trial_ends_at: <%= 30.days.from_now %>
 admin:
   name: Keith Schacht
   email: krschacht@gmail.com
   password_hash: $2a$10$b9Rc5iX3h2vTOpnXm0T6N.svSLgKfoJeD603KC677Lt1U.P4ztdKK
   access_token: f0c0207b350dbe297493e5e9274a7a0235abc000
   admin: true
+  trial_ends_at: <%= 30.days.from_now %>

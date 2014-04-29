@@ -27,6 +27,13 @@ class UserTest < ActiveSupport::TestCase
     assert user.errors[:access_token].include? "can't be blank"
   end
 
+  test "validates uniqueness of trial_ends_at" do
+    user = User.new
+    user.stubs(:trial_ends_at).returns(nil)
+    assert !user.valid?
+    assert user.errors[:trial_ends_at].include? "can't be blank"
+  end
+
   test "validates uniqueness of email" do
     user = users(:avand)
     duplicate_user = User.new email: user.email
@@ -74,6 +81,39 @@ class UserTest < ActiveSupport::TestCase
     users = User.admins
     assert users.include? users(:admin)
     assert users.exclude? users(:avand)
+  end
+
+  test "sets trial_ends_at to 30 days from now" do
+    user = User.new
+    user.valid?
+    assert_equal 30.days.from_now.to_i, user.trial_ends_at.to_i
+  end
+
+  test "#stripe_customer returns nil if stripe_customer_id is nil" do
+    assert_nil User.new.stripe_customer
+  end
+
+  test "#stripe_customer retrieves customer from Stripe API once" do
+    Stripe::Customer.expects(:retrieve).with("abc123").returns("stripe-customer").once
+
+    user = User.new(stripe_customer_id: "abc123")
+
+    assert_equal "stripe-customer", user.stripe_customer
+    user.stripe_customer
+  end
+
+  test "#subscribed? returns true if Stripe customer is not null, has a subscription, and is not deleted" do
+    user = User.new
+    assert_not user.subscribed?
+
+    user.stubs(:stripe_customer).returns(stub(subscription: nil))
+    assert_not user.subscribed?
+
+    user.stubs(:stripe_customer).returns(stub(subscription: stub))
+    assert user.subscribed?
+
+    user.stubs(:stripe_customer).returns(stub(subscription: stub, deleted: true))
+    assert_not user.subscribed?
   end
 
 end
