@@ -14,9 +14,9 @@ class MessageFactory
     end
 
     Message.find_or_initialize_by(yahoo_message_id: @yahoo_message["msgId"]).tap do |message|
-      message.author = author
-      message.subject = message_subject
-      message.body = message_body
+      message.author     = author
+      message.subject    = message_subject
+      message.body       = message_body
       message.created_at = message_created_at
 
       if reply?

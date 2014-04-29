@@ -24,7 +24,7 @@
   <% end -%>
 
   <div class="body">
-    <%= markdown message.body -%>
+    <%= sanitize markdown message.body -%>
   </div>
 
   <% if message.opener? %>
