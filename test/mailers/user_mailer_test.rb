@@ -37,7 +37,7 @@ class UserMailerTest < ActionMailer::TestCase
 
   test "new_message_posted bcc's admins" do
     email = UserMailer.new_message_posted(messages(:opener)).deliver
-    assert email.bcc.include? "krschacht@gmail.com"
+    assert_equal [users(:admin).email], email.bcc
   end
 
   test "new_message_posted bcc's everyone on thread" do
@@ -65,6 +65,7 @@ class UserMailerTest < ActionMailer::TestCase
     assert_not ActionMailer::Base.deliveries.empty?
     assert_equal ["do-not-reply@nebelscience.com"], email.from
     assert_equal [user.email], email.to
+    assert_equal [users(:admin).email], email.bcc
     assert_equal "[Nebel Science] Credit card charge failed.", email.subject
     assert email.body.include? edit_user_url(user, access_token: user.access_token)
   end
