@@ -28,6 +28,17 @@ class User < ActiveRecord::Base
     name.split(" ").map(&:first).join.upcase
   end
 
+  def stripe_customer
+    return nil unless stripe_customer_id
+    @stripe_customer ||= Stripe::Customer.retrieve stripe_customer_id
+  end
+
+  def subscribed?
+    stripe_customer.present? &&
+    stripe_customer.subscription.present? &&
+    !(stripe_customer.respond_to?(:deleted) && stripe_customer.deleted)
+  end
+
 private
 
   def generate_access_token
