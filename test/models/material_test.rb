@@ -43,4 +43,11 @@ class MaterialTest < ActiveSupport::TestCase
     material.unarchive
     assert !material.reload.archived
   end
+
+  test "#display_name" do
+    assert_nil Material.new.display_name
+    assert_equal "Foo", Material.new(name: "Foo").display_name
+    assert_equal "Foo", Material.new(original_name: "Foo").display_name
+  end
+
 end
