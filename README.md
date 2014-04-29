@@ -1,10 +1,10 @@
-# BFSU
+# Nebel
 
 ## Setting up a new dev environment
 
 ```
 git clone git@heroku.com:nebelscience.git -o heroku
-git remote add github ssh://git@github.com/avand/bfsu.git
+git remote add github ssh://git@github.com/avand/nebel.git
 git fetch github
 git branch --track master github/master
 ```

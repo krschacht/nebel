@@ -8,8 +8,8 @@ defaults: &defaults
 
 development:
   <<: *defaults
-  database: bfsu_development
+  database: nebel_development
 
 test:
   <<: *defaults
-  database: bfsu_test
+  database: nebel_test

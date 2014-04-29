@@ -3,6 +3,6 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Bfsu::Application.load_tasks
+Nebel::Application.load_tasks
 
 task default: "test:all"

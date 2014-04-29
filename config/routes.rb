@@ -1,4 +1,4 @@
-Bfsu::Application.routes.draw do
+Nebel::Application.routes.draw do
 
   root "welcome#index"
 
