@@ -1,7 +1,13 @@
 <p>
-  A subscription for Nebel Science is $3.00/month. You will receive a 30-day
-  free trial and can cancel at anytime. We do not store credit card information
-  on our servers.
+  A subscription for Nebel Science is $3.00/month.
+  <% if current_user.trial_ends_at.past? %>
+    You've already made use of the 30-day trial.
+  <% else %>
+    You have <%= days_until current_user.trial_ends_at -%> to keep trying the
+    product out for free.
+  <% end -%>
+  We do not store credit card information on our servers and you can cancel at
+  any time.
 </p>
 
 <%= billing_button_and_form %>

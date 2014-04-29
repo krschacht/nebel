@@ -1,5 +1,14 @@
 module SubscriptionsHelper
 
+  def disabled?(user)
+    controller.controller_name != "users" &&
+    controller.controller_name != "subscriptions" &&
+    user.present? &&
+    !user.admin? &&
+    user.trial_ends_at.past? &&
+    !user.subscribed?
+  end
+
   def days_until(future)
     pluralize ((Time.now - future) / 60 / 60 / 24).abs.round, "day"
   end

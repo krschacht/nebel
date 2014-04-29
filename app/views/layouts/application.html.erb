@@ -60,7 +60,18 @@
   <%= content_tag(:div, flash[:alert].html_safe,  class: "alert")  if flash[:alert] -%>
 
   <section>
-    <%= content_for?(:content) ? yield(:content) : yield %>
+    <% if disabled? current_user %>
+      <p>
+        Unfortunately, our trial has expired. To continue using this site you
+        have to create a monthly subscription.
+      </p>
+
+      <p>
+        <%= link_to "Create a subscription", new_subscription_path -%>
+      </p>
+    <% else %>
+      <%= content_for?(:content) ? yield(:content) : yield %>
+    <% end -%>
   </section>
 </div>
 
