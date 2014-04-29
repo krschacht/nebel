@@ -46,7 +46,7 @@ private
   end
 
   def set_trial_ends_at
-    self.trial_ends_at = 30.days.from_now
+    self.trial_ends_at ||= 30.days.from_now
   end
 
 end

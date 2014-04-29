@@ -89,6 +89,14 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 30.days.from_now.to_i, user.trial_ends_at.to_i
   end
 
+  test "does not set trial_ends_at if already set" do
+    user = users(:avand)
+    trial_ends_at = 30.days.ago
+    user.update_column :trial_ends_at, trial_ends_at
+    user.valid?
+    assert_equal trial_ends_at, user.trial_ends_at
+  end
+
   test "#stripe_customer returns nil if stripe_customer_id is nil" do
     assert_nil User.new.stripe_customer
   end
