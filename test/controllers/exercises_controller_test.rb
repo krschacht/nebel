@@ -81,24 +81,4 @@ class ExercisesControllerTest < ActionController::TestCase
     assert_equal assigns(:exercise), @exercise
   end
 
-  test "DELETE to destroy requires admin" do
-    login_as_user
-
-    delete :destroy, id: @exercise
-
-    assert_admin_required
-  end
-
-  test "should destroy exercise" do
-    login_as_admin
-
-    assert_difference("Exercise.count", -1) do
-      delete :destroy, id: @exercise
-    end
-
-    assert_redirected_to root_path
-    assert_equal flash[:notice], "Exercise was successfully destroyed."
-    assert_equal assigns(:exercise), @exercise
-  end
-
 end

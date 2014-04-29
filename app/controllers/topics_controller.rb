@@ -1,7 +1,7 @@
 class TopicsController < ApplicationController
   before_action :require_user, only: [:index, :show]
-  before_action :require_admin, only: [:new, :edit, :create, :update, :destroy]
-  before_action :set_topic, only: [:edit, :update, :destroy]
+  before_action :require_admin, only: [:new, :edit, :create, :update]
+  before_action :set_topic, only: [:edit, :update]
 
   def index
     @subjects = Subject.all
@@ -40,11 +40,6 @@ class TopicsController < ApplicationController
     else
       render action: 'edit'
     end
-  end
-
-  def destroy
-    @topic.destroy
-    redirect_to topics_url, notice: 'Topic was successfully destroyed.'
   end
 
 private

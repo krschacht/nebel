@@ -8,13 +8,11 @@ Nebel::Application.routes.draw do
   get    "/topics/:slug"    => "topics#show",   as: "canonical_topic"
   post   "/topics"          => "topics#create"
   patch  "/topics/:id"      => "topics#update", as: "topic"
-  delete "/topics/:id"      => "topics#destroy"
 
   get    "/exercises/new"      => "exercises#new",    as: "new_exercise"
   get    "/exercises/:id/edit" => "exercises#edit",   as: "edit_exercise"
   post   "/exercises"          => "exercises#create", as: "exercises"
   patch  "/exercises/:id"      => "exercises#update", as: "exercise"
-  delete "/exercises/:id"      => "exercises#destroy"
 
   get    "/materials"          => "materials#index",  as: "materials"
   get    "/materials/new"      => "materials#new",    as: "new_material"

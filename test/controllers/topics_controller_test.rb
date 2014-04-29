@@ -110,24 +110,4 @@ class TopicsControllerTest < ActionController::TestCase
     assert_equal @topic, assigns(:topic)
   end
 
-  test "DELETE to destroy requires an admin" do
-    login_as_user
-
-    delete :destroy, id: @topic
-
-    assert_admin_required
-  end
-
-  test "DELETE to destroy destroys topic" do
-    login_as_admin
-
-    assert_difference("Topic.count", -1) do
-      delete :destroy, id: @topic
-    end
-
-    assert_redirected_to topics_path
-    assert_equal flash[:notice], "Topic was successfully destroyed."
-    assert_equal @topic, assigns(:topic)
-  end
-
 end

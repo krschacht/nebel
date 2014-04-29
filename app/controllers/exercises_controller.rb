@@ -1,7 +1,7 @@
 class ExercisesController < ApplicationController
   before_action :require_user, only: :show
-  before_action :require_admin, only: [:new, :edit, :create, :update, :destroy]
-  before_action :set_exercise, only: [:edit, :update, :destroy]
+  before_action :require_admin, only: [:new, :edit, :create, :update]
+  before_action :set_exercise, only: [:edit, :update]
 
   # GET /exercises/new
   def new
@@ -30,12 +30,6 @@ class ExercisesController < ApplicationController
     else
       render action: 'edit'
     end
-  end
-
-  # DELETE /exercises/1
-  def destroy
-    @exercise.destroy
-    redirect_to root_path, notice: 'Exercise was successfully destroyed.'
   end
 
   private
