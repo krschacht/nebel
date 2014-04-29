@@ -16,3 +16,15 @@ a.logo {
 a.logo:hover {
   background: none;
 }
+.trial-message,
+.activator {
+  display: inline-block;
+}
+.trial-message a {
+  font-size: 12px;
+  color: #666666;
+  text-decoration: none;
+}
+.trial-message a:hover {
+  text-decoration: underline;
+}
