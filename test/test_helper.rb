@@ -13,12 +13,21 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 
+  def current_user
+    @current_user ||= User.find(session[:user_id])
+  end
+
+  def login_as(user)
+    @current_user = user
+    session[:user_id] = user.id
+  end
+
   def login_as_user
-    session[:user_id] = users(:avand).id
+    login_as users(:avand)
   end
 
   def login_as_admin
-    session[:user_id] = users(:admin).id
+    login_as users(:admin)
   end
 
   def assert_user_required
