@@ -74,7 +74,7 @@ class ExercisesControllerTest < ActionController::TestCase
   test "PATCH to update updates exercise" do
     login_as_admin
 
-    patch :update, id: @exercise, exercise: { body: @exercise.body, duration: @exercise.duration, name: @exercise.name }
+    patch :update, id: @exercise, exercise: { body: @exercise.body, name: @exercise.name }
 
     assert_redirected_to edit_exercise_path(assigns(:exercise))
     assert_equal flash[:notice], "Exercise was successfully updated."
