@@ -23,6 +23,8 @@ Bfsu::Application.routes.draw do
     post :merge, on: :collection
   end
 
+  post "/webhooks/stripe" => "webhooks#stripe"
+
   get "/topics/:slug", to: "topics#show", as: "canonical_topic"
 
   post "/markdown/preview", to: "markdown#preview"
