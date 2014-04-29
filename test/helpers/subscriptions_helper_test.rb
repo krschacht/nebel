@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ApplicationHelperTest < ActionView::TestCase
+class SubscriptionsHelperTest < ActionView::TestCase
 
   test "#days_until" do
     assert_equal "3 days", days_until(3.days.from_now)

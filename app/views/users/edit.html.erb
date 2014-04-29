@@ -1,3 +1,11 @@
 <h1>Editing user</h1>
 
 <%= render 'form' %>
+
+<% if current_user.subscribed? %>
+  <%= billing_button_and_form %>
+
+  <%= form_tag subscriptions_path, method: :delete do %>
+    <input type="submit" value="Cancel Subscription">
+  <% end -%>
+<% end -%>

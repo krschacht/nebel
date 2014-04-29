@@ -2,6 +2,10 @@ Bfsu::Application.routes.draw do
 
   root "welcome#index"
 
+  resources :subscriptions, only: [:new, :create] do
+    patch :update, on: :collection
+    delete :destroy, on: :collection
+  end
   resources :requisitions, only: [:create, :update, :destroy]
   resources :users, only: [:new, :edit, :update, :create] do
     get :forgot_password, on: :collection
