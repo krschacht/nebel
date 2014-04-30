@@ -66,3 +66,10 @@ section {
 .hidden {
   display: none;
 }
+
+ol.unstyled,
+ul.unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

@@ -5,7 +5,28 @@ class MaterialsController < ApplicationController
 
   # GET /materials
   def index
-    @materials = Material.order("archived DESC, original_name")
+    if current_user.admin?
+      @materials = Material.order("archived DESC, original_name")
+    else
+      pg_result = Material.connection.execute <<-SQL
+        SELECT s.code, m.name, m.original_name, r.quantity
+        FROM requisitions r
+        INNER JOIN materials m ON m.id = r.material_id
+        INNER JOIN exercises e ON e.id = r.exercise_id
+        INNER JOIN topics t ON t.id = e.topic_id
+        INNER JOIN subjects s ON s.id = t.subject_id
+        ORDER BY m.name, m.original_name;
+      SQL
+
+      @quantity_by_material_name_by_subject_code = pg_result.values.each_with_object({}) do |result, hash|
+        subject_code  = result.first
+        material_name = result.second || result.third
+        quantity      = result.last.to_i
+
+        hash[subject_code] ||= Hash.new(0)
+        hash[subject_code][material_name] += quantity
+      end
+    end
 
     render current_user.admin? ? "materials/index/admin" : "materials/index/user"
   end
