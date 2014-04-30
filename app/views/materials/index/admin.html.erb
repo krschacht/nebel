@@ -1,32 +1,33 @@
-<h1>Supply List</h1>
+<%= render "shared/tabs" -%>
 
-<%= form_tag merge_materials_path, id: "merger" do %>
-  <%= link_to 'New Material', new_material_path %> &nbsp;&nbsp;|&nbsp;&nbsp;
+<div class="tab">
+  <%= form_tag merge_materials_path, id: "merger" do %>
+    <%= link_to 'New Material', new_material_path %> &nbsp;&nbsp;|&nbsp;&nbsp;
 
-  Merge
-  <input type="text" placeholder="Winner" name="winner_id">
-  with
-  <input type="text" placeholder="Loser(s)" name="loser_ids">
-  <input type="submit" value="Merge">
-<% end -%>
+    Merge
+    <input type="text" placeholder="Winner" name="winner_id">
+    with
+    <input type="text" placeholder="Loser(s)" name="loser_ids">
+    <input type="submit" value="Merge">
+  <% end -%>
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @materials.each do |material| %>
-      <tr class=<%= "faded" if material.archived -%>>
-        <td><%= link_to material.id, edit_material_path(material) %></td>
-        <td><%= material.name %></td>
-        <td><%= material.description.to_s[0..50] %>...</td>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @materials.each do |material| %>
+        <tr class=<%= "faded" if material.archived -%>>
+          <td><%= link_to material.id, edit_material_path(material) %></td>
+          <td><%= material.name %></td>
+          <td><%= material.description.to_s[0..50] %>...</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

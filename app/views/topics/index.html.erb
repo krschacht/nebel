@@ -1,23 +1,26 @@
-<h1>Curriculum Map</h1>
+<%= render "shared/tabs" -%>
 
-<table class="block four-columns">
-  <thead>
-    <tr>
-      <% @subjects.each do |subject| %>
-        <th><%= subject.name -%></th>
-      <% end %>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <% @subjects.each do |subject| %>
-        <td>
-          <%= render @topics_by_subject[subject] %>
-        </td>
-      <% end %>
-    </tr>
-</table>
+<div class="tab">
+  <table class="block four-columns">
+    <thead>
+      <tr>
+        <% @subjects.each do |subject| %>
+          <th><%= subject.name -%></th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <% @subjects.each do |subject| %>
+          <td>
+            <%= render @topics_by_subject[subject] %>
+          </td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
 
-<br>
-
-<%= link_to 'New Topic', new_topic_path %>
+  <% if current_user.admin? %>
+    <%= link_to "Create New Topic", new_topic_path %>
+  <% end %>
+</div>

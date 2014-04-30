@@ -1,41 +1,43 @@
-<nav>
-  <ul class="tabs">
-    <% case @previous_topics.size %>
-    <% when 1 %>
-      <li data-position="2"><%= render "tab", topic: @previous_topics[0] if @previous_topics[0] -%></li>
-    <% when 2 %>
-      <li data-position="1"><%= render "tab", topic: @previous_topics[0] if @previous_topics[0] -%></li>
-      <li data-position="2"><%= render "tab", topic: @previous_topics[1] if @previous_topics[1] -%></li>
-    <% end %>
-
-    <li data-position="3"><%= @topic.code -%></li>
-
-    <% case @next_topics.size %>
-    <% when 1 %>
-      <li data-position="4"><%= render "tab", topic: @next_topics[0] if @next_topics[0] -%></li>
-    <% when 2 %>
-      <li data-position="4"><%= render "tab", topic: @next_topics[0] if @next_topics[0] -%></li>
-      <li data-position="5"><%= render "tab", topic: @next_topics[1] if @next_topics[1] -%></li>
-    <% end %>
-  </ul>
-</nav>
-
 <div id="topic">
-  <h1><%= @topic.name -%></h1>
+  <nav>
+    <ul class="tabs">
+      <% case @previous_topics.size %>
+      <% when 1 %>
+        <li data-position="2"><%= render "tab", topic: @previous_topics[0] if @previous_topics[0] -%></li>
+      <% when 2 %>
+        <li data-position="1"><%= render "tab", topic: @previous_topics[0] if @previous_topics[0] -%></li>
+        <li data-position="2"><%= render "tab", topic: @previous_topics[1] if @previous_topics[1] -%></li>
+      <% end %>
 
-  <%= render "prerequisites" -%>
-  <%= render "overview" %>
-  <%= render "objectives" %>
-  <%= render "progression" %>
-  <%= render "teachable_moments" %>
-  <%= render @exercises %>
-  <%= render "messages" %>
-  <%= render "questions" %>
-  <%= render "parents" %>
-  <%= render "connections" %>
-  <%= render "books" %>
+      <li data-position="3" class="current"><%= @topic.code -%></li>
 
-  <% if current_user.admin? %>
-    <%= link_to "Edit this Topic", edit_topic_path(@topic) -%>
-  <% end %>
+      <% case @next_topics.size %>
+      <% when 1 %>
+        <li data-position="4"><%= render "tab", topic: @next_topics[0] if @next_topics[0] -%></li>
+      <% when 2 %>
+        <li data-position="4"><%= render "tab", topic: @next_topics[0] if @next_topics[0] -%></li>
+        <li data-position="5"><%= render "tab", topic: @next_topics[1] if @next_topics[1] -%></li>
+      <% end %>
+    </ul>
+  </nav>
+
+  <div class="tab">
+    <h1><%= @topic.name -%></h1>
+
+    <%= render "prerequisites" -%>
+    <%= render "overview" %>
+    <%= render "objectives" %>
+    <%= render "progression" %>
+    <%= render "teachable_moments" %>
+    <%= render @exercises %>
+    <%= render "messages" %>
+    <%= render "questions" %>
+    <%= render "parents" %>
+    <%= render "connections" %>
+    <%= render "books" %>
+
+    <% if current_user.admin? %>
+      <%= link_to "Edit this Topic", edit_topic_path(@topic) -%>
+    <% end %>
+  </div>
 </div>

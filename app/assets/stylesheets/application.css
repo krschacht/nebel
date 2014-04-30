@@ -9,11 +9,12 @@
  *= require forms
  *= require menu
  *= require supply_list
+ *= require tabs
  */
 
 body {
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 15px;
+  line-height: 20px;
   font-family: Arial, sans-serif;
 }
 

@@ -1,31 +1,33 @@
-<h1>Supply List</h1>
+<%= render "shared/tabs" -%>
 
-<aside>
-  <p>
-    List supplies for:
-  </p>
+<div class="tab supply-list">
+  <aside>
+    <p>
+      List supplies for:
+    </p>
 
-  <ul class="unstyled">
-    <% @quantity_by_material_name_by_subject_code.keys.sort.each do |subject_code| %>
-      <li>
-        <label>
-          <input type="checkbox" name="subject_code" value="<%= subject_code -%>" checked>
-          <%= subject_code %> Thread
-        </label>
-      </li>
-    <% end %>
-  </ul>
-</aside>
-
-<article>
-  <ol class="unstyled">
-    <% @quantity_by_material_name_by_subject_code.each do |subject_code, quantity_by_material_name| %>
-      <% quantity_by_material_name.each do |material_name, quantity| %>
-        <li class="material" data-subject-code="<%= subject_code -%>">
-          <span class="quantity"><%= quantity %></span>
-          <span class="name"><%= material_name %></span>
+    <ul class="unstyled">
+      <% @quantity_by_material_name_by_subject_code.keys.sort.each do |subject_code| %>
+        <li>
+          <label>
+            <input type="checkbox" name="subject_code" value="<%= subject_code -%>" checked>
+            <%= subject_code %> Thread
+          </label>
         </li>
       <% end %>
-    <% end %>
-  </ol>
-</article>
+    </ul>
+  </aside>
+
+  <article>
+    <ol class="unstyled">
+      <% @quantity_by_material_name_by_subject_code.each do |subject_code, quantity_by_material_name| %>
+        <% quantity_by_material_name.each do |material_name, quantity| %>
+          <li class="material" data-subject-code="<%= subject_code -%>">
+            <span class="quantity"><%= quantity %></span>
+            <span class="name"><%= material_name %></span>
+          </li>
+        <% end %>
+      <% end %>
+    </ol>
+  </article>
+</div>

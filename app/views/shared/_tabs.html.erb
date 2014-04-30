@@ -1,0 +1,10 @@
+<nav>
+  <ul class="tabs">
+    <%= content_tag :li, class: ("current" if controller.controller_name == "topics") do %>
+      <%= link_to_unless_current "Curriculum Map", topics_path -%>
+    <% end %>
+    <%= content_tag :li, class: ("current" if controller.controller_name == "materials") do %>
+      <%= link_to_unless_current "Supply List", materials_path -%>
+    <% end %>
+  </ul>
+</nav>
