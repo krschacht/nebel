@@ -8,6 +8,7 @@
  *= require messages
  *= require forms
  *= require menu
+ *= require supply_list
  */
 
 body {
@@ -65,4 +66,11 @@ section {
 
 .hidden {
   display: none;
+}
+
+ol.unstyled,
+ul.unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

@@ -1,0 +1,21 @@
+.supply-list aside {
+  float: left;
+  margin-left: 20px;
+}
+.supply-list article {
+  margin-left: 200px;
+  min-height: 300px;
+  border-left: 1px solid #888888;
+  padding-left: 40px;
+}
+.supply-list aside p:first-child {
+  margin-top: 0;
+}
+.supply-list .quantity {
+  float: left;
+}
+.supply-list .name {
+  display: block;
+  margin-left: 40px;
+  margin-bottom: .5em;
+}

@@ -6,22 +6,35 @@ class MaterialsControllerTest < ActionController::TestCase
     @material = materials(:straw)
   end
 
-  test "GET to index requires an admin" do
+  test "GET to index requires a user" do
+    get :index
+
+    assert_user_required
+  end
+
+  test "GET to index loads material quantities by subject code and renders index for users" do
     login_as_user
 
     get :index
 
-    assert_admin_required
+    assert_response :success
+    assert_nil assigns(:materials)
+    assert_not_nil assigns(:quantity_by_material_name_by_subject_code)
+    assert_equal 1, assigns(:quantity_by_material_name_by_subject_code)["A"]["Dirt"]
+    assert_equal 1, assigns(:quantity_by_material_name_by_subject_code)["A"]["Glue"]
+    assert_equal 1, assigns(:quantity_by_material_name_by_subject_code)["A"]["Straw"]
+    assert_equal 1, assigns(:quantity_by_material_name_by_subject_code)["D"]["Straw"]
+    assert_template "index/user"
   end
 
-  test "GET to index loads materials and renders index" do
+  test "GET to index loads materials and renders index for admins" do
     login_as_admin
 
     get :index
 
-    assert_response :success
+    assert_nil assigns(:quantity_by_material_name_by_subject_code)
     assert_not_nil assigns(:materials)
-    assert_template :index
+    assert_template "index/admin"
   end
 
   test "GET to new requires an admin" do
@@ -127,6 +140,8 @@ class MaterialsControllerTest < ActionController::TestCase
 
   test "POST to merge merges materials together" do
     login_as_admin
+
+    Requisition.delete_all
 
     winner  = materials(:straw)
     loser_1 = materials(:glue)
