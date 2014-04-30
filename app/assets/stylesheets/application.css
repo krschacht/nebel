@@ -8,6 +8,7 @@
  *= require messages
  *= require forms
  *= require menu
+ *= require supply_list
  */
 
 body {
