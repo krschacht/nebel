@@ -6,3 +6,4 @@
 //= require archive_message
 //= require menu
 //= require exercise
+//= require supply_list
