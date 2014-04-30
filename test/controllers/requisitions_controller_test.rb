@@ -13,6 +13,8 @@ class RequisitionsControllerTest < ActionController::TestCase
   test "DELETE to destroy destroys requisition" do
     login_as_admin
 
+    Requisition.delete_all
+
     material = materials(:straw)
     exercise = exercises(:d5_part1)
 
