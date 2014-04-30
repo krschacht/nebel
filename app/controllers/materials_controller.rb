@@ -1,10 +1,13 @@
 class MaterialsController < ApplicationController
-  before_action :require_admin
+  before_action :require_user, only: :index
+  before_action :require_admin, except: :index
   before_action :set_material, only: [:edit, :update, :destroy]
 
   # GET /materials
   def index
     @materials = Material.order("archived DESC, original_name")
+
+    render current_user.admin? ? "materials/index/admin" : "materials/index/user"
   end
 
   # GET /materials/new

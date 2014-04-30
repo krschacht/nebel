@@ -6,22 +6,28 @@ class MaterialsControllerTest < ActionController::TestCase
     @material = materials(:straw)
   end
 
-  test "GET to index requires an admin" do
-    login_as_user
-
+  test "GET to index requires a user" do
     get :index
 
-    assert_admin_required
+    assert_user_required
   end
 
-  test "GET to index loads materials and renders index" do
-    login_as_admin
+  test "GET to index loads materials and renders index for users" do
+    login_as_user
 
     get :index
 
     assert_response :success
     assert_not_nil assigns(:materials)
-    assert_template :index
+    assert_template "index/user"
+  end
+
+  test "GET to index renders index for admins" do
+    login_as_admin
+
+    get :index
+
+    assert_template "index/admin"
   end
 
   test "GET to new requires an admin" do
