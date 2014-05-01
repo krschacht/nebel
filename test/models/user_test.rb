@@ -45,6 +45,10 @@ class UserTest < ActiveSupport::TestCase
     assert users(:avand).messages.include? messages(:opener)
   end
 
+  test "has many completions" do
+    assert users(:avand).completions.include? completions(:one)
+  end
+
   test "generates an access_token before validation" do
     user = User.new
     SecureRandom.stubs(:hex).returns("abcd1234")

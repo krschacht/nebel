@@ -14,4 +14,12 @@ class CompletionTest < ActiveSupport::TestCase
     assert completion.errors[:topic_id].include? "can't be blank"
   end
 
+  test "belongs to a user" do
+    assert_equal users(:avand), completions(:one).user
+  end
+
+  test "belongs to a topic" do
+    assert_equal topics(:a2), completions(:one).topic
+  end
+
 end
