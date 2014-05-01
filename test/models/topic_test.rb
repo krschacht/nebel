@@ -73,6 +73,10 @@ class TopicTest < ActiveSupport::TestCase
     assert topics(:a2).messages.include? messages(:opener)
   end
 
+  test "has many completions" do
+    assert topics(:a2).completions.include? completions(:one)
+  end
+
   test "generates slug from code automatically" do
     topic = Topic.new code: "A-3"
     topic.valid?

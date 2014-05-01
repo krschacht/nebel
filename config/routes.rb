@@ -2,12 +2,13 @@ Nebel::Application.routes.draw do
 
   root "welcome#index"
 
-  get    "/topics"          => "topics#index",  as: "topics"
-  get    "/topics/new"      => "topics#new",    as: "new_topic"
-  get    "/topics/:id/edit" => "topics#edit",   as: "edit_topic"
-  get    "/topics/:slug"    => "topics#show",   as: "canonical_topic"
-  post   "/topics"          => "topics#create"
-  patch  "/topics/:id"      => "topics#update", as: "topic"
+  get    "/topics"              => "topics#index",    as: "topics"
+  get    "/topics/new"          => "topics#new",      as: "new_topic"
+  get    "/topics/:id/edit"     => "topics#edit",     as: "edit_topic"
+  get    "/topics/:slug"        => "topics#show",     as: "canonical_topic"
+  post   "/topics"              => "topics#create"
+  post   "/topics/:id/complete" => "topics#complete", as: "complete_topic"
+  patch  "/topics/:id"          => "topics#update",   as: "topic"
 
   get    "/exercises/new"      => "exercises#new",    as: "new_exercise"
   get    "/exercises/:id/edit" => "exercises#edit",   as: "edit_exercise"

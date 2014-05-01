@@ -22,6 +22,10 @@
   </nav>
 
   <div class="tab">
+    <div id="completion-notch"></div>
+
+    <%= render "shared/completion_checkbox", topic: @topic, completed: @completed %>
+
     <h1><%= @topic.name -%></h1>
 
     <%= render "prerequisites" -%>

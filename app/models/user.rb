@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   include BCrypt
 
   has_many :messages, foreign_key: :author_id
+  has_many :completions
 
   validates_presence_of :name, :email, :password_hash, :access_token, :trial_ends_at
   validates_uniqueness_of :email

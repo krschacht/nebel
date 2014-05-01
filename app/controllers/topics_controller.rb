@@ -1,10 +1,11 @@
 class TopicsController < ApplicationController
-  before_action :require_user, only: [:index, :show]
+  before_action :require_user, only: [:index, :show, :complete]
   before_action :require_admin, only: [:new, :edit, :create, :update]
   before_action :set_topic, only: [:edit, :update]
 
   def index
     @subjects = Subject.all
+    @completions = current_user.completions
     @topics_by_subject = @subjects.each_with_object({}) do |subject, object|
       object[subject] = subject.topics.order(:order)
     end
@@ -15,6 +16,7 @@ class TopicsController < ApplicationController
     @exercises = @topic.exercises.order(:part)
     @previous_topics = @topic.previous(2)
     @next_topics = @topic.next(2)
+    @completed = current_user.completions.where(topic_id: @topic.id).present?
   end
 
   def new
@@ -40,6 +42,14 @@ class TopicsController < ApplicationController
     else
       render action: 'edit'
     end
+  end
+
+  def complete
+    completion = Completion.find_or_initialize_by user_id: current_user.id, topic_id: params[:id]
+
+    completion.new_record? ? completion.save! : completion.delete
+
+    render nothing: true
   end
 
 private

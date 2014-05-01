@@ -7,3 +7,4 @@
 //= require menu
 //= require exercise
 //= require supply_list
+//= require completion_checkbox

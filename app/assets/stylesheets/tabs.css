@@ -37,6 +37,7 @@
   border-width: 0 2px 2px;
   padding: 2em 1em;
   background-color: white;
+  position: relative;
 }
 
 #topic .tabs {

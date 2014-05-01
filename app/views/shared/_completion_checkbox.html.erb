@@ -1,0 +1,4 @@
+<%= form_tag complete_topic_path(topic), class: "inline" do %>
+  <input type="checkbox" class="completion-checkbox" <%= "checked" if completed -%>
+         title="Mark topic as complete/incomplete">
+<% end -%>
