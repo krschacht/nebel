@@ -111,4 +111,37 @@ class TopicsControllerTest < ActionController::TestCase
     assert_equal @topic, assigns(:topic)
   end
 
+  test "POST to complete requires a user" do
+    post :complete, id: @topic
+
+    assert_user_required
+  end
+
+  test "POST to complete creates a completion" do
+    login_as_user
+
+    Completion.delete_all
+
+    post :complete, id: @topic, debug: true
+
+    assert Completion.find_by user_id: current_user.id, topic_id: @topic.id
+  end
+
+  test "POST to complete deletes an existing completion" do
+    login_as_user
+
+    post :complete, id: @topic
+
+    assert_nil Completion.find_by user_id: current_user.id, topic_id: @topic.id
+  end
+
+  test "POST to complete responds successfully with nothing" do
+    login_as_user
+
+    post :complete, id: @topic
+
+    assert_response :success
+    assert_template nil
+  end
+
 end

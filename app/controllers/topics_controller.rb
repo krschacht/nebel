@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-  before_action :require_user, only: [:index, :show]
+  before_action :require_user, only: [:index, :show, :complete]
   before_action :require_admin, only: [:new, :edit, :create, :update]
   before_action :set_topic, only: [:edit, :update]
 
@@ -41,6 +41,14 @@ class TopicsController < ApplicationController
     else
       render action: 'edit'
     end
+  end
+
+  def complete
+    completion = Completion.find_or_initialize_by user_id: current_user.id, topic_id: params[:id]
+
+    completion.new_record? ? completion.save! : completion.delete
+
+    render nothing: true
   end
 
 private
