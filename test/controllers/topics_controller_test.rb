@@ -12,7 +12,7 @@ class TopicsControllerTest < ActionController::TestCase
     assert_user_required
   end
 
-  test "GET to index loads subjects and topics by subject and renders index" do
+  test "GET to index loads subjects, completions, and topics by subject and renders index" do
     login_as_user
 
     get :index
@@ -20,6 +20,7 @@ class TopicsControllerTest < ActionController::TestCase
     assert_response :success
     assert_template :index
     assert_not_nil assigns(:subjects)
+    assert_not_nil assigns(:completions)
     assert_not_nil assigns(:topics_by_subject)
   end
 

@@ -5,6 +5,7 @@ class TopicsController < ApplicationController
 
   def index
     @subjects = Subject.all
+    @completions = current_user.completions
     @topics_by_subject = @subjects.each_with_object({}) do |subject, object|
       object[subject] = subject.topics.order(:order)
     end

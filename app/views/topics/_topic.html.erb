@@ -1,4 +1,7 @@
 <div class="topic" data-order="<%= topic.order -%>">
+  <% completed = @completions.any? { |c| c.topic_id == topic.id } %>
+  <input type="checkbox" <%= "checked" if completed -%>>
+
   <%= link_to canonical_topic_path(slug: topic.slug) do %>
     <strong><%= topic.code %></strong>
     <%= topic.name %>
