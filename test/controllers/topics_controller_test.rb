@@ -19,8 +19,8 @@ class TopicsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_template :index
-    assert_not_nil assigns(:subjects)
-    assert_not_nil assigns(:completions)
+    assert_equal Subject.all, assigns(:subjects)
+    assert_equal current_user.completions, assigns(:completions)
     assert_not_nil assigns(:topics_by_subject)
   end
 
@@ -63,13 +63,17 @@ class TopicsControllerTest < ActionController::TestCase
     assert_equal flash[:notice], "Topic was successfully created."
   end
 
-  test "GET to show loads topic and renders show" do
+  test "GET to show loads topic, exercises, next topics, previous topics, completed and renders show" do
     login_as_user
 
     get :show, slug: @topic.slug, field: "overview"
 
     assert_response :success
     assert_equal @topic, assigns(:topic)
+    assert_equal @topic.exercises.order(:part), assigns(:exercises)
+    assert_equal @topic.previous(2), assigns(:previous_topics)
+    assert_equal @topic.next(2), assigns(:next_topics)
+    assert assigns(:completed)
     assert_template :show
   end
 

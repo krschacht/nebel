@@ -16,6 +16,7 @@ class TopicsController < ApplicationController
     @exercises = @topic.exercises.order(:part)
     @previous_topics = @topic.previous(2)
     @next_topics = @topic.next(2)
+    @completed = current_user.completions.where(topic_id: @topic.id).present?
   end
 
   def new
