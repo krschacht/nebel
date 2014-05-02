@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class TopicTest < ActiveSupport::TestCase
+
   test "validates presence of name" do
     topic = Topic.new
     assert !topic.valid?
@@ -89,6 +90,10 @@ class TopicTest < ActiveSupport::TestCase
     topic = Topic.new code: "D-9B"
     topic.valid?
     assert_equal "d-9b", topic.slug
+  end
+
+  test "#all_prerequisite_topic_ids is an empty array by default" do
+    assert_equal [], Topic.new.all_prerequisite_topic_ids
   end
 
   test "#next" do
