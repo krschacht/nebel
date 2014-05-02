@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140430235413) do
+ActiveRecord::Schema.define(version: 20140502030843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -105,9 +105,9 @@ ActiveRecord::Schema.define(version: 20140430235413) do
   add_index "subjects", ["code"], name: "index_subjects_on_code", unique: true, using: :btree
 
   create_table "topics", force: true do |t|
-    t.integer  "subject_id",               null: false
-    t.string   "name",                     null: false
-    t.integer  "order",                    null: false
+    t.integer  "subject_id",                              null: false
+    t.string   "name",                                    null: false
+    t.integer  "order",                                   null: false
     t.text     "overview"
     t.text     "progression"
     t.text     "objectives"
@@ -122,6 +122,7 @@ ActiveRecord::Schema.define(version: 20140430235413) do
     t.datetime "updated_at"
     t.text     "materials_text"
     t.text     "required_background_text"
+    t.string   "all_prerequisite_topic_ids", default: [],              array: true
   end
 
   add_index "topics", ["code"], name: "index_topics_on_code", unique: true, using: :btree
