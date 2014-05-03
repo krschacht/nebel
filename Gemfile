@@ -22,4 +22,5 @@ group :production do
   gem "uglifier",       "~> 2.5.0"
   gem "rails_12factor", "~> 0.0.2"
   gem "postmark-rails", "~> 0.6.0"
+  gem "bugsnag"
 end
