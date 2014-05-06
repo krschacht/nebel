@@ -8,3 +8,4 @@
 //= require exercise
 //= require supply_list
 //= require completion_checkbox
+//= require prerequisite_highlight
