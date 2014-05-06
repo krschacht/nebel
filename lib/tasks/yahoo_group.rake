@@ -9,16 +9,16 @@ namespace :yahoo_group do
   # Just visit groups.yahoo.com, login with Keith's account, and look at the
   # network inspector. Find an XHR request and look at the headers and copy the
   # value of the Cookie header.
-  task :import, [:cookies, :from, :to] => :environment do |task, args|
+  task :import, [:id, :cookies, :from, :to] => :environment do |task, args|
     args.with_defaults(from: 0, to: 3_000) # There are ~2,700 total messages
 
     start_of_import = Time.now
     initial_message_count = Message.count
 
-    yahoo_group = YahooGroup.new(args[:cookies])
+    yahoo_group = YahooGroup.new(args[:id], args[:cookies])
 
     yahoo_group.messages(args[:from].to_i, args[:to].to_i) do |yahoo_group_message|
-      message = MessageFactory.new(yahoo_group_message).message
+      message = MessageFactory.new(args[:id], yahoo_group_message).message
       new_record = message.new_record?
       message.save!
 

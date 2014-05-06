@@ -1,27 +1,28 @@
 class MessageFactory
 
-  def initialize(yahoo_group_message)
-    @yahoo_group_message = yahoo_group_message
+  def initialize(yahoo_group_id, yahoo_group_message)
+    @yahoo_group_id, @yahoo_group_message = yahoo_group_id, yahoo_group_message
   end
 
   def message
     author = User.find_or_initialize_by(email: author_email).tap do |user|
       user.name = author_name
+      user.password = "something" if user.new_record?
     end
 
-    if author.new_record?
-      author.password = "something"
-    end
+    params = { yahoo_group_id: @yahoo_group_id, yahoo_group_message_id: @yahoo_group_message["msgId"] }
 
-    Message.find_or_initialize_by(yahoo_group_message_id: @yahoo_group_message["msgId"]).tap do |message|
+    Message.find_or_initialize_by(params).tap do |message|
       message.author     = author
       message.subject    = message_subject
       message.body       = message_body
       message.created_at = message_created_at
 
       if reply?
-        reply = Message.find_by yahoo_group_message_id: @yahoo_group_message["topicId"]
-        message.messageable = reply
+        message.messageable = Message.find_by({
+          yahoo_group_id: @yahoo_group_id,
+          yahoo_group_message_id: @yahoo_group_message["topicId"]
+        })
       end
     end
   end

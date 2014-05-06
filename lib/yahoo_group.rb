@@ -4,10 +4,10 @@ class YahooGroup
 
   include HTTParty
 
-  base_uri "https://groups.yahoo.com/api/v1/groups/K5science"
+  base_uri "https://groups.yahoo.com/api/v1/groups"
 
-  def initialize(cookies)
-    @cookies = cookies
+  def initialize(id, cookies)
+    @id, @cookies = id, cookies
   end
 
   def message_ids(query = {})
@@ -18,7 +18,7 @@ class YahooGroup
       direction: 1
     })
 
-    response = self.class.get("/messages", headers: { "Cookie" => @cookies }, query: query)
+    response = self.class.get("/#{@id}/messages", headers: { "Cookie" => @cookies }, query: query)
     response["ygData"]["messages"].map { |m| m["messageId"] }
   end
 
@@ -34,7 +34,7 @@ class YahooGroup
   def message(id)
     tries = 3
     begin
-      self.class.get("/messages/#{id}", headers: { "Cookie" => @cookies })["ygData"]
+      self.class.get("/#{@id}/messages/#{id}", headers: { "Cookie" => @cookies })["ygData"]
     rescue => error
       tries -= 1
       retry if tries > 0
