@@ -98,6 +98,9 @@ table.two-column td:last-child {
   padding: 8px 10px;
   margin-bottom: 20px;
   position: relative;
+  height: 64px;
+  width: 189px;
+  display: table;
 }
 .topic.highlight {
   border-width: 5px;
@@ -106,9 +109,17 @@ table.two-column td:last-child {
 }
 .topic input {
   position: absolute;
+  font-size: 16px;
+  margin: 22px 0;
+}
+.topic .name {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 24px;
 }
 .topic a {
   color: #000000;
   display: block;
-  margin-left: 24px;
+  max-height: 60px;
+  overflow: hidden;
 }

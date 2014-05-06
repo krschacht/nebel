@@ -2,8 +2,10 @@
   <% completed = @completions.any? { |c| c.topic_id == topic.id } %>
   <%= render "shared/completion_checkbox", topic: topic, completed: completed %>
 
-  <%= link_to canonical_topic_path(slug: topic.slug) do %>
-    <strong><%= topic.code %></strong>
-    <%= topic.name %>
-  <% end %>
+  <div class="name">
+    <%= link_to canonical_topic_path(slug: topic.slug), title: topic.name do %>
+      <strong><%= topic.code %></strong>
+      <%= truncate topic.name, length: 50 %>
+    <% end %>
+  </div>
 </div>
