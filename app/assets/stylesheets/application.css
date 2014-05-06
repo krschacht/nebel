@@ -10,6 +10,7 @@
  *= require menu
  *= require supply_list
  *= require tabs
+ *= require loader
  */
 
 body {
