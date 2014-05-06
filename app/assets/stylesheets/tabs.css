@@ -20,11 +20,11 @@
 .tabs li.current {
   color: #535353;
   font-weight: bold;
-  font-size: 24px;
   background: white;
   margin-bottom: -2px;
-  padding: 15px 20px;
   border-bottom: 2px solid white;
+  padding: 15px 20px;
+  font-size: 22px;
 }
 .tabs li a {
   display: block;
@@ -41,7 +41,7 @@
 }
 
 #topic .tabs {
-  height: 56px;
+  height: 72px;
 }
 #topic .tabs li {
   position: absolute;
@@ -50,6 +50,7 @@
 }
 #topic .tabs li[data-position="1"] { left: 10px; }
 #topic .tabs li[data-position="2"] { left: 210px; }
-#topic .tabs li[data-position="3"] { left: 410px; width: 120px; }
+#topic .tabs li[data-position="3"] { left: 410px; width: 120px; padding: 25px; }
 #topic .tabs li[data-position="4"] { left: 545px; }
 #topic .tabs li[data-position="5"] { left: 745px; }
+#topic .tabs a { min-height: 40px; }
