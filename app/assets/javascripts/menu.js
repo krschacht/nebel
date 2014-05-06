@@ -18,8 +18,10 @@ var Menu = {
     var body = document.querySelector("body"),
         activator = document.querySelector(".menu .activator");
 
-    activator.addEventListener("click", this.activate);
-    body.addEventListener("click", this.close);
+    if (activator) {
+      activator.addEventListener("click", this.activate);
+      body.addEventListener("click", this.close);
+    }
   }
 }
 
