@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140506213309) do
+ActiveRecord::Schema.define(version: 20140506214122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20140506213309) do
     t.datetime "updated_at"
     t.boolean  "archived",               default: false, null: false
     t.integer  "yahoo_group_message_id"
+    t.string   "yahoo_group_id"
   end
 
   add_index "messages", ["archived"], name: "index_messages_on_archived", using: :btree
@@ -72,6 +73,7 @@ ActiveRecord::Schema.define(version: 20140506213309) do
   add_index "messages", ["opened"], name: "index_messages_on_opened", using: :btree
   add_index "messages", ["order"], name: "index_messages_on_order", using: :btree
   add_index "messages", ["updated_at"], name: "index_messages_on_updated_at", using: :btree
+  add_index "messages", ["yahoo_group_id"], name: "index_messages_on_yahoo_group_id", using: :btree
   add_index "messages", ["yahoo_group_message_id"], name: "index_messages_on_yahoo_group_message_id", using: :btree
 
   create_table "prerequisites", force: true do |t|
