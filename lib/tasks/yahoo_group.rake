@@ -27,7 +27,12 @@ namespace :yahoo_group do
       sleep rand * 2
     end
 
-    puts "#{User.where("created_at > ?", start_of_import).count} users(s) created, #{User.where("updated_at > ?", start_of_import).count} updated (#{User.count} total)"
-    puts "#{Message.count - initial_message_count} message(s) created, #{Message.where("updated_at > ?", start_of_import).count} updated (#{Message.count} total)"
+    users_created = User.where("created_at > ?", start_of_import).count
+    users_updated = User.where("updated_at > ?", start_of_import).count - users_created
+    messages_created = Message.count - initial_message_count
+    messages_updated = Message.where("updated_at > ?", start_of_import).count - messages_created
+
+    puts "#{users_created} users(s) created, #{users_updated} updated (#{User.count} total)"
+    puts "#{messages_created} message(s) created, #{messages_updated} updated (#{Message.count} total)"
   end
 end
