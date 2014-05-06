@@ -184,6 +184,7 @@ class MessagesControllerTest < ActionController::TestCase
     delete :destroy, id: messages(:opener).id
 
     assert messages(:opener).reload.archived
+    assert_equal assigns(:message), messages(:opener)
     assert_response :success
     assert_template :destroy
   end

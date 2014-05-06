@@ -29,7 +29,7 @@
 
   <% if message.opener? %>
     <div class="replies">
-      <%= render message.replies -%>
+      <%= render message.replies.unarchived -%>
     </div>
 
     <%= render "messages/form", message: message.new_reply(current_user, nil) %>
@@ -38,10 +38,12 @@
       <%= form_tag toggle_message_path(message), method: :patch, class: "inline toggle-message" do %>
         <input type="submit" value="<%= message.opened? ? "Close" : "Open" -%>">
       <% end -%>
+    <% end -%>
+  <% end -%>
 
-      <%= form_tag message_path(message), method: :delete, class: "inline archive-message" do %>
-        <input type="submit" value="Archive">
-      <% end -%>
+  <% if current_user.admin? %>
+    <%= form_tag message_path(message), method: :delete, class: "inline archive-message" do %>
+      <%= submit_tag message.archived? ? "Archived" : "Archive", disabled: message.archived? -%>
     <% end -%>
   <% end -%>
 </div>

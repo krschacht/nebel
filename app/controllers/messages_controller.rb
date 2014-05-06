@@ -42,8 +42,8 @@ class MessagesController < ApplicationController
   end
 
   def destroy
-    message = Message.find(params[:id])
-    message.update archived: true
+    @message = Message.find(params[:id])
+    @message.update archived: true
   end
 
 end
