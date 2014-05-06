@@ -12,10 +12,14 @@
         <% end %>
       </div>
 
-      <div class="materials">
-        <strong>Materials:</strong>
-        <%= exercise.materials.map { |m| m.name || m.original_name }.join(", ") -%>
-      </div>
+      <% exercise.materials.where(archived: false).tap do |materials| %>
+        <% if materials.present? %>
+          <div class="materials">
+            <strong>Materials:</strong>
+            <%= materials.map(&:display_name).to_sentence -%>
+          </div>
+        <% end -%>
+      <% end -%>
     <% end %>
   </header>
 
