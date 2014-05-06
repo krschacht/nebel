@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     if user && user.password == params[:password]
       session[:user_id] = user.id
       flash[:notice] = "Welcome back, #{user.name}."
-      redirect_to topics_url
+      redirect_to session.delete(:redirect_to) || topics_url
     else
       flash[:alert] = "Your email or password is incorrect."
       render :new

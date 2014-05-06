@@ -12,12 +12,14 @@ class ApplicationController < ActionController::Base
 
   def require_user
     if current_user.blank?
+      session[:redirect_to] = request.env["PATH_INFO"]
       redirect_to root_path, alert: "You must be logged in to do that."
     end
   end
 
   def require_admin
     if current_user.blank? || !current_user.admin?
+      session[:redirect_to] = request.env["PATH_INFO"]
       redirect_to root_path, alert: "You must be an admin to do that."
     end
   end

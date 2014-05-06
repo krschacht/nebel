@@ -32,6 +32,16 @@ class SessionsControllerTest < ActionController::TestCase
     assert_nil session[:user_id]
   end
 
+  test "POST to create redirects to session[:redirect_to]" do
+    user = users(:avand)
+    session[:redirect_to] = "/foo/bar"
+
+    post :create, email: user.email, password: "secret"
+
+    assert_redirected_to "/foo/bar"
+    assert_nil session[:redirect_to]
+  end
+
   test "DELETE to destroy requires a user" do
     delete :destroy
 
