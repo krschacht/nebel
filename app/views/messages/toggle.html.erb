@@ -1,2 +1,2 @@
-<%= link_to "Message", message_path(@message) %>
-Message has been <%= @message.opened? ? "opened" : "closed" -%>.
+<%= link_to "Message ##{@message.id}", message_path(@message) %>
+has been <%= @message.opened? ? "opened" : "closed" -%>.

@@ -5,8 +5,8 @@ var ToggleMessage = {
     var message = this.parentElement;
 
     AJAX.submitForm(this, function(xhr) {
-      if (request.status == 200) {
-        message.innerHTML = request.response;
+      if (xhr.status == 200) {
+        message.innerHTML = xhr.response;
       } else {
         alert("There was a problem opening/closing the message.");
       }
