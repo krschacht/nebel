@@ -1,7 +1,7 @@
 <div id="messages">
   <h2>Questions & Answers About Lesson</h2>
 
-  <%= render @topic.messages %>
+  <%= render @topic.messages.unarchived %>
 
   <%= render "messages/form", message: @topic.messages.build -%>
 </div>
