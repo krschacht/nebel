@@ -80,16 +80,9 @@ class TopicTest < ActiveSupport::TestCase
 
   test "generates slug from code automatically" do
     topic = Topic.new code: "A-3"
+    TopicSlug.expects(:new).with("A-3").returns(mock(slug: "a-3"))
     topic.valid?
     assert_equal "a-3", topic.slug
-
-    topic = Topic.new code: "A/B-1"
-    topic.valid?
-    assert_equal "ab-1", topic.slug
-
-    topic = Topic.new code: "D-9B"
-    topic.valid?
-    assert_equal "d-9b", topic.slug
   end
 
   test "updates all_prerequisite_topic_ids for all topics when a prerequisite is added or removed" do

@@ -2,6 +2,9 @@ require "net/http"
 
 class Book
 
+  # http://rubular.com/r/N2ZDxweEjo
+  TOPIC_CODE_PATTERN = /([ABCD]\/?-?[ABCD]?-\d{1,2}[ABCD]?)/
+
   class Lesson
 
     attr_reader :text

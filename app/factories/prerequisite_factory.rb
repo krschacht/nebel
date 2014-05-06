@@ -7,8 +7,7 @@ class PrerequisiteFactory
   end
 
   def topic_codes
-    # http://rubular.com/r/N2ZDxweEjo
-    @book_lesson.required_background.scan(/[ABCD]\/?-?[ABCD]?-\d{1,2}[ABCD]?/)
+    @book_lesson.required_background.scan(Book::TOPIC_CODE_PATTERN)
   end
 
 end

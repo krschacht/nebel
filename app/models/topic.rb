@@ -37,8 +37,7 @@ class Topic < ActiveRecord::Base
 private
 
   def generate_slug
-    slug = code.downcase.gsub("/", "")
-    write_attribute(:slug, slug)
+    write_attribute(:slug, TopicSlug.new(code).slug)
   end
 
   def update_all_prerequisite_topic_ids(prerequisite_topic)

@@ -48,4 +48,11 @@ class MarkdownHelperTest < ActionView::TestCase
     assert_equal html, markdown(string)
   end
 
+  test "#markdown inserts links to lessons" do
+    assert_equal "<p>Lesson #{link_to("B-21", canonical_topic_path("b-21"))}</p>\n", markdown("Lesson B-21")
+    assert_equal "<p>Lesson #{link_to("A/B-1", canonical_topic_path("ab-1"))}</p>\n", markdown("Lesson A/B-1")
+    assert_equal "<p>Lesson #{link_to("B-13", canonical_topic_path("b-13"))} and #{link_to("B-14", canonical_topic_path("b-14"))}</p>\n", markdown("Lesson B-13 and B-14")
+    assert_equal "<p>Lesson #{link_to("C-3A", canonical_topic_path("c-3a"))}</p>\n", markdown("Lesson C-3A")
+  end
+
 end

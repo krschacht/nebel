@@ -1,8 +1,15 @@
+require "book"
+require "topic_slug"
+
 module MarkdownHelper
 
   def markdown(string)
     return nil if string.nil?
-    renderer.render(string).html_safe
+    result = renderer.render(string)
+    result.gsub! Book::TOPIC_CODE_PATTERN do |topic_code|
+      link_to(topic_code, canonical_topic_path(TopicSlug.new(topic_code).slug))
+    end
+    result.html_safe
   end
 
 private
