@@ -17,12 +17,12 @@ namespace :yahoo_group do
 
     yahoo_group = YahooGroup.new(args[:cookies])
 
-    yahoo_group.messages(args[:from].to_i, args[:to].to_i) do |yahoo_message|
-      message = MessageFactory.new(yahoo_message).message
+    yahoo_group.messages(args[:from].to_i, args[:to].to_i) do |yahoo_group_message|
+      message = MessageFactory.new(yahoo_group_message).message
       new_record = message.new_record?
       message.save!
 
-      puts "#{message.yahoo_message_id} - #{message.subject} (#{new_record ? "new" : message.id})"
+      puts "#{message.yahoo_group_message_id} - #{message.subject} (#{new_record ? "new" : message.id})"
 
       sleep rand * 2
     end
