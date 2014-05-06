@@ -8,7 +8,7 @@ class Material < ActiveRecord::Base
 
   default_scope { order('archived') }
 
-  before_validation :strip_whitespace_from_name_fields
+  before_validation :strip_whitespace_from_name
 
   def display_name
     name || original_name
@@ -24,9 +24,8 @@ class Material < ActiveRecord::Base
 
 private
 
-  def strip_whitespace_from_name_fields
-    self.name          = name.strip          if name.present?
-    self.original_name = original_name.strip if original_name.present?
+  def strip_whitespace_from_name
+    self.name = name.strip if name.present?
   end
 
 end

@@ -51,10 +51,9 @@ class MaterialTest < ActiveSupport::TestCase
   end
 
   test "strips whitespace from name fields automatically" do
-    material = Material.new name: " foo ", original_name: " bar "
+    material = Material.new name: " foo "
     material.valid?
     assert_equal "foo", material.name
-    assert_equal "bar", material.original_name
   end
 
 end
