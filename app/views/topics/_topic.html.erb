@@ -1,4 +1,4 @@
-<div class="topic" data-order="<%= topic.order -%>">
+<div class="topic" id="topic-<%= topic.id -%>" data-all-prerequisite-topic-ids="<%= topic.all_prerequisite_topic_ids.to_json -%>">
   <% completed = @completions.any? { |c| c.topic_id == topic.id } %>
   <%= render "shared/completion_checkbox", topic: topic, completed: completed %>
 

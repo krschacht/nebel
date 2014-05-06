@@ -99,6 +99,11 @@ table.two-column td:last-child {
   margin-bottom: 20px;
   position: relative;
 }
+.topic.highlight {
+  border-width: 5px;
+  padding: 4px 6px;
+  border-radius: 3px;
+}
 .topic input {
   position: absolute;
 }

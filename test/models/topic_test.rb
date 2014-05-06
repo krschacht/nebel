@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class TopicTest < ActiveSupport::TestCase
+
   test "validates presence of name" do
     topic = Topic.new
     assert !topic.valid?
@@ -89,6 +90,29 @@ class TopicTest < ActiveSupport::TestCase
     topic = Topic.new code: "D-9B"
     topic.valid?
     assert_equal "d-9b", topic.slug
+  end
+
+  test "updates all_prerequisite_topic_ids for all topics when a prerequisite is added or removed" do
+    topic_a, topic_b, topic_c = topics(:a2), topics(:a3), topics(:d5)
+
+    topic_b.prerequisite_topics << topic_a
+    topic_c.prerequisite_topics << topic_b
+
+    assert_equal [topic_a.id], topic_b.reload.all_prerequisite_topic_ids
+    assert_equal [topic_b.id, topic_a.id], topic_c.reload.all_prerequisite_topic_ids
+
+    topic_b.prerequisite_topics.delete(topic_a)
+
+    assert_equal [], topic_b.reload.all_prerequisite_topic_ids
+    assert_equal [topic_b.id], topic_c.reload.all_prerequisite_topic_ids
+  end
+
+  test "#all_prerequisite_topic_ids is an empty array by default" do
+    assert_equal [], Topic.new.all_prerequisite_topic_ids
+  end
+
+  test "#all_prerequisite_topic_ids always returns an array of numbers" do
+    assert_equal [1, 2, 3], Topic.new(all_prerequisite_topic_ids: %w(1 2 3)).all_prerequisite_topic_ids
   end
 
   test "#next" do
