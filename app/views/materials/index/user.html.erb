@@ -7,7 +7,7 @@
     </p>
 
     <ul class="unstyled">
-      <% @quantity_by_material_name_by_subject_code.keys.sort.each do |subject_code| %>
+      <% @quantities_by_material_name_by_subject_code.keys.sort.each do |subject_code| %>
         <li>
           <label>
             <input type="checkbox" name="subject_code" value="<%= subject_code -%>" checked>
@@ -20,11 +20,16 @@
 
   <article>
     <ol class="unstyled">
-      <% @quantity_by_material_name_by_subject_code.each do |subject_code, quantity_by_material_name| %>
-        <% quantity_by_material_name.each do |material_name, quantity| %>
+      <% @quantities_by_material_name_by_subject_code.each do |subject_code, quantities_by_material_name| %>
+        <% quantities_by_material_name.each do |material_name, quantities| %>
           <li class="material" data-subject-code="<%= subject_code -%>">
-            <span class="quantity"><%= quantity %></span>
-            <span class="name"><%= material_name %></span>
+            <% if quantities.all?(&:nil?) %>
+              <span class="name"><%= material_name %></span>
+            <% else %>
+              <% sum = quantities.reject(&:nil?).sum %>
+              <span class="quantity"><%= sum %></span>
+              <span class="name"><%= pluralize(sum, material_name.strip).gsub(/^\d+/, "") %></span>
+            <% end %>
           </li>
         <% end %>
       <% end %>

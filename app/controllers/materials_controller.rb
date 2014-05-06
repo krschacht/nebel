@@ -19,16 +19,16 @@ class MaterialsController < ApplicationController
         ORDER BY m.name, m.original_name;
       SQL
 
-      @quantity_by_material_name_by_subject_code = pg_result.values.each_with_object({}) do |result, hash|
+      @quantities_by_material_name_by_subject_code = pg_result.values.each_with_object({}) do |result, hash|
         subject_code  = result.first
         material_name = result.second || result.third
-        quantity      = result.last.to_i
+        quantity      = result.last.nil? ? nil : result.last.to_i
 
-        hash[subject_code] ||= Hash.new(0)
-        hash[subject_code][material_name] += quantity
+        hash[subject_code] ||= {}
+        hash[subject_code][material_name] ||= []
+        hash[subject_code][material_name] << quantity
       end
     end
-
     render current_user.admin? ? "materials/index/admin" : "materials/index/user"
   end
 
