@@ -15,6 +15,7 @@ class MaterialsController < ApplicationController
         INNER JOIN exercises e ON e.id = r.exercise_id
         INNER JOIN topics t ON t.id = e.topic_id
         INNER JOIN subjects s ON s.id = t.subject_id
+        WHERE m.archived = false
         ORDER BY m.name, m.original_name;
       SQL
 
