@@ -12,7 +12,7 @@
         <% end %>
       </div>
 
-      <% exercise.materials.unarchived.tap do |materials| %>
+      <% exercise.materials.where(archived: false).tap do |materials| %>
         <% if materials.present? %>
           <div class="materials">
             <strong>Materials:</strong>
