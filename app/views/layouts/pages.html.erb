@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nebel</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="pages" class="container">
+  <header>
+    <h1 class="serif">Nebel Science</h1>
+
+    <nav>
+      <ul class="unstyled">
+        <li><%= link_to "About", root_path, class: ("active" if controller.action_name == "about") -%></li>
+        <li><%= link_to "Curriculum", curriculum_page_path, class: ("active" if controller.action_name == "curriculum") -%></li>
+        <li><%= link_to "Try It", try_it_page_path, class: ("active" if controller.action_name == "try_it") -%></li>
+        <li><%= link_to "Pricing", pricing_page_path, class: ("active" if controller.action_name == "pricing") -%></li>
+        <li><%= link_to "NGSS", ngss_page_path, class: ("active" if controller.action_name == "ngss") -%></li>
+      </ul>
+    </nav>
+
+    <nav>
+      <ul class="unstyled">
+        <li><%= link_to "Register", new_user_path -%></li>
+        <li><%= link_to "Login", new_session_path -%></li>
+      </ul>
+    </nav>
+  </header>
+
+  <article>
+    <%= yield %>
+  </article>
+</div>
+
+</body>
+</html>

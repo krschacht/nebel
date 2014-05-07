@@ -1,12 +1,12 @@
 var AJAX = {
   showLoader: function() {
     var loader = document.querySelector("#loader");
-    loader.classList.remove("hidden");
+    if (loader) loader.classList.remove("hidden");
   },
 
   hideLoader: function() {
     var loader = document.querySelector("#loader");
-    loader.classList.add("hidden");
+    if (loader) loader.classList.add("hidden");
   },
 
   submitForm: function(form, done) {

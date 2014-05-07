@@ -10,8 +10,8 @@
 
 <div class="container">
   <header>
-    <%= link_to current_user ? topics_path : root_path, class: "logo" do %>
-      BFSU Online
+    <%= link_to current_user ? topics_path : root_path, class: "logo serif" do %>
+      Nebel Science
     <% end -%>
 
     <nav class="menu">
@@ -50,8 +50,8 @@
           </ul>
         </div>
       <% else %>
-        <%= link_to "Register", new_user_path %> ·
-        <%= link_to "Login", new_session_path %>
+        <%= link_to_unless_current "Register", new_user_path %> ·
+        <%= link_to_unless_current "Login", new_session_path %>
       <% end -%>
     </nav>
   </header>

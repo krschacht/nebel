@@ -1,0 +1,65 @@
+#pages header {
+  background: url(<%= image_path("pages/header-background.png") %>) no-repeat;
+  border-bottom: none;
+  text-align: center;
+  min-height: 157px;
+  position: relative;
+}
+#pages nav li {
+  text-transform: uppercase;
+  display: inline;
+  color: #e00005;
+}
+#pages nav li:not(:last-child) {
+  margin-right: 30px;
+}
+#pages nav:first-of-type li a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #d5a89c;
+}
+#pages nav:first-of-type li a.active {
+  color: #e00005;
+  border-bottom: 1px solid #e00005;
+}
+#pages nav:last-of-type {
+  position: absolute;
+  top: 5px;
+  right: 100px;
+  font-size: 12px;
+}
+#pages article {
+  margin: 0 75px;
+  padding-bottom: 120px;
+  overflow: hidden;
+  background: url(<%= image_path("pages/article-background.png") %>) bottom right no-repeat;
+}
+#pages blockquote {
+  margin: 0 0 0 70px;
+  width: 200px;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 26px;
+  position: relative;
+}
+#pages blockquote::before {
+  content: "“";
+  font-size: 100px;
+  position: absolute;
+  line-height: 14px;
+  top: 30px;
+  left: -45px;
+  opacity: 0.5;
+  width: 50px;
+}
+#pages cite {
+  display: block;
+  text-align: right;
+}
+#pages h1 {
+  font-size: 46px;
+}
+#pages h2 {
+  color: #e00005;
+  font-size: 24px;
+}
