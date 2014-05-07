@@ -1,6 +1,12 @@
 Nebel::Application.routes.draw do
 
-  root "welcome#index"
+  root "pages#about"
+
+  get "/about"      => "pages#about"
+  get "/curriculum" => "pages#curriculum", as: "curriculum_page"
+  get "/try-it"     => "pages#try_it",     as: "try_it_page"
+  get "/pricing"    => "pages#pricing",    as: "pricing_page"
+  get "/ngss"       => "pages#ngss",       as: "ngss_page"
 
   get    "/topics"              => "topics#index",    as: "topics"
   get    "/topics/new"          => "topics#new",      as: "new_topic"
