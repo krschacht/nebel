@@ -1,3 +1,5 @@
+require "topic_slug"
+
 class Topic < ActiveRecord::Base
   validates_presence_of :name, :subject_id, :order, :code, :slug
   validates_uniqueness_of :code, :slug
