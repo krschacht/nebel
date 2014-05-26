@@ -22,6 +22,14 @@ class Material < ActiveRecord::Base
     update archived: false
   end
 
+  def inconsistent_quantities?
+    quantities = requisitions.collect { |r| r.quantity }
+    includes_nil = quantities.include?( nil )
+    quantities.delete(nil)
+
+    includes_nil && quantities.length > 0
+  end
+
 private
 
   def strip_whitespace_from_name

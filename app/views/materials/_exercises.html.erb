@@ -14,6 +14,7 @@
           <%= link_to canonical_topic_path(exercise.topic.slug, anchor: "part-#{exercise.part}", material_id: @material.id) do %>
             <%= exercise.topic.code -%>: <%= truncate(exercise.name, length: 45) %>
           <% end -%>
+          (quantity <%= requisition.quantity.nil? ? 'blank' : requisition.quantity %>)
         <% end %>
         <%= form_tag requisition_path(requisition), method: :delete, class: "inline" do %>
           <input type="submit" value="Unlink">

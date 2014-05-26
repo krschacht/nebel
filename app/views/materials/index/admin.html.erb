@@ -24,7 +24,11 @@
       <% @materials.each do |material| %>
         <tr class=<%= "faded" if material.archived -%>>
           <td><%= link_to material.id, edit_material_path(material) %></td>
-          <td><%= material.name %></td>
+          <td><%= material.name %>
+            <span style='color: red;' class="<%= 'hidden' unless material.inconsistent_quantities? %>">
+              ERROR! Incosistent use of quantities
+            </span>
+          </td>
           <td><%= material.description.to_s[0..50] %>...</td>
         </tr>
       <% end %>

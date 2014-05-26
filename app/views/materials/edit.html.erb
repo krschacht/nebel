@@ -1,4 +1,9 @@
-<h1>Editing material</h1>
+<h1>Editing material - 
+
+  <span style='color: red;' class="<%= 'hidden' unless @material.inconsistent_quantities? %>">
+    ERROR! Incosistent use of quantities
+  </span>
+</h1>
 
 <p>
   <strong>Original name:</strong>
