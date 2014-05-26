@@ -7,7 +7,7 @@
     </p>
 
     <ul class="unstyled">
-      <% @quantities_by_material_name_by_subject_code.keys.sort.each do |subject_code| %>
+      <% @subject_codes.sort.each do |subject_code| %>
         <li>
           <label>
             <input type="checkbox" name="subject_code" value="<%= subject_code -%>" checked>
@@ -20,18 +20,30 @@
 
   <article>
     <ol class="unstyled">
-      <% @quantities_by_material_name_by_subject_code.each do |subject_code, quantities_by_material_name| %>
-        <% quantities_by_material_name.each do |material_name, quantities| %>
-          <li class="material" data-subject-code="<%= subject_code -%>">
-            <% if quantities.all?(&:nil?) %>
-              <span class="name"><%= material_name %></span>
-            <% else %>
-              <% sum = quantities.reject(&:nil?).sum %>
-              <span class="quantity"><%= sum %></span>
-              <span class="name"><%= pluralize(sum, material_name.strip).gsub(/^\d+/, "") %></span>
-            <% end %>
-          </li>
-        <% end %>
+      <% @quantities_by_subject_code_by_material_name.each do |material_name, quantities_by_subject_code| %>
+        <%  some_quantities = false %>
+        <%  total_quantities = 0 %>
+
+        <%  data_subject_codes = quantities_by_subject_code.keys.collect do |k| 
+              "data-subject-code-#{k}='true'"
+            end.join " " %>
+
+        <%  data_quantities = quantities_by_subject_code.collect do |a| 
+              a.second.delete(nil)
+              if ! a.second.empty?
+                some_quantities = true
+                total_quantities += a.second.sum
+              end
+              "data-quantity-#{a.first}='#{a.second.empty? ? '' : a.second.sum}'"
+            end.join " " %>
+
+        <li class="material" <%= data_subject_codes.html_safe -%> <%= data_quantities.html_safe -%>>
+          <% if some_quantities %>
+            <span class="quantity"><%= total_quantities %></span>
+          <% end %>
+          <span class="name singular <%= 'hidden' if some_quantities %>"><%= material_name %></span>
+          <span class="name plural <%= 'hidden' unless some_quantities %>"><%= pluralize(total_quantities, material_name.strip).gsub(/^\d+/, "") %></span>
+        </li>
       <% end %>
     </ol>
   </article>

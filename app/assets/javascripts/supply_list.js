@@ -9,14 +9,37 @@ var SupplyList = {
     }
 
     for (var i = 0; i < materials.length; i++) {
-      var material = materials[i],
-          materialSubjectCode = materials[i].getAttribute("data-subject-code");
+      var materialElem = materials[i];
+      var quantityElem = materialElem.querySelector(".quantity")
+      var singularNameElem = materialElem.querySelector(".singular")
+      var pluralNameElem = materialElem.querySelector(".singular")
 
-      if (checkedSubjectCodes.indexOf(materialSubjectCode) < 0) {
-        material.classList.add("hidden");
-      } else {
-        material.classList.remove("hidden");
+      materialElem.classList.add("hidden");
+      if(quantityElem != null) {
+        quantityElem.innerHTML = 0;
+        pluralNameElem.classList.add("hidden");
+        singularNameElem.classList.remove("hidden");
       }
+
+      for(var j = 0; j < checkedSubjectCodes.length; j++) {
+        if(materialElem.getAttribute("data-subject-code-" + checkedSubjectCodes[j]) != null) {
+          materialElem.classList.remove("hidden");
+          dataQuantity = materialElem.getAttribute("data-quantity-" + checkedSubjectCodes[j]);
+
+          if(quantityElem != null && dataQuantity != null) {
+            var qty = parseInt(quantityElem.innerHTML) + parseInt(dataQuantity);
+            quantityElem.innerHTML = qty;
+            if(qty > 1) {
+              pluralNameElem.classList.remove("hidden");              
+              singularNameElem.classList.add("hidden");
+            } else {
+              pluralNameElem.classList.add("hidden");              
+              singularNameElem.classList.remove("hidden");              
+            }
+          }
+        }
+      }
+
     }
   },
 

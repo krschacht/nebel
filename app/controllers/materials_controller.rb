@@ -9,7 +9,7 @@ class MaterialsController < ApplicationController
       @materials = Material.order("archived DESC, original_name")
     else
       pg_result = Material.connection.execute <<-SQL
-        SELECT s.code, m.name, m.original_name, r.quantity
+        SELECT s.code as subject_code, m.name as material_name, m.original_name, r.quantity
         FROM requisitions r
         INNER JOIN materials m ON m.id = r.material_id
         INNER JOIN exercises e ON e.id = r.exercise_id
@@ -19,15 +19,20 @@ class MaterialsController < ApplicationController
         ORDER BY m.name, m.original_name;
       SQL
 
-      @quantities_by_material_name_by_subject_code = pg_result.values.each_with_object({}) do |result, hash|
+      @subject_codes = []
+      @quantities_by_subject_code_by_material_name = pg_result.values.each_with_object({}) do |result, hash|
         subject_code  = result.first
         material_name = result.second || result.third
         quantity      = result.last.nil? ? nil : result.last.to_i
 
-        hash[subject_code] ||= {}
-        hash[subject_code][material_name] ||= []
-        hash[subject_code][material_name] << quantity
+        @subject_codes << subject_code
+
+        hash[material_name] ||= {}
+        hash[material_name][subject_code] ||= []
+        hash[material_name][subject_code] << quantity
       end
+
+      @subject_codes.uniq!
     end
     render current_user.admin? ? "materials/index/admin" : "materials/index/user"
   end

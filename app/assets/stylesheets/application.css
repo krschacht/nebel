@@ -72,7 +72,7 @@ section {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 ol.unstyled,
