@@ -30,6 +30,11 @@ GEM
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
+    better_errors (0.7.2)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bugsnag (2.0.1)
       httparty (>= 0.6, < 1.0)
       multi_json (~> 1.0)
@@ -43,6 +48,7 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     columnize (0.8.9)
+    debug_inspector (0.0.2)
     debugger (1.6.6)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.2.0)
@@ -154,6 +160,8 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  better_errors
+  binding_of_caller
   bugsnag
   httparty (~> 0.13.0)
   letter_opener (~> 1.2.0)

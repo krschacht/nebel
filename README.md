@@ -7,7 +7,7 @@ Clone the repository:
 ```
 git clone git@github.com:krschacht/nebel.git
 cd nebel
-git remote add production git@heroku.com:nebelscience.git
+git remote add heroku git@heroku.com:nebelscience.git
 ```
 
 Finally, do the usual:
@@ -34,8 +34,16 @@ bundle exec rake
 To deploy, do the usual:
 
 ```
-git push production master
+git push heroku master
 ```
+
+To pull production DB to local:
+
+```
+rake db:drop
+heroku pg:pull DATABASE nebel_development
+```
+
 
 ## Importing the Book
 

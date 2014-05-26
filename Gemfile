@@ -16,6 +16,8 @@ group :development, :test do
   gem "pry-debugger",  "~> 0.2.2"
   gem "letter_opener", "~> 1.2.0"
   gem "mocha",         "~> 1.0.0"
+  gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group :production do
