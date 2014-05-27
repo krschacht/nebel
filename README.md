@@ -34,6 +34,7 @@ bundle exec rake
 To deploy, do the usual:
 
 ```
+git push github master
 git push heroku master
 ```
 
