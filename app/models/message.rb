@@ -12,6 +12,9 @@ class Message < ActiveRecord::Base
   scope :archived,   -> { where(archived: true) }
   scope :unarchived, -> { where(archived: false) }
 
+  scope :hanging,    -> { where(messageable_type: nil) }
+  scope :attached,   -> { openers.where("messageable_id IS NOT NULL") }
+
   def reply?
     messageable_type == "Message"
   end
@@ -48,5 +51,13 @@ class Message < ActiveRecord::Base
 
   def replies
     @replies ||= Message.where(messageable_type: "Message", messageable_id: id).order(:created_at)
+  end
+
+  def archive!
+    update_attribute( :archived, true )
+  end
+
+  def close!
+    update_attribute( :closed, true )
   end
 end

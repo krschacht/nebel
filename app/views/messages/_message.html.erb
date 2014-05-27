@@ -27,6 +27,12 @@
     <%= sanitize markdown message.body -%>
   </div>
 
+  <% if current_user.admin? %>
+    <%= form_tag message_path(message), method: :delete, class: "inline archive-message" do %>
+      <%= submit_tag message.archived? ? "Archived" : "Archive#{ ' Discussion' if message.opener? }", disabled: message.archived? -%>
+    <% end -%>
+  <% end -%>
+
   <% if message.opener? %>
     <div class="replies">
       <%= render message.replies.unarchived -%>
@@ -36,14 +42,8 @@
 
     <% if current_user.admin? %>
       <%= form_tag toggle_message_path(message), method: :patch, class: "inline toggle-message" do %>
-        <input type="submit" value="<%= message.opened? ? "Close" : "Open" -%>">
+        <input type="submit" value="<%= message.opened? ? "Close Replies" : "Open" -%>">
       <% end -%>
-    <% end -%>
-  <% end -%>
-
-  <% if current_user.admin? %>
-    <%= form_tag message_path(message), method: :delete, class: "inline archive-message" do %>
-      <%= submit_tag message.archived? ? "Archived" : "Archive", disabled: message.archived? -%>
     <% end -%>
   <% end -%>
 </div>
