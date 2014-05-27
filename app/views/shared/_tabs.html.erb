@@ -3,8 +3,11 @@
     <%= content_tag :li, class: ("current" if controller.controller_name == "topics") do %>
       <%= link_to_unless_current "Curriculum Map", topics_path -%>
     <% end %>
-    <%= content_tag :li, class: ("current" if controller.controller_name == "materials") do %>
+    <%= content_tag :li, class: ("current" if controller_action == "materials-index") do %>
       <%= link_to_unless_current "Supply List", materials_path -%>
     <% end %>
+    <%= content_tag :li, class: ("current" if controller_action == "materials-manage" ) do %>
+      <%= link_to_unless_current "Manage Supplies", manage_materials_path -%>
+    <% end if current_user.admin? %>
   </ul>
 </nav>

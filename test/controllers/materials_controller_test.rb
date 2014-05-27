@@ -18,23 +18,32 @@ class MaterialsControllerTest < ActionController::TestCase
     get :index
 
     assert_response :success
-    assert_nil assigns(:materials)
     assert_not_nil assigns(:quantities_by_subject_code_by_material_name)
     assert_equal [1], assigns(:quantities_by_subject_code_by_material_name)["Dirt"]["A"]
     assert_equal [1], assigns(:quantities_by_subject_code_by_material_name)["Glue"]["A"]
     assert_equal [1], assigns(:quantities_by_subject_code_by_material_name)["Straw"]["A"]
     assert_equal [1], assigns(:quantities_by_subject_code_by_material_name)["Straw"]["D"]
-    assert_template "index/user"
+
+    assert_response :success
+    assert_template :index
   end
 
-  test "GET to index loads materials and renders index for admins" do
+  test "GET to manage requires an admin" do
+    login_as_user
+
+    get :manage
+
+    assert_admin_required
+  end
+
+  test "GET to manage loads materials" do
     login_as_admin
 
-    get :index
+    get :manage
 
-    assert_nil assigns(:quantities_by_material_name_by_subject_code)
     assert_not_nil assigns(:materials)
-    assert_template "index/admin"
+    assert_response :success
+    assert_template :manage
   end
 
   test "GET to new requires an admin" do

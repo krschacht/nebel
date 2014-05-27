@@ -5,36 +5,36 @@ class MaterialsController < ApplicationController
 
   # GET /materials
   def index
-    if current_user.admin?
-      @materials = Material.order("archived DESC, original_name")
-    else
-      pg_result = Material.connection.execute <<-SQL
-        SELECT s.code as subject_code, m.name as material_name, m.original_name, r.quantity
-        FROM requisitions r
-        INNER JOIN materials m ON m.id = r.material_id
-        INNER JOIN exercises e ON e.id = r.exercise_id
-        INNER JOIN topics t ON t.id = e.topic_id
-        INNER JOIN subjects s ON s.id = t.subject_id
-        WHERE m.archived = false
-        ORDER BY m.name, m.original_name;
-      SQL
+    pg_result = Material.connection.execute <<-SQL
+      SELECT s.code as subject_code, m.name as material_name, m.original_name, r.quantity
+      FROM requisitions r
+      INNER JOIN materials m ON m.id = r.material_id
+      INNER JOIN exercises e ON e.id = r.exercise_id
+      INNER JOIN topics t ON t.id = e.topic_id
+      INNER JOIN subjects s ON s.id = t.subject_id
+      WHERE m.archived = false
+      ORDER BY m.name, m.original_name;
+    SQL
 
-      @subject_codes = []
-      @quantities_by_subject_code_by_material_name = pg_result.values.each_with_object({}) do |result, hash|
-        subject_code  = result.first
-        material_name = result.second || result.third
-        quantity      = result.last.nil? ? nil : result.last.to_i
+    @subject_codes = []
+    @quantities_by_subject_code_by_material_name = pg_result.values.each_with_object({}) do |result, hash|
+      subject_code  = result.first
+      material_name = result.second || result.third
+      quantity      = result.last.nil? ? nil : result.last.to_i
 
-        @subject_codes << subject_code
+      @subject_codes << subject_code
 
-        hash[material_name] ||= {}
-        hash[material_name][subject_code] ||= []
-        hash[material_name][subject_code] << quantity
-      end
-
-      @subject_codes.uniq!
+      hash[material_name] ||= {}
+      hash[material_name][subject_code] ||= []
+      hash[material_name][subject_code] << quantity
     end
-    render current_user.admin? ? "materials/index/admin" : "materials/index/user"
+
+    @subject_codes.uniq!
+  end
+
+  # GET /materials/manage
+  def manage
+    @materials = Material.order("archived DESC, original_name")
   end
 
   # GET /materials/new

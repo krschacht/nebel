@@ -22,6 +22,7 @@ Nebel::Application.routes.draw do
   patch  "/exercises/:id"      => "exercises#update", as: "exercise"
 
   get    "/materials"          => "materials#index",  as: "materials"
+  get    "/materials/manage"   => "materials#manage", as: "manage_materials"
   get    "/materials/new"      => "materials#new",    as: "new_material"
   get    "/materials/:id/edit" => "materials#edit",   as: "edit_material"
   post   "/materials"          => "materials#create"
