@@ -12,7 +12,7 @@ var SupplyList = {
       var materialElem = materials[i];
       var quantityElem = materialElem.querySelector(".quantity")
       var singularNameElem = materialElem.querySelector(".singular")
-      var pluralNameElem = materialElem.querySelector(".singular")
+      var pluralNameElem = materialElem.querySelector(".plural")
 
       materialElem.classList.add("hidden");
       if(quantityElem != null) {
@@ -27,8 +27,12 @@ var SupplyList = {
           dataQuantity = materialElem.getAttribute("data-quantity-" + checkedSubjectCodes[j]);
 
           if(quantityElem != null && dataQuantity != null) {
-            var qty = parseInt(quantityElem.innerHTML) + parseInt(dataQuantity);
-            quantityElem.innerHTML = qty;
+            var qty = Math.max( parseInt(quantityElem.innerHTML), parseInt(dataQuantity) );
+            if( isNaN(qty) ) {
+              quantityElem.innerHTML = '';
+            } else {
+              quantityElem.innerHTML = qty;
+            }
             if(qty > 1) {
               pluralNameElem.classList.remove("hidden");              
               singularNameElem.classList.add("hidden");

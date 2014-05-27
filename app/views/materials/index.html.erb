@@ -22,7 +22,7 @@
     <ol class="unstyled">
       <% @quantities_by_subject_code_by_material_name.each do |material_name, quantities_by_subject_code| %>
         <%  some_quantities = false %>
-        <%  total_quantities = 0 %>
+        <%  max_quantities = 0 %>
 
         <%  data_subject_codes = quantities_by_subject_code.keys.collect do |k| 
               "data-subject-code-#{k}='true'"
@@ -32,17 +32,17 @@
               a.second.delete(nil)
               if ! a.second.empty?
                 some_quantities = true
-                total_quantities += a.second.sum
+                max_quantities = (a.second + [ max_quantities ] ).max
               end
-              "data-quantity-#{a.first}='#{a.second.empty? ? '' : a.second.sum}'"
+              "data-quantity-#{a.first}='#{a.second.empty? ? '' : a.second.max}'"
             end.join " " %>
 
         <li class="material" <%= data_subject_codes.html_safe -%> <%= data_quantities.html_safe -%>>
           <% if some_quantities %>
-            <span class="quantity"><%= total_quantities %></span>
+            <span class="quantity"><%= max_quantities %></span>
           <% end %>
           <span class="name singular <%= 'hidden' if some_quantities %>"><%= material_name %></span>
-          <span class="name plural <%= 'hidden' unless some_quantities %>"><%= pluralize(total_quantities, material_name.strip).gsub(/^\d+/, "") %></span>
+          <span class="name plural <%= 'hidden' unless some_quantities %>"><%= pluralize(max_quantities, material_name.strip).gsub(/^\d+/, "") %></span>
         </li>
       <% end %>
     </ol>
