@@ -31,7 +31,7 @@ var MarkdownPreview = {
       var textarea = textareas[i],
           button   = this.createButton();
 
-      textarea.parentElement.insertAdjacentElement("afterend", button)
+      //textarea.parentElement.insertAdjacentElement("afterend", button)
     }
   }
 }
