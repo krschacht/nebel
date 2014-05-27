@@ -9,6 +9,10 @@ module MarkdownHelper
     result.gsub! Book::TOPIC_CODE_PATTERN do |topic_code|
       link_to(topic_code, canonical_topic_path(TopicSlug.new(topic_code).slug))
     end
+    result.gsub!  /\(Google: (.*)\)/ do |match|
+      "(Google: <a href='http://google.com/search?q=#{ CGI.escape($1) }' target='_blank'>#{ $1 }</a>)"
+    end
+
     result.html_safe
   end
 
