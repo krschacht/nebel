@@ -19,11 +19,11 @@ class MaterialsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_nil assigns(:materials)
-    assert_not_nil assigns(:quantities_by_material_name_by_subject_code)
-    assert_equal [1], assigns(:quantities_by_material_name_by_subject_code)["A"]["Dirt"]
-    assert_equal [1], assigns(:quantities_by_material_name_by_subject_code)["A"]["Glue"]
-    assert_equal [1], assigns(:quantities_by_material_name_by_subject_code)["A"]["Straw"]
-    assert_equal [1], assigns(:quantities_by_material_name_by_subject_code)["D"]["Straw"]
+    assert_not_nil assigns(:quantities_by_subject_code_by_material_name)
+    assert_equal [1], assigns(:quantities_by_subject_code_by_material_name)["Dirt"]["A"]
+    assert_equal [1], assigns(:quantities_by_subject_code_by_material_name)["Glue"]["A"]
+    assert_equal [1], assigns(:quantities_by_subject_code_by_material_name)["Straw"]["A"]
+    assert_equal [1], assigns(:quantities_by_subject_code_by_material_name)["Straw"]["D"]
     assert_template "index/user"
   end
 
